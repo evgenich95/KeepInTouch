@@ -1,24 +1,23 @@
 //
-//  {{ module_info.file_name }}
-//  {{ module_info.project_name }}
+//  NewsSummaryViewController.swift
+//  KeepInTouch
 //
-//  Created by {{ developer.name }} on {{ date }}.
-//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//  Created by Anton Ivanov on 10/09/2017.
+//  Copyright © 2017 Anton_Ivanov. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class {{ module_info.name }}ViewController: ViewController {
+class NewsSummaryViewController: ViewController {
 
-    var viewModel: {{ module_info.name }}ViewModel
+    var viewModel: NewsSummaryViewModel
 
-    init(viewModel: {{ module_info.name }}ViewModel) {
+    init(viewModel: NewsSummaryViewModel) {
         self.viewModel = viewModel
         super.init()
     }
-    
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -38,16 +37,16 @@ class {{ module_info.name }}ViewController: ViewController {
         super.setupView()
 
     }
-    
+
     fileprivate func updateView() {
-        
+
     }
 
 }
 
-//MARK: - ViewModel Binding -
-extension {{ module_info.name }}ViewController {
- 
+// MARK: - ViewModel Binding -
+extension NewsSummaryViewController {
+
     fileprivate func bindToViewModel() {
         viewModel.dataDidChange = {[weak self] in
             DispatchQueue.main.async {
@@ -57,16 +56,16 @@ extension {{ module_info.name }}ViewController {
 
         viewModel.onSignInRequestStart = {[weak self] in
             DispatchQueue.main.async {
-                self?.showLoadingView(nil, view: self?.navigationController?.view)
+//                self?.showLoadingView(nil, view: self?.navigationController?.view)
             }
         }
-        
+
         viewModel.onSignInRequestEnd = {[weak self] in
             DispatchQueue.main.async {
-                self?.hideLoadingView()
+//                self?.hideLoadingView()
             }
         }
-        
+
         viewModel.onSignInRequestFailed = {[weak self] (errorDescription) in
             DispatchQueue.main.async {
                 self?.showNotificationAlert(withTitle: "Error", message: "Something gone wrong. \(errorDescription)")
@@ -74,4 +73,3 @@ extension {{ module_info.name }}ViewController {
         }
     }
 }
-
