@@ -1,0 +1,21 @@
+# Template information section
+name: MVVM
+summary: Create ViewModel + (ViewController + .Xib) + Coordinator
+author: Anton Ivanov
+version: 1.1
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+# ViewModel
+- {name: ViewModel.swift, path: Code/view_model.swift.liquid}
+
+# ViewController
+- {name: ViewController/ViewController.swift, path: Code/view_controller.swift.liquid}
+- {name: ViewController/ViewController.xib, path: Code/view_controller_xib.xib.liquid}
+
+
+# Coordinator
+- {name: Coordinator.swift, path: Code/coordinator.swift.liquid}
+
