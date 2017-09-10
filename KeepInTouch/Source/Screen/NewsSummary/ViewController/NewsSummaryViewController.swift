@@ -13,6 +13,8 @@ class NewsSummaryViewController: ViewController {
 
     var viewModel: NewsSummaryViewModel
 
+    @IBOutlet weak var newsCollectionView: UICollectionView!
+    
     init(viewModel: NewsSummaryViewModel) {
         self.viewModel = viewModel
         super.init()
