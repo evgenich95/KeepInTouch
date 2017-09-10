@@ -16,9 +16,6 @@ public struct SectionedValues<Section: Equatable, Value: Equatable>: Equatable {
     public let sectionsAndValues: [(Section, [Value])]
 
     internal var sections: [Section] { get { return self.sectionsAndValues.map { $0.0 } } }
-//    internal subscript(i: Int) -> (Section, [Value]) {
-//        return self.sectionsAndValues[i]
-//    }
 
     func value(for indexPath: IndexPath) -> Value {
         return sectionsAndValues[indexPath.section].1[indexPath.row]
