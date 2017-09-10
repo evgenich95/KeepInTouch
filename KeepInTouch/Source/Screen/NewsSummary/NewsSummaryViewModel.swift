@@ -25,6 +25,30 @@ class NewsSummaryViewModel {
 
     }
 
+    typealias Section = String
+    typealias Value = News
+    typealias Data = SectionedValues<Section, Value>
+
+    var sectionedValues = Data()
+
+    var sections = [String: [News]]() {
+        didSet {
+
+        }
+    }
+
+    func handleRawData() {
+        sectionedValues = SectionedValues<Section, Value>(dictionary: sections, sortSections: {
+            let order = [NewsType.top7, NewsType.last24, NewsType.none]
+                .flatMap{$0.description}
+            return order.index(of: $0) ?? 0 < order.index(of: $1) ?? 0
+        }) { (n1, n2) in
+            //TODO: Change on the Date comparing
+            n1.link == n2.link
+        }
+
+    }
+
     var data = [News]()
 
     //MARK: - Web Layer -
@@ -41,9 +65,9 @@ class NewsSummaryViewModel {
 
     func completion(for type: NewsType) -> WebService.Completion<[News]> {
         return {[weak self] result in
-            printMe(with: ["type = \(type)"])
             switch result {
             case .success(let news):
+                self?.sections[type.description] = news
                 self?.data.append(contentsOf: news.flatMap({
                     $0.type = type
                     return $0
@@ -52,7 +76,10 @@ class NewsSummaryViewModel {
             case .failed(let error):
                 print("Loading failed\n\(error)")
             }
+            printMe(with: ["sections = \(self?.sections)"])
+
         }
+
     }
 
     // MARK: - Binding properties -
