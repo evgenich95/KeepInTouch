@@ -1,15 +1,28 @@
 PODS:
+  - PromiseKit (4.4.0):
+    - PromiseKit/Foundation (= 4.4.0)
+    - PromiseKit/QuartzCore (= 4.4.0)
+    - PromiseKit/UIKit (= 4.4.0)
+  - PromiseKit/CorePromise (4.4.0)
+  - PromiseKit/Foundation (4.4.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.4.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.4.0):
+    - PromiseKit/CorePromise
   - SwiftLint (0.20.0)
   - SWXMLHash (4.0.0)
 
 DEPENDENCIES:
+  - PromiseKit (~> 4.4)
   - SwiftLint
   - SWXMLHash (~> 4.0.0)
 
 SPEC CHECKSUMS:
+  PromiseKit: ecf5fe92275d57ee77c9ede858af47a162e9b97e
   SwiftLint: 3f7543509c931d1291395335f34e245d3919b7f2
   SWXMLHash: 6bbc0bf72975a18ceda469fb7d6a886a26d81694
 
-PODFILE CHECKSUM: ae2e78445de0a2ce916014e77b4128c78e0a24f5
+PODFILE CHECKSUM: eebd13ac3c2ac5d9877e904d931bfef0d602055b
 
 COCOAPODS: 1.2.1

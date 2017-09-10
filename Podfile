@@ -8,5 +8,7 @@ target 'KeepInTouch' do
   # Pods for KeepInTouch
 	pod 'SwiftLint'
 	pod 'SWXMLHash', '~> 4.0.0'
+	pod ‘PromiseKit’, ‘~> 4.4’
+
 
 end
