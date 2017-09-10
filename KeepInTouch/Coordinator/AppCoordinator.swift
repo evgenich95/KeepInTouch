@@ -18,11 +18,14 @@ class AppCoordinator: Coordinator {
 
     init(window: UIWindow) {
         self.window = window
+        setupTheme()
     }
 
     func startMainFlow() {
         removeAllChildren()
-        let mainNavigationController = UINavigationController()
+        let mainNavigationController = make(UINavigationController()) {
+            $0.navigationBar.isTranslucent = false
+        }
 
         let mainFlowCoordinator = MainFlowCoordinator(navigationController: mainNavigationController)
 
@@ -36,5 +39,10 @@ class AppCoordinator: Coordinator {
     func start() {
         startMainFlow()
         window.makeKeyAndVisible()
+    }
+
+    func setupTheme() {
+        UINavigationBar.appearance().barTintColor = .white
+        UINavigationBar.appearance().tintColor = .white
     }
 }
