@@ -8,20 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		5676AFCC1F6553FE00F66296 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFCB1F6553FE00F66296 /* AppDelegate.swift */; };
-		5676AFCE1F6553FE00F66296 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFCD1F6553FE00F66296 /* ViewController.swift */; };
-		5676AFD11F6553FE00F66296 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5676AFCF1F6553FE00F66296 /* Main.storyboard */; };
 		5676AFD31F6553FE00F66296 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5676AFD21F6553FE00F66296 /* Assets.xcassets */; };
 		5676AFD61F6553FE00F66296 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5676AFD41F6553FE00F66296 /* LaunchScreen.storyboard */; };
+		5676AFE11F6554F200F66296 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFE01F6554F200F66296 /* AppCoordinator.swift */; };
+		5676AFE31F65551100F66296 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFE21F65551100F66296 /* Coordinator.swift */; };
+		5676AFE51F65557700F66296 /* MainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFE41F65557700F66296 /* MainFlowCoordinator.swift */; };
+		5676AFEC1F65570600F66296 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFEB1F65570600F66296 /* Thread.swift */; };
+		5676AFEE1F65572900F66296 /* DebugPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFED1F65572900F66296 /* DebugPrinter.swift */; };
+		5676AFF01F65574400F66296 /* ObjectBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFEF1F65574400F66296 /* ObjectBuilder.swift */; };
+		5676AFF41F65579400F66296 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFF31F65579400F66296 /* TableView.swift */; };
+		5676AFF91F6557F800F66296 /* UIViewController+ProgressLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFF81F6557F800F66296 /* UIViewController+ProgressLoading.swift */; };
+		5676AFFB1F65587600F66296 /* OneObjectRepresentableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFFA1F65587600F66296 /* OneObjectRepresentableCell.swift */; };
+		5676AFFD1F65589300F66296 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFFC1F65589300F66296 /* TableViewController.swift */; };
+		5676AFFF1F6558BC00F66296 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFFE1F6558BC00F66296 /* ViewController.swift */; };
+		88D96B7CF13FF6738210A62A /* Pods_KeepInTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2BE642881FC08F3DCDA7AB /* Pods_KeepInTouch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A2BE642881FC08F3DCDA7AB /* Pods_KeepInTouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepInTouch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5676AFC81F6553FE00F66296 /* KeepInTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepInTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5676AFCB1F6553FE00F66296 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5676AFCD1F6553FE00F66296 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5676AFD01F6553FE00F66296 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5676AFD21F6553FE00F66296 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5676AFD51F6553FE00F66296 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5676AFD71F6553FE00F66296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5676AFE01F6554F200F66296 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		5676AFE21F65551100F66296 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		5676AFE41F65557700F66296 /* MainFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFlowCoordinator.swift; sourceTree = "<group>"; };
+		5676AFEB1F65570600F66296 /* Thread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
+		5676AFED1F65572900F66296 /* DebugPrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugPrinter.swift; sourceTree = "<group>"; };
+		5676AFEF1F65574400F66296 /* ObjectBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectBuilder.swift; sourceTree = "<group>"; };
+		5676AFF31F65579400F66296 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		5676AFF81F6557F800F66296 /* UIViewController+ProgressLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ProgressLoading.swift"; sourceTree = "<group>"; };
+		5676AFFA1F65587600F66296 /* OneObjectRepresentableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneObjectRepresentableCell.swift; sourceTree = "<group>"; };
+		5676AFFC1F65589300F66296 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		5676AFFE1F6558BC00F66296 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		804003AA337C01AAB4A85AA7 /* Pods-KeepInTouch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepInTouch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeepInTouch/Pods-KeepInTouch.debug.xcconfig"; sourceTree = "<group>"; };
+		98E66635E7D1DB5458DF7D6E /* Pods-KeepInTouch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepInTouch.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeepInTouch/Pods-KeepInTouch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,16 +51,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88D96B7CF13FF6738210A62A /* Pods_KeepInTouch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21BB254E63DFE42273B6B9D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A2BE642881FC08F3DCDA7AB /* Pods_KeepInTouch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5676AFBF1F6553FE00F66296 = {
 			isa = PBXGroup;
 			children = (
+				21BB254E63DFE42273B6B9D1 /* Frameworks */,
 				5676AFCA1F6553FE00F66296 /* KeepInTouch */,
+				61DB1C343A330833285914F9 /* Pods */,
 				5676AFC91F6553FE00F66296 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,14 +87,149 @@
 		5676AFCA1F6553FE00F66296 /* KeepInTouch */ = {
 			isa = PBXGroup;
 			children = (
-				5676AFCB1F6553FE00F66296 /* AppDelegate.swift */,
-				5676AFCD1F6553FE00F66296 /* ViewController.swift */,
-				5676AFCF1F6553FE00F66296 /* Main.storyboard */,
-				5676AFD21F6553FE00F66296 /* Assets.xcassets */,
-				5676AFD41F6553FE00F66296 /* LaunchScreen.storyboard */,
-				5676AFD71F6553FE00F66296 /* Info.plist */,
+				5676AFDE1F6554BE00F66296 /* Application */,
+				5676AFDD1F6554A500F66296 /* Assets */,
+				5676AFDF1F6554E900F66296 /* Coordinator */,
+				5676AFF51F6557CE00F66296 /* Extension */,
+				5676AFE61F6556B900F66296 /* Source */,
+				5676AFEA1F6556ED00F66296 /* Utility */,
 			);
 			path = KeepInTouch;
+			sourceTree = "<group>";
+		};
+		5676AFDD1F6554A500F66296 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5676AFD21F6553FE00F66296 /* Assets.xcassets */,
+				5676AFD71F6553FE00F66296 /* Info.plist */,
+				5676AFD41F6553FE00F66296 /* LaunchScreen.storyboard */,
+			);
+			name = Assets;
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		5676AFDE1F6554BE00F66296 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5676AFCB1F6553FE00F66296 /* AppDelegate.swift */,
+			);
+			name = Application;
+			path = Application;
+			sourceTree = "<group>";
+		};
+		5676AFDF1F6554E900F66296 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				5676AFE01F6554F200F66296 /* AppCoordinator.swift */,
+				5676AFE21F65551100F66296 /* Coordinator.swift */,
+				5676AFE41F65557700F66296 /* MainFlowCoordinator.swift */,
+			);
+			name = Coordinator;
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		5676AFE61F6556B900F66296 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				5676AFE71F6556BD00F66296 /* Model */,
+				5676AFF11F65577600F66296 /* View Layer */,
+			);
+			name = Source;
+			path = Source;
+			sourceTree = "<group>";
+		};
+		5676AFE71F6556BD00F66296 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5676AFE91F6556C700F66296 /* Application */,
+				5676AFE81F6556C100F66296 /* Entity */,
+			);
+			name = Model;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5676AFE81F6556C100F66296 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Entity;
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5676AFE91F6556C700F66296 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Application;
+			path = Application;
+			sourceTree = "<group>";
+		};
+		5676AFEA1F6556ED00F66296 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				5676AFED1F65572900F66296 /* DebugPrinter.swift */,
+				5676AFEF1F65574400F66296 /* ObjectBuilder.swift */,
+				5676AFEB1F65570600F66296 /* Thread.swift */,
+			);
+			name = Utility;
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		5676AFF11F65577600F66296 /* View Layer */ = {
+			isa = PBXGroup;
+			children = (
+				5676AFF21F65578500F66296 /* Base Classes */,
+			);
+			name = "View Layer";
+			path = "View Layer";
+			sourceTree = "<group>";
+		};
+		5676AFF21F65578500F66296 /* Base Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5676AFFA1F65587600F66296 /* OneObjectRepresentableCell.swift */,
+				5676AFF31F65579400F66296 /* TableView.swift */,
+				5676AFFC1F65589300F66296 /* TableViewController.swift */,
+				5676AFFE1F6558BC00F66296 /* ViewController.swift */,
+			);
+			name = "Base Classes";
+			path = "Base Classes";
+			sourceTree = "<group>";
+		};
+		5676AFF51F6557CE00F66296 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5676AFF61F6557D400F66296 /* UIKit */,
+			);
+			name = Extension;
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5676AFF61F6557D400F66296 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				5676AFF71F6557D900F66296 /* UIViewController */,
+			);
+			name = UIKit;
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		5676AFF71F6557D900F66296 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5676AFF81F6557F800F66296 /* UIViewController+ProgressLoading.swift */,
+			);
+			name = UIViewController;
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		61DB1C343A330833285914F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				804003AA337C01AAB4A85AA7 /* Pods-KeepInTouch.debug.xcconfig */,
+				98E66635E7D1DB5458DF7D6E /* Pods-KeepInTouch.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +239,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5676AFDA1F6553FE00F66296 /* Build configuration list for PBXNativeTarget "KeepInTouch" */;
 			buildPhases = (
+				0C712C080E54CEDF71E26589 /* [CP] Check Pods Manifest.lock */,
 				5676AFC41F6553FE00F66296 /* Sources */,
 				5676AFC51F6553FE00F66296 /* Frameworks */,
 				5676AFC61F6553FE00F66296 /* Resources */,
+				1D927EA6564FEAC75306C38F /* [CP] Embed Pods Frameworks */,
+				838B3C71B4FAAFC5D172C6FC /* [CP] Copy Pods Resources */,
+				562EF5EA1F655A3B0021B8BB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -126,39 +298,102 @@
 			files = (
 				5676AFD61F6553FE00F66296 /* LaunchScreen.storyboard in Resources */,
 				5676AFD31F6553FE00F66296 /* Assets.xcassets in Resources */,
-				5676AFD11F6553FE00F66296 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C712C080E54CEDF71E26589 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1D927EA6564FEAC75306C38F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeepInTouch/Pods-KeepInTouch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		562EF5EA1F655A3B0021B8BB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		838B3C71B4FAAFC5D172C6FC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeepInTouch/Pods-KeepInTouch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5676AFC41F6553FE00F66296 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5676AFCE1F6553FE00F66296 /* ViewController.swift in Sources */,
+				5676AFFB1F65587600F66296 /* OneObjectRepresentableCell.swift in Sources */,
+				5676AFF01F65574400F66296 /* ObjectBuilder.swift in Sources */,
+				5676AFEE1F65572900F66296 /* DebugPrinter.swift in Sources */,
+				5676AFE11F6554F200F66296 /* AppCoordinator.swift in Sources */,
+				5676AFEC1F65570600F66296 /* Thread.swift in Sources */,
+				5676AFE51F65557700F66296 /* MainFlowCoordinator.swift in Sources */,
+				5676AFFF1F6558BC00F66296 /* ViewController.swift in Sources */,
+				5676AFFD1F65589300F66296 /* TableViewController.swift in Sources */,
+				5676AFF41F65579400F66296 /* TableView.swift in Sources */,
 				5676AFCC1F6553FE00F66296 /* AppDelegate.swift in Sources */,
+				5676AFF91F6557F800F66296 /* UIViewController+ProgressLoading.swift in Sources */,
+				5676AFE31F65551100F66296 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5676AFCF1F6553FE00F66296 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5676AFD01F6553FE00F66296 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5676AFD41F6553FE00F66296 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5676AFD51F6553FE00F66296 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -261,10 +496,11 @@
 		};
 		5676AFDB1F6553FE00F66296 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 804003AA337C01AAB4A85AA7 /* Pods-KeepInTouch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GB85HYMZT6;
-				INFOPLIST_FILE = KeepInTouch/Info.plist;
+				INFOPLIST_FILE = KeepInTouch/Assets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iae.KeepInTouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,10 +510,11 @@
 		};
 		5676AFDC1F6553FE00F66296 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98E66635E7D1DB5458DF7D6E /* Pods-KeepInTouch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GB85HYMZT6;
-				INFOPLIST_FILE = KeepInTouch/Info.plist;
+				INFOPLIST_FILE = KeepInTouch/Assets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iae.KeepInTouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,6 +541,7 @@
 				5676AFDC1F6553FE00F66296 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

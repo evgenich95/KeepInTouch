@@ -1,0 +1,54 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+protocol {{ module_info.name }}CoordinatorDelegate: class {
+
+}
+
+class {{ module_info.name }}Coordinator: Coordinator {
+    
+    weak var delegate: {{ module_info.name }}CoordinatorDelegate?
+    
+    var childCoordinators: [Coordinator] = []
+    
+    var navigationController: UINavigationController
+    
+    //MARK: - Start ViewModel -
+    var _{{ module_info.name }}ViewModel: {{ module_info.name }}ViewModel!
+
+    //MARK: - Children ViewModels -
+    
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
+    
+    func start() {
+        _{{ module_info.name }}ViewModel = {{ module_info.name }}ViewModel()
+        _{{ module_info.name }}ViewModel.delegate = self
+        
+        let viewController = {{ module_info.name }}ViewController(viewModel: _{{ module_info.name }}ViewModel) 
+        configureNavigationItems(viewController)
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func configureNavigationItems(_ viewController: {{ module_info.name }}ViewController) {
+
+    }
+}
+
+extension {{ module_info.name }}Coordinator {
+    //MARK: - Open children ViewModels functions -
+}
+
+extension {{ module_info.name }}Coordinator: {{ module_info.name }}ViewModelDelegate {
+
+}
