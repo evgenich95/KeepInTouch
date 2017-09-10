@@ -8,6 +8,7 @@
 
 import Foundation
 import SWXMLHash
+import PromiseKit
 
 class WebService {
     static let serverApiAddress = "https://lenta.ru/rss/"
@@ -22,4 +23,22 @@ class WebService {
 
         Downloader.shared.loadArray(url: url, nodePath: nodePath, completion: completion)
     }
+
+    static func loadPromiseNews(with type: NewsType) -> Promise<[News]> {
+        return Promise { fulfill, reject in
+            guard let url = URL(string: serverApiAddress.appending(type.rawValue)) else {
+                fatalError("Unexpected url value")
+            }
+            let nodePath = ["rss", "channel", "item"]
+            Downloader.shared.loadArray(url: url, nodePath: nodePath, completion: { (result: Result<[News]>) in
+                switch result {
+                case .success(let news):
+                    fulfill(news)
+                case .failed(let error):
+                    reject(error)
+                }
+            })
+        }
+    }
+
 }
