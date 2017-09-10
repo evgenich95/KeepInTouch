@@ -61,11 +61,11 @@
 		56804FB41F6565B500EF375D /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		56804FB61F6566DF00EF375D /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		56804FBA1F65691C00EF375D /* RequestSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestSetting.swift; sourceTree = "<group>"; };
-		56E353741F656A9A006E775F /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = News.swift; path = KeepInTouch/News.swift; sourceTree = SOURCE_ROOT; };
-		56E353761F656AC2006E775F /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Object.swift; path = KeepInTouch/Object.swift; sourceTree = SOURCE_ROOT; };
+		56E353741F656A9A006E775F /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		56E353761F656AC2006E775F /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		56E353791F656B44006E775F /* DataSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSerializer.swift; sourceTree = "<group>"; };
 		56E3537B1F656DD4006E775F /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
-		56E3537D1F657CA3006E775F /* SectionedValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SectionedValues.swift; path = KeepInTouch/SectionedValues.swift; sourceTree = SOURCE_ROOT; };
+		56E3537D1F657CA3006E775F /* SectionedValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedValues.swift; sourceTree = "<group>"; };
 		5C19D349B530A9ECBEF5F32F /* NewsSummaryViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewsSummaryViewController.swift; sourceTree = "<group>"; };
 		6A962AFF8142A12A2B29ADDC /* NewsSummaryViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewsSummaryViewModel.swift; sourceTree = "<group>"; };
 		804003AA337C01AAB4A85AA7 /* Pods-KeepInTouch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepInTouch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeepInTouch/Pods-KeepInTouch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,14 +124,14 @@
 		5676AFCA1F6553FE00F66296 /* KeepInTouch */ = {
 			isa = PBXGroup;
 			children = (
-				56E353781F656B3B006E775F /* Helper */,
-				56804FAE1F6563A500EF375D /* Service */,
 				5676AFDE1F6554BE00F66296 /* Application */,
 				5676AFDD1F6554A500F66296 /* Assets */,
 				5676AFDF1F6554E900F66296 /* Coordinator */,
 				5676AFF51F6557CE00F66296 /* Extension */,
+				56E353781F656B3B006E775F /* Helper */,
 				5676AFE61F6556B900F66296 /* Source */,
 				5676AFEA1F6556ED00F66296 /* Utility */,
+				56804FAF1F6563B300EF375D /* Web Service */,
 			);
 			path = KeepInTouch;
 			sourceTree = "<group>";
@@ -261,15 +261,7 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
-		56804FAE1F6563A500EF375D /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				56804FAF1F6563B300EF375D /* Web */,
-			);
-			name = Service;
-			sourceTree = "<group>";
-		};
-		56804FAF1F6563B300EF375D /* Web */ = {
+		56804FAF1F6563B300EF375D /* Web Service */ = {
 			isa = PBXGroup;
 			children = (
 				56804FBC1F65693600EF375D /* Web object */,
@@ -277,17 +269,17 @@
 				56804FB61F6566DF00EF375D /* WebService.swift */,
 				56E3537B1F656DD4006E775F /* XMLParser.swift */,
 			);
-			name = Web;
+			path = "Web Service";
 			sourceTree = "<group>";
 		};
 		56804FBC1F65693600EF375D /* Web object */ = {
 			isa = PBXGroup;
 			children = (
-				56804FB21F65651700EF375D /* Result.swift */,
-				56804FBA1F65691C00EF375D /* RequestSetting.swift */,
 				56804FB41F6565B500EF375D /* NetworkError.swift */,
+				56804FBA1F65691C00EF375D /* RequestSetting.swift */,
+				56804FB21F65651700EF375D /* Result.swift */,
 			);
-			name = "Web object";
+			path = "Web object";
 			sourceTree = "<group>";
 		};
 		56E353781F656B3B006E775F /* Helper */ = {
@@ -295,7 +287,7 @@
 			children = (
 				56E353791F656B44006E775F /* DataSerializer.swift */,
 			);
-			name = Helper;
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		61DB1C343A330833285914F9 /* Pods */ = {

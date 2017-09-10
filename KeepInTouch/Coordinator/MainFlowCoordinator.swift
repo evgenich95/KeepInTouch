@@ -21,7 +21,7 @@ class MainFlowCoordinator: Coordinator {
     func start() {
         removeAllChildren()
 
-        let newsSummaryCoordinator = make(NewsSummaryCoordinator(navigationController: navigationController)) {
+        _ = make(NewsSummaryCoordinator(navigationController: navigationController)) {
             addChildCoordinator($0)
         }
 

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 class Object: NSObject {
 
     override func isEqual(_ object: Any?) -> Bool {
