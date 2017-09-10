@@ -25,8 +25,34 @@ class NewsSummaryViewModel {
 
     }
 
-    func loadRequiredData() {
+    var data = [News]()
 
+    //MARK: - Web Layer -
+
+    func loadRequiredData() {
+        [NewsType.top7, NewsType.last24, NewsType.none].forEach {
+            loadNews($0)
+        }
+    }
+
+    private func loadNews(_ type: NewsType) {
+        WebService.loadNews(with: type, completion: completion(for: type))
+    }
+
+    func completion(for type: NewsType) -> WebService.Completion<[News]> {
+        return {[weak self] result in
+            printMe(with: ["type = \(type)"])
+            switch result {
+            case .success(let news):
+                self?.data.append(contentsOf: news.flatMap({
+                    $0.type = type
+                    return $0
+                }))
+                print("news loaded count = \(news.count)")
+            case .failed(let error):
+                print("Loading failed\n\(error)")
+            }
+        }
     }
 
     // MARK: - Binding properties -
