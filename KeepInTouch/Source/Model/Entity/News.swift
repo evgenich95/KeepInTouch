@@ -59,13 +59,13 @@ class News: Object, XMLIndexerDeserializable {
         //        )
     }
 
-    static func prase<T>(_ node: XMLIndexer, _ type: T.Type) throws -> T    {
+    static func prase<T>(_ node: XMLIndexer, _ type: T.Type) throws -> T {
         return try News(
             guid : node["guid"].value(),
             title : node["title"].value(),
             link : node["link"].value(),
             pubDate : node["pubDate"].value()
             ) as! T
-        
+
     }
 }

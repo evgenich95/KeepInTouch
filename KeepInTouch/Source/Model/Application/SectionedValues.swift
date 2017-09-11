@@ -51,7 +51,7 @@ public extension SectionedValues where Section: Hashable {
             current.append(value)
             dictionary[section] = current
         }
-        
+
         let sortedSections = dictionary.keys.sorted(by: sortSections)
         self.init(sortedSections.map { section in
             let values = dictionary[section] ?? []

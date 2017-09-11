@@ -21,7 +21,6 @@ class Object: NSObject {
         return []
     }
 
-
     static func == (lhs: Object, rhs: Object) -> Bool {
         return lhs.toJSONString() == rhs.toJSONString()
     }
@@ -84,7 +83,6 @@ class Object: NSObject {
         return Mirror(reflecting: self).toDictionary()
     }
 
-
     func value(byAttributePath: String) -> Any? {
         guard let attributeName = byAttributePath.components(separatedBy: ".").last else {
             fatalError("Expected at least one key")
@@ -133,7 +131,7 @@ class Object: NSObject {
 extension Mirror {
     func toPropertyList() -> [String] {
         var result = [String]()
-        result.append(contentsOf: self.children.flatMap{$0.label})
+        result.append(contentsOf: self.children.flatMap {$0.label})
 
         // Add properties of superclass:
         if let parent = self.superclassMirror {
@@ -161,5 +159,3 @@ extension Mirror {
         return dict
     }
 }
-
-
