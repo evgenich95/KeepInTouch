@@ -9,12 +9,14 @@
 import Foundation
 import UIKit
 
-class NewsSummaryCollectionViewDelegate: NSObject, UICollectionViewDataSource {
+class NewsSummaryCollectionViewDelegate: NSObject  {
     var registeredCells = [String]()
 
+    let header = NewsSummaryHeader.self
+
     typealias Data = NewsSummaryViewModel.Data
-    private var collectionView: CollectionView
-    private var data: Data
+    fileprivate var collectionView: CollectionView
+    fileprivate var data: Data
 
     init(collectionView: CollectionView, data: Data) {
         self.collectionView = collectionView
@@ -34,7 +36,10 @@ class NewsSummaryCollectionViewDelegate: NSObject, UICollectionViewDataSource {
         data = updates
         registerCells()
         collectionView.reloadData()
+        collectionView.register(header, for: .header)
     }
+
+
 
     private func registerCells() {
         let usingCellTypesStr = data.sectionsAndValues
@@ -51,6 +56,8 @@ class NewsSummaryCollectionViewDelegate: NSObject, UICollectionViewDataSource {
         }
     }
 
+}
+extension NewsSummaryCollectionViewDelegate: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         printMe(with: ["data.sections.count = \(data.sections.count)"])
         return data.sections.count
@@ -61,10 +68,17 @@ class NewsSummaryCollectionViewDelegate: NSObject, UICollectionViewDataSource {
         return data.sections[section].isEmpty ? 0 : 4
     }
 
-    //3
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = data.value(for: indexPath)
         return self.collectionView.updatedCell(ofType: cell.cellType, by: cell.value, at: indexPath)
     }
+
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+
+        let headerView = self.collectionView.view(ofType: header, assignedAs: .header, for: indexPath)
+
+        return headerView
+    }
+
 }
