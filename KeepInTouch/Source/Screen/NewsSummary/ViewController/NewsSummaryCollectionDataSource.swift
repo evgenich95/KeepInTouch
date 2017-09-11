@@ -1,5 +1,5 @@
 //
-//  NewsSummaryCollectionViewDelegate.swift
+//  NewsSummaryCollectionDataSource.swift
 //  KeepInTouch
 //
 //  Created by Anton Ivanov on 11.09.17.
@@ -9,7 +9,13 @@
 import Foundation
 import UIKit
 
-class NewsSummaryCollectionViewDelegate: NSObject  {
+protocol NewsSummaryCollectionDataSourceDelegate: class {
+    func newsSummaryCollectionDataSourceDidView(section: NewsSummaryViewModel.Section)
+}
+
+class NewsSummaryCollectionDataSource: NSObject {
+
+    weak var delegate: NewsSummaryCollectionDataSourceDelegate?
     var registeredCells = [String]()
 
     let header = NewsSummaryHeader.self
@@ -57,7 +63,7 @@ class NewsSummaryCollectionViewDelegate: NSObject  {
     }
 
 }
-extension NewsSummaryCollectionViewDelegate: UICollectionViewDataSource {
+extension NewsSummaryCollectionDataSource: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         printMe(with: ["data.sections.count = \(data.sections.count)"])
         return data.sections.count
@@ -77,8 +83,17 @@ extension NewsSummaryCollectionViewDelegate: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
         let headerView = self.collectionView.view(ofType: header, assignedAs: .header, for: indexPath)
+        let name = data.sections[indexPath.section]
+        headerView.updateUI(headerName: name, viewAction: viewSection(for: indexPath))
 
         return headerView
+    }
+
+    private func viewSection(for indexPath: IndexPath) -> EmptyFunction {
+        let section = data.sections[indexPath.section]
+        return {[weak self] in
+            self?.delegate?.newsSummaryCollectionDataSourceDidView(section: section)
+        }
     }
 
 }

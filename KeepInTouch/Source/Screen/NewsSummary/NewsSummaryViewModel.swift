@@ -10,6 +10,7 @@ import Foundation
 import PromiseKit
 
 protocol NewsSummaryViewModelDelegate: class {
+    func newsSummaryViewModelDidOpenDetails(of section: NewsSummaryViewModel.Section)
 
 }
 
@@ -88,6 +89,10 @@ class NewsSummaryViewModel {
                 //TODO: Show user alert for users
                 print("error = \(error)")
         }
+    }
+
+    func viewDetails(of section: Section) {
+        delegate?.newsSummaryViewModelDidOpenDetails(of: section)
     }
 
     // MARK: - Binding properties -

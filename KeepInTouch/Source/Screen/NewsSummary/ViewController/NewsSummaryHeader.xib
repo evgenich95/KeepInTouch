@@ -17,14 +17,17 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5gd-bX-ZZm">
-                    <rect key="frame" x="15" y="0.0" width="249" height="65"/>
+                    <rect key="frame" x="15" y="0.0" width="261" height="65"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BI-XB-etk">
-                    <rect key="frame" x="272" y="16.5" width="46" height="32.5"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="284" y="16.5" width="34" height="32.5"/>
+                    <state key="normal" title="View"/>
+                    <connections>
+                        <action selector="viewAction:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="dGM-PW-z5o"/>
+                    </connections>
                 </button>
             </subviews>
             <constraints>
@@ -38,8 +41,9 @@
             </constraints>
             <connections>
                 <outlet property="headerNameUILabel" destination="5gd-bX-ZZm" id="mob-Su-QkC"/>
+                <outlet property="viewButton" destination="9BI-XB-etk" id="osa-SX-ZBf"/>
             </connections>
-            <point key="canvasLocation" x="-250.5" y="17.5"/>
+            <point key="canvasLocation" x="-441" y="18"/>
         </collectionReusableView>
     </objects>
 </document>

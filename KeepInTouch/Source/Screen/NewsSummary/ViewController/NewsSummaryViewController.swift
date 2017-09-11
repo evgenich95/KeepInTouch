@@ -13,7 +13,7 @@ class NewsSummaryViewController: ViewController {
 
     var viewModel: NewsSummaryViewModel
 
-    var collectionViewDelegate: NewsSummaryCollectionViewDelegate!
+    var collectionDataSource: NewsSummaryCollectionDataSource!
     var collectionLayoutDelegate: NewsSummaryCollectionLayoutDelegate!
 
     @IBOutlet weak var newsCollectionView: CollectionView!
@@ -50,13 +50,14 @@ class NewsSummaryViewController: ViewController {
 
     private func setupCollectionView() {
         printMe()
-        collectionViewDelegate = NewsSummaryCollectionViewDelegate(collectionView: newsCollectionView, data: dataSource)
+        collectionDataSource = NewsSummaryCollectionDataSource(collectionView: newsCollectionView, data: dataSource)
+        collectionDataSource.delegate = self
         collectionLayoutDelegate = NewsSummaryCollectionLayoutDelegate(collectionView: newsCollectionView)
     }
 
     fileprivate func updateView() {
         printMe()
-        collectionViewDelegate.reloadData(by: dataSource)
+        collectionDataSource.reloadData(by: dataSource)
     }
 
 }
@@ -88,5 +89,11 @@ extension NewsSummaryViewController {
                 self?.showNotificationAlert(withTitle: "Error", message: "Something gone wrong. \(errorDescription)")
             }
         }
+    }
+}
+
+extension NewsSummaryViewController: NewsSummaryCollectionDataSourceDelegate {
+    func newsSummaryCollectionDataSourceDidView(section: NewsSummaryViewModel.Section) {
+        viewModel.viewDetails(of: section)
     }
 }
