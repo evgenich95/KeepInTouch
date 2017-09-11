@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SWXMLHash
+import PromiseKit
 
 extension URL {
     var request: URLRequest {
@@ -35,61 +36,27 @@ class Downloader: NSObject, URLSessionTaskDelegate {
         return URLSession(configuration: self.sessionConfiguration, delegate: self, delegateQueue: nil)
     }()
 
-    func loadObject<T: XMLIndexerDeserializable>(url: URL, nodePath: [String], completion: Completion<T>) {
-        loadData(url: url) { (result) in
-            switch result {
-            case .success(let data):
-                guard let object = XMLParser<T>(nodePath: nodePath, xmlData: data).object else {
-                    completion?(.failed(NetworkError(message: "Parse error")))
-                    return
-                }
-                completion?(.success(object))
-            case .failed(let error):
-                completion?(.failed(error))
-            }
-        }
-    }
-
-    func loadArray<T: XMLIndexerDeserializable>(url: URL, nodePath: [String], completion: Completion<[T]>) {
-        loadData(url: url) { (result) in
-            switch result {
-            case .success(let data):
-                guard let array = XMLParser<T>(nodePath: nodePath, xmlData: data).array else {
-                    completion?(.failed(NetworkError(message: "Parse error")))
-                    return
-                }
-                completion?(.success(array))
-            case .failed(let error):
-                completion?(.failed(error))
-            }
-        }
-    }
-
-    private func loadData(url: URL, setting: RequestSetting = RequestSetting.defaults, completion: Completion<Data>) {
+    func loadData(url: URL, setting: RequestSetting = RequestSetting.defaults) -> URLDataPromise {
         session.configuration.requestCachePolicy = setting.policy
-        let task = session.dataTask(with: url.request) {[weak self] (data, response, error) in
-            guard
-                let data = data,
-                let response = response
-                else {
-                    let defaultError = NetworkError(message: "Did not receive data")
-                    completion?(.failed(error ?? defaultError))
-                    return
-            }
-
-            completion?(.success(data))
+        let dataPromise: URLDataPromise = session.dataTask(with: url.request)
+        _ = dataPromise.asDataAndResponse().then {[weak self] data, response -> Void in
             if setting.isNeedCaching {
                 self?.cache(response, data, for: url)
             }
         }
+        return dataPromise
+    }
 
-        task.resume()
+    func loadImage(url: URL) -> Promise<UIImage> {
+        let setting = RequestSetting(isNeedCaching: true, policy: .returnCacheDataElseLoad)
+        return loadData(url: url, setting: setting).asImage()
     }
 
     private func cache(_ response: URLResponse, _ data: Data, for url: URL) {
         DispatchQueue.global(qos: .userInitiated).async {[weak self] in
             let cachedResponse = CachedURLResponse(response: response, data: data, userInfo:nil, storagePolicy: URLCache.StoragePolicy.allowed)
             self?.urlCache.storeCachedResponse(cachedResponse, for: url.request)
+            printMe(with: ["cached"])
         }
     }
 }
