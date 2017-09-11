@@ -13,8 +13,15 @@ class NewsSummaryViewController: ViewController {
 
     var viewModel: NewsSummaryViewModel
 
-    @IBOutlet weak var newsCollectionView: UICollectionView!
-    
+    var collectionViewDelegate: NewsSummaryCollectionViewDelegate!
+    var collectionLayoutDelegate: NewsSummaryCollectionLayoutDelegate!
+
+    @IBOutlet weak var newsCollectionView: CollectionView!
+
+    var dataSource: NewsSummaryViewModel.Data {
+        return viewModel.sectionedValues
+    }
+
     init(viewModel: NewsSummaryViewModel) {
         self.viewModel = viewModel
         super.init()
@@ -37,11 +44,19 @@ class NewsSummaryViewController: ViewController {
 
     internal override func setupView() {
         super.setupView()
+        setupCollectionView()
 
     }
 
-    fileprivate func updateView() {
+    private func setupCollectionView() {
+        printMe()
+        collectionViewDelegate = NewsSummaryCollectionViewDelegate(collectionView: newsCollectionView, data: dataSource)
+        collectionLayoutDelegate = NewsSummaryCollectionLayoutDelegate(collectionView: newsCollectionView)
+    }
 
+    fileprivate func updateView() {
+        printMe()
+        collectionViewDelegate.reloadData(by: dataSource)
     }
 
 }
