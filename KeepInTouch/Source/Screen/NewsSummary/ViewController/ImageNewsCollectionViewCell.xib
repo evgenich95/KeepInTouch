@@ -26,6 +26,7 @@
                     </label>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Oam-y4-rJL" secondAttribute="trailing" id="Kts-SO-v7z"/>
                 <constraint firstItem="Oam-y4-rJL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cCf-x5-DFp"/>
