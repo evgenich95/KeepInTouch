@@ -9,7 +9,7 @@
 import Foundation
 
 protocol NewsSectionDetailViewModelDelegate: class {
-
+    func newsSectionDetailViewModelDidOpenDetails(of news: NewsSectionDetailViewModel.Value)
 }
 
 class NewsSectionDetailViewModel {
@@ -47,6 +47,10 @@ class NewsSectionDetailViewModel {
         defer {
             self.sectionedValues = sectionedValues
         }
+    }
+
+    func openDetail(of news: Value) {
+        delegate?.newsSectionDetailViewModelDidOpenDetails(of: news)
     }
 
     func loadRequiredData() {

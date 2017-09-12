@@ -10,7 +10,8 @@ import Foundation
 import PromiseKit
 
 protocol NewsSummaryViewModelDelegate: class {
-    func newsSummaryViewModelDidOpenDetails(of section: SectionedValues<NewsSummaryViewModel.Section, NewsSummaryViewModel.Value>)
+    func newsSummaryViewModelDidOpenSectionDetails(of section: SectionedValues<NewsSummaryViewModel.Section, NewsSummaryViewModel.Value>)
+    func newsSummaryViewModelDidOpenValueDetails(of value: NewsSummaryViewModel.Value)
 }
 class NewsSummaryViewModel {
     weak var delegate: NewsSummaryViewModelDelegate?
@@ -57,7 +58,7 @@ class NewsSummaryViewModel {
 
         firstly {
             when(fulfilled: promises)
-            }.then {[weak self] results -> Void in
+            }.then(on: background) {[weak self] results -> Void in
                 guard let `self` = self else {
                     return
                 }
@@ -82,8 +83,12 @@ class NewsSummaryViewModel {
     func viewDetails(of section: Section) {
         if let detailedData = data.sectionsAndValues.first(where: {$0.0 == section}) {
             let sectionedValues = SectionedValues<Section, Value>([detailedData])
-            delegate?.newsSummaryViewModelDidOpenDetails(of: sectionedValues)
+            delegate?.newsSummaryViewModelDidOpenSectionDetails(of: sectionedValues)
         }
+    }
+
+    func openDetails(of value: Value) {
+        delegate?.newsSummaryViewModelDidOpenValueDetails(of: value)
     }
 
     // MARK: - Binding properties -

@@ -53,10 +53,20 @@ extension NewsSummaryCoordinator {
         addChildCoordinator(newsSectionDetailCoordinator)
         startChildren()
     }
+
+    fileprivate func viewDetails(of value: NewsSummaryViewModel.Value) {
+        removeAllChildren()
+        let newsDetailCoordinator = NewsDetailCoordinator(navigationController: navigationController, detailNews: value)
+        addChildCoordinator(newsDetailCoordinator)
+        startChildren()
+    }
 }
 
 extension NewsSummaryCoordinator: NewsSummaryViewModelDelegate {
-    func newsSummaryViewModelDidOpenDetails(of section: NewsSectionDetailCoordinator.Data) {
+    func newsSummaryViewModelDidOpenValueDetails(of value: NewsSummaryViewModel.Value) {
+        viewDetails(of: value)
+    }
+    func newsSummaryViewModelDidOpenSectionDetails(of section: NewsSectionDetailCoordinator.Data) {
         viewSectioned(data: section)
     }
 }

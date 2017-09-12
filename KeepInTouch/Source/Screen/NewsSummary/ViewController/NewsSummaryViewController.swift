@@ -14,7 +14,7 @@ class NewsSummaryViewController: ViewController {
     var viewModel: NewsSummaryViewModel
 
     var collectionDataSource: NewsSummaryCollectionDataSource!
-    var collectionLayoutDelegate: NewsSummaryCollectionLayoutDelegate!
+    var collectionLayout: NewsSummaryCollectionLayout!
 
     @IBOutlet weak var newsCollectionView: CollectionView!
 
@@ -31,15 +31,19 @@ class NewsSummaryViewController: ViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        viewModel.loadRequiredData()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        background.async {[weak self] in
+            self?.viewModel.loadRequiredData()
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         bindToViewModel()
+//        viewModel.loadRequiredData()
     }
 
     internal override func setupView() {
@@ -52,7 +56,8 @@ class NewsSummaryViewController: ViewController {
         printMe()
         collectionDataSource = NewsSummaryCollectionDataSource(collectionView: newsCollectionView, data: dataSource)
         collectionDataSource.delegate = self
-        collectionLayoutDelegate = NewsSummaryCollectionLayoutDelegate(collectionView: newsCollectionView)
+        collectionLayout = NewsSummaryCollectionLayout(collectionView: newsCollectionView)
+        collectionLayout.delegate = self
     }
 
     fileprivate func updateView() {
@@ -97,3 +102,11 @@ extension NewsSummaryViewController: NewsSummaryCollectionDataSourceDelegate {
         viewModel.viewDetails(of: section)
     }
 }
+
+extension NewsSummaryViewController: NewsSummaryCollectionLayoutDelegate {
+    func newsSummaryCollectionLayoutDidSelectItem(at indexPaht: IndexPath) {
+        let value = dataSource.value(for: indexPaht).value
+        viewModel.openDetails(of: value)
+    }
+}
+

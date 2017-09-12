@@ -41,7 +41,7 @@ class Downloader: NSObject, URLSessionTaskDelegate {
 
         session.configuration.requestCachePolicy = setting.policy
         let dataPromise: URLDataPromise = session.dataTask(with: url.request)
-        _ = dataPromise.asDataAndResponse().then {[weak self] data, response -> Void in
+        _ = dataPromise.asDataAndResponse().then(on: background) {[weak self] data, response -> Void in
             if setting.isNeedCaching {
                 self?.cache(response, data, for: url)
             }
