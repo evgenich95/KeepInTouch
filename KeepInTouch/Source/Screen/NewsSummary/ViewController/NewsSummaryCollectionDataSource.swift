@@ -39,6 +39,7 @@ class NewsSummaryCollectionDataSource: NSObject {
     }
 
     func reloadData(by updates: Data) {
+        printMe()
         data = updates
         registerCellsIfNeed()
         collectionView.reloadData()
@@ -63,7 +64,6 @@ class NewsSummaryCollectionDataSource: NSObject {
 }
 extension NewsSummaryCollectionDataSource: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        printMe(with: ["data.sections.count = \(data.sections.count)"])
         return data.sections.count
     }
 
@@ -93,5 +93,4 @@ extension NewsSummaryCollectionDataSource: UICollectionViewDataSource {
             self?.delegate?.newsSummaryCollectionDataSourceDidView(section: section)
         }
     }
-
 }

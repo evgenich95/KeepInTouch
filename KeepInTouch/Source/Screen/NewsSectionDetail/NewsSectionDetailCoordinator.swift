@@ -50,8 +50,16 @@ class NewsSectionDetailCoordinator: Coordinator {
 
 extension NewsSectionDetailCoordinator {
     // MARK: - Open children ViewModels functions -
+    fileprivate func openDetails(of item: NewsSectionDetailViewModel.Value) {
+        removeAllChildren()
+        let newsDetailCoordinator = NewsDetailCoordinator(navigationController: navigationController, detailNews: item)
+        addChildCoordinator(newsDetailCoordinator)
+        startChildren()
+    }
 }
 
 extension NewsSectionDetailCoordinator: NewsSectionDetailViewModelDelegate {
-
+    func newsSectionDetailViewModelDidOpenDetails(of news: NewsSectionDetailViewModel.Value) {
+        openDetails(of: news)
+    }
 }

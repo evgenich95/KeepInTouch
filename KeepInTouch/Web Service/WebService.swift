@@ -22,7 +22,7 @@ class WebService {
         return Promise {fulfill, reject in
             printMe(with: ["url = \(url)"])
 
-            Downloader.shared.loadData(url: url).then { data -> Void in
+            Downloader.shared.loadData(url: url).then(on: background) { data -> Void in
                 let parser = XMLParser<News>.init(nodePath: nodePath, xmlData: data)
                 guard let array = parser.array else {
                     let parseError = NetworkError(message: "Parse Error")

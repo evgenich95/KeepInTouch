@@ -15,13 +15,14 @@ class ImageNewsCollectionViewCell: SingleItemCollectionCell<News> {
     @IBOutlet weak var newsUIImageView: UIImageView!
 
     override func prepareForReuse() {
+        super.prepareForReuse()
         newsUIImageView.image = nil
         newsUIImageView.isHidden = false
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.addBottomBorderWithColor(color: .gray, width: 1)
+        contentView.addBottomBorder(color: .gray, width: 1)
     }
 
     override func awakeFromNib() {
@@ -37,6 +38,5 @@ class ImageNewsCollectionViewCell: SingleItemCollectionCell<News> {
         }
         newsTitleUILabel.text = object.title
         descriptionUILabel.text = object.definition.replacingOccurrences(of: "^\\s*", with: "", options: .regularExpression)
-
     }
 }

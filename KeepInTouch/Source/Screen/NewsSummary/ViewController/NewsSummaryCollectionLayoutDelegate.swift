@@ -1,5 +1,5 @@
 //
-//  NewsSummaryCollectionLayoutDelegate.swift
+//  NewsSummaryCollectionLayout.swift
 //  KeepInTouch
 //
 //  Created by Anton Ivanov on 11.09.17.
@@ -9,7 +9,13 @@
 import Foundation
 import UIKit
 
-class NewsSummaryCollectionLayoutDelegate: NSObject, UICollectionViewDelegateFlowLayout {
+protocol NewsSummaryCollectionLayoutDelegate: class {
+    func newsSummaryCollectionLayoutDidSelectItem(at indexPaht: IndexPath)
+}
+
+class NewsSummaryCollectionLayout: NSObject, UICollectionViewDelegateFlowLayout {
+
+    weak var delegate: NewsSummaryCollectionLayoutDelegate?
 
     var collectionView: UICollectionView
 
@@ -61,6 +67,11 @@ class NewsSummaryCollectionLayoutDelegate: NSObject, UICollectionViewDelegateFlo
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 30.0)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.newsSummaryCollectionLayoutDidSelectItem(at: indexPath)
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
 
 }

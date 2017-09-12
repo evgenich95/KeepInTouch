@@ -1,32 +1,34 @@
 //
-//  NewsSectionDetailViewController.swift
+//  NewsDetailViewController.swift
 //  KeepInTouch
 //
-//  Created by Anton Ivanov on 12/09/2017.
+//  Created by Anton Ivanov on 13/09/2017.
 //  Copyright © 2017 Anton_Ivanov. All rights reserved.
 //
 
 import Foundation
 import UIKit
+import SafariServices
 
-class NewsSectionDetailViewController: ViewController {
+class NewsDetailViewController: ViewController {
 
-    @IBOutlet weak var tableView: TableView!
-    var tableViewDelegate: NewsSectionDetailTableViewDataSource!
+    var viewModel: NewsDetailViewModel
+    var safariViewController: SFSafariViewController
 
-    var viewModel: NewsSectionDetailViewModel
-
-    var dataSource: NewsSectionDetailViewModel.TableData {
-        return viewModel.tableData
-    }
-
-    init(viewModel: NewsSectionDetailViewModel) {
+    init(viewModel: NewsDetailViewModel) {
         self.viewModel = viewModel
+        self.safariViewController = SFSafariViewController(url: viewModel.url)
+
         super.init()
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        view.set(safariViewController)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -42,22 +44,22 @@ class NewsSectionDetailViewController: ViewController {
 
     internal override func setupView() {
         super.setupView()
-        configureTableView()
+        setupSafariController()
     }
 
-    private func configureTableView() {
-        tableViewDelegate = NewsSectionDetailTableViewDataSource(tableView: tableView, data: dataSource)
-        tableViewDelegate.delegate = self
+    private func setupSafariController() {
+        addChildViewController(safariViewController)
+        view.set(safariViewController)
     }
 
     fileprivate func updateView() {
-        tableViewDelegate.reloadData(by: dataSource)
+
     }
 
 }
 
 // MARK: - ViewModel Binding -
-extension NewsSectionDetailViewController {
+extension NewsDetailViewController {
 
     fileprivate func bindToViewModel() {
         viewModel.dataDidChange = {[weak self] in
@@ -83,10 +85,5 @@ extension NewsSectionDetailViewController {
                 self?.showNotificationAlert(withTitle: "Error", message: "Something gone wrong. \(errorDescription)")
             }
         }
-    }
-}
-extension NewsSectionDetailViewController: NewsSectionDetailTableViewDataSourceDelegate {
-    func newsSectionDetailTableViewDataSourceDidSelect(item: NewsSectionDetailViewModel.Value) {
-        viewModel.openDetail(of: item)
     }
 }

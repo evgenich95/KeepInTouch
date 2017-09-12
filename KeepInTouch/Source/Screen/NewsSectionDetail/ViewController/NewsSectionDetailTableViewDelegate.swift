@@ -1,5 +1,5 @@
 //
-//  NewsSectionDetailTableViewDelegate.swift
+//  NewsSectionDetailTableViewDataSource.swift
 //  KeepInTouch
 //
 //  Created by Anton Ivanov on 12.09.17.
@@ -9,7 +9,13 @@
 import Foundation
 import UIKit
 
-class NewsSectionDetailTableViewDelegate: NSObject {
+protocol NewsSectionDetailTableViewDataSourceDelegate: class {
+    func newsSectionDetailTableViewDataSourceDidSelect(item: NewsSectionDetailViewModel.Value)
+}
+
+class NewsSectionDetailTableViewDataSource: NSObject {
+    weak var delegate: NewsSectionDetailTableViewDataSourceDelegate?
+
     typealias Data = NewsSectionDetailViewModel.TableData
     var tableView: TableView
     var data: Data
@@ -27,13 +33,22 @@ class NewsSectionDetailTableViewDelegate: NSObject {
     }
 
     private func setup() {
-        tableView.delegate = self
-        tableView.dataSource = self
+        configureTableView()
+        registerCellsIfNeed()
     }
 
-    func updateData(by updates: Data) {
+    private func configureTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.tableFooterView = UIView()
+    }
+
+    func reloadData(by updates: Data) {
         data = updates
         registerCellsIfNeed()
+        tableView.reloadData()
     }
 
     private func registerCellsIfNeed() {
@@ -52,7 +67,7 @@ class NewsSectionDetailTableViewDelegate: NSObject {
     }
 }
 
-extension NewsSectionDetailTableViewDelegate: UITableViewDelegate, UITableViewDataSource {
+extension NewsSectionDetailTableViewDataSource: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return data.sections.count
     }
@@ -66,4 +81,9 @@ extension NewsSectionDetailTableViewDelegate: UITableViewDelegate, UITableViewDa
         return self.tableView.updatedCell(ofType: cell.type, by: cell.value, at: indexPath)
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cellValue = data.value(for: indexPath).value
+        delegate?.newsSectionDetailTableViewDataSourceDidSelect(item: cellValue)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

@@ -22,23 +22,23 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3N-Bn-SNS">
                         <rect key="frame" x="10" y="10" width="355" height="136"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDy-G2-XH3">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tDy-G2-XH3">
                                 <rect key="frame" x="0.0" y="0.0" width="355" height="136"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xMv-Hz-QMp">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="136"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i94-CH-gjp">
-                                        <rect key="frame" x="150" y="0.0" width="205" height="136"/>
+                                        <rect key="frame" x="160" y="0.0" width="195" height="136"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" verticalCompressionResistancePriority="754" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhL-aP-RRV">
-                                                <rect key="frame" x="0.0" y="0.0" width="205" height="12"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="195" height="12"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmV-xp-knz">
-                                                <rect key="frame" x="0.0" y="12" width="205" height="124"/>
+                                                <rect key="frame" x="0.0" y="12" width="195" height="124"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -63,7 +63,7 @@
                 <constraint firstAttribute="trailing" secondItem="x3N-Bn-SNS" secondAttribute="trailing" constant="10" id="8Mr-CX-4eX"/>
                 <constraint firstItem="x3N-Bn-SNS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="NnY-0a-arH"/>
                 <constraint firstItem="x3N-Bn-SNS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="W08-OX-xI5"/>
-                <constraint firstItem="xMv-Hz-QMp" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="4/10" id="fXE-Y9-LUk"/>
+                <constraint firstItem="xMv-Hz-QMp" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="4/10" priority="900" id="fXE-Y9-LUk"/>
                 <constraint firstAttribute="bottom" secondItem="x3N-Bn-SNS" secondAttribute="bottom" constant="10" id="rNO-es-IvW"/>
             </constraints>
             <size key="customSize" width="375" height="156"/>
