@@ -57,6 +57,7 @@ class NewsSummaryViewModel {
                     let newSection = (type.description, cells)
                     sectionedValues = sectionedValues.appending(sectionAndValue: newSection)
                 }
+                printMe(with: ["self.sectionedValues = \(sectionedValues.sectionsAndValues[0].1)"])
                 self.sectionedValues = sectionedValues
 
             }.catch { (error) in

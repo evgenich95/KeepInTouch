@@ -7,14 +7,23 @@
 //
 
 import Foundation
+import SWXMLHash
 
-class Object: NSObject {
+class Object: NSObject, XMLIndexerDeserializable {
 
     override func isEqual(_ object: Any?) -> Bool {
         if let rhs = object as? Object {
             return self == rhs
         }
         return false
+    }
+
+    static func deserialize(_ node: XMLIndexer) throws -> Self {
+        return try self.prase(node, self)
+    }
+
+    class func prase<T>(_ node: XMLIndexer, _ type: T.Type) throws -> T {
+        fatalError("'\(self)' class must implement prase(_:) function")
     }
 
     class func ignoredProperties() -> [String] {

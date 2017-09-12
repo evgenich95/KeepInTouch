@@ -26,11 +26,13 @@ enum NewsType: String, CustomStringConvertible {
     }
 }
 
-class News: Object, XMLIndexerDeserializable {
-    var guid: String = ""
-    var title: String = ""
-    var link: String = ""
-    var pubDate: String = ""
+class News: Object {
+    var guid = ""
+    var title = ""
+    var link = ""
+    var pubDate = Date()
+    var definition = ""
+    var url: URL?
 
     var type: NewsType = .none
 
@@ -38,34 +40,35 @@ class News: Object, XMLIndexerDeserializable {
         return ["type"]
     }
 
-    init(guid: String,
-         title: String,
-         link: String,
-         pubDate: String) {
+    init(guid: String, title: String, link: String, pubDate: Date, definition: String, url: URL?) {
         self.guid = guid
         self.title = title
         self.link = link
         self.pubDate = pubDate
+        self.definition = definition
+        self.url = url
+
         super.init()
     }
 
-    static func deserialize(_ node: XMLIndexer) throws -> Self {
-        return try self.prase(node, self)
-        //        return try self.init(
-        //            guid : node["guid"].value(),
-        //            title : node["title"].value(),
-        //            link : node["link"].value(),
-        //            pubDate : node["pubDate"].value()
-        //        )
-    }
+    override class func prase<T>(_ node: XMLIndexer, _ type: T.Type) throws -> T {
 
-    static func prase<T>(_ node: XMLIndexer, _ type: T.Type) throws -> T {
+        let dateStr: String = try node["pubDate"].value()
+        guard let date = DateFormatterTransform().transformFrom(dateStr) else {
+            throw IndexingError.attribute(attr: "pubDate")
+        }
+
+        let urlStr = node["enclosure"].element?.attribute(by: "url")?.text
+        let url = URL(string: urlStr ?? "")
+
+
         return try News(
             guid : node["guid"].value(),
             title : node["title"].value(),
             link : node["link"].value(),
-            pubDate : node["pubDate"].value()
+            pubDate : date,
+            definition: node["description"].value(),
+            url: url
             ) as! T
-
     }
 }

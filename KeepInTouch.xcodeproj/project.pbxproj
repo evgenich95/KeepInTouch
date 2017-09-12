@@ -36,6 +36,9 @@
 		56E3537A1F656B44006E775F /* DataSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E353791F656B44006E775F /* DataSerializer.swift */; };
 		56E3537C1F656DD4006E775F /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E3537B1F656DD4006E775F /* XMLParser.swift */; };
 		56E3537E1F657CA3006E775F /* SectionedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E3537D1F657CA3006E775F /* SectionedValues.swift */; };
+		56EC44441F67AA52002DAD37 /* DateFormatterTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EC44431F67AA52002DAD37 /* DateFormatterTransform.swift */; };
+		56EC444C1F67AECD002DAD37 /* KeepInTouchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EC444B1F67AECD002DAD37 /* KeepInTouchTests.swift */; };
+		56EC44541F67AEE9002DAD37 /* DateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EC44531F67AEE9002DAD37 /* DateFormatterTests.swift */; };
 		56EDE4581F66597F00570113 /* NewsSummaryCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDE4571F66597F00570113 /* NewsSummaryCollectionDataSource.swift */; };
 		56EDE45F1F665E7700570113 /* NewsSummaryCollectionLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDE45E1F665E7700570113 /* NewsSummaryCollectionLayoutDelegate.swift */; };
 		56EDE4621F66631400570113 /* ImageNewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDE4601F66631400570113 /* ImageNewsCollectionViewCell.swift */; };
@@ -47,6 +50,16 @@
 		6A478B594F7DB364E244B1EA /* NewsSummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A962AFF8142A12A2B29ADDC /* NewsSummaryViewModel.swift */; };
 		88D96B7CF13FF6738210A62A /* Pods_KeepInTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2BE642881FC08F3DCDA7AB /* Pods_KeepInTouch.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		56EC444E1F67AECD002DAD37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5676AFC01F6553FE00F66296 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5676AFC71F6553FE00F66296;
+			remoteInfo = KeepInTouch;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3A2BE642881FC08F3DCDA7AB /* Pods_KeepInTouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepInTouch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +92,11 @@
 		56E353791F656B44006E775F /* DataSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSerializer.swift; sourceTree = "<group>"; };
 		56E3537B1F656DD4006E775F /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 		56E3537D1F657CA3006E775F /* SectionedValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedValues.swift; sourceTree = "<group>"; };
+		56EC44431F67AA52002DAD37 /* DateFormatterTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterTransform.swift; sourceTree = "<group>"; };
+		56EC44491F67AECD002DAD37 /* KeepInTouchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeepInTouchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56EC444B1F67AECD002DAD37 /* KeepInTouchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepInTouchTests.swift; sourceTree = "<group>"; };
+		56EC444D1F67AECD002DAD37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56EC44531F67AEE9002DAD37 /* DateFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterTests.swift; sourceTree = "<group>"; };
 		56EDE4571F66597F00570113 /* NewsSummaryCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSummaryCollectionDataSource.swift; sourceTree = "<group>"; };
 		56EDE45E1F665E7700570113 /* NewsSummaryCollectionLayoutDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSummaryCollectionLayoutDelegate.swift; sourceTree = "<group>"; };
 		56EDE4601F66631400570113 /* ImageNewsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageNewsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -100,6 +118,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				88D96B7CF13FF6738210A62A /* Pods_KeepInTouch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56EC44461F67AECD002DAD37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				5676AFCA1F6553FE00F66296 /* KeepInTouch */,
+				56EC444A1F67AECD002DAD37 /* KeepInTouchTests */,
 				21BB254E63DFE42273B6B9D1 /* Frameworks */,
 				61DB1C343A330833285914F9 /* Pods */,
 				5676AFC91F6553FE00F66296 /* Products */,
@@ -140,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				5676AFC81F6553FE00F66296 /* KeepInTouch.app */,
+				56EC44491F67AECD002DAD37 /* KeepInTouchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -320,8 +347,19 @@
 			isa = PBXGroup;
 			children = (
 				56E353791F656B44006E775F /* DataSerializer.swift */,
+				56EC44431F67AA52002DAD37 /* DateFormatterTransform.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		56EC444A1F67AECD002DAD37 /* KeepInTouchTests */ = {
+			isa = PBXGroup;
+			children = (
+				56EC444B1F67AECD002DAD37 /* KeepInTouchTests.swift */,
+				56EC444D1F67AECD002DAD37 /* Info.plist */,
+				56EC44531F67AEE9002DAD37 /* DateFormatterTests.swift */,
+			);
+			path = KeepInTouchTests;
 			sourceTree = "<group>";
 		};
 		56EDE4561F66595A00570113 /* Delegate */ = {
@@ -403,6 +441,24 @@
 			productReference = 5676AFC81F6553FE00F66296 /* KeepInTouch.app */;
 			productType = "com.apple.product-type.application";
 		};
+		56EC44481F67AECD002DAD37 /* KeepInTouchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56EC44501F67AECD002DAD37 /* Build configuration list for PBXNativeTarget "KeepInTouchTests" */;
+			buildPhases = (
+				56EC44451F67AECD002DAD37 /* Sources */,
+				56EC44461F67AECD002DAD37 /* Frameworks */,
+				56EC44471F67AECD002DAD37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56EC444F1F67AECD002DAD37 /* PBXTargetDependency */,
+			);
+			name = KeepInTouchTests;
+			productName = KeepInTouchTests;
+			productReference = 56EC44491F67AECD002DAD37 /* KeepInTouchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -417,6 +473,12 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = GB85HYMZT6;
 						ProvisioningStyle = Automatic;
+					};
+					56EC44481F67AECD002DAD37 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = GB85HYMZT6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5676AFC71F6553FE00F66296;
 					};
 				};
 			};
@@ -434,6 +496,7 @@
 			projectRoot = "";
 			targets = (
 				5676AFC71F6553FE00F66296 /* KeepInTouch */,
+				56EC44481F67AECD002DAD37 /* KeepInTouchTests */,
 			);
 		};
 /* End PBXProject section */
@@ -449,6 +512,13 @@
 				5676AFD31F6553FE00F66296 /* Assets.xcassets in Resources */,
 				4B7F6F4368EB1C9F4C707CC9 /* NewsSummaryViewController.xib in Resources */,
 				56EDE4631F66631400570113 /* ImageNewsCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56EC44471F67AECD002DAD37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +595,7 @@
 				5676AFF01F65574400F66296 /* ObjectBuilder.swift in Sources */,
 				5676AFEE1F65572900F66296 /* DebugPrinter.swift in Sources */,
 				5676AFE11F6554F200F66296 /* AppCoordinator.swift in Sources */,
+				56EC44441F67AA52002DAD37 /* DateFormatterTransform.swift in Sources */,
 				5676AFEC1F65570600F66296 /* Thread.swift in Sources */,
 				5676AFE51F65557700F66296 /* MainFlowCoordinator.swift in Sources */,
 				56A744E31F668EBD00952FBF /* Cell.swift in Sources */,
@@ -555,7 +626,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		56EC44451F67AECD002DAD37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56EC44541F67AEE9002DAD37 /* DateFormatterTests.swift in Sources */,
+				56EC444C1F67AECD002DAD37 /* KeepInTouchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		56EC444F1F67AECD002DAD37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5676AFC71F6553FE00F66296 /* KeepInTouch */;
+			targetProxy = 56EC444E1F67AECD002DAD37 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5676AFD41F6553FE00F66296 /* LaunchScreen.storyboard */ = {
@@ -693,6 +781,34 @@
 			};
 			name = Release;
 		};
+		56EC44511F67AECD002DAD37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = GB85HYMZT6;
+				INFOPLIST_FILE = KeepInTouchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iae.KeepInTouchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeepInTouch.app/KeepInTouch";
+			};
+			name = Debug;
+		};
+		56EC44521F67AECD002DAD37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = GB85HYMZT6;
+				INFOPLIST_FILE = KeepInTouchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iae.KeepInTouchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeepInTouch.app/KeepInTouch";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -713,6 +829,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		56EC44501F67AECD002DAD37 /* Build configuration list for PBXNativeTarget "KeepInTouchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56EC44511F67AECD002DAD37 /* Debug */,
+				56EC44521F67AECD002DAD37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
