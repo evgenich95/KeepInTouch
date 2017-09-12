@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsSummaryViewController" customModule="KeepInTouch" customModuleProvider="target">
             <connections>
-                <outlet property="newsCollectionView" destination="ftF-gs-ZLZ" id="qGm-hl-K4I"/>
+                <outlet property="newsCollectionView" destination="jXm-me-ziG" id="zQ4-8c-TEe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,10 +20,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ftF-gs-ZLZ" customClass="CollectionView" customModule="KeepInTouch" customModuleProvider="target">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jXm-me-ziG" customClass="CollectionView" customModule="KeepInTouch" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6vD-E4-S8X">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="F2j-zq-cWV">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -31,12 +31,12 @@
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="ftF-gs-ZLZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GWR-fV-TDF"/>
-                <constraint firstAttribute="bottom" secondItem="ftF-gs-ZLZ" secondAttribute="bottom" id="i6q-Qt-ssr"/>
-                <constraint firstAttribute="trailing" secondItem="ftF-gs-ZLZ" secondAttribute="trailing" id="rua-5o-zeS"/>
-                <constraint firstItem="ftF-gs-ZLZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wMS-C2-zye"/>
+                <constraint firstItem="jXm-me-ziG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8Ip-sg-Gjb"/>
+                <constraint firstAttribute="bottom" secondItem="jXm-me-ziG" secondAttribute="bottom" id="TG3-RL-iF1"/>
+                <constraint firstAttribute="trailing" secondItem="jXm-me-ziG" secondAttribute="trailing" id="hiN-f5-VCy"/>
+                <constraint firstItem="jXm-me-ziG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qJg-5Q-asb"/>
             </constraints>
         </view>
     </objects>

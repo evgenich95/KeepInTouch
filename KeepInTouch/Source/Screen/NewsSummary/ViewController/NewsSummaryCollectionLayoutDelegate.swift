@@ -13,8 +13,8 @@ class NewsSummaryCollectionLayoutDelegate: NSObject, UICollectionViewDelegateFlo
 
     var collectionView: UICollectionView
 
-    let mixSpaceBetweenCells: CGFloat = 0.5
-    let mixSpaceBetweenSections: CGFloat = 0.5
+    let mixSpaceBetweenCells: CGFloat = 0.25
+    let mixSpaceBetweenSections: CGFloat = 0.25
 
     init(collectionView: UICollectionView) {
         self.collectionView = collectionView
@@ -29,26 +29,34 @@ class NewsSummaryCollectionLayoutDelegate: NSObject, UICollectionViewDelegateFlo
         collectionView.delegate = self
     }
 
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+
+    }
+
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
+
         let maxWidth = collectionView.bounds.width
 
         let width = (indexPath.section == 0) ?  maxWidth : maxWidth / 2
 
-        return CGSize(width: width - mixSpaceBetweenCells, height: 50.0)
+        return CGSize(width: width, height: 100)
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return mixSpaceBetweenSections
+//        return mixSpaceBetweenSections
+        return 0
     }
 
     func collectionView(_ collectionView: UICollectionView, layout
         collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return mixSpaceBetweenCells
+//        return mixSpaceBetweenCells
+        return 0
+
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class OneObjectPresentableCell<T>: UICollectionViewCell {
+class SingleItemCollectionCell<T>: UICollectionViewCell {
     func updateUI(by object: T) {
         fatalError("Not overriden updateUI method in \(String(describing: self)) class")
     }

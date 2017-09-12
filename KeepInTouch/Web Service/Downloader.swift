@@ -37,17 +37,21 @@ class Downloader: NSObject, URLSessionTaskDelegate {
     }()
 
     func loadData(url: URL, setting: RequestSetting = RequestSetting.defaults) -> URLDataPromise {
+        printMe(with: ["url = \(url)"])
+
         session.configuration.requestCachePolicy = setting.policy
         let dataPromise: URLDataPromise = session.dataTask(with: url.request)
-        _ = dataPromise.asDataAndResponse().then {[weak self] data, response -> Void in
+        _ = dataPromise.asDataAndResponse().then {[weak self] _, _ -> Void in
             if setting.isNeedCaching {
-                self?.cache(response, data, for: url)
+//                self?.cache(response, data, for: url)
             }
         }
         return dataPromise
     }
 
     func loadImage(url: URL) -> Promise<UIImage> {
+        printMe(with: ["url = \(url)"])
+
         let setting = RequestSetting(isNeedCaching: true, policy: .returnCacheDataElseLoad)
         return loadData(url: url, setting: setting).asImage()
     }

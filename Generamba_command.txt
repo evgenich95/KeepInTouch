@@ -1,2 +1,2 @@
 For models:
-generamba gen NewsSummary MVVM --module_path KeepInTouch/Source/Screen
+generamba gen NewsSectionDetail MVVM --module_path KeepInTouch/Source/Screen

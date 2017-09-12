@@ -24,16 +24,15 @@ enum SupplementaryViewType {
 }
 
 class CollectionView: UICollectionView {
-    func register<T: UICollectionViewCell>(_ cell: T.Type) {
-        let nibName = String(describing: T.self)
+    func register(cellType: UICollectionViewCell.Type) {
+        let nibName = String(describing: cellType)
         let nib = UINib(nibName: nibName, bundle: nil)
         register(nib, forCellWithReuseIdentifier: nibName)
     }
 
     func register(_ cellClassName: String) {
-        let nibName = cellClassName
-        let nib = UINib(nibName: nibName, bundle: nil)
-        register(nib, forCellWithReuseIdentifier: nibName)
+        let nib = UINib(nibName: cellClassName, bundle: nil)
+        register(nib, forCellWithReuseIdentifier: cellClassName)
     }
 
     func register<T: UICollectionReusableView>(_ view: T.Type, for type: SupplementaryViewType) {
@@ -52,8 +51,7 @@ class CollectionView: UICollectionView {
         return view
     }
 
-
-    func updatedCell<T, P>(ofType: T.Type, by object: P, at indexPath: IndexPath) -> T where T: OneObjectPresentableCell<P> {
+    func updatedCell<Cell, Value>(ofType: Cell.Type, by object: Value, at indexPath: IndexPath) -> Cell where Cell: SingleItemCollectionCell<Value> {
         let cell = getRegisteredCell(ofType: ofType, at: indexPath)
         cell.updateUI(by: object)
         return cell

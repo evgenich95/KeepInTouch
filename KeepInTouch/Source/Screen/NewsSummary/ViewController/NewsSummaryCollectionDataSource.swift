@@ -20,7 +20,7 @@ class NewsSummaryCollectionDataSource: NSObject {
 
     let header = NewsSummaryHeader.self
 
-    typealias Data = NewsSummaryViewModel.Data
+    typealias Data = NewsSummaryViewModel.CollectionData
     fileprivate var collectionView: CollectionView
     fileprivate var data: Data
 
@@ -35,22 +35,20 @@ class NewsSummaryCollectionDataSource: NSObject {
 
     private func setup() {
         collectionView.dataSource = self
-        registerCells()
+        registerCellsIfNeed()
     }
 
     func reloadData(by updates: Data) {
         data = updates
-        registerCells()
+        registerCellsIfNeed()
         collectionView.reloadData()
         collectionView.register(header, for: .header)
     }
 
-
-
-    private func registerCells() {
+    private func registerCellsIfNeed() {
         let usingCellTypesStr = data.sectionsAndValues
             .flatMap {$0.1}
-            .flatMap {$0.cellType}
+            .flatMap {$0.type}
             .flatMap {String(describing: $0)}
             .filter {!registeredCells.contains($0)}
 
@@ -77,7 +75,7 @@ extension NewsSummaryCollectionDataSource: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = data.value(for: indexPath)
-        return self.collectionView.updatedCell(ofType: cell.cellType, by: cell.value, at: indexPath)
+        return self.collectionView.updatedCell(ofType: cell.type, by: cell.value, at: indexPath)
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
