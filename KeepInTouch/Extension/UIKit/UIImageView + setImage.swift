@@ -11,18 +11,21 @@ import UIKit
 
 extension UIImageView {
     var activityIndicator: UIActivityIndicatorView {
-        return make(UIActivityIndicatorView(activityIndicatorStyle: .gray)) {
-            let ownFrame = $0.frame
-            let containerView = self.frame
 
-            let x = containerView.width / 2 - ownFrame.width / 2
-            let y = containerView.height / 2 + ownFrame.height / 2
-
-            $0.frame = CGRect(origin: CGPoint(x:  x, y: y), size: ownFrame.size)
-
-            $0.hidesWhenStopped = true
-            addSubview($0)
+        let activityIndicator = make(UIActivityIndicatorView(activityIndicatorStyle: .gray)) {
+            $0.translatesAutoresizingMaskIntoConstraints = false
         }
+
+        addSubview(activityIndicator)
+
+        let horizontalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0)
+
+        let verticalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0)
+
+        addConstraint(horizontalConstraint)
+        addConstraint(verticalConstraint)
+
+        return activityIndicator
     }
 
     func setImage(url: URL, completion: Downloader.Completion<UIImage> = nil) {
@@ -39,7 +42,6 @@ extension UIImageView {
             }.always(on: main) {
                 progressIndicator.stopAnimating()
                 progressIndicator.removeFromSuperview()
-
         }
     }
 }
