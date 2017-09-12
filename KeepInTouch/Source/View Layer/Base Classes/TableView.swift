@@ -10,14 +10,18 @@ import Foundation
 import UIKit
 
 class TableView: UITableView {
-    func register<T: UITableViewCell>(_ cell: T.Type) {
-        let nibName = String(describing: T.self)
+    func register(cellType: UITableViewCell.Type) {
+        let nibName = String(describing: cellType)
         let nib = UINib(nibName: nibName, bundle: nil)
-
         register(nib, forCellReuseIdentifier: nibName)
     }
 
-    func updatedCell<T, P>(ofType: T.Type, by object: P, at indexPath: IndexPath) -> T where T: OneObjectPresentableCell<P> {
+    func register(cellClassName: String) {
+        let nib = UINib(nibName: cellClassName, bundle: nil)
+        register(nib, forCellReuseIdentifier: cellClassName)
+    }
+
+    func updatedCell<Cell, Value>(ofType: Cell.Type, by object: Value, at indexPath: IndexPath) -> Cell where Cell: SingleItemTableCell<Value> {
         let cell = getRegisteredCell(ofType: ofType, at: indexPath)
         cell.updateUI(by: object)
         return cell

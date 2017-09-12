@@ -61,7 +61,6 @@ class News: Object {
         let urlStr = node["enclosure"].element?.attribute(by: "url")?.text
         let url = URL(string: urlStr ?? "")
 
-
         return try News(
             guid : node["guid"].value(),
             title : node["title"].value(),

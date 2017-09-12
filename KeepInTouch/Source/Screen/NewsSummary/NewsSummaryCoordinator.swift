@@ -50,8 +50,8 @@ extension NewsSummaryCoordinator {
 }
 
 extension NewsSummaryCoordinator: NewsSummaryViewModelDelegate {
-    func newsSummaryViewModelDidOpenDetails(of section: NewsSummaryViewModel.Section) {
+    func newsSummaryViewModelDidOpenDetails(of section: (NewsSummaryViewModel.Section, [NewsSummaryViewModel.Value])) {
         printMe(with: ["Open details of '\(section)' section"])
-    }
 
+    }
 }

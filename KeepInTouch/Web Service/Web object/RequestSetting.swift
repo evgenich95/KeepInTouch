@@ -12,5 +12,5 @@ struct RequestSetting {
     var isNeedCaching: Bool
     var policy: URLRequest.CachePolicy
 
-    static let defaults = RequestSetting(isNeedCaching: false, policy: URLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData)
+    static let defaults = RequestSetting(isNeedCaching: false, policy: URLRequest.CachePolicy.reloadIgnoringLocalCacheData)
 }

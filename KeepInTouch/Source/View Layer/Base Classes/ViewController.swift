@@ -78,7 +78,7 @@ extension UIViewController {
     func showNotificationAlert(withTitle: String, message: String, completion: (() -> Void)? = nil) {
         let alertController = UIAlertController(title: withTitle, message:
             message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .cancel) { _ in
+        let action = UIAlertAction(title: "OK", style: .cancel) { _ in
             completion?()
         }
         alertController.addAction(action)

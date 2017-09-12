@@ -23,7 +23,7 @@ class NewsSummaryHeader: UICollectionReusableView {
         headerNameUILabel.text = headerName
         self.viewAction = viewAction
     }
-    
+
     @IBAction func viewAction(_ sender: UIButton) {
         viewAction?()
     }

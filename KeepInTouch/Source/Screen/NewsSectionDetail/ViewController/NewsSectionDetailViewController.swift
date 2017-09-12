@@ -1,28 +1,26 @@
 //
-//  NewsSummaryViewController.swift
+//  NewsSectionDetailViewController.swift
 //  KeepInTouch
 //
-//  Created by Anton Ivanov on 10/09/2017.
+//  Created by Anton Ivanov on 12/09/2017.
 //  Copyright © 2017 Anton_Ivanov. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class NewsSummaryViewController: ViewController {
+class NewsSectionDetailViewController: ViewController {
 
-    var viewModel: NewsSummaryViewModel
+    @IBOutlet weak var tableView: TableView!
+    var tableViewDelegate: NewsSectionDetailTableViewDelegate!
 
-    var collectionDataSource: NewsSummaryCollectionDataSource!
-    var collectionLayoutDelegate: NewsSummaryCollectionLayoutDelegate!
+    var viewModel: NewsSectionDetailViewModel
 
-    @IBOutlet weak var newsCollectionView: CollectionView!
-
-    var dataSource: NewsSummaryViewModel.CollectionData {
-        return viewModel.sectionedValues
+    var dataSource: NewsSectionDetailViewModel.TableData {
+        return viewModel.tableData
     }
 
-    init(viewModel: NewsSummaryViewModel) {
+    init(viewModel: NewsSectionDetailViewModel) {
         self.viewModel = viewModel
         super.init()
     }
@@ -44,26 +42,21 @@ class NewsSummaryViewController: ViewController {
 
     internal override func setupView() {
         super.setupView()
-        setupCollectionView()
 
     }
 
-    private func setupCollectionView() {
-        printMe()
-        collectionDataSource = NewsSummaryCollectionDataSource(collectionView: newsCollectionView, data: dataSource)
-        collectionDataSource.delegate = self
-        collectionLayoutDelegate = NewsSummaryCollectionLayoutDelegate(collectionView: newsCollectionView)
+    private func configureTableView() {
+        tableViewDelegate = NewsSectionDetailTableViewDelegate(tableView: tableView, data: dataSource)
     }
 
     fileprivate func updateView() {
-        printMe()
-        collectionDataSource.reloadData(by: dataSource)
+
     }
 
 }
 
 // MARK: - ViewModel Binding -
-extension NewsSummaryViewController {
+extension NewsSectionDetailViewController {
 
     fileprivate func bindToViewModel() {
         viewModel.dataDidChange = {[weak self] in
@@ -89,11 +82,5 @@ extension NewsSummaryViewController {
                 self?.showNotificationAlert(withTitle: "Error", message: "Something gone wrong. \(errorDescription)")
             }
         }
-    }
-}
-
-extension NewsSummaryViewController: NewsSummaryCollectionDataSourceDelegate {
-    func newsSummaryCollectionDataSourceDidView(section: NewsSummaryViewModel.Section) {
-        viewModel.viewDetails(of: section)
     }
 }

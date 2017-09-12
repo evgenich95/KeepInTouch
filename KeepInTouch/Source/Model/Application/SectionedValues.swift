@@ -9,6 +9,9 @@
 import Foundation
 public struct SectionedValues<Section: Equatable, Value: Equatable>: Equatable {
 
+    typealias TableViewData = SectionedValues<Section, TableCellData<Value>>
+    typealias CollectionViewData = SectionedValues<Section, CollectionCellData<Value>>
+
     public init(_ sectionsAndValues: [(Section, [Value])] = []) {
         self.sectionsAndValues = sectionsAndValues
     }
@@ -23,6 +26,28 @@ public struct SectionedValues<Section: Equatable, Value: Equatable>: Equatable {
 
     public func appending(sectionAndValue: (Section, [Value])) -> SectionedValues<Section, Value> {
         return SectionedValues(self.sectionsAndValues + [sectionAndValue])
+    }
+
+    func tableViewData(valueToCellType: @escaping ((Value) -> SingleItemTableCell<Value>.Type)) -> TableViewData {
+        var data = TableViewData()
+        sectionsAndValues.forEach { section, objectArray in
+            let cells = objectArray.flatMap { (value: Value) in
+                TableCellData(value, valueToCellType(value))
+            }
+            data = data.appending(sectionAndValue: (section, cells))
+        }
+        return data
+    }
+
+    func collectionViewData(valueToCellType: @escaping ((Value) -> SingleItemCollectionCell<Value>.Type)) -> CollectionViewData {
+        var data = CollectionViewData()
+        sectionsAndValues.forEach { section, objectArray in
+            let cells = objectArray.flatMap { (value: Value) in
+                CollectionCellData(value, valueToCellType(value))
+            }
+            data = data.appending(sectionAndValue: (section, cells))
+        }
+        return data
     }
 
     public static func ==(lhs: SectionedValues<Section, Value>, rhs: SectionedValues<Section, Value>) -> Bool {
