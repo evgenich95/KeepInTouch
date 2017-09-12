@@ -10,13 +10,29 @@ import UIKit
 
 class NewsSectionDetailTableViewCell: SingleItemTableCell<News> {
 
+    @IBOutlet weak var newsTitleUILabel: UILabel!
+    @IBOutlet weak var newsUIImageView: UIImageView!
+    @IBOutlet weak var newsDescriptionUILabel: UILabel!
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        newsUIImageView.image = nil
+        newsUIImageView.isHidden = false
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        newsUIImageView.contentMode = .scaleAspectFit
     }
 
     override func updateUI(by object: News) {
+        if let url = object.url {
+            newsUIImageView.setImage(url: url)
+        } else {
+            newsUIImageView.isHidden = true
+        }
 
+        newsTitleUILabel.text = object.title
+        newsDescriptionUILabel.text = object.definition.replacingOccurrences(of: "^\\s*", with: "", options: .regularExpression)
     }
-
 }

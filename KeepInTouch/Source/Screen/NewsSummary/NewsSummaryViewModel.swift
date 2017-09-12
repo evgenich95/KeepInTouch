@@ -10,7 +10,7 @@ import Foundation
 import PromiseKit
 
 protocol NewsSummaryViewModelDelegate: class {
-    func newsSummaryViewModelDidOpenDetails(of section: (NewsSummaryViewModel.Section, [NewsSummaryViewModel.Value]))
+    func newsSummaryViewModelDidOpenDetails(of section: SectionedValues<NewsSummaryViewModel.Section, NewsSummaryViewModel.Value>)
 }
 class NewsSummaryViewModel {
     weak var delegate: NewsSummaryViewModelDelegate?
@@ -23,10 +23,22 @@ class NewsSummaryViewModel {
 
     typealias Section = String
     typealias Value = News
+
     private typealias Data = SectionedValues<Section, Value>
     typealias CollectionData = SectionedValues<Section, CollectionCellData<Value>>
 
-    private var data = Data()
+    private var data = Data() {
+        didSet {
+            sectionedValues = data.collectionViewData(valueToCellType: { value in
+                switch value.type {
+                case .top7:
+                    return ImageNewsCollectionViewCell.self
+                default:
+                    return SimpleNewsCollectionViewCell.self
+                }
+            })
+        }
+    }
     var sectionedValues = CollectionData() {
         didSet {
             if oldValue == sectionedValues {
@@ -49,43 +61,29 @@ class NewsSummaryViewModel {
                 guard let `self` = self else {
                     return
                 }
-                var sectionedValues = CollectionData()
+
+                var data = Data()
+
                 for (index, news) in results.enumerated() {
                     let type = self.requiredNewsTypes[index]
                     news.forEach {
                         $0.type = type
                     }
-                    let cells = news.flatMap {self.cell(for: $0)}
-                    let newSection = (type.description, cells)
-                    sectionedValues = sectionedValues.appending(sectionAndValue: newSection)
-
-                    printMe(with: ["-----\ntype = \(type), \n \(news)"])
+                    data = data.appending(sectionAndValue: (type.description, news))
                 }
 
-//                printMe(with: ["self.sectionedValues = \(sectionedValues.sectionsAndValues[0].1)"])
-                self.sectionedValues = sectionedValues
-
+                self.data = data
             }.catch { (error) in
                 //TODO: Show user alert for users
                 print("error = \(error)")
         }
     }
 
-    func cellType(for item: Value) -> SingleItemCollectionCell<Value>.Type {
-        switch item.type {
-        case .top7:
-            return ImageNewsCollectionViewCell.self
-        default:
-            return SimpleNewsCollectionViewCell.self
-        }
-    }
-
-    func cell(for item: Value) -> CollectionCellData<Value> {
-        return CollectionCellData(item, cellType(for: item))
-    }
-
     func viewDetails(of section: Section) {
-//        delegate?.newsSummaryViewModelDidOpenDetails(of: section)
+        if let detailedData = data.sectionsAndValues.first(where: {$0.0 == section}) {
+            let sectionedValues = SectionedValues<Section, Value>([detailedData])
+            delegate?.newsSummaryViewModelDidOpenDetails(of: sectionedValues)
+        }
     }
 
     // MARK: - Binding properties -

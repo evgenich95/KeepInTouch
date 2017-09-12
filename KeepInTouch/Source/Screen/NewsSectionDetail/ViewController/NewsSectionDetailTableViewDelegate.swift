@@ -27,13 +27,22 @@ class NewsSectionDetailTableViewDelegate: NSObject {
     }
 
     private func setup() {
-        tableView.delegate = self
-        tableView.dataSource = self
+        configureTableView()
+        registerCellsIfNeed()
     }
 
-    func updateData(by updates: Data) {
+    private func configureTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.tableFooterView = UIView()
+    }
+
+    func reloadData(by updates: Data) {
         data = updates
         registerCellsIfNeed()
+        tableView.reloadData()
     }
 
     private func registerCellsIfNeed() {
@@ -65,5 +74,4 @@ extension NewsSectionDetailTableViewDelegate: UITableViewDelegate, UITableViewDa
         let cell = data.value(for: indexPath)
         return self.tableView.updatedCell(ofType: cell.type, by: cell.value, at: indexPath)
     }
-
 }

@@ -18,33 +18,35 @@ class NewsSectionDetailViewModel {
 
     // MARK: - Properties -
     var title: String {
-        return ""
+        return sectionedValues.sections.first ?? ""
     }
+
     typealias Section = String
     typealias Value = News
+
     typealias Data = SectionedValues<Section, Value>
     typealias TableData = SectionedValues<Section, TableCellData<Value>>
 
-    var tableData = TableData()
-    var sectionedValues = Data() {
+    var tableData = TableData() {
         didSet {
-            var data = TableData()
-            sectionedValues.sectionsAndValues.forEach { section, newsArray in
-                let cells = newsArray.flatMap {
-                    TableCellData($0, cellType(for: $0))
-                }
-                data = data.appending(sectionAndValue: (section, cells))
+            if oldValue == tableData {
+                dataDidChangeWithoutChanges?()
             }
-            tableData = data
+            dataDidChange?()
+        }
+    }
+    private var sectionedValues = Data() {
+        didSet {
+            tableData = sectionedValues.tableViewData(valueToCellType: {_ in
+                return NewsSectionDetailTableViewCell.self
+            })
         }
     }
 
-    func cellType(for item: Value) -> SingleItemTableCell<Value>.Type {
-        return NewsSectionDetailTableViewCell.self
-    }
-
     init(sectionedValues: Data) {
-        self.sectionedValues = sectionedValues
+        defer {
+            self.sectionedValues = sectionedValues
+        }
     }
 
     func loadRequiredData() {
@@ -53,6 +55,7 @@ class NewsSectionDetailViewModel {
 
     // MARK: - Binding properties -
     typealias EmptyFunction = (() -> Void)
+    var dataDidChangeWithoutChanges: EmptyFunction?
     var dataDidChange: EmptyFunction?
     var onSignInRequestFailed: ((_ errorDescription: String) -> Void)?
     var onSignInRequestStart: EmptyFunction?

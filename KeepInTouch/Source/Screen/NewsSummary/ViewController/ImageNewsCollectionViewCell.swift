@@ -15,6 +15,7 @@ class ImageNewsCollectionViewCell: SingleItemCollectionCell<News> {
     @IBOutlet weak var newsUIImageView: UIImageView!
 
     override func prepareForReuse() {
+        super.prepareForReuse()
         newsUIImageView.image = nil
         newsUIImageView.isHidden = false
     }

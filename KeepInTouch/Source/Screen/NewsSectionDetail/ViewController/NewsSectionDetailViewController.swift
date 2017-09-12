@@ -42,7 +42,7 @@ class NewsSectionDetailViewController: ViewController {
 
     internal override func setupView() {
         super.setupView()
-
+        configureTableView()
     }
 
     private func configureTableView() {
@@ -50,7 +50,7 @@ class NewsSectionDetailViewController: ViewController {
     }
 
     fileprivate func updateView() {
-
+        tableViewDelegate.reloadData(by: dataSource)
     }
 
 }

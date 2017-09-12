@@ -47,11 +47,16 @@ class NewsSummaryCoordinator: Coordinator {
 
 extension NewsSummaryCoordinator {
     // MARK: - Open children ViewModels functions -
+    fileprivate func viewSectioned(data: NewsSectionDetailCoordinator.Data) {
+        removeAllChildren()
+        let newsSectionDetailCoordinator =  NewsSectionDetailCoordinator(navigationController: navigationController, sectionedValues: data)
+        addChildCoordinator(newsSectionDetailCoordinator)
+        startChildren()
+    }
 }
 
 extension NewsSummaryCoordinator: NewsSummaryViewModelDelegate {
-    func newsSummaryViewModelDidOpenDetails(of section: (NewsSummaryViewModel.Section, [NewsSummaryViewModel.Value])) {
-        printMe(with: ["Open details of '\(section)' section"])
-
+    func newsSummaryViewModelDidOpenDetails(of section: NewsSectionDetailCoordinator.Data) {
+        viewSectioned(data: section)
     }
 }
