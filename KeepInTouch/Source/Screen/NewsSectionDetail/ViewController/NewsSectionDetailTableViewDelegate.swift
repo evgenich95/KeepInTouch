@@ -25,11 +25,8 @@ class NewsSectionDetailTableViewDataSource: NSObject {
     init(tableView: TableView, data: Data) {
         self.tableView = tableView
         self.data = data
-        defer {
-            setup()
-        }
-
         super.init()
+        setup()
     }
 
     private func setup() {
@@ -52,15 +49,15 @@ class NewsSectionDetailTableViewDataSource: NSObject {
     }
 
     private func registerCellsIfNeed() {
-        let usingCellTypesStr = data.sectionsAndValues
+        let unregisteredCellTypes: [String] = data.sectionsAndValues
             .flatMap {$0.1}
             .flatMap {$0.type}
             .flatMap {String(describing: $0)}
             .filter {!registeredCells.contains($0)}
 
-        let unicCells = Set(usingCellTypesStr)
+        let uniqueCells = Set(unregisteredCellTypes)
 
-        unicCells.forEach {
+        uniqueCells.forEach {
             registeredCells.append($0)
             tableView.register(cellClassName: $0)
         }
@@ -78,7 +75,7 @@ extension NewsSectionDetailTableViewDataSource: UITableViewDelegate, UITableView
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = data.value(for: indexPath)
-        return self.tableView.updatedCell(ofType: cell.type, by: cell.value, at: indexPath)
+        return self.tableView.makeCell(ofType: cell.type, with: cell.value, at: indexPath)
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

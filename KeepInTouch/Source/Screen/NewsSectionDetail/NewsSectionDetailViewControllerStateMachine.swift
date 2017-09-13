@@ -15,10 +15,13 @@ class NewsSectionDetailViewControllerStateMachine {
     var state: State = .loading
 
     var ownerFrame: CGRect {
-        return owner.view.frame
+        return owner?.view.frame ?? CGRect()
     }
 
     var usingView: [UIView] {
+        guard let owner = owner else {
+            return []
+        }
         return [
             owner.tableView,
             owner.errorView,
@@ -26,7 +29,7 @@ class NewsSectionDetailViewControllerStateMachine {
         ]
     }
 
-    var owner: NewsSectionDetailViewController
+    weak var owner: NewsSectionDetailViewController?
 
     init(owner: NewsSectionDetailViewController) {
         self.owner = owner
@@ -50,16 +53,23 @@ class NewsSectionDetailViewControllerStateMachine {
         usingView.forEach {
             $0.isHidden = true
         }
-        owner.hideLoadingView()
+        owner?.hideLoadingView()
     }
 
     private func changeStateToLoaded(_ values: NewsSectionDetailViewModel.TableData) {
+        guard let owner = owner else {
+            return
+        }
         owner.tableView.isHidden = false
         owner.tableViewDelegate.reloadData(by: values)
         owner.refreshControl.endRefreshing()
     }
 
     private func changeStateToError(_ error: Error) {
+        guard let owner = owner else {
+            return
+        }
+
         owner.errorView.isHidden = false
         owner.errorView.frame = ownerFrame
         owner.errorView.center = CGPoint(x: ownerFrame.width / 2,
@@ -68,6 +78,10 @@ class NewsSectionDetailViewControllerStateMachine {
     }
 
     private func changeStateToNoData() {
+        guard let owner = owner else {
+            return
+        }
+
         owner.noDataView.isHidden = false
         owner.noDataView.frame = ownerFrame
         owner.noDataView.center = CGPoint(x: ownerFrame.width / 2,
@@ -76,6 +90,6 @@ class NewsSectionDetailViewControllerStateMachine {
     }
 
     private func changeStateToLoading() {
-        owner.showLoadingView()
+        owner?.showLoadingView()
     }
 }

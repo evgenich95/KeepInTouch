@@ -31,7 +31,7 @@ class NewsSummaryViewModel {
     private var data = Data() {
         didSet {
             sectionedValues = data
-                .removedDuplicates
+                .withoutDuplicates
                 .collectionViewData(valueToCellType: { value in
                     switch value.type {
                     case .top7:
@@ -45,10 +45,11 @@ class NewsSummaryViewModel {
     var sectionedValues = CollectionData() {
         didSet {
             if oldValue == sectionedValues {
-                dataDidChangeWithoutChanges?()
+                onDataDidNotChange?()
                 return
             }
-            self.dataDidChange?()
+
+            self.onDataDidChange?()
         }
     }
 
@@ -58,7 +59,7 @@ class NewsSummaryViewModel {
             .then(on: background) {[weak self] typedNews in
                 self?.save(typedNews: typedNews)
             }.catch {[weak self] (error) in
-                self?.onSignInRequestFailed?(error)
+                self?.onDataRequestFailed?(error)
         }
     }
 
@@ -82,14 +83,14 @@ class NewsSummaryViewModel {
         return result
     }
 
-    func viewDetails(of section: Section) {
+    func viewDetails(for section: Section) {
         if let detailedData = data.sectionsAndValues.first(where: {$0.0 == section}) {
             let sectionedValues = SectionedValues<Section, Value>([detailedData])
             delegate?.newsSummaryViewModelDidOpenSectionDetails(of: sectionedValues)
         }
     }
 
-    func openDetails(of value: Value) {
+    func openDetails(for value: Value) {
         delegate?.newsSummaryViewModelDidOpenValueDetails(of: value)
     }
 
@@ -97,12 +98,8 @@ class NewsSummaryViewModel {
         loadRequiredData()
     }
 
-    // MARK: - Binding properties -
-    typealias EmptyFunction = (() -> Void)
-    //TODO: Implement
-    var dataDidChangeWithoutChanges: EmptyFunction?
-    var dataDidChange: EmptyFunction?
-    var onSignInRequestFailed: ((_ error: Error) -> Void)?
-    var onSignInRequestStart: EmptyFunction?
-    var onSignInRequestEnd: EmptyFunction?
+    // MARK: - Reactions -
+    var onDataDidNotChange: EmptyFunction?
+    var onDataDidChange: EmptyFunction?
+    var onDataRequestFailed: ((_ error: Error) -> Void)?
 }

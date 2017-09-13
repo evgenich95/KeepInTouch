@@ -9,57 +9,43 @@
 import Foundation
 import UIKit
 
-protocol NewsSectionDetailCoordinatorDelegate: class {
-
-}
-
 class NewsSectionDetailCoordinator: Coordinator {
-
-    weak var delegate: NewsSectionDetailCoordinatorDelegate?
-
-    var childCoordinators: [Coordinator] = []
-
+    var children: [Coordinator] = []
     var navigationController: UINavigationController
 
-    // MARK: - Start ViewModel -
     var newsSectionDetailViewModel: NewsSectionDetailViewModel!
+    var rootViewController: NewsSectionDetailViewController
 
-    // MARK: - Children ViewModels -
     typealias Data = NewsSectionDetailViewModel.Data
     var sectionedValues: Data
 
     init(navigationController: UINavigationController, sectionedValues: Data) {
         self.navigationController = navigationController
         self.sectionedValues = sectionedValues
+
+        newsSectionDetailViewModel = NewsSectionDetailViewModel(sectionedValues: sectionedValues)
+
+        rootViewController = NewsSectionDetailViewController(viewModel: newsSectionDetailViewModel)
+        newsSectionDetailViewModel.delegate = self
     }
 
     func start() {
-        newsSectionDetailViewModel = NewsSectionDetailViewModel(sectionedValues: sectionedValues)
-        newsSectionDetailViewModel.delegate = self
-
-        let viewController = NewsSectionDetailViewController(viewModel: newsSectionDetailViewModel)
-        configureNavigationItems(viewController)
-
-        navigationController.pushViewController(viewController, animated: true)
-    }
-
-    private func configureNavigationItems(_ viewController: NewsSectionDetailViewController) {
-
+        navigationController.pushViewController(rootViewController, animated: true)
     }
 }
 
 extension NewsSectionDetailCoordinator {
     // MARK: - Open children ViewModels functions -
-    fileprivate func openDetails(of item: NewsSectionDetailViewModel.Value) {
-        removeAllChildren()
+    fileprivate func openDetails(for item: NewsSectionDetailViewModel.Value) {
+        removeAllCoordinators()
         let newsDetailCoordinator = NewsDetailCoordinator(navigationController: navigationController, detailNews: item)
-        addChildCoordinator(newsDetailCoordinator)
-        startChildren()
+        add(coordinator: newsDetailCoordinator)
+        startCoordinators()
     }
 }
 
 extension NewsSectionDetailCoordinator: NewsSectionDetailViewModelDelegate {
     func newsSectionDetailViewModelDidOpenDetails(of news: NewsSectionDetailViewModel.Value) {
-        openDetails(of: news)
+        openDetails(for: news)
     }
 }

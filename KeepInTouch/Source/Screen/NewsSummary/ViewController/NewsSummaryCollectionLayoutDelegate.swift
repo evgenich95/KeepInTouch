@@ -1,5 +1,5 @@
 //
-//  NewsSummaryCollectionLayout.swift
+//  NewsSummaryCollectionDelegate.swift
 //  KeepInTouch
 //
 //  Created by Anton Ivanov on 11.09.17.
@@ -9,34 +9,21 @@
 import Foundation
 import UIKit
 
-protocol NewsSummaryCollectionLayoutDelegate: class {
-    func newsSummaryCollectionLayoutDidSelectItem(at indexPaht: IndexPath)
-}
-
-class NewsSummaryCollectionLayout: NSObject, UICollectionViewDelegateFlowLayout {
-
-    weak var delegate: NewsSummaryCollectionLayoutDelegate?
-
+class NewsSummaryCollectionDelegate: NSObject, UICollectionViewDelegate {
+    var onDidSelectItem: ((_ at: IndexPath) -> Void)?
     var collectionView: UICollectionView
 
-    let mixSpaceBetweenCells: CGFloat = 0.25
-    let mixSpaceBetweenSections: CGFloat = 0.25
+    let minSpaceBetweenCells: CGFloat = 0
+    let minSpaceBetweenSections: CGFloat = 0
 
     init(collectionView: UICollectionView) {
         self.collectionView = collectionView
-        defer {
-            setup()
-        }
-
         super.init()
+        setup()
     }
 
     private func setup() {
         collectionView.delegate = self
-    }
-
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -53,16 +40,13 @@ class NewsSummaryCollectionLayout: NSObject, UICollectionViewDelegateFlowLayout 
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return mixSpaceBetweenSections
-        return 0
+        return minSpaceBetweenSections
     }
 
     func collectionView(_ collectionView: UICollectionView, layout
         collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return mixSpaceBetweenCells
-        return 0
-
+        return minSpaceBetweenCells
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -70,7 +54,7 @@ class NewsSummaryCollectionLayout: NSObject, UICollectionViewDelegateFlowLayout 
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.newsSummaryCollectionLayoutDidSelectItem(at: indexPath)
+        onDidSelectItem?(indexPath)
         collectionView.deselectItem(at: indexPath, animated: true)
     }
 

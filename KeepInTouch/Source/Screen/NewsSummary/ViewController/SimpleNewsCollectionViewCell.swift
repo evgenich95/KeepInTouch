@@ -27,7 +27,7 @@ class SimpleNewsCollectionViewCell: SingleItemCollectionCell<News> {
         $0.dateFormat = "HH:mm"
     }
 
-    override func updateUI(by object: News) {
+    override func updateUI(with object: News) {
         let dateStr = dateFormatter.string(from: object.pubDate)
         let labelText = "\(dateStr) \(object.title)"
 

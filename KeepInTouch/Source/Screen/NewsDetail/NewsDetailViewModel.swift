@@ -8,21 +8,12 @@
 
 import Foundation
 
-protocol NewsDetailViewModelDelegate: class {
-
-}
-
 class NewsDetailViewModel {
-
-    weak var delegate: NewsDetailViewModelDelegate?
-
-    // MARK: - Properties -
     var title: String {
         return ""
     }
 
     var url: URL
-
     init(url: URL) {
         self.url = url
     }

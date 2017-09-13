@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class SingleItemTableCell<T>: UITableViewCell {
-    func updateUI(by object: T) {
+    func updateUI(with object: T) {
         fatalError("Not overriden updateUI method in \(String(describing: self)) class")
     }
 }

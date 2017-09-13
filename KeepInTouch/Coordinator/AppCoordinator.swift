@@ -12,7 +12,7 @@ import UIKit
 class AppCoordinator: Coordinator {
     var navigationController = UINavigationController()
 
-    var childCoordinators: [Coordinator] = []
+    var children: [Coordinator] = []
 
     private let window: UIWindow
 
@@ -22,18 +22,18 @@ class AppCoordinator: Coordinator {
     }
 
     func startMainFlow() {
-        removeAllChildren()
+        removeAllCoordinators()
         let mainNavigationController = make(UINavigationController()) {
             $0.navigationBar.isTranslucent = false
         }
 
         let mainFlowCoordinator = MainFlowCoordinator(navigationController: mainNavigationController)
 
-        addChildCoordinator(mainFlowCoordinator)
+        add(coordinator: mainFlowCoordinator)
 
         window.rootViewController = mainNavigationController
 
-        startChildren()
+        startCoordinators()
     }
 
     func start() {

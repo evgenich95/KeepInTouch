@@ -9,15 +9,12 @@
 import Foundation
 import UIKit
 
-protocol NewsSummaryCollectionDataSourceDelegate: class {
-    func newsSummaryCollectionDataSourceDidView(section: NewsSummaryViewModel.Section)
-}
-
+fileprivate let maxItemsInSection = 4
 class NewsSummaryCollectionDataSource: NSObject {
 
-    weak var delegate: NewsSummaryCollectionDataSourceDelegate?
-    var registeredCells = [String]()
+    var onViewSectionAction: ((_ section: NewsSummaryViewModel.Section) -> Void)?
 
+    var registeredCells = [String]()
     let header = NewsSummaryHeader.self
 
     typealias Data = NewsSummaryViewModel.CollectionData
@@ -27,10 +24,8 @@ class NewsSummaryCollectionDataSource: NSObject {
     init(collectionView: CollectionView, data: Data) {
         self.collectionView = collectionView
         self.data = data
-        defer {
-            setup()
-        }
         super.init()
+        setup()
     }
 
     private func setup() {
@@ -47,21 +42,21 @@ class NewsSummaryCollectionDataSource: NSObject {
     }
 
     private func registerCellsIfNeed() {
-        let usingCellTypesStr = data.sectionsAndValues
+        let unregisteredCellTypes: [String] = data.sectionsAndValues
             .flatMap {$0.1}
             .flatMap {$0.type}
             .flatMap {String(describing: $0)}
             .filter {!registeredCells.contains($0)}
 
-        let unicCells = Set(usingCellTypesStr)
+        let uniqueCells = Set(unregisteredCellTypes)
 
-        unicCells.forEach {
+        uniqueCells.forEach {
             registeredCells.append($0)
             collectionView.register($0)
         }
     }
-
 }
+
 extension NewsSummaryCollectionDataSource: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return data.sections.count
@@ -69,13 +64,13 @@ extension NewsSummaryCollectionDataSource: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return data.sections[section].isEmpty ? 0 : 4
+        return data.sections[section].isEmpty ? 0 : maxItemsInSection
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = data.value(for: indexPath)
-        return self.collectionView.updatedCell(ofType: cell.type, by: cell.value, at: indexPath)
+        return self.collectionView.makeCell(ofType: cell.type, with: cell.value, at: indexPath)
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -89,8 +84,8 @@ extension NewsSummaryCollectionDataSource: UICollectionViewDataSource {
 
     private func viewSection(for indexPath: IndexPath) -> EmptyFunction {
         let section = data.sections[indexPath.section]
-        return {[weak self] in
-            self?.delegate?.newsSummaryCollectionDataSourceDidView(section: section)
+        return {
+            self.onViewSectionAction?(section)
         }
     }
 }

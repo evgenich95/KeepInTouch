@@ -17,14 +17,12 @@ class NewsSummaryCoordinator: Coordinator {
 
     weak var delegate: NewsSummaryCoordinatorDelegate?
 
-    var childCoordinators: [Coordinator] = []
+    var children: [Coordinator] = []
 
     var navigationController: UINavigationController
 
-    // MARK: - Start ViewModel -
     var newsSummaryViewModel: NewsSummaryViewModel!
 
-    // MARK: - Children ViewModels -
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -35,36 +33,31 @@ class NewsSummaryCoordinator: Coordinator {
         newsSummaryViewModel.delegate = self
 
         let viewController = NewsSummaryViewController(viewModel: newsSummaryViewModel)
-        configureNavigationItems(viewController)
-
         navigationController.pushViewController(viewController, animated: true)
-    }
-
-    private func configureNavigationItems(_ viewController: NewsSummaryViewController) {
-
     }
 }
 
 extension NewsSummaryCoordinator {
     // MARK: - Open children ViewModels functions -
     fileprivate func viewSectioned(data: NewsSectionDetailCoordinator.Data) {
-        removeAllChildren()
+        removeAllCoordinators()
         let newsSectionDetailCoordinator =  NewsSectionDetailCoordinator(navigationController: navigationController, sectionedValues: data)
-        addChildCoordinator(newsSectionDetailCoordinator)
-        startChildren()
+        add(coordinator: newsSectionDetailCoordinator)
+        startCoordinators()
     }
 
-    fileprivate func viewDetails(of value: NewsSummaryViewModel.Value) {
-        removeAllChildren()
+    fileprivate func viewDetails(for value: NewsSummaryViewModel.Value) {
+        removeAllCoordinators()
         let newsDetailCoordinator = NewsDetailCoordinator(navigationController: navigationController, detailNews: value)
-        addChildCoordinator(newsDetailCoordinator)
-        startChildren()
+        add(coordinator: newsDetailCoordinator)
+        startCoordinators()
     }
 }
 
 extension NewsSummaryCoordinator: NewsSummaryViewModelDelegate {
     func newsSummaryViewModelDidOpenValueDetails(of value: NewsSummaryViewModel.Value) {
-        viewDetails(of: value)
+        viewDetails(for: value)
+
     }
     func newsSummaryViewModelDidOpenSectionDetails(of section: NewsSectionDetailCoordinator.Data) {
         viewSectioned(data: section)

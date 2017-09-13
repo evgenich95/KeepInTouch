@@ -53,7 +53,7 @@ public struct SectionedValues<Section: Equatable, Value: Equatable>: Equatable {
         return data
     }
 
-    var removedDuplicates: SectionedValues<Section, Value> {
+    var withoutDuplicates: SectionedValues<Section, Value> {
         var handlingSections = sections
         var updatedSectionsAndValues = SectionedValues<Section, Value>(sectionsAndValues)
 

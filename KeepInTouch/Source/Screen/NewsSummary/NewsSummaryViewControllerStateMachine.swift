@@ -9,16 +9,19 @@
 import Foundation
 import UIKit
 
-class NewsSummaryViewControllerStateMachine {
+class NewsSummaryStateMachine {
 
     typealias State = ListState<NewsSummaryViewModel.CollectionData>
     var state: State = .noData
 
     var ownerFrame: CGRect {
-        return owner.view.frame
+        return owner?.view.frame ?? CGRect()
     }
 
     var usingView: [UIView] {
+        guard let owner = owner else {
+            return []
+        }
         return [
             owner.newsCollectionView,
             owner.errorView,
@@ -26,7 +29,7 @@ class NewsSummaryViewControllerStateMachine {
         ]
     }
 
-    var owner: NewsSummaryViewController
+    weak var owner: NewsSummaryViewController?
 
     init(owner: NewsSummaryViewController) {
         self.owner = owner
@@ -50,16 +53,24 @@ class NewsSummaryViewControllerStateMachine {
         usingView.forEach {
             $0.isHidden = true
         }
-        owner.hideLoadingView()
+        owner?.hideLoadingView()
     }
 
     private func changeStateToLoaded(_ values: NewsSummaryViewModel.CollectionData) {
+        guard let owner = owner else {
+            return
+        }
+
         owner.newsCollectionView.isHidden = false
         owner.collectionDataSource.reloadData(by: values)
         owner.refreshControl.endRefreshing()
     }
 
     private func changeStateToError(_ error: Error) {
+        guard let owner = owner else {
+            return
+        }
+
         owner.errorView.isHidden = false
         owner.errorView.frame = ownerFrame
         owner.errorView.center = CGPoint(x: ownerFrame.width / 2,
@@ -68,6 +79,10 @@ class NewsSummaryViewControllerStateMachine {
     }
 
     private func changeStateToNoData() {
+        guard let owner = owner else {
+            return
+        }
+
         owner.noDataView.isHidden = false
         owner.noDataView.frame = ownerFrame
         owner.noDataView.center = CGPoint(x: ownerFrame.width / 2,
@@ -76,7 +91,7 @@ class NewsSummaryViewControllerStateMachine {
     }
 
     private func changeStateToLoading() {
-        owner.showLoadingView()
+        owner?.showLoadingView()
     }
 
 }

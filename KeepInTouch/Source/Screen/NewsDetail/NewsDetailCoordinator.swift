@@ -9,17 +9,10 @@
 import Foundation
 import UIKit
 
-protocol NewsDetailCoordinatorDelegate: class {
-
-}
-
 class NewsDetailCoordinator: Coordinator {
 
-    weak var delegate: NewsDetailCoordinatorDelegate?
+    var children: [Coordinator] = []
 
-    var childCoordinators: [Coordinator] = []
-
-    // MARK: - Start ViewModel -
     var newsDetailViewModel: NewsDetailViewModel!
 
     var navigationController: UINavigationController
@@ -35,23 +28,8 @@ class NewsDetailCoordinator: Coordinator {
             return
         }
         newsDetailViewModel = NewsDetailViewModel(url: url)
-        newsDetailViewModel.delegate = self
-
         let viewController = NewsDetailViewController(viewModel: newsDetailViewModel)
-        configureNavigationItems(viewController)
-
+        
         navigationController.present(viewController, animated: true, completion: nil)
     }
-
-    private func configureNavigationItems(_ viewController: NewsDetailViewController) {
-
-    }
-}
-
-extension NewsDetailCoordinator {
-    // MARK: - Open children ViewModels functions -
-}
-
-extension NewsDetailCoordinator: NewsDetailViewModelDelegate {
-
 }

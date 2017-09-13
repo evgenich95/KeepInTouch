@@ -12,20 +12,16 @@ import UIKit
 class MainFlowCoordinator: Coordinator {
     var navigationController = UINavigationController()
 
-    var childCoordinators: [Coordinator] = []
+    var children: [Coordinator] = []
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
 
     func start() {
-        removeAllChildren()
-
-        _ = make(NewsSummaryCoordinator(navigationController: navigationController)) {
-            addChildCoordinator($0)
-        }
-
-        startChildren()
+        removeAllCoordinators()
+        let newsSummaryCoordinator = NewsSummaryCoordinator(navigationController: navigationController)
+        add(coordinator: newsSummaryCoordinator)
+        newsSummaryCoordinator.start()
     }
-
 }

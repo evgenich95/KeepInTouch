@@ -49,15 +49,11 @@ class NewsSectionDetailViewController: ViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        viewModel.loadRequiredData()
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         bindToViewModel()
+        stateMachinge.switch(to: dataSource.isEmpty ? .loading : .loaded(dataSource))
     }
 
     internal override func setupView() {
@@ -101,32 +97,21 @@ class NewsSectionDetailViewController: ViewController {
 extension NewsSectionDetailViewController {
 
     fileprivate func bindToViewModel() {
-
-        viewModel.dataDidChangeWithoutChanges = {[weak self] in
+        printMe()
+        viewModel.onDataDidNotChange = {[weak self] in
             DispatchQueue.main.async {
+                self?.hideLoadingView()
                 self?.refreshControl.endRefreshing()
             }
         }
 
-        viewModel.dataDidChange = {[weak self] in
+        viewModel.onDataDidChange = {[weak self] in
             DispatchQueue.main.async {
                 self?.updateView()
             }
         }
 
-        viewModel.onSignInRequestStart = {[weak self] in
-            DispatchQueue.main.async {
-                self?.showLoadingView()
-            }
-        }
-
-        viewModel.onSignInRequestEnd = {[weak self] in
-            DispatchQueue.main.async {
-                self?.hideLoadingView()
-            }
-        }
-
-        viewModel.onSignInRequestFailed = {[weak self] error in
+        viewModel.onDataRequestFailed = {[weak self] error in
             DispatchQueue.main.async {
                 self?.stateMachinge.switch(to: .error(error))
             }

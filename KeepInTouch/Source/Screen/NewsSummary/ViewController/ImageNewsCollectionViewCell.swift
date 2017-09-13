@@ -30,7 +30,7 @@ class ImageNewsCollectionViewCell: SingleItemCollectionCell<News> {
         newsUIImageView.contentMode = .scaleAspectFit
     }
 
-    override func updateUI(by object: News) {
+    override func updateUI(with object: News) {
         if let url = object.url {
             newsUIImageView.setImage(url: url)
         } else {

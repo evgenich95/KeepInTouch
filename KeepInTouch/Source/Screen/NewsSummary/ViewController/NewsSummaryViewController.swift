@@ -28,7 +28,7 @@ class NewsSummaryViewController: ViewController {
 
     // MARK: - Class variables -
     var collectionDataSource: NewsSummaryCollectionDataSource!
-    var collectionLayout: NewsSummaryCollectionLayout!
+    var collectionDelegate: NewsSummaryCollectionDelegate!
 
     var dataSource: NewsSummaryViewModel.CollectionData {
         return viewModel.sectionedValues
@@ -36,12 +36,12 @@ class NewsSummaryViewController: ViewController {
 
     // MARK: - Init -
     var viewModel: NewsSummaryViewModel
-    var stateMachinge: NewsSummaryViewControllerStateMachine!
+    var stateMachine: NewsSummaryStateMachine!
 
     init(viewModel: NewsSummaryViewModel) {
         self.viewModel = viewModel
         defer {
-            stateMachinge = NewsSummaryViewControllerStateMachine(owner: self)
+            stateMachine = NewsSummaryStateMachine(owner: self)
         }
         super.init()
     }
@@ -52,7 +52,6 @@ class NewsSummaryViewController: ViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
         background.async {[weak self] in
             self?.viewModel.loadRequiredData()
         }
@@ -70,16 +69,24 @@ class NewsSummaryViewController: ViewController {
         setupErrorView()
         setupNoDataView()
         setupNavigationItems()
-        stateMachinge.switch(to: .loading)
+        stateMachine.switch(to: .loading)
     }
 
     private func setupCollectionView() {
         newsCollectionView.addSubview(refreshControl)
         collectionDataSource = NewsSummaryCollectionDataSource(collectionView: newsCollectionView, data: dataSource)
-        collectionLayout = NewsSummaryCollectionLayout(collectionView: newsCollectionView)
+        collectionDelegate = NewsSummaryCollectionDelegate(collectionView: newsCollectionView)
 
-        collectionDataSource.delegate = self
-        collectionLayout.delegate = self
+        collectionDataSource.onViewSectionAction = {[weak self] section in
+            self?.viewModel.viewDetails(for: section)
+        }
+        collectionDelegate.onDidSelectItem = {[weak self] indexPath in
+            guard let `self` = self else {
+                return
+            }
+            let value = self.dataSource.value(for: indexPath).value
+            self.viewModel.openDetails(for: value)
+        }
     }
 
     private func setupErrorView() {
@@ -95,7 +102,7 @@ class NewsSummaryViewController: ViewController {
     }
 
     fileprivate func updateView() {
-        stateMachinge.switch(to: dataSource.isEmpty ? .noData : .loaded(dataSource))
+        stateMachine.switch(to: dataSource.isEmpty ? .noData : .loaded(dataSource))
     }
 
     @objc func refreshTableData(refreshControl: UIRefreshControl) {
@@ -105,49 +112,23 @@ class NewsSummaryViewController: ViewController {
 
 // MARK: - ViewModel Binding -
 extension NewsSummaryViewController {
-
     fileprivate func bindToViewModel() {
-        viewModel.dataDidChangeWithoutChanges = {[weak self] in
+        viewModel.onDataDidNotChange = {[weak self] in
             DispatchQueue.main.async {
                 self?.refreshControl.endRefreshing()
             }
         }
 
-        viewModel.dataDidChange = {[weak self] in
+        viewModel.onDataDidChange = {[weak self] in
             DispatchQueue.main.async {
                 self?.updateView()
             }
         }
 
-        viewModel.onSignInRequestStart = {[weak self] in
+        viewModel.onDataRequestFailed = {[weak self] error in
             DispatchQueue.main.async {
-                self?.showLoadingView()
+                self?.stateMachine.switch(to: .error(error))
             }
         }
-
-        viewModel.onSignInRequestEnd = {[weak self] in
-            DispatchQueue.main.async {
-                self?.hideLoadingView()
-            }
-        }
-
-        viewModel.onSignInRequestFailed = {[weak self] error in
-            DispatchQueue.main.async {
-                self?.stateMachinge.switch(to: .error(error))
-            }
-        }
-    }
-}
-
-extension NewsSummaryViewController: NewsSummaryCollectionDataSourceDelegate {
-    func newsSummaryCollectionDataSourceDidView(section: NewsSummaryViewModel.Section) {
-        viewModel.viewDetails(of: section)
-    }
-}
-
-extension NewsSummaryViewController: NewsSummaryCollectionLayoutDelegate {
-    func newsSummaryCollectionLayoutDidSelectItem(at indexPaht: IndexPath) {
-        let value = dataSource.value(for: indexPaht).value
-        viewModel.openDetails(of: value)
     }
 }

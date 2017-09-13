@@ -30,16 +30,16 @@ class NewsSectionDetailViewModel {
     var tableData = TableData() {
         didSet {
             if oldValue == tableData {
-                dataDidChangeWithoutChanges?()
+                onDataDidNotChange?()
                 return
             }
-            dataDidChange?()
+            onDataDidChange?()
         }
     }
     private var sectionedValues = Data() {
         didSet {
             tableData = sectionedValues
-                .removedDuplicates
+                .withoutDuplicates
                 .tableViewData(valueToCellType: {_ in
                     return NewsSectionDetailTableViewCell.self
                 })
@@ -48,16 +48,14 @@ class NewsSectionDetailViewModel {
 
     init(sectionedValues: Data) {
         defer {
-            self.sectionedValues = sectionedValues
+            background.async {[weak self] in
+                self?.sectionedValues = sectionedValues
+            }
         }
     }
 
     func openDetail(of news: Value) {
         delegate?.newsSectionDetailViewModelDidOpenDetails(of: news)
-    }
-
-    func loadRequiredData() {
-
     }
 
     func updateData() {
@@ -71,7 +69,7 @@ class NewsSectionDetailViewModel {
             .then(on: background) {[weak self] typedNews in
                 self?.save(typedNews: typedNews)
             }.catch {[weak self] error in
-                self?.onSignInRequestFailed?(error)
+                self?.onDataRequestFailed?(error)
         }
     }
 
@@ -95,11 +93,8 @@ class NewsSectionDetailViewModel {
         return result
     }
 
-    // MARK: - Binding properties -
-    typealias EmptyFunction = (() -> Void)
-    var dataDidChangeWithoutChanges: EmptyFunction?
-    var dataDidChange: EmptyFunction?
-    var onSignInRequestFailed: ((_ error: Error) -> Void)?
-    var onSignInRequestStart: EmptyFunction?
-    var onSignInRequestEnd: EmptyFunction?
+    // MARK: - Reactions -
+    var onDataDidNotChange: EmptyFunction?
+    var onDataDidChange: EmptyFunction?
+    var onDataRequestFailed: ((_ error: Error) -> Void)?
 }

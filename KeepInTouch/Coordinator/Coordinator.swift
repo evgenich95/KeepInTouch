@@ -10,42 +10,32 @@ import Foundation
 import UIKit
 
 protocol Coordinator: class, AnyObject {
-    var childCoordinators: [Coordinator] { get set }
-
-    func start()
-    func addChildCoordinator(_ coordinator: Coordinator)
-    func removeChildCoordinator(_ coordinator: Coordinator)
-    func startChildren()
-    func removeAllChildren()
-    //TODO: Проверить на необходимость
+    var children: [Coordinator] { get set }
     var navigationController: UINavigationController {get set}
 
-    func hideCurrentScreen()
+    func start()
+    func add(coordinator: Coordinator)
+    func remove(coordinator: Coordinator)
+    func startCoordinators()
+    func removeAllCoordinators()
 }
 
 extension Coordinator {
-    func hideCurrentScreen() {
-        DispatchQueue.main.async {[weak self] in
-            self?.navigationController.popViewController(animated: true)
-            self?.navigationController.dismiss(animated: true, completion: nil)
+    func add(coordinator: Coordinator) {
+        children.append(coordinator)
+    }
+
+    func remove(coordinator: Coordinator) {
+        if let index = children.index(where: {$0 === coordinator}) {
+            children.remove(at: index)
         }
     }
 
-    func addChildCoordinator(_ coordinator: Coordinator) {
-        childCoordinators.append(coordinator)
+    func startCoordinators() {
+        children.forEach { $0.start() }
     }
 
-    func removeChildCoordinator(_ coordinator: Coordinator) {
-        if let index = childCoordinators.index(where: {$0 === coordinator}) {
-            childCoordinators.remove(at: index)
-        }
-    }
-
-    func startChildren() {
-        childCoordinators.forEach { $0.start() }
-    }
-
-    func removeAllChildren() {
-        childCoordinators.removeAll()
+    func removeAllCoordinators() {
+        children.removeAll()
     }
 }

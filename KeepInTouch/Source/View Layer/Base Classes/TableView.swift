@@ -21,9 +21,9 @@ class TableView: UITableView {
         register(nib, forCellReuseIdentifier: cellClassName)
     }
 
-    func updatedCell<Cell, Value>(ofType: Cell.Type, by object: Value, at indexPath: IndexPath) -> Cell where Cell: SingleItemTableCell<Value> {
+    func makeCell<Cell, Value>(ofType: Cell.Type, with object: Value, at indexPath: IndexPath) -> Cell where Cell: SingleItemTableCell<Value> {
         let cell = getRegisteredCell(ofType: ofType, at: indexPath)
-        cell.updateUI(by: object)
+        cell.updateUI(with: object)
         return cell
     }
 

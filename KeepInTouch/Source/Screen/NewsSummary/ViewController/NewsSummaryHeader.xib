@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,7 +22,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BI-XB-etk">
-                    <rect key="frame" x="284" y="16.5" width="34" height="32.5"/>
+                    <rect key="frame" x="284" y="0.5" width="34" height="65"/>
                     <state key="normal" title="View"/>
                     <connections>
                         <action selector="viewAction:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="dGM-PW-z5o"/>
@@ -35,7 +34,7 @@
                 <constraint firstAttribute="trailing" secondItem="9BI-XB-etk" secondAttribute="trailing" constant="15" id="ABh-93-Puc"/>
                 <constraint firstItem="5gd-bX-ZZm" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="15" id="GkA-VE-zej"/>
                 <constraint firstItem="9BI-XB-etk" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="KDE-3U-fgf"/>
-                <constraint firstItem="9BI-XB-etk" firstAttribute="height" secondItem="U6b-Vx-4bR" secondAttribute="height" multiplier="1:2" id="QDz-Vi-ahT"/>
+                <constraint firstItem="9BI-XB-etk" firstAttribute="height" secondItem="U6b-Vx-4bR" secondAttribute="height" id="QDz-Vi-ahT"/>
                 <constraint firstAttribute="bottom" secondItem="5gd-bX-ZZm" secondAttribute="bottom" id="Ui9-sc-6Lt"/>
                 <constraint firstItem="5gd-bX-ZZm" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="elL-bI-aON"/>
             </constraints>
@@ -43,7 +42,7 @@
                 <outlet property="headerNameUILabel" destination="5gd-bX-ZZm" id="mob-Su-QkC"/>
                 <outlet property="viewButton" destination="9BI-XB-etk" id="osa-SX-ZBf"/>
             </connections>
-            <point key="canvasLocation" x="-441" y="18"/>
+            <point key="canvasLocation" x="-604" y="12"/>
         </collectionReusableView>
     </objects>
 </document>
