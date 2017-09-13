@@ -23,7 +23,6 @@ class NewsSummaryCoordinator: Coordinator {
 
     var newsSummaryViewModel: NewsSummaryViewModel!
 
-
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }

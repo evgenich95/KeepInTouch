@@ -31,7 +31,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i94-CH-gjp">
                                         <rect key="frame" x="160" y="0.0" width="195" height="136"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" verticalCompressionResistancePriority="754" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OhL-aP-RRV">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" verticalCompressionResistancePriority="754" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OhL-aP-RRV">
                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="136"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <nil key="textColor"/>
@@ -65,7 +65,7 @@
                 <outlet property="newsTitleUILabel" destination="OhL-aP-RRV" id="oNk-I8-BCS"/>
                 <outlet property="newsUIImageView" destination="xMv-Hz-QMp" id="12i-uu-Bxt"/>
             </connections>
-            <point key="canvasLocation" x="-177" y="30"/>
+            <point key="canvasLocation" x="-118" y="20"/>
         </collectionViewCell>
     </objects>
 </document>

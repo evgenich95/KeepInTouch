@@ -92,7 +92,7 @@ public struct SectionedValues<Section: Equatable, Value: Equatable>: Equatable {
         return SectionedValues<Section, Value>(sectionsAndValues)
     }
 
-    public static func ==(lhs: SectionedValues<Section, Value>, rhs: SectionedValues<Section, Value>) -> Bool {
+    public static func == (lhs: SectionedValues<Section, Value>, rhs: SectionedValues<Section, Value>) -> Bool {
         guard lhs.sectionsAndValues.count == rhs.sectionsAndValues.count else { return false }
         for i in 0..<(lhs.sectionsAndValues.count) {
             let ltuple = lhs.sectionsAndValues[i]

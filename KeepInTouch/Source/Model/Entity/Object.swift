@@ -60,10 +60,8 @@ public class Object: NSObject, XMLIndexerDeserializable {
     }
 
     func toJSONString() -> String? {
-
-        guard
-            let json = toJSON() as? [String: Any],
-            let data = DataSerializer.serialize(json) else {
+        let json = toJSON() as [String: Any]
+        guard let data = DataSerializer.serialize(json) else {
                 return nil
         }
         let str = NSString(data: data, encoding: String.Encoding.utf8.rawValue) as String?

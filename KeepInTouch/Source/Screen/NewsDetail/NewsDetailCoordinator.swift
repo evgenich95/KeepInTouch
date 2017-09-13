@@ -30,7 +30,7 @@ class NewsDetailCoordinator: Coordinator {
         }
         newsDetailViewModel = NewsDetailViewModel(url: url)
         let viewController = NewsDetailViewController(viewModel: newsDetailViewModel)
-        
+
         navigationController.present(viewController, animated: true, completion: nil)
     }
 }
