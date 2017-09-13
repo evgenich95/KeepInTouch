@@ -56,6 +56,7 @@ class NewsSummaryViewControllerStateMachine {
     private func changeStateToLoaded(_ values: NewsSummaryViewModel.CollectionData) {
         owner.newsCollectionView.isHidden = false
         owner.collectionDataSource.reloadData(by: values)
+        owner.refreshControl.endRefreshing()
     }
 
     private func changeStateToError(_ error: Error) {

@@ -72,8 +72,8 @@ class NewsSummaryViewModel {
                     news.forEach {
                         $0.type = type
                     }
-                    let sortedValues = news.sorted(by: { (n1, n2) -> Bool in
-                        n1.pubDate > n2.pubDate
+                    let sortedValues = news.sorted(by: {
+                        $0.pubDate > $1.pubDate
                     })
 
                     data = data.appending(sectionAndValue: (type.description, sortedValues))
@@ -95,6 +95,10 @@ class NewsSummaryViewModel {
 
     func openDetails(of value: Value) {
         delegate?.newsSummaryViewModelDidOpenValueDetails(of: value)
+    }
+
+    func updateData() {
+        loadRequiredData()
     }
 
     // MARK: - Binding properties -
