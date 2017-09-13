@@ -26,7 +26,6 @@ class NewsSummaryViewController: ViewController {
         return refresh
     }()
 
-
     // MARK: - Class variables -
     var collectionDataSource: NewsSummaryCollectionDataSource!
     var collectionLayout: NewsSummaryCollectionLayout!
@@ -97,7 +96,6 @@ class NewsSummaryViewController: ViewController {
     @objc func refreshTableData(refreshControl: UIRefreshControl) {
         viewModel.updateData()
     }
-
 }
 
 // MARK: - ViewModel Binding -

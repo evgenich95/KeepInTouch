@@ -16,6 +16,15 @@ class NewsSectionDetailViewController: ViewController {
     var errorView: LabelView = LabelView()
     var noDataView: LabelView = LabelView()
 
+    lazy var refreshControl: UIRefreshControl = {
+        let refresh =  UIRefreshControl()
+        refresh.attributedTitle = NSAttributedString(string: "Pull to update")
+        refresh.addTarget(self,
+                          action: #selector(refreshTableData(refreshControl:)),
+                          for: UIControlEvents.valueChanged)
+        return refresh
+    }()
+
     // MARK: - Class variables -
     var tableViewDelegate: NewsSectionDetailTableViewDataSource!
 
@@ -61,6 +70,7 @@ class NewsSectionDetailViewController: ViewController {
     private func configureTableView() {
         tableViewDelegate = NewsSectionDetailTableViewDataSource(tableView: tableView, data: dataSource)
         tableViewDelegate.delegate = self
+        tableView.addSubview(refreshControl)
     }
 
     private func setupErrorView() {
@@ -75,12 +85,24 @@ class NewsSectionDetailViewController: ViewController {
         stateMachinge.switch(to: dataSource.isEmpty ? .noData : .loaded(dataSource))
     }
 
+    @objc func refreshTableData(refreshControl: UIRefreshControl) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.viewModel.updateData()
+        }
+    }
 }
 
 // MARK: - ViewModel Binding -
 extension NewsSectionDetailViewController {
 
     fileprivate func bindToViewModel() {
+
+        viewModel.dataDidChangeWithoutChanges = {[weak self] in
+            DispatchQueue.main.async {
+                self?.refreshControl.endRefreshing()
+            }
+        }
+
         viewModel.dataDidChange = {[weak self] in
             DispatchQueue.main.async {
                 self?.updateView()

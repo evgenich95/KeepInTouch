@@ -31,6 +31,7 @@ class NewsSectionDetailViewModel {
         didSet {
             if oldValue == tableData {
                 dataDidChangeWithoutChanges?()
+                return
             }
             dataDidChange?()
         }
@@ -57,6 +58,41 @@ class NewsSectionDetailViewModel {
 
     func loadRequiredData() {
 
+    }
+
+    func updateData() {
+        let newsTypes = Array(Set<NewsType>(
+            sectionedValues.sectionsAndValues
+                .flatMap { $0.1 }
+                .flatMap { $0.type }
+        ))
+
+        WebService.loadNews(with: newsTypes)
+            .then(on: background) {[weak self] typedNews in
+                self?.save(typedNews: typedNews)
+            }.catch {[weak self] error in
+                self?.onSignInRequestFailed?(error)
+        }
+    }
+
+    private func save(typedNews: [(NewsType, [News])]) {
+        var sectionedValues = Data()
+        let sorted = sortedByDate(typedNews)
+        sorted.forEach {
+            let newSection = ($0.0.description, $0.1)
+            sectionedValues = sectionedValues.appending(sectionAndValue: newSection)
+        }
+        self.sectionedValues = sectionedValues
+    }
+
+    private func sortedByDate(_ typedNews: [(NewsType, [News])]) -> [(NewsType, [News])] {
+        var result = typedNews
+        for (index, cortege) in typedNews.enumerated() {
+            let sortedNews = cortege.1.sorted { $0.pubDate > $1.pubDate}
+            let updatedCortege = (cortege.0, sortedNews)
+            result[index] = updatedCortege
+        }
+        return result
     }
 
     // MARK: - Binding properties -
