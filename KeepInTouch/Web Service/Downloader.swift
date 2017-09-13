@@ -17,48 +17,67 @@ extension URL {
     }
 }
 
+class CacheSession {
+    static private var urlCache = URLCache(memoryCapacity: 20 * 1024 * 1024, diskCapacity: 100 * 1024 * 1024, diskPath: "ImageDownloadCache")
+
+    static private var sessionConfiguration: URLSessionConfiguration {
+        return make(URLSessionConfiguration.default) {
+            $0.requestCachePolicy = URLRequest.CachePolicy.returnCacheDataElseLoad
+            $0.urlCache = urlCache
+        }
+    }
+
+    static var shared: URLSession {
+        return URLSession(configuration: self.sessionConfiguration)
+    }
+}
+
 class Downloader: NSObject, URLSessionTaskDelegate {
 
     static let shared = Downloader()
 
-    private var urlCache = URLCache(memoryCapacity: 20 * 1024 * 1024, diskCapacity: 100 * 1024 * 1024, diskPath: "ImageDownloadCache")
+    private var cacheSession: URLSession {
+        return CacheSession.shared
+    }
 
-    private lazy var sessionConfiguration: URLSessionConfiguration = {
-        return make(URLSessionConfiguration.default) {
-            $0.requestCachePolicy = URLRequest.CachePolicy.returnCacheDataElseLoad
-            $0.urlCache = self.urlCache
+    private var defautlSession: URLSession {
+        let configuration = URLSessionConfiguration.default
+        configuration.requestCachePolicy = URLRequest.CachePolicy.reloadIgnoringCacheData
+        configuration.urlCache = nil
+
+        return URLSession(configuration: configuration)
+    }
+
+    func loadData(url: URL, isNeedCaching: Bool = false) -> URLDataPromise {
+        let cacheSession = self.cacheSession
+        let url2 = URL(string: "https://gist.githubusercontent.com/evgenich95/652d81d762e1ae0d5583a42c50660428/raw/89effcbed21aa0ad527da87e4fea9e800d5e591b/gistfile1.txt")!
+
+        var baseurl = url2
+        if isNeedCaching {
+            baseurl = url
         }
-    }()
+        let session = isNeedCaching ? cacheSession : defautlSession
 
-    private lazy var session: URLSession = {
-        return URLSession(configuration: self.sessionConfiguration, delegate: self, delegateQueue: nil)
-    }()
+        //Backup caching each request
+        let _ : URLDataPromise = cacheSession.dataTask(with: baseurl.request)
 
-    func loadData(url: URL, setting: RequestSetting = RequestSetting.defaults) -> URLDataPromise {
-        printMe(with: ["url = \(url)"])
+        return URLDataPromise { fulfill, reject in
+            let dataPromise: URLDataPromise = session.dataTask(with: baseurl.request)
 
-        session.configuration.requestCachePolicy = setting.policy
-        let dataPromise: URLDataPromise = session.dataTask(with: url.request)
-        _ = dataPromise.asDataAndResponse().then(on: background) {[weak self] data, response -> Void in
-            if setting.isNeedCaching {
-                self?.cache(response, data, for: url)
+            dataPromise.then { data -> Void in
+                fulfill(data)
+                }.catch { _ -> Void in
+                    let cachePromise: URLDataPromise = cacheSession.dataTask(with: baseurl.request)
+
+                    cachePromise.then { data -> Void in
+                        fulfill(data)
+                        }.catch(execute: reject)
             }
         }
-        return dataPromise
+
     }
 
     func loadImage(url: URL) -> Promise<UIImage> {
-        printMe(with: ["url = \(url)"])
-
-        let setting = RequestSetting(isNeedCaching: true, policy: .returnCacheDataElseLoad)
-        return loadData(url: url, setting: setting).asImage()
-    }
-
-    private func cache(_ response: URLResponse, _ data: Data, for url: URL) {
-        DispatchQueue.global(qos: .userInitiated).async {[weak self] in
-            let cachedResponse = CachedURLResponse(response: response, data: data, userInfo:nil, storagePolicy: URLCache.StoragePolicy.allowed)
-            self?.urlCache.storeCachedResponse(cachedResponse, for: url.request)
-            printMe(with: ["cached"])
-        }
+        return loadData(url: url, isNeedCaching: true).asImage()
     }
 }

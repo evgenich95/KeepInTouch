@@ -20,7 +20,8 @@ class NewsSummaryViewModel {
         return "News Summary"
     }
 
-    let requiredNewsTypes = [NewsType.top7, NewsType.last24, NewsType.none]
+    let requiredNewsTypes = [NewsType.top7]
+//        , NewsType.last24, NewsType.none]
 
     typealias Section = String
     typealias Value = News
@@ -81,9 +82,8 @@ class NewsSummaryViewModel {
 
                 self.data = data
 
-            }.catch { (error) in
-                //TODO: Show user alert for users
-                print("error = \(error)")
+            }.catch {[weak self] (error) in
+                self?.onSignInRequestFailed?(error)
         }
     }
 

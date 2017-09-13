@@ -26,7 +26,6 @@ class NewsSummaryViewControllerStateMachine {
         ]
     }
 
-
     var owner: NewsSummaryViewController
 
     init(owner: NewsSummaryViewController) {
