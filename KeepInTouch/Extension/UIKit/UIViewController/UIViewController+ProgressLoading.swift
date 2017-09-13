@@ -11,8 +11,8 @@ import UIKit
 import CustomHUD
 
 extension UIViewController {
-    func showLoadingView(_ text: String? = nil, view: UIView? = nil) {
-        CustomHUD.instance.showLoading(at: view ?? self.view)
+    func showLoadingView() {
+        CustomHUD.instance.showLoading(at: self.navigationController?.view ?? self.view)
     }
 
     func hideLoadingView() {

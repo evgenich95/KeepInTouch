@@ -28,7 +28,7 @@ extension UIImageView {
         return activityIndicator
     }
 
-    func setImage(url: URL, completion: Downloader.Completion<UIImage> = nil) {
+    func setImage(url: URL, completion: ((_ image: UIImage?) -> Void)? = nil) {
         image = nil
         let progressIndicator = activityIndicator
 
@@ -39,6 +39,9 @@ extension UIImageView {
         Downloader.shared.loadImage(url: url)
             .then(on: main) {[weak self] image -> Void in
                 self?.image = image
+                completion?(image)
+            }.catch { (_) in
+                completion?(nil)
             }.always(on: main) {
                 progressIndicator.stopAnimating()
                 progressIndicator.removeFromSuperview()
