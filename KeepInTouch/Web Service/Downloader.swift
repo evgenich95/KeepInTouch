@@ -40,14 +40,14 @@ public class Downloader: NSObject, URLSessionTaskDelegate {
 
         return URLDataPromise { fulfill, reject in
             forceUpdatePromise.asDataAndResponse()
-                .then {data, response -> Void in
+                .then(on: background) {data, response -> Void in
                     fulfill(data)
                     CacheSession.cache(response, data, for: url)
-                }.catch {_ in
+                }.catch(on: background) {_ in
                     cachePromise
-                .then {data -> Void in
+                .then(on: background) {data -> Void in
                     fulfill(data)
-                }.catch { error in
+                }.catch(on: background) { error in
                     reject(error)
                 }
             }

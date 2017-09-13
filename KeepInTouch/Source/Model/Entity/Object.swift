@@ -70,70 +70,8 @@ public class Object: NSObject, XMLIndexerDeserializable {
         return str
     }
 
-    //    var propertyDictionary: [String: Any] {
-    //        return self.toPropertyDictionary()
-    //    }
-
-    //    func toPropertyDictionary() -> [String: Any] {
-    //        var dict = [String: Any]()
-    //        let json = self.toJSON()
-    //
-    //        json.keys.forEach {
-    //            dict[$0] = value(forKey: $0)
-    //        }
-    //        return dict
-    //    }
-
     var propertyKeys: [String] {
         return Mirror(reflecting: self).toPropertyList()
-    }
-
-    var propertyDictionary: [String: Any] {
-        return Mirror(reflecting: self).toDictionary()
-    }
-
-    func value(byAttributePath: String) -> Any? {
-        guard let attributeName = byAttributePath.components(separatedBy: ".").last else {
-            fatalError("Expected at least one key")
-        }
-
-        guard let object = getLastNstedObject(forKeyPath: byAttributePath) else {
-            fatalError("\(self) object doenst have '\(byAttributePath)' KeyPath")
-        }
-
-        return object.value(forKey: attributeName)
-    }
-
-    func set(value: Any, toKeyPath: String) {
-        guard let attributeName = toKeyPath.components(separatedBy: ".").last else {
-            fatalError("Expected at least one key")
-        }
-
-        guard let object = getLastNstedObject(forKeyPath: toKeyPath) else {
-            fatalError("\(self) object doenst have '\(toKeyPath)' KeyPath")
-        }
-
-        object.setValue(value, forKey: attributeName)
-    }
-
-    private func getLastNstedObject(forKeyPath: String) -> Object! {
-        var keys = forKeyPath.components(separatedBy: ".")
-
-        if keys.count == 1 {
-            return self
-        }
-
-        var linkedListObject: Object? = self.value(forKey: keys.removeFirst()) as? Object
-
-        //Remove attribute name from chain
-        keys.removeLast()
-
-        keys.forEach {
-            linkedListObject = linkedListObject?.value(forKey: $0) as? Object
-        }
-
-        return linkedListObject
-
     }
 }
 

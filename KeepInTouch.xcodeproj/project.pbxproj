@@ -20,7 +20,6 @@
 		563EB44A1F69DA4900A3D722 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E353741F656A9A006E775F /* News.swift */; };
 		563EB44B1F69DA4900A3D722 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E353761F656AC2006E775F /* Object.swift */; };
 		563EB44C1F69DA4900A3D722 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E3537B1F656DD4006E775F /* XMLParser.swift */; };
-		563EB44D1F69DA4900A3D722 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56804FB41F6565B500EF375D /* CustomError.swift */; };
 		563EB44E1F69DA4900A3D722 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56804FB01F65646800EF375D /* Downloader.swift */; };
 		563EB44F1F69DA4900A3D722 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56804FB61F6566DF00EF375D /* WebService.swift */; };
 		563EB4501F69DA4900A3D722 /* CacheSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5673DF441F69931D00E22F95 /* CacheSession.swift */; };
@@ -57,7 +56,6 @@
 		56BCED3E1F6862B100865827 /* UIView + set UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BCED3D1F6862B100865827 /* UIView + set UIViewController.swift */; };
 		56BCED401F686F3A00865827 /* UIView + addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BCED3F1F686F3A00865827 /* UIView + addBorder.swift */; };
 		56E3537E1F657CA3006E775F /* SectionedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E3537D1F657CA3006E775F /* SectionedValues.swift */; };
-		56EC44541F67AEE9002DAD37 /* DateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EC44531F67AEE9002DAD37 /* DateFormatterTests.swift */; };
 		56EDE4581F66597F00570113 /* NewsSummaryCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDE4571F66597F00570113 /* NewsSummaryCollectionDataSource.swift */; };
 		56EDE45F1F665E7700570113 /* NewsSummaryCollectionLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDE45E1F665E7700570113 /* NewsSummaryCollectionLayoutDelegate.swift */; };
 		56EDE4621F66631400570113 /* ImageNewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDE4601F66631400570113 /* ImageNewsCollectionViewCell.swift */; };
@@ -157,7 +155,6 @@
 		567DEDEA1F69330900615061 /* CustomHUD.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CustomHUD.xcodeproj; path = ../CustomHUD/CustomHUD.xcodeproj; sourceTree = "<group>"; };
 		567DEE031F6942EA00615061 /* NewsSummaryViewControllerStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSummaryViewControllerStateMachine.swift; sourceTree = "<group>"; };
 		56804FB01F65646800EF375D /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Downloader.swift; path = "../KeepInTouch/Web Service/Downloader.swift"; sourceTree = "<group>"; };
-		56804FB41F6565B500EF375D /* CustomError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomError.swift; path = "../KeepInTouch/Web Service/Web object/CustomError.swift"; sourceTree = "<group>"; };
 		56804FB61F6566DF00EF375D /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebService.swift; path = "../KeepInTouch/Web Service/WebService.swift"; sourceTree = "<group>"; };
 		56A2D8DD1F668408009496F4 /* NewsSummaryHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSummaryHeader.swift; sourceTree = "<group>"; };
 		56A2D8DE1F668408009496F4 /* NewsSummaryHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsSummaryHeader.xib; sourceTree = "<group>"; };
@@ -181,7 +178,6 @@
 		56EC44431F67AA52002DAD37 /* DateFormatterTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatterTransform.swift; path = ../KeepInTouch/Helper/DateFormatterTransform.swift; sourceTree = "<group>"; };
 		56EC44491F67AECD002DAD37 /* KeepInTouchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeepInTouchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56EC444D1F67AECD002DAD37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56EC44531F67AEE9002DAD37 /* DateFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterTests.swift; sourceTree = "<group>"; };
 		56EDE4571F66597F00570113 /* NewsSummaryCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSummaryCollectionDataSource.swift; sourceTree = "<group>"; };
 		56EDE45E1F665E7700570113 /* NewsSummaryCollectionLayoutDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSummaryCollectionLayoutDelegate.swift; sourceTree = "<group>"; };
 		56EDE4601F66631400570113 /* ImageNewsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageNewsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -262,21 +258,52 @@
 		563EB43A1F69D93400A3D722 /* LentaSDK */ = {
 			isa = PBXGroup;
 			children = (
-				5676AFEB1F65570600F66296 /* Thread.swift */,
-				56E353791F656B44006E775F /* DataSerializer.swift */,
-				56EC44431F67AA52002DAD37 /* DateFormatterTransform.swift */,
-				56E353741F656A9A006E775F /* News.swift */,
+				563EB4561F69DF4300A3D722 /* Model */,
+				563EB4591F69DFA000A3D722 /* Utility */,
+				563EB4581F69DF6100A3D722 /* Data Handler */,
+				563EB4571F69DF4C00A3D722 /* Web */,
+				563EB43B1F69D93400A3D722 /* LentaSDK.h */,
+				563EB43C1F69D93400A3D722 /* Info.plist */,
+			);
+			path = LentaSDK;
+			sourceTree = "<group>";
+		};
+		563EB4561F69DF4300A3D722 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				56E353761F656AC2006E775F /* Object.swift */,
-				56E3537B1F656DD4006E775F /* XMLParser.swift */,
-				56804FB41F6565B500EF375D /* CustomError.swift */,
+				56E353741F656A9A006E775F /* News.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		563EB4571F69DF4C00A3D722 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				5676AFEB1F65570600F66296 /* Thread.swift */,
 				56804FB01F65646800EF375D /* Downloader.swift */,
 				56804FB61F6566DF00EF375D /* WebService.swift */,
 				5673DF441F69931D00E22F95 /* CacheSession.swift */,
-				563EB43B1F69D93400A3D722 /* LentaSDK.h */,
-				563EB43C1F69D93400A3D722 /* Info.plist */,
+			);
+			name = Web;
+			sourceTree = "<group>";
+		};
+		563EB4581F69DF6100A3D722 /* Data Handler */ = {
+			isa = PBXGroup;
+			children = (
+				56E353791F656B44006E775F /* DataSerializer.swift */,
+				56EC44431F67AA52002DAD37 /* DateFormatterTransform.swift */,
+				56E3537B1F656DD4006E775F /* XMLParser.swift */,
+			);
+			name = "Data Handler";
+			sourceTree = "<group>";
+		};
+		563EB4591F69DFA000A3D722 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
 				563EB4521F69DBEE00A3D722 /* ObjectBuilder.swift */,
 			);
-			path = LentaSDK;
+			name = Utility;
 			sourceTree = "<group>";
 		};
 		5676AFBF1F6553FE00F66296 = {
@@ -543,7 +570,6 @@
 			isa = PBXGroup;
 			children = (
 				56EC444D1F67AECD002DAD37 /* Info.plist */,
-				56EC44531F67AEE9002DAD37 /* DateFormatterTests.swift */,
 				565622F91F68ED4F00E9097E /* SectionedValuesTests.swift */,
 			);
 			path = KeepInTouchTests;
@@ -922,7 +948,6 @@
 				563EB4501F69DA4900A3D722 /* CacheSession.swift in Sources */,
 				563EB44C1F69DA4900A3D722 /* XMLParser.swift in Sources */,
 				563EB4531F69DBEE00A3D722 /* ObjectBuilder.swift in Sources */,
-				563EB44D1F69DA4900A3D722 /* CustomError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -976,7 +1001,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				565622FA1F68ED4F00E9097E /* SectionedValuesTests.swift in Sources */,
-				56EC44541F67AEE9002DAD37 /* DateFormatterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

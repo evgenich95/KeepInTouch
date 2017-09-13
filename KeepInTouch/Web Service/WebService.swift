@@ -11,10 +11,16 @@ import SWXMLHash
 import PromiseKit
 
 public class WebService {
-    static let serverApiAddress = "https://lenta.ru/rss/"
+    static var serverAPIAddress: String {
+        guard let value = Bundle(for: self).infoDictionary?["ServerAPIAddress"] as? String else {
+            fatalError("Missing 'ServerAPIAddress' key in Info.plist")
+        }
+
+        return value
+    }
 
     public static func loadNews(with type: NewsType) -> Promise<[News]> {
-        guard let url = URL(string: serverApiAddress.appending(type.rawValue)) else {
+        guard let url = URL(string: serverAPIAddress.appending(type.rawValue)) else {
             fatalError("Unexpected url value")
         }
         let nodePath = ["rss", "channel", "item"]
@@ -24,7 +30,7 @@ public class WebService {
                 .then(on: background) { data -> Void in
                     let parser = XMLParser<News>.init(nodePath: nodePath, xmlData: data)
                     guard let array = parser.array else {
-                        let parseError = CustomError(message: "Parse Error")
+                        let parseError = NSError(domain: "Parse Error", code: -1, userInfo: nil)
                         reject(parseError)
                         return
                     }
