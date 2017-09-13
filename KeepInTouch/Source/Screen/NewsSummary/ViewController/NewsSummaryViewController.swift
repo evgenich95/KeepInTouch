@@ -69,6 +69,7 @@ class NewsSummaryViewController: ViewController {
         setupCollectionView()
         setupErrorView()
         setupNoDataView()
+        setupNavigationItems()
         stateMachinge.switch(to: .loading)
     }
 
@@ -87,6 +88,10 @@ class NewsSummaryViewController: ViewController {
 
     private func setupNoDataView() {
         view.addSubview(noDataView)
+    }
+
+    private func setupNavigationItems() {
+        title = viewModel.title
     }
 
     fileprivate func updateView() {

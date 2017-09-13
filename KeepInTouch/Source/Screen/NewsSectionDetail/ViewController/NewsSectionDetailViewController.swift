@@ -65,6 +65,7 @@ class NewsSectionDetailViewController: ViewController {
         configureTableView()
         setupErrorView()
         setupNoDataView()
+        setupNavigationItems()
     }
 
     private func configureTableView() {
@@ -79,6 +80,10 @@ class NewsSectionDetailViewController: ViewController {
 
     private func setupNoDataView() {
         view.addSubview(noDataView)
+    }
+
+    private func setupNavigationItems() {
+        title = viewModel.title
     }
 
     fileprivate func updateView() {
