@@ -21,8 +21,6 @@ class Downloader: NSObject, URLSessionTaskDelegate {
 
     static let shared = Downloader()
 
-    public typealias Completion<T> = ((_ result: Result<T>) -> Void)?
-
     private var urlCache = URLCache(memoryCapacity: 20 * 1024 * 1024, diskCapacity: 100 * 1024 * 1024, diskPath: "ImageDownloadCache")
 
     private lazy var sessionConfiguration: URLSessionConfiguration = {

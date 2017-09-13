@@ -79,13 +79,13 @@ extension NewsSummaryViewController {
 
         viewModel.onSignInRequestStart = {[weak self] in
             DispatchQueue.main.async {
-//                self?.showLoadingView(nil, view: self?.navigationController?.view)
+                self?.showLoadingView()
             }
         }
 
         viewModel.onSignInRequestEnd = {[weak self] in
             DispatchQueue.main.async {
-//                self?.hideLoadingView()
+                self?.hideLoadingView()
             }
         }
 
