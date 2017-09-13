@@ -17,9 +17,9 @@ extension URL {
     }
 }
 
-class Downloader: NSObject, URLSessionTaskDelegate {
+public class Downloader: NSObject, URLSessionTaskDelegate {
 
-    static let shared = Downloader()
+    public static let shared = Downloader()
 
     private var cacheSession = CacheSession.shared
 
@@ -31,7 +31,7 @@ class Downloader: NSObject, URLSessionTaskDelegate {
         return URLSession(configuration: configuration)
     }()
 
-    func loadData(url: URL, needsCaching: Bool = false) -> URLDataPromise {
+    public func loadData(url: URL, needsCaching: Bool = false) -> URLDataPromise {
         let cacheSession = self.cacheSession
         let session = needsCaching ? cacheSession : defaultSession
 
@@ -42,19 +42,19 @@ class Downloader: NSObject, URLSessionTaskDelegate {
             forceUpdatePromise.asDataAndResponse()
                 .then {data, response -> Void in
                     fulfill(data)
-//                    CacheSession.cache(response, data, for: url)
+                    CacheSession.cache(response, data, for: url)
                 }.catch {_ in
-//                    cachePromise
-//                .then {data -> Void in
-//                    fulfill(data)
-//                }.catch { error in
-//                    reject(error)
-//                }
+                    cachePromise
+                .then {data -> Void in
+                    fulfill(data)
+                }.catch { error in
+                    reject(error)
+                }
             }
         }
     }
 
-    func loadImage(url: URL) -> Promise<UIImage> {
+    public func loadImage(url: URL) -> Promise<UIImage> {
         return loadData(url: url, needsCaching: true).asImage()
     }
 }

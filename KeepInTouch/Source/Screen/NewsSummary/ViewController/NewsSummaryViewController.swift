@@ -52,7 +52,7 @@ class NewsSummaryViewController: ViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        background.async {[weak self] in
+        DispatchQueue.global(qos: .userInitiated).async {[weak self] in
             self?.viewModel.loadRequiredData()
         }
     }

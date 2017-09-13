@@ -9,16 +9,16 @@
 import Foundation
 import SWXMLHash
 
-class Object: NSObject, XMLIndexerDeserializable {
+public class Object: NSObject, XMLIndexerDeserializable {
 
-    override func isEqual(_ object: Any?) -> Bool {
+    override public func isEqual(_ object: Any?) -> Bool {
         if let rhs = object as? Object {
             return self == rhs
         }
         return false
     }
 
-    static func deserialize(_ node: XMLIndexer) throws -> Self {
+    public static func deserialize(_ node: XMLIndexer) throws -> Self {
         return try self.prase(node, self)
     }
 
@@ -34,7 +34,7 @@ class Object: NSObject, XMLIndexerDeserializable {
         return lhs.toJSONString() == rhs.toJSONString()
     }
 
-    override var description: String {
+    override public var description: String {
         return toJSONString() ?? ""
     }
 

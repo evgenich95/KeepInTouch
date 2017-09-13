@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LentaSDK
 
 class NewsSectionDetailTableViewCell: SingleItemTableCell<News> {
 

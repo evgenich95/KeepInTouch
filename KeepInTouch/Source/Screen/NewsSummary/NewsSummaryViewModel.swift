@@ -8,6 +8,7 @@
 
 import Foundation
 import PromiseKit
+import LentaSDK
 
 protocol NewsSummaryViewModelDelegate: class {
     func newsSummaryViewModelDidOpenSectionDetails(of section: SectionedValues<NewsSummaryViewModel.Section, NewsSummaryViewModel.Value>)
@@ -55,6 +56,7 @@ class NewsSummaryViewModel {
 
     // MARK: - Web Layer -
     func loadRequiredData() {
+        let background = DispatchQueue.global(qos: .userInitiated)
         WebService.loadNews(with: requiredNewsTypes)
             .then(on: background) {[weak self] typedNews in
                 self?.save(typedNews: typedNews)

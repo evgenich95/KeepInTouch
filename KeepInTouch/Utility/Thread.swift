@@ -8,6 +8,6 @@
 
 import Foundation
 
-public let main = DispatchQueue.main
-public var background = DispatchQueue.global(qos: .userInitiated)
-public let utility = DispatchQueue.global(qos: .utility)
+internal let main = DispatchQueue.main
+internal var background = DispatchQueue.global(qos: .userInitiated)
+internal let utility = DispatchQueue.global(qos: .utility)

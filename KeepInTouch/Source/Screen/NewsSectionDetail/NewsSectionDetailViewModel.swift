@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import LentaSDK
 
 protocol NewsSectionDetailViewModelDelegate: class {
     func newsSectionDetailViewModelDidOpenDetails(of news: NewsSectionDetailViewModel.Value)
@@ -20,6 +21,7 @@ class NewsSectionDetailViewModel {
     var title: String {
         return sectionedValues.sections.first ?? ""
     }
+    let background = DispatchQueue.global(qos: .userInitiated)
 
     typealias Section = String
     typealias Value = News

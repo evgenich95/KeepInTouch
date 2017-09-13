@@ -9,12 +9,12 @@
 import Foundation
 import SWXMLHash
 
-enum NewsType: String, CustomStringConvertible {
+public enum NewsType: String, CustomStringConvertible {
     case top7 = "top7"
     case last24 = "last24"
     case none = "news"
 
-    var description: String {
+    public var description: String {
         switch self {
         case .top7:
             return "Top Seven"
@@ -26,21 +26,21 @@ enum NewsType: String, CustomStringConvertible {
     }
 }
 
-class News: Object {
-    var guid = ""
-    var title = ""
-    var link = ""
-    var pubDate = Date()
-    var definition = ""
-    var url: URL?
+public class News: Object {
+    public var guid = ""
+    public var title = ""
+    public var link = ""
+    public var pubDate = Date()
+    public var definition = ""
+    public var url: URL?
 
-    var type: NewsType = .none
+    public var type: NewsType = .none
 
     override class func ignoredProperties() -> [String] {
         return ["type"]
     }
 
-    init(guid: String, title: String, link: String, pubDate: Date, definition: String, url: URL?) {
+    public init(guid: String, title: String, link: String, pubDate: Date, definition: String, url: URL?) {
         self.guid = guid
         self.title = title
         self.link = link

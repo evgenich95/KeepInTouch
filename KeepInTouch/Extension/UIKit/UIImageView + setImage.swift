@@ -8,8 +8,12 @@
 
 import Foundation
 import UIKit
+import LentaSDK
 
 extension UIImageView {
+    var main: DispatchQueue {
+        return DispatchQueue.main
+    }
     var activityIndicator: UIActivityIndicatorView {
 
         let activityIndicator = make(UIActivityIndicatorView(activityIndicatorStyle: .gray)) {

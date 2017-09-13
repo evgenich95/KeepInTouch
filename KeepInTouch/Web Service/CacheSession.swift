@@ -25,7 +25,6 @@ class CacheSession {
         DispatchQueue.global(qos: .userInitiated).async {
             let cachedResponse = CachedURLResponse(response: response, data: data, userInfo:nil, storagePolicy: URLCache.StoragePolicy.allowed)
             urlCache.storeCachedResponse(cachedResponse, for: url.request)
-            printMe(with: ["cached"])
         }
     }
 }

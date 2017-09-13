@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LentaSDK
 
 class ImageNewsCollectionViewCell: SingleItemCollectionCell<News> {
 

@@ -15,6 +15,7 @@
 		1911F3F049B7BFD737A282DA618229A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
 		23801D5219A60437E94438C65E954B76 /* UIViewController+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E17FFBF7583023803454C21854A8AEF2 /* UIViewController+AnyPromise.m */; };
 		24338025F90A12BC36396EDCD7B950E2 /* dispatch_promise.m in Sources */ = {isa = PBXBuildFile; fileRef = 123F78F288EAC10011EE9F92F09020CA /* dispatch_promise.m */; };
+		275D685D691F0F0E6575E531ADADB28E /* Pods-LentaSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CF24533224CF7CD6F45658C097DD8B9 /* Pods-LentaSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		279E9665DFA3E0B7B5AFB4CAAD603B10 /* NSURLSession+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = A1ED3C71071ECB9E458C48A8FADAFBBE /* NSURLSession+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		281F611DAD13FA61F78C919DAC54486B /* race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BCC6BFAD72386084C97B504DB83D34 /* race.swift */; };
 		2853540D542DF5B930593FF64BFEF236 /* when.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD5CB305C8327AF94FC64387871BB9 /* when.swift */; };
@@ -22,8 +23,9 @@
 		316583E97D7230F39DCF1215929DF18A /* GlobalState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D507D1CE9CECA38579AD27E3CBF3821 /* GlobalState.m */; };
 		3289CD76AC8B6C03BB1605B8B1E0EE6A /* URLDataPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA77FD51E3659244F2A0ADFDC61A43E /* URLDataPromise.swift */; };
 		33015FFF79320575898CD5CD13BBD3FB /* Promise+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431FF2D5EAE8312D763676911F1B4A12 /* Promise+Properties.swift */; };
+		359D94A370659A4D9531E29CFCE02753 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
 		3C3186640DBBF0C3669E47F3B969A804 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B488F6A7F5D696F11E079D5EE94389E /* Error.swift */; };
-		4733A9312C5C7890D4753CB47DD75352 /* Pods-KeepInTouch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 942A2B7A61EF74D43499CB18255AB78D /* Pods-KeepInTouch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4733A9312C5C7890D4753CB47DD75352 /* Pods-KeepInTouch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F3F8839033A100A91A72317D9C118C1 /* Pods-KeepInTouch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D3D4771E759E6C6298B83A9B42EAAD9 /* after.swift in Sources */ = {isa = PBXBuildFile; fileRef = B487127F0B482207096953870F42AB4A /* after.swift */; };
 		4D6B1D87C05A450E6101D5C216B45CDE /* after.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3012D3DBFC6E41720117C094CDFC8F /* after.m */; };
 		4F16D4E857958005ED119C116D33591B /* SWXMLHash-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5423D3DE723E1E040DF4ED1AF2310736 /* SWXMLHash-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,7 +47,7 @@
 		92F8BCBE266A411896535CBAB75E468D /* NSURLSession+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC174F694AFDE7A397F75457788420B /* NSURLSession+Promise.swift */; };
 		9608F8BA56878EA44F40E7B8CFCAE6C9 /* AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A259E31AC9F3921596257D36B0363DB /* AnyPromise.m */; };
 		96198B63E510407700D24DD73C7D8208 /* Process+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7E060BC15494892DE7C0DEA1B8752 /* Process+Promise.swift */; };
-		9A241E5B1543F1FE8570F30B359CEEBC /* Pods-KeepInTouch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC6733C6E682D9306E448842BDF21D /* Pods-KeepInTouch-dummy.m */; };
+		9A241E5B1543F1FE8570F30B359CEEBC /* Pods-KeepInTouch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFD50A16BE9EEA78005F7C462625BD /* Pods-KeepInTouch-dummy.m */; };
 		A3A07AAFC3A26BCDD5A608CD93E1500D /* UIView+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 2594E2EF278140618C4EF2C7DAF876DB /* UIView+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3CC3B5F2BACF88D4454147115496308 /* PMKUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B21B3C5C1F81270B29CF4B8911AA4D4 /* PMKUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A948462435668D48E8FECB75113A89A0 /* UIViewController+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5884227BAC0E3DF9A16C7502D9317AE /* UIViewController+Promise.swift */; };
@@ -64,12 +66,27 @@
 		E51C92A4EBA96B369E7F3EF1F0D5ADA1 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE3E9B4D7DE4927F977082DBD488CC3 /* State.swift */; };
 		F099F0918AC4C4807EE8E5EB69EC2B78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
 		F39302DDB201D87F28C5618AF2D9C24C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		F3E153B311B55CC5752361CE0F6D1100 /* Pods-LentaSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA7E1E399589065DB22DEB10216DDE /* Pods-LentaSDK-dummy.m */; };
 		F4DC35EB53FEF9BFAD728382CC0158B0 /* UIView+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5911497129B61834C774A8EEDF9C192 /* UIView+Promise.swift */; };
 		F5D34EC80494DD894561E849BBCD7FBC /* NSNotificationCenter+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 5ED5281EE376F653982FF516D7FDA764 /* NSNotificationCenter+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE986FE5C97D94041BD3AB797CAAB9EF /* PMKAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31B98C826CB185F5480EC99D8B5C6BA /* PMKAlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4053386462F06F8F945279E74F5CCD99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1E2BAF3A800B354C835ECE4EFC55472;
+			remoteInfo = SWXMLHash;
+		};
+		445C22318C9B720072650CF93AA92439 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10ED94E11487E952761770726245FD92;
+			remoteInfo = PromiseKit;
+		};
 		E2923F5E2AABF3BC7B3FCEE4F6F84515 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -89,59 +106,67 @@
 /* Begin PBXFileReference section */
 		00A3EBCCC3146E79A35118CECCF5AF02 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02CB3585CE1B98B5D839F3892F26AFBF /* DispatchQueue+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Promise.swift"; path = "Sources/DispatchQueue+Promise.swift"; sourceTree = "<group>"; };
-		0636B45A5E03687633033B8ED08D1A3B /* Pods-KeepInTouch-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KeepInTouch-resources.sh"; sourceTree = "<group>"; };
-		06784E7B3BBE491B8737E300CA2508CF /* Pods-KeepInTouch-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KeepInTouch-frameworks.sh"; sourceTree = "<group>"; };
 		0A259E31AC9F3921596257D36B0363DB /* AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AnyPromise.m; path = Sources/AnyPromise.m; sourceTree = "<group>"; };
 		0D2BFD0C9545D508D07D53B5AC9A0424 /* AnyPromise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyPromise.swift; path = Sources/AnyPromise.swift; sourceTree = "<group>"; };
-		0E38C76DE4C75935214D196288B71604 /* Pods-KeepInTouch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KeepInTouch.debug.xcconfig"; sourceTree = "<group>"; };
+		10A87D1C8D6A7F864F0390C85867E184 /* Pods-KeepInTouch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KeepInTouch.release.xcconfig"; sourceTree = "<group>"; };
 		123F78F288EAC10011EE9F92F09020CA /* dispatch_promise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = dispatch_promise.m; path = Sources/dispatch_promise.m; sourceTree = "<group>"; };
+		1F756B0EBDFE7AA4748B45C1764D3794 /* Pods-LentaSDK-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LentaSDK-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1FC174F694AFDE7A397F75457788420B /* NSURLSession+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLSession+Promise.swift"; path = "Extensions/Foundation/Sources/NSURLSession+Promise.swift"; sourceTree = "<group>"; };
 		1FE8520E0D6ADD2BF09CFE3810CE6EE0 /* UIViewController+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+AnyPromise.h"; path = "Extensions/UIKit/Sources/UIViewController+AnyPromise.h"; sourceTree = "<group>"; };
 		20F80CF2876A956FF153FF8CD3523241 /* PromiseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PromiseKit-dummy.m"; sourceTree = "<group>"; };
+		2117A4827E55A160A901AB6AF50B7D5F /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SWXMLHash.framework; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2594E2EF278140618C4EF2C7DAF876DB /* UIView+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+AnyPromise.h"; path = "Extensions/UIKit/Sources/UIView+AnyPromise.h"; sourceTree = "<group>"; };
-		275A3BD0F02D38900063BCCDB73DA29D /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PromiseKit.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		276B6931AA730CD06CCB20DA55C41D51 /* Pods-LentaSDK-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LentaSDK-resources.sh"; sourceTree = "<group>"; };
+		27B535CA6D382EF3D68612B140849965 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D140B66BFC29C508D2114C2970EEEF9 /* NSNotificationCenter+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSNotificationCenter+Promise.swift"; path = "Extensions/Foundation/Sources/NSNotificationCenter+Promise.swift"; sourceTree = "<group>"; };
+		2F3F8839033A100A91A72317D9C118C1 /* Pods-KeepInTouch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KeepInTouch-umbrella.h"; sourceTree = "<group>"; };
 		2F9E8FB831E814BCCC1D95B35FEED861 /* AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AnyPromise.h; path = Sources/AnyPromise.h; sourceTree = "<group>"; };
 		33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		33966F9DDBF656AB5B858E0EB2F0927E /* Pods-KeepInTouch-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KeepInTouch-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3379A52CD0FDD514A0290DCCCCB7D601 /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PromiseKit.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B140F57250FAA8C2AE30513B92B530 /* wrap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = wrap.swift; path = Sources/wrap.swift; sourceTree = "<group>"; };
 		3917A50EB224EEDBC66971700D698782 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		3AADD7A97F6CC6B221468CA3D41E5AB0 /* when.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = when.m; path = Sources/when.m; sourceTree = "<group>"; };
+		3ACFD50A16BE9EEA78005F7C462625BD /* Pods-KeepInTouch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KeepInTouch-dummy.m"; sourceTree = "<group>"; };
+		3CF24533224CF7CD6F45658C097DD8B9 /* Pods-LentaSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LentaSDK-umbrella.h"; sourceTree = "<group>"; };
 		40AF5C7591CE6F9C9A4335BC44BE0B50 /* PMKFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PMKFoundation.h; path = Extensions/Foundation/Sources/PMKFoundation.h; sourceTree = "<group>"; };
 		40C7131CDCB11E07D16A31A9957A75DC /* hang.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = hang.m; path = Sources/hang.m; sourceTree = "<group>"; };
 		431FF2D5EAE8312D763676911F1B4A12 /* Promise+Properties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Properties.swift"; path = "Sources/Promise+Properties.swift"; sourceTree = "<group>"; };
 		48DFBEC6956889168ED699291EB1E073 /* NSNotificationCenter+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSNotificationCenter+AnyPromise.m"; sourceTree = "<group>"; };
 		4AA77FD51E3659244F2A0ADFDC61A43E /* URLDataPromise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLDataPromise.swift; path = Extensions/Foundation/Sources/URLDataPromise.swift; sourceTree = "<group>"; };
-		4AFC6733C6E682D9306E448842BDF21D /* Pods-KeepInTouch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KeepInTouch-dummy.m"; sourceTree = "<group>"; };
-		4D46035C8ABD324F67440872FF43124E /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SWXMLHash.framework; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ADC4C23B22EC3254FD7235A1283AA86 /* Pods-LentaSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LentaSDK.release.xcconfig"; sourceTree = "<group>"; };
 		4F1FB2FDD4B1E337F62A73432BD61D07 /* join.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = join.m; path = Sources/join.m; sourceTree = "<group>"; };
+		52AA2FC4059D12600E2FEA8DACF1AFB5 /* Pods-KeepInTouch-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KeepInTouch-acknowledgements.plist"; sourceTree = "<group>"; };
 		5423D3DE723E1E040DF4ED1AF2310736 /* SWXMLHash-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWXMLHash-umbrella.h"; sourceTree = "<group>"; };
 		5674EE71C1218FF0C9399633875B15C8 /* UIView+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+AnyPromise.m"; path = "Extensions/UIKit/Sources/UIView+AnyPromise.m"; sourceTree = "<group>"; };
 		5692E3ADF7B131F0F965996ED3326482 /* Zalgo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Zalgo.swift; path = Sources/Zalgo.swift; sourceTree = "<group>"; };
 		5ED5281EE376F653982FF516D7FDA764 /* NSNotificationCenter+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+AnyPromise.h"; path = "Extensions/Foundation/Sources/NSNotificationCenter+AnyPromise.h"; sourceTree = "<group>"; };
-		5F3714EABB736A45EBAB5BA8023EDDD9 /* Pods-KeepInTouch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-KeepInTouch.modulemap"; sourceTree = "<group>"; };
 		63BCC6BFAD72386084C97B504DB83D34 /* race.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = race.swift; path = Sources/race.swift; sourceTree = "<group>"; };
+		64503D68DC36C793C3A53DABA8129E53 /* Pods-LentaSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-LentaSDK.modulemap"; sourceTree = "<group>"; };
 		665DE54106E076326E963E8BE2B808A6 /* PromiseKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromiseKit-umbrella.h"; sourceTree = "<group>"; };
 		6D507D1CE9CECA38579AD27E3CBF3821 /* GlobalState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GlobalState.m; path = Sources/GlobalState.m; sourceTree = "<group>"; };
+		6DDEF73B49655146C6A9A4FB489DAFE5 /* Pods_LentaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LentaSDK.framework; path = "Pods-LentaSDK.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71021878F042A7F8BD5D0AA68F10A488 /* SWXMLHash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SWXMLHash.swift; path = Source/SWXMLHash.swift; sourceTree = "<group>"; };
+		7258BDA1A3A5EDF3649DE6A3D05AE0AC /* Pods-LentaSDK-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LentaSDK-acknowledgements.plist"; sourceTree = "<group>"; };
 		7C9E226FE875BC8862323F849316583B /* NSURLSession+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSURLSession+AnyPromise.m"; sourceTree = "<group>"; };
-		7CBE8E3537116BFC0D30272B9A6B4BF5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E2B23A06DEBD8CBC6375A0EE29C2BF6 /* Pods-KeepInTouch-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KeepInTouch-acknowledgements.markdown"; sourceTree = "<group>"; };
 		806A3577441255816D43D0658AB58289 /* PromiseKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PromiseKit.h; path = Sources/PromiseKit.h; sourceTree = "<group>"; };
 		814B6CB753CD217DC9EBF5CCA0256E68 /* PromiseKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PromiseKit.xcconfig; sourceTree = "<group>"; };
 		818397C7511E0E2894653C5C62EDB297 /* PromiseKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromiseKit-prefix.pch"; sourceTree = "<group>"; };
-		834CA538C72CADFDBCB187EC715A2934 /* Pods_KeepInTouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KeepInTouch.framework; path = "Pods-KeepInTouch.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8417CB680B02423BF8C2B386E4F1CD10 /* SWXMLHash.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWXMLHash.xcconfig; sourceTree = "<group>"; };
 		85464BBBB8234709266AC87F45428338 /* SWXMLHash-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWXMLHash-dummy.m"; sourceTree = "<group>"; };
+		8655D9F36BFABC51C3920B40774FF36A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CDE733A65B008E63767B298E2B3E7BF /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = Sources/Promise.swift; sourceTree = "<group>"; };
 		90A9D92D40C04B6CBD9F58C88F645134 /* NSTask+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSTask+AnyPromise.h"; path = "Extensions/Foundation/Sources/NSTask+AnyPromise.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		942A2B7A61EF74D43499CB18255AB78D /* Pods-KeepInTouch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KeepInTouch-umbrella.h"; sourceTree = "<group>"; };
 		954684BB33331CE1A8A3BD26CA155A8B /* PMKQuartzCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PMKQuartzCore.h; path = Extensions/QuartzCore/Sources/PMKQuartzCore.h; sourceTree = "<group>"; };
 		9A3AB1D94EC834770F4103741845A624 /* PromiseKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PromiseKit.modulemap; sourceTree = "<group>"; };
+		9B00A00EE2F07E3F693B99DF9E0914C4 /* Pods-KeepInTouch-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KeepInTouch-frameworks.sh"; sourceTree = "<group>"; };
 		9B21B3C5C1F81270B29CF4B8911AA4D4 /* PMKUIKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PMKUIKit.h; path = Extensions/UIKit/Sources/PMKUIKit.h; sourceTree = "<group>"; };
 		9B488F6A7F5D696F11E079D5EE94389E /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Sources/Error.swift; sourceTree = "<group>"; };
 		A1ED3C71071ECB9E458C48A8FADAFBBE /* NSURLSession+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLSession+AnyPromise.h"; path = "Extensions/Foundation/Sources/NSURLSession+AnyPromise.h"; sourceTree = "<group>"; };
 		A5884227BAC0E3DF9A16C7502D9317AE /* UIViewController+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Promise.swift"; path = "Extensions/UIKit/Sources/UIViewController+Promise.swift"; sourceTree = "<group>"; };
+		A98E8A689697212B2277EC12D1340BA2 /* Pods-KeepInTouch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KeepInTouch.debug.xcconfig"; sourceTree = "<group>"; };
+		AB9926C86105C9FD8575CD5D9E6C4F96 /* Pods-KeepInTouch-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KeepInTouch-resources.sh"; sourceTree = "<group>"; };
 		B0A7E060BC15494892DE7C0DEA1B8752 /* Process+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Process+Promise.swift"; path = "Extensions/Foundation/Sources/Process+Promise.swift"; sourceTree = "<group>"; };
 		B0FDA299C587BE28E5DDFF477A838527 /* afterlife.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = afterlife.swift; path = Extensions/Foundation/Sources/afterlife.swift; sourceTree = "<group>"; };
 		B1D83779C60EA20A67976BC72FCA6E6E /* NSTask+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTask+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSTask+AnyPromise.m"; sourceTree = "<group>"; };
@@ -153,16 +178,18 @@
 		C2632755E5E45268F7AAD7720F299A3A /* SWXMLHash.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SWXMLHash.modulemap; sourceTree = "<group>"; };
 		CA1E7D5EC182FAA469D50CB1717265B5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEE3E9B4D7DE4927F977082DBD488CC3 /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = State.swift; path = Sources/State.swift; sourceTree = "<group>"; };
+		D0393B1112AD5E1FD84A92447800755F /* Pods-KeepInTouch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-KeepInTouch.modulemap"; sourceTree = "<group>"; };
 		D1BA5B2B0B31493D3FA41BB8A104B90A /* NSObject+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Promise.swift"; path = "Extensions/Foundation/Sources/NSObject+Promise.swift"; sourceTree = "<group>"; };
 		D31B98C826CB185F5480EC99D8B5C6BA /* PMKAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PMKAlertController.swift; path = Extensions/UIKit/Sources/PMKAlertController.swift; sourceTree = "<group>"; };
 		D3E1A436AC7C5573FB893498EF2A6156 /* CALayer+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CALayer+AnyPromise.m"; path = "Extensions/QuartzCore/Sources/CALayer+AnyPromise.m"; sourceTree = "<group>"; };
-		DC24054099D0307F49EB089C30D9B82D /* Pods-KeepInTouch-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KeepInTouch-acknowledgements.plist"; sourceTree = "<group>"; };
+		DB50F6EB4B3BB641BB09FABA60021F10 /* Pods_KeepInTouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KeepInTouch.framework; path = "Pods-KeepInTouch.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF1A40E56E4906CA5BF4E6DE9704ED8A /* join.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = join.swift; path = Sources/join.swift; sourceTree = "<group>"; };
-		E12FE8AC93E8E19C756CC8B28CFF5911 /* Pods-KeepInTouch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KeepInTouch.release.xcconfig"; sourceTree = "<group>"; };
 		E17FFBF7583023803454C21854A8AEF2 /* UIViewController+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+AnyPromise.m"; path = "Extensions/UIKit/Sources/UIViewController+AnyPromise.m"; sourceTree = "<group>"; };
+		E7EA7E1E399589065DB22DEB10216DDE /* Pods-LentaSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LentaSDK-dummy.m"; sourceTree = "<group>"; };
 		EBAE9CE7EA852C7120E2F9AC68DF77BB /* SWXMLHash+TypeConversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SWXMLHash+TypeConversion.swift"; path = "Source/SWXMLHash+TypeConversion.swift"; sourceTree = "<group>"; };
 		EFFD5CB305C8327AF94FC64387871BB9 /* when.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = when.swift; path = Sources/when.swift; sourceTree = "<group>"; };
 		F5911497129B61834C774A8EEDF9C192 /* UIView+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Promise.swift"; path = "Extensions/UIKit/Sources/UIView+Promise.swift"; sourceTree = "<group>"; };
+		F769E35452BF6372C7824E203E20A670 /* Pods-LentaSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LentaSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		FD3012D3DBFC6E41720117C094CDFC8F /* after.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = after.m; path = Sources/after.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,6 +210,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1911F3F049B7BFD737A282DA618229A8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A4D783785CF139D914D1D80AA91B159 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				359D94A370659A4D9531E29CFCE02753 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +298,34 @@
 			path = "../Target Support Files/SWXMLHash";
 			sourceTree = "<group>";
 		};
+		60DD276A50FC3629278EC579B187C1AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB50F6EB4B3BB641BB09FABA60021F10 /* Pods_KeepInTouch.framework */,
+				6DDEF73B49655146C6A9A4FB489DAFE5 /* Pods_LentaSDK.framework */,
+				3379A52CD0FDD514A0290DCCCCB7D601 /* PromiseKit.framework */,
+				2117A4827E55A160A901AB6AF50B7D5F /* SWXMLHash.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D080338315E57F31994EEBC6B31DD4C /* Pods-LentaSDK */ = {
+			isa = PBXGroup;
+			children = (
+				8655D9F36BFABC51C3920B40774FF36A /* Info.plist */,
+				64503D68DC36C793C3A53DABA8129E53 /* Pods-LentaSDK.modulemap */,
+				1F756B0EBDFE7AA4748B45C1764D3794 /* Pods-LentaSDK-acknowledgements.markdown */,
+				7258BDA1A3A5EDF3649DE6A3D05AE0AC /* Pods-LentaSDK-acknowledgements.plist */,
+				E7EA7E1E399589065DB22DEB10216DDE /* Pods-LentaSDK-dummy.m */,
+				276B6931AA730CD06CCB20DA55C41D51 /* Pods-LentaSDK-resources.sh */,
+				3CF24533224CF7CD6F45658C097DD8B9 /* Pods-LentaSDK-umbrella.h */,
+				F769E35452BF6372C7824E203E20A670 /* Pods-LentaSDK.debug.xcconfig */,
+				4ADC4C23B22EC3254FD7235A1283AA86 /* Pods-LentaSDK.release.xcconfig */,
+			);
+			name = "Pods-LentaSDK";
+			path = "Target Support Files/Pods-LentaSDK";
+			sourceTree = "<group>";
+		};
 		713B3D7AC7800AFC112401AE29226456 /* QuartzCore */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,32 +353,24 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
 				E0DBAC7289440C361D6092EE716B7C28 /* Pods */,
-				B9A21350B0077F55230E74990CA96A57 /* Products */,
-				8B827A35EE61E4583E7ADD54EFA4D626 /* Targets Support Files */,
+				60DD276A50FC3629278EC579B187C1AD /* Products */,
+				F04EC54EF0B4568374FD4E3E501B363C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8B827A35EE61E4583E7ADD54EFA4D626 /* Targets Support Files */ = {
+		829EFAF39860A5BB386447E936BC26C1 /* Pods-KeepInTouch */ = {
 			isa = PBXGroup;
 			children = (
-				8B870857A6C4D1D059FDF3F169C8DCBB /* Pods-KeepInTouch */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		8B870857A6C4D1D059FDF3F169C8DCBB /* Pods-KeepInTouch */ = {
-			isa = PBXGroup;
-			children = (
-				7CBE8E3537116BFC0D30272B9A6B4BF5 /* Info.plist */,
-				5F3714EABB736A45EBAB5BA8023EDDD9 /* Pods-KeepInTouch.modulemap */,
-				33966F9DDBF656AB5B858E0EB2F0927E /* Pods-KeepInTouch-acknowledgements.markdown */,
-				DC24054099D0307F49EB089C30D9B82D /* Pods-KeepInTouch-acknowledgements.plist */,
-				4AFC6733C6E682D9306E448842BDF21D /* Pods-KeepInTouch-dummy.m */,
-				06784E7B3BBE491B8737E300CA2508CF /* Pods-KeepInTouch-frameworks.sh */,
-				0636B45A5E03687633033B8ED08D1A3B /* Pods-KeepInTouch-resources.sh */,
-				942A2B7A61EF74D43499CB18255AB78D /* Pods-KeepInTouch-umbrella.h */,
-				0E38C76DE4C75935214D196288B71604 /* Pods-KeepInTouch.debug.xcconfig */,
-				E12FE8AC93E8E19C756CC8B28CFF5911 /* Pods-KeepInTouch.release.xcconfig */,
+				27B535CA6D382EF3D68612B140849965 /* Info.plist */,
+				D0393B1112AD5E1FD84A92447800755F /* Pods-KeepInTouch.modulemap */,
+				7E2B23A06DEBD8CBC6375A0EE29C2BF6 /* Pods-KeepInTouch-acknowledgements.markdown */,
+				52AA2FC4059D12600E2FEA8DACF1AFB5 /* Pods-KeepInTouch-acknowledgements.plist */,
+				3ACFD50A16BE9EEA78005F7C462625BD /* Pods-KeepInTouch-dummy.m */,
+				9B00A00EE2F07E3F693B99DF9E0914C4 /* Pods-KeepInTouch-frameworks.sh */,
+				AB9926C86105C9FD8575CD5D9E6C4F96 /* Pods-KeepInTouch-resources.sh */,
+				2F3F8839033A100A91A72317D9C118C1 /* Pods-KeepInTouch-umbrella.h */,
+				A98E8A689697212B2277EC12D1340BA2 /* Pods-KeepInTouch.debug.xcconfig */,
+				10A87D1C8D6A7F864F0390C85867E184 /* Pods-KeepInTouch.release.xcconfig */,
 			);
 			name = "Pods-KeepInTouch";
 			path = "Target Support Files/Pods-KeepInTouch";
@@ -342,16 +397,6 @@
 			);
 			name = PromiseKit;
 			path = PromiseKit;
-			sourceTree = "<group>";
-		};
-		B9A21350B0077F55230E74990CA96A57 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				834CA538C72CADFDBCB187EC715A2934 /* Pods_KeepInTouch.framework */,
-				275A3BD0F02D38900063BCCDB73DA29D /* PromiseKit.framework */,
-				4D46035C8ABD324F67440872FF43124E /* SWXMLHash.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		BE34D88B93478EB867105BFBCBDDE4F6 /* UIKit */ = {
@@ -407,6 +452,15 @@
 			path = SwiftLint;
 			sourceTree = "<group>";
 		};
+		F04EC54EF0B4568374FD4E3E501B363C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				829EFAF39860A5BB386447E936BC26C1 /* Pods-KeepInTouch */,
+				6D080338315E57F31994EEBC6B31DD4C /* Pods-LentaSDK */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -415,6 +469,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F16D4E857958005ED119C116D33591B /* SWXMLHash-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96C6FEF2505B3E782AC49C06A8DBC77A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				275D685D691F0F0E6575E531ADADB28E /* Pods-LentaSDK-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +525,7 @@
 			);
 			name = PromiseKit;
 			productName = PromiseKit;
-			productReference = 275A3BD0F02D38900063BCCDB73DA29D /* PromiseKit.framework */;
+			productReference = 3379A52CD0FDD514A0290DCCCCB7D601 /* PromiseKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C1E2BAF3A800B354C835ECE4EFC55472 /* SWXMLHash */ = {
@@ -480,7 +542,26 @@
 			);
 			name = SWXMLHash;
 			productName = SWXMLHash;
-			productReference = 4D46035C8ABD324F67440872FF43124E /* SWXMLHash.framework */;
+			productReference = 2117A4827E55A160A901AB6AF50B7D5F /* SWXMLHash.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ED49B1979E87FC055707915A16DB89C6 /* Pods-LentaSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA606C0E561FEE44E3AFB03E601992B5 /* Build configuration list for PBXNativeTarget "Pods-LentaSDK" */;
+			buildPhases = (
+				C6EF1D626E21CB4D6E6ED0EBF5096F8F /* Sources */,
+				8A4D783785CF139D914D1D80AA91B159 /* Frameworks */,
+				96C6FEF2505B3E782AC49C06A8DBC77A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1A1C7E205391782D02ED4AA8767129E /* PBXTargetDependency */,
+				982B3CF379C1BFC2EE944EA43C816922 /* PBXTargetDependency */,
+			);
+			name = "Pods-LentaSDK";
+			productName = "Pods-LentaSDK";
+			productReference = 6DDEF73B49655146C6A9A4FB489DAFE5 /* Pods_LentaSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F0AF49EB40A3C68889F38250F57F11AB /* Pods-KeepInTouch */ = {
@@ -499,7 +580,7 @@
 			);
 			name = "Pods-KeepInTouch";
 			productName = "Pods-KeepInTouch";
-			productReference = 834CA538C72CADFDBCB187EC715A2934 /* Pods_KeepInTouch.framework */;
+			productReference = DB50F6EB4B3BB641BB09FABA60021F10 /* Pods_KeepInTouch.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -519,11 +600,12 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = B9A21350B0077F55230E74990CA96A57 /* Products */;
+			productRefGroup = 60DD276A50FC3629278EC579B187C1AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				F0AF49EB40A3C68889F38250F57F11AB /* Pods-KeepInTouch */,
+				ED49B1979E87FC055707915A16DB89C6 /* Pods-LentaSDK */,
 				10ED94E11487E952761770726245FD92 /* PromiseKit */,
 				C1E2BAF3A800B354C835ECE4EFC55472 /* SWXMLHash */,
 			);
@@ -582,6 +664,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C6EF1D626E21CB4D6E6ED0EBF5096F8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3E153B311B55CC5752361CE0F6D1100 /* Pods-LentaSDK-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D28FF6E01AEE932E2FC2C651967B91B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -606,6 +696,18 @@
 			name = PromiseKit;
 			target = 10ED94E11487E952761770726245FD92 /* PromiseKit */;
 			targetProxy = E2923F5E2AABF3BC7B3FCEE4F6F84515 /* PBXContainerItemProxy */;
+		};
+		982B3CF379C1BFC2EE944EA43C816922 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SWXMLHash;
+			target = C1E2BAF3A800B354C835ECE4EFC55472 /* SWXMLHash */;
+			targetProxy = 4053386462F06F8F945279E74F5CCD99 /* PBXContainerItemProxy */;
+		};
+		E1A1C7E205391782D02ED4AA8767129E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PromiseKit;
+			target = 10ED94E11487E952761770726245FD92 /* PromiseKit */;
+			targetProxy = 445C22318C9B720072650CF93AA92439 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -660,7 +762,7 @@
 		};
 		3168F249B78C71D8BFA98D858B3F40C1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E12FE8AC93E8E19C756CC8B28CFF5911 /* Pods-KeepInTouch.release.xcconfig */;
+			baseConfigurationReference = 10A87D1C8D6A7F864F0390C85867E184 /* Pods-KeepInTouch.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -811,7 +913,7 @@
 		};
 		A0325B5113417C9D78632A4411DA3CAD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E38C76DE4C75935214D196288B71604 /* Pods-KeepInTouch.debug.xcconfig */;
+			baseConfigurationReference = A98E8A689697212B2277EC12D1340BA2 /* Pods-KeepInTouch.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -883,6 +985,45 @@
 			};
 			name = Debug;
 		};
+		E1B26A2E214A6CF201917E27822A4977 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F769E35452BF6372C7824E203E20A670 /* Pods-LentaSDK.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LentaSDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LentaSDK/Pods-LentaSDK.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LentaSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		F95ACD3BDDD9B1D50A0730FB4DCBE364 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 814B6CB753CD217DC9EBF5CCA0256E68 /* PromiseKit.xcconfig */;
@@ -907,6 +1048,44 @@
 				MODULEMAP_FILE = "Target Support Files/PromiseKit/PromiseKit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = PromiseKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F9F7DC29ECDAFD7B616E6184C709FD81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4ADC4C23B22EC3254FD7235A1283AA86 /* Pods-LentaSDK.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LentaSDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LentaSDK/Pods-LentaSDK.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LentaSDK;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -952,6 +1131,15 @@
 			buildConfigurations = (
 				A0325B5113417C9D78632A4411DA3CAD /* Debug */,
 				3168F249B78C71D8BFA98D858B3F40C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA606C0E561FEE44E3AFB03E601992B5 /* Build configuration list for PBXNativeTarget "Pods-LentaSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1B26A2E214A6CF201917E27822A4977 /* Debug */,
+				F9F7DC29ECDAFD7B616E6184C709FD81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
