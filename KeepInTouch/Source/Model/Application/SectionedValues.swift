@@ -12,6 +12,9 @@ public struct SectionedValues<Section: Equatable, Value: Equatable>: Equatable {
     typealias TableViewData = SectionedValues<Section, TableCellData<Value>>
     typealias CollectionViewData = SectionedValues<Section, CollectionCellData<Value>>
 
+    public var isEmpty: Bool {
+        return  sectionsAndValues.flatMap {$0.1}.isEmpty
+    }
     public init(_ sectionsAndValues: [(Section, [Value])] = []) {
         self.sectionsAndValues = sectionsAndValues
     }

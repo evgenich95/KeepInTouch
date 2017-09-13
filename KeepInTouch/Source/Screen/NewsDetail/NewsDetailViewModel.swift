@@ -26,15 +26,4 @@ class NewsDetailViewModel {
     init(url: URL) {
         self.url = url
     }
-
-    func loadRequiredData() {
-
-    }
-
-    // MARK: - Binding properties -
-    typealias EmptyFunction = (() -> Void)
-    var dataDidChange: EmptyFunction?
-    var onSignInRequestFailed: ((_ errorDescription: String) -> Void)?
-    var onSignInRequestStart: EmptyFunction?
-    var onSignInRequestEnd: EmptyFunction?
 }

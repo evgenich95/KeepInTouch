@@ -103,7 +103,7 @@ class NewsSummaryViewModel {
     //TODO: Implement
     var dataDidChangeWithoutChanges: EmptyFunction?
     var dataDidChange: EmptyFunction?
-    var onSignInRequestFailed: ((_ errorDescription: String) -> Void)?
+    var onSignInRequestFailed: ((_ error: Error) -> Void)?
     var onSignInRequestStart: EmptyFunction?
     var onSignInRequestEnd: EmptyFunction?
 }

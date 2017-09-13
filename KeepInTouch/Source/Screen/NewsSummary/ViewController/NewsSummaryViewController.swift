@@ -11,19 +11,29 @@ import UIKit
 
 class NewsSummaryViewController: ViewController {
 
-    var viewModel: NewsSummaryViewModel
-
-    var collectionDataSource: NewsSummaryCollectionDataSource!
-    var collectionLayout: NewsSummaryCollectionLayout!
+    //MARK: - UI -
+    var errorView: LabelView = LabelView()
+    var noDataView: LabelView = LabelView()
 
     @IBOutlet weak var newsCollectionView: CollectionView!
+
+    //MARK: - Class variables -
+    var collectionDataSource: NewsSummaryCollectionDataSource!
+    var collectionLayout: NewsSummaryCollectionLayout!
 
     var dataSource: NewsSummaryViewModel.CollectionData {
         return viewModel.sectionedValues
     }
 
+    //MARK: - Init -
+    var viewModel: NewsSummaryViewModel
+    var stateMachinge: NewsSummaryViewControllerStateMachine!
+
     init(viewModel: NewsSummaryViewModel) {
         self.viewModel = viewModel
+        defer {
+            stateMachinge = NewsSummaryViewControllerStateMachine(owner: self)
+        }
         super.init()
     }
 
@@ -43,28 +53,35 @@ class NewsSummaryViewController: ViewController {
         super.viewDidLoad()
         setupView()
         bindToViewModel()
-//        viewModel.loadRequiredData()
     }
 
     internal override func setupView() {
         super.setupView()
         setupCollectionView()
-
+        setupErrorView()
+        setupNoDataView()
+        stateMachinge.switch(to: .loading)
     }
 
     private func setupCollectionView() {
-        printMe()
         collectionDataSource = NewsSummaryCollectionDataSource(collectionView: newsCollectionView, data: dataSource)
-        collectionDataSource.delegate = self
         collectionLayout = NewsSummaryCollectionLayout(collectionView: newsCollectionView)
+
+        collectionDataSource.delegate = self
         collectionLayout.delegate = self
     }
 
-    fileprivate func updateView() {
-        printMe()
-        collectionDataSource.reloadData(by: dataSource)
+    private func setupErrorView() {
+        view.addSubview(errorView)
     }
 
+    private func setupNoDataView() {
+        view.addSubview(noDataView)
+    }
+
+    fileprivate func updateView() {
+        stateMachinge.switch(to: dataSource.isEmpty ? .noData : .loaded(dataSource))
+    }
 }
 
 // MARK: - ViewModel Binding -
@@ -89,9 +106,9 @@ extension NewsSummaryViewController {
             }
         }
 
-        viewModel.onSignInRequestFailed = {[weak self] (errorDescription) in
+        viewModel.onSignInRequestFailed = {[weak self] error in
             DispatchQueue.main.async {
-                self?.showNotificationAlert(withTitle: "Error", message: "Something gone wrong. \(errorDescription)")
+                self?.stateMachinge.switch(to: .error(error))
             }
         }
     }
