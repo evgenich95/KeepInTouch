@@ -1,5 +1,5 @@
 //
-//  NewsSummaryViewControllerStateMachine.swift
+//  NewsSectionDetailViewControllerStateMachine.swift
 //  KeepInTouch
 //
 //  Created by Anton Ivanov on 13.09.17.
@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-class NewsSummaryViewControllerStateMachine {
+class NewsSectionDetailViewControllerStateMachine {
 
-    typealias State = ListState<NewsSummaryViewModel.CollectionData>
-    var state: State = .noData
+    typealias State = ListState<NewsSectionDetailViewModel.TableData>
+    var state: State = .loading
 
     var ownerFrame: CGRect {
         return owner.view.frame
@@ -20,16 +20,15 @@ class NewsSummaryViewControllerStateMachine {
 
     var usingView: [UIView] {
         return [
-            owner.newsCollectionView,
+            owner.tableView,
             owner.errorView,
             owner.noDataView
         ]
     }
 
+    var owner: NewsSectionDetailViewController
 
-    var owner: NewsSummaryViewController
-
-    init(owner: NewsSummaryViewController) {
+    init(owner: NewsSectionDetailViewController) {
         self.owner = owner
     }
 
@@ -54,9 +53,9 @@ class NewsSummaryViewControllerStateMachine {
         owner.hideLoadingView()
     }
 
-    private func changeStateToLoaded(_ values: NewsSummaryViewModel.CollectionData) {
-        owner.newsCollectionView.isHidden = false
-        owner.collectionDataSource.reloadData(by: values)
+    private func changeStateToLoaded(_ values: NewsSectionDetailViewModel.TableData) {
+        owner.tableView.isHidden = false
+        owner.tableViewDelegate.reloadData(by: values)
     }
 
     private func changeStateToError(_ error: Error) {
@@ -71,12 +70,11 @@ class NewsSummaryViewControllerStateMachine {
         owner.noDataView.isHidden = false
         owner.noDataView.frame = ownerFrame
         owner.noDataView.center = CGPoint(x: ownerFrame.width / 2,
-                                         y: ownerFrame.height / 2)
+                                          y: ownerFrame.height / 2)
         owner.noDataView.set(text: "We have not data to display right now.\nCheck later")
     }
 
     private func changeStateToLoading() {
         owner.showLoadingView()
     }
-
 }

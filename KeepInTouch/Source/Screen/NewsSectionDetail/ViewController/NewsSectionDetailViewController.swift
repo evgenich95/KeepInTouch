@@ -11,17 +11,29 @@ import UIKit
 
 class NewsSectionDetailViewController: ViewController {
 
+    //MARK: - UI -
     @IBOutlet weak var tableView: TableView!
+    var errorView: LabelView = LabelView()
+    var noDataView: LabelView = LabelView()
+
+    //MARK: - Class variables -
     var tableViewDelegate: NewsSectionDetailTableViewDataSource!
 
-    var viewModel: NewsSectionDetailViewModel
 
     var dataSource: NewsSectionDetailViewModel.TableData {
         return viewModel.tableData
     }
+    //MARK: - Init -
+    var stateMachinge: NewsSectionDetailViewControllerStateMachine!
+
+    var viewModel: NewsSectionDetailViewModel
 
     init(viewModel: NewsSectionDetailViewModel) {
         self.viewModel = viewModel
+        defer {
+            stateMachinge = NewsSectionDetailViewControllerStateMachine(owner: self)
+        }
+
         super.init()
     }
 
@@ -43,6 +55,8 @@ class NewsSectionDetailViewController: ViewController {
     internal override func setupView() {
         super.setupView()
         configureTableView()
+        setupErrorView()
+        setupNoDataView()
     }
 
     private func configureTableView() {
@@ -50,8 +64,17 @@ class NewsSectionDetailViewController: ViewController {
         tableViewDelegate.delegate = self
     }
 
+    private func setupErrorView() {
+        view.addSubview(errorView)
+    }
+
+    private func setupNoDataView() {
+        view.addSubview(noDataView)
+    }
+
+
     fileprivate func updateView() {
-        tableViewDelegate.reloadData(by: dataSource)
+        stateMachinge.switch(to: dataSource.isEmpty ? .noData : .loaded(dataSource))
     }
 
 }
@@ -78,9 +101,9 @@ extension NewsSectionDetailViewController {
             }
         }
 
-        viewModel.onSignInRequestFailed = {[weak self] (errorDescription) in
+        viewModel.onSignInRequestFailed = {[weak self] error in
             DispatchQueue.main.async {
-                self?.showNotificationAlert(withTitle: "Error", message: "Something gone wrong. \(errorDescription)")
+                self?.stateMachinge.switch(to: .error(error))
             }
         }
     }
