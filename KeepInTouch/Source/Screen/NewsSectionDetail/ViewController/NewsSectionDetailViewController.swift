@@ -34,7 +34,7 @@ class NewsSectionDetailViewController: ViewController {
     // MARK: - Init -
     var stateMachinge: NewsSectionDetailViewControllerStateMachine!
 
-    var viewModel: NewsSectionDetailViewModel
+    let viewModel: NewsSectionDetailViewModel
 
     init(viewModel: NewsSectionDetailViewModel) {
         self.viewModel = viewModel

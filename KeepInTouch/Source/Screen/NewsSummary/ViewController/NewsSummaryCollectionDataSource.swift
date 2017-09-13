@@ -18,7 +18,7 @@ class NewsSummaryCollectionDataSource: NSObject {
     let header = NewsSummaryHeader.self
 
     typealias Data = NewsSummaryViewModel.CollectionData
-    fileprivate var collectionView: CollectionView
+    fileprivate let collectionView: CollectionView
     fileprivate var data: Data
 
     init(collectionView: CollectionView, data: Data) {

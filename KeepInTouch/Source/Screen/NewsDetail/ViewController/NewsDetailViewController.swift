@@ -12,8 +12,8 @@ import SafariServices
 
 class NewsDetailViewController: UIViewController {
 
-    var viewModel: NewsDetailViewModel
-    var safariViewController: SFSafariViewController
+    let viewModel: NewsDetailViewModel
+    let safariViewController: SFSafariViewController
 
     init(viewModel: NewsDetailViewModel) {
         self.viewModel = viewModel

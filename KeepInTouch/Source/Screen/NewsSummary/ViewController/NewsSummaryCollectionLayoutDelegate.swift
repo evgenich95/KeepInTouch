@@ -11,7 +11,7 @@ import UIKit
 
 class NewsSummaryCollectionDelegate: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     var onDidSelectItem: ((_ at: IndexPath) -> Void)?
-    var collectionView: UICollectionView
+    let collectionView: UICollectionView
 
     let minSpaceBetweenCells: CGFloat = 0
     let minSpaceBetweenSections: CGFloat = 0

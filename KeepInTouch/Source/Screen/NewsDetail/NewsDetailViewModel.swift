@@ -13,7 +13,7 @@ class NewsDetailViewModel {
         return ""
     }
 
-    var url: URL
+    let url: URL
     init(url: URL) {
         self.url = url
     }

@@ -11,7 +11,6 @@ import UIKit
 
 class AppCoordinator: Coordinator {
     var navigationController = UINavigationController()
-
     var children: [Coordinator] = []
 
     private let window: UIWindow

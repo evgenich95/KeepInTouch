@@ -35,7 +35,7 @@ class NewsSummaryViewController: ViewController {
     }
 
     // MARK: - Init -
-    var viewModel: NewsSummaryViewModel
+    let viewModel: NewsSummaryViewModel
     var stateMachine: NewsSummaryStateMachine!
 
     init(viewModel: NewsSummaryViewModel) {

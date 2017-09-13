@@ -9,8 +9,8 @@
 import Foundation
 
 struct TableCellData<T: Equatable>: Equatable {
-    var value: T
-    var type: SingleItemTableCell<T>.Type
+    let value: T
+    let type: SingleItemTableCell<T>.Type
 
     init(_ value: T, _ type: SingleItemTableCell<T>.Type) {
         self.value = value

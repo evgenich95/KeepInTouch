@@ -17,7 +17,7 @@ class NewsDetailCoordinator: Coordinator {
     var newsDetailViewModel: NewsDetailViewModel!
 
     var navigationController: UINavigationController
-    var detailNews: News
+    let detailNews: News
 
     init(navigationController: UINavigationController, detailNews: News) {
         self.navigationController = navigationController

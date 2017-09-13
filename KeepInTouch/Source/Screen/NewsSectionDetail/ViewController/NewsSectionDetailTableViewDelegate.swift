@@ -17,7 +17,7 @@ class NewsSectionDetailTableViewDataSource: NSObject {
     weak var delegate: NewsSectionDetailTableViewDataSourceDelegate?
 
     typealias Data = NewsSectionDetailViewModel.TableData
-    var tableView: TableView
+    let tableView: TableView
     var data: Data
 
     var registeredCells = [String]()
