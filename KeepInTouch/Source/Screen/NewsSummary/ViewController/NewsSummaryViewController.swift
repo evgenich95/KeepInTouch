@@ -109,4 +109,3 @@ extension NewsSummaryViewController: NewsSummaryCollectionLayoutDelegate {
         viewModel.openDetails(of: value)
     }
 }
-

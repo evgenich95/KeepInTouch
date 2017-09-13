@@ -16,7 +16,7 @@ public struct SectionedValues<Section: Equatable, Value: Equatable>: Equatable {
         self.sectionsAndValues = sectionsAndValues
     }
 
-    public let sectionsAndValues: [(Section, [Value])]
+    public var sectionsAndValues: [(Section, [Value])]
 
     internal var sections: [Section] { get { return self.sectionsAndValues.map { $0.0 } } }
 
@@ -48,6 +48,45 @@ public struct SectionedValues<Section: Equatable, Value: Equatable>: Equatable {
             data = data.appending(sectionAndValue: (section, cells))
         }
         return data
+    }
+
+    var removedDuplicates: SectionedValues<Section, Value> {
+        var handlingSections = sections
+        var updatedSectionsAndValues = SectionedValues<Section, Value>(sectionsAndValues)
+
+        //For all Sections
+        sectionsAndValues
+            //Sort by values count
+            .sorted {$0.1.count < $1.1.count}
+            .forEach { section, values in
+                if let index = handlingSections.index(of: section) {
+                    handlingSections.remove(at: index)
+                }
+                //Remove all found value matches from other sections
+                values.forEach {value in
+                    handlingSections.forEach { targetSection in
+                        updatedSectionsAndValues = updatedSectionsAndValues.remove(value: value, at: targetSection)
+                    }
+                }
+        }
+        return updatedSectionsAndValues
+    }
+
+    func remove(value: Value, at section: Section) -> SectionedValues<Section, Value> {
+        var sectionsAndValues = self.sectionsAndValues
+
+        guard let itemIndex = sectionsAndValues.index(where: {$0.0 == section}) else {
+            return self
+        }
+        //Get (Section, [Value]) under consideration
+        var targetValues = sectionsAndValues[itemIndex].1
+
+        //Replace by updated value Array
+        if let removeValueIndex = targetValues.index(of: value) {
+            targetValues.remove(at: removeValueIndex)
+            sectionsAndValues[itemIndex] = (section, targetValues)
+        }
+        return SectionedValues<Section, Value>(sectionsAndValues)
     }
 
     public static func ==(lhs: SectionedValues<Section, Value>, rhs: SectionedValues<Section, Value>) -> Bool {

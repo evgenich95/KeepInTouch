@@ -30,7 +30,9 @@ class NewsSummaryViewModel {
 
     private var data = Data() {
         didSet {
-            sectionedValues = data.collectionViewData(valueToCellType: { value in
+            sectionedValues = data
+                .removedDuplicates
+                .collectionViewData(valueToCellType: { value in
                 switch value.type {
                 case .top7:
                     return ImageNewsCollectionViewCell.self
@@ -74,6 +76,7 @@ class NewsSummaryViewModel {
                 }
 
                 self.data = data
+
             }.catch { (error) in
                 //TODO: Show user alert for users
                 print("error = \(error)")

@@ -13,6 +13,7 @@
 		48F63164F2B1ACD87B40014D /* NewsSectionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E695970E3BE900B0D5649 /* NewsSectionDetailViewModel.swift */; };
 		4B7F6F4368EB1C9F4C707CC9 /* NewsSummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E96560EBC2AF51623B80BC68 /* NewsSummaryViewController.xib */; };
 		4CC4EDE4150375CBF51BD4DC /* NewsSectionDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC994837C74D28BB7977AB8F /* NewsSectionDetailCoordinator.swift */; };
+		565622FA1F68ED4F00E9097E /* SectionedValuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565622F91F68ED4F00E9097E /* SectionedValuesTests.swift */; };
 		5676AFCC1F6553FE00F66296 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFCB1F6553FE00F66296 /* AppDelegate.swift */; };
 		5676AFD31F6553FE00F66296 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5676AFD21F6553FE00F66296 /* Assets.xcassets */; };
 		5676AFD61F6553FE00F66296 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5676AFD41F6553FE00F66296 /* LaunchScreen.storyboard */; };
@@ -80,6 +81,7 @@
 		0D3E9AFC96E0D42402E21F0D /* NewsSectionDetailViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = NewsSectionDetailViewController.xib; sourceTree = "<group>"; };
 		1B6990B741A0E0C497C3B79E /* NewsDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		3A2BE642881FC08F3DCDA7AB /* Pods_KeepInTouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepInTouch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		565622F91F68ED4F00E9097E /* SectionedValuesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedValuesTests.swift; sourceTree = "<group>"; };
 		5676AFC81F6553FE00F66296 /* KeepInTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepInTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5676AFCB1F6553FE00F66296 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5676AFD21F6553FE00F66296 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 			children = (
 				56EC444D1F67AECD002DAD37 /* Info.plist */,
 				56EC44531F67AEE9002DAD37 /* DateFormatterTests.swift */,
+				565622F91F68ED4F00E9097E /* SectionedValuesTests.swift */,
 			);
 			path = KeepInTouchTests;
 			sourceTree = "<group>";
@@ -747,6 +750,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				565622FA1F68ED4F00E9097E /* SectionedValuesTests.swift in Sources */,
 				56EC44541F67AEE9002DAD37 /* DateFormatterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

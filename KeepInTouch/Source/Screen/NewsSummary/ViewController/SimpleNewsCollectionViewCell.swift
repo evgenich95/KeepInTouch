@@ -39,5 +39,3 @@ class SimpleNewsCollectionViewCell: SingleItemCollectionCell<News> {
         newsTitle.attributedText = attributedText
     }
 }
-
-

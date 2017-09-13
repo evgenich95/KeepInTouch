@@ -37,9 +37,11 @@ class NewsSectionDetailViewModel {
     }
     private var sectionedValues = Data() {
         didSet {
-            tableData = sectionedValues.tableViewData(valueToCellType: {_ in
-                return NewsSectionDetailTableViewCell.self
-            })
+            tableData = sectionedValues
+                .removedDuplicates
+                .tableViewData(valueToCellType: {_ in
+                    return NewsSectionDetailTableViewCell.self
+                })
         }
     }
 
