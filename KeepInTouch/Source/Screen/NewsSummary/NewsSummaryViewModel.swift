@@ -72,7 +72,11 @@ class NewsSummaryViewModel {
                     news.forEach {
                         $0.type = type
                     }
-                    data = data.appending(sectionAndValue: (type.description, news))
+                    let sortedValues = news.sorted(by: { (n1, n2) -> Bool in
+                        n1.pubDate > n2.pubDate
+                    })
+
+                    data = data.appending(sectionAndValue: (type.description, sortedValues))
                 }
 
                 self.data = data
