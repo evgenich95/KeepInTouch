@@ -56,6 +56,7 @@ class NewsSectionDetailViewControllerStateMachine {
     private func changeStateToLoaded(_ values: NewsSectionDetailViewModel.TableData) {
         owner.tableView.isHidden = false
         owner.tableViewDelegate.reloadData(by: values)
+        owner.refreshControl.endRefreshing()
     }
 
     private func changeStateToError(_ error: Error) {

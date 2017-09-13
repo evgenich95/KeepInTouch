@@ -33,13 +33,13 @@ class NewsSummaryViewModel {
             sectionedValues = data
                 .removedDuplicates
                 .collectionViewData(valueToCellType: { value in
-                switch value.type {
-                case .top7:
-                    return ImageNewsCollectionViewCell.self
-                default:
-                    return SimpleNewsCollectionViewCell.self
-                }
-            })
+                    switch value.type {
+                    case .top7:
+                        return ImageNewsCollectionViewCell.self
+                    default:
+                        return SimpleNewsCollectionViewCell.self
+                    }
+                })
         }
     }
     var sectionedValues = CollectionData() {
@@ -52,38 +52,34 @@ class NewsSummaryViewModel {
         }
     }
 
-    init() {}
-
     // MARK: - Web Layer -
     func loadRequiredData() {
-        let promises = requiredNewsTypes.map { WebService.loadNews(with: $0) }
-
-        firstly {
-            when(fulfilled: promises)
-            }.then(on: background) {[weak self] results -> Void in
-                guard let `self` = self else {
-                    return
-                }
-
-                var data = Data()
-
-                for (index, news) in results.enumerated() {
-                    let type = self.requiredNewsTypes[index]
-                    news.forEach {
-                        $0.type = type
-                    }
-                    let sortedValues = news.sorted(by: { (n1, n2) -> Bool in
-                        n1.pubDate > n2.pubDate
-                    })
-
-                    data = data.appending(sectionAndValue: (type.description, sortedValues))
-                }
-
-                self.data = data
-
+        WebService.loadNews(with: requiredNewsTypes)
+            .then(on: background) {[weak self] typedNews in
+                self?.save(typedNews: typedNews)
             }.catch {[weak self] (error) in
                 self?.onSignInRequestFailed?(error)
         }
+    }
+
+    private func save(typedNews: [(NewsType, [News])]) {
+        var data = Data()
+        let sorted = sortedByDate(typedNews)
+        sorted.forEach {
+            let newSection = ($0.0.description, $0.1)
+            data = data.appending(sectionAndValue: newSection)
+        }
+        self.data = data
+    }
+
+    private func sortedByDate(_ typedNews: [(NewsType, [News])]) -> [(NewsType, [News])] {
+        var result = typedNews
+        for (index, cortege) in typedNews.enumerated() {
+            let sortedNews = cortege.1.sorted { $0.pubDate > $1.pubDate}
+            let updatedCortege = (cortege.0, sortedNews)
+            result[index] = updatedCortege
+        }
+        return result
     }
 
     func viewDetails(of section: Section) {
@@ -95,6 +91,10 @@ class NewsSummaryViewModel {
 
     func openDetails(of value: Value) {
         delegate?.newsSummaryViewModelDidOpenValueDetails(of: value)
+    }
+
+    func updateData() {
+        loadRequiredData()
     }
 
     // MARK: - Binding properties -

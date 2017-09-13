@@ -17,6 +17,15 @@ class NewsSummaryViewController: ViewController {
 
     @IBOutlet weak var newsCollectionView: CollectionView!
 
+    lazy var refreshControl: UIRefreshControl = {
+        let refresh =  UIRefreshControl()
+        refresh.attributedTitle = NSAttributedString(string: "Pull to update")
+        refresh.addTarget(self,
+                          action: #selector(refreshTableData(refreshControl:)),
+                          for: UIControlEvents.valueChanged)
+        return refresh
+    }()
+
     // MARK: - Class variables -
     var collectionDataSource: NewsSummaryCollectionDataSource!
     var collectionLayout: NewsSummaryCollectionLayout!
@@ -64,6 +73,7 @@ class NewsSummaryViewController: ViewController {
     }
 
     private func setupCollectionView() {
+        newsCollectionView.addSubview(refreshControl)
         collectionDataSource = NewsSummaryCollectionDataSource(collectionView: newsCollectionView, data: dataSource)
         collectionLayout = NewsSummaryCollectionLayout(collectionView: newsCollectionView)
 
@@ -82,12 +92,22 @@ class NewsSummaryViewController: ViewController {
     fileprivate func updateView() {
         stateMachinge.switch(to: dataSource.isEmpty ? .noData : .loaded(dataSource))
     }
+
+    @objc func refreshTableData(refreshControl: UIRefreshControl) {
+        viewModel.updateData()
+    }
 }
 
 // MARK: - ViewModel Binding -
 extension NewsSummaryViewController {
 
     fileprivate func bindToViewModel() {
+        viewModel.dataDidChangeWithoutChanges = {[weak self] in
+            DispatchQueue.main.async {
+                self?.refreshControl.endRefreshing()
+            }
+        }
+
         viewModel.dataDidChange = {[weak self] in
             DispatchQueue.main.async {
                 self?.updateView()
