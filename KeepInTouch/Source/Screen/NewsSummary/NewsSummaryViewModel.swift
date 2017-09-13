@@ -81,9 +81,8 @@ class NewsSummaryViewModel {
 
                 self.data = data
 
-            }.catch { (error) in
-                //TODO: Show user alert for users
-                print("error = \(error)")
+            }.catch {[weak self] (error) in
+                self?.onSignInRequestFailed?(error)
         }
     }
 

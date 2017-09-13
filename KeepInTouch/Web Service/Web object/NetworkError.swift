@@ -1,5 +1,5 @@
 //
-//  NetworkError.swift
+//  CustomError.swift
 //  KeepInTouch
 //
 //  Created by Anton Ivanov on 10.09.17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NetworkError: LocalizedError {
+struct CustomError: LocalizedError {
     var message: String
 
     var errorDescription: String? {

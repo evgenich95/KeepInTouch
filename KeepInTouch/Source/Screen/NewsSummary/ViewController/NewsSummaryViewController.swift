@@ -11,13 +11,13 @@ import UIKit
 
 class NewsSummaryViewController: ViewController {
 
-    //MARK: - UI -
+    // MARK: - UI -
     var errorView: LabelView = LabelView()
     var noDataView: LabelView = LabelView()
 
     @IBOutlet weak var newsCollectionView: CollectionView!
 
-    //MARK: - Class variables -
+    // MARK: - Class variables -
     var collectionDataSource: NewsSummaryCollectionDataSource!
     var collectionLayout: NewsSummaryCollectionLayout!
 
@@ -25,7 +25,7 @@ class NewsSummaryViewController: ViewController {
         return viewModel.sectionedValues
     }
 
-    //MARK: - Init -
+    // MARK: - Init -
     var viewModel: NewsSummaryViewModel
     var stateMachinge: NewsSummaryViewControllerStateMachine!
 

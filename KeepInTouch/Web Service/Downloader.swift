@@ -21,44 +21,40 @@ class Downloader: NSObject, URLSessionTaskDelegate {
 
     static let shared = Downloader()
 
-    private var urlCache = URLCache(memoryCapacity: 20 * 1024 * 1024, diskCapacity: 100 * 1024 * 1024, diskPath: "ImageDownloadCache")
+    private var cacheSession = CacheSession.shared
 
-    private lazy var sessionConfiguration: URLSessionConfiguration = {
-        return make(URLSessionConfiguration.default) {
-            $0.requestCachePolicy = URLRequest.CachePolicy.returnCacheDataElseLoad
-            $0.urlCache = self.urlCache
-        }
+    private lazy var defaultSession: URLSession = {
+        let configuration = URLSessionConfiguration.default
+        configuration.requestCachePolicy = URLRequest.CachePolicy.reloadIgnoringCacheData
+        configuration.urlCache = nil
+
+        return URLSession(configuration: configuration)
     }()
 
-    private lazy var session: URLSession = {
-        return URLSession(configuration: self.sessionConfiguration, delegate: self, delegateQueue: nil)
-    }()
+    func loadData(url: URL, needsCaching: Bool = false) -> URLDataPromise {
+        let cacheSession = self.cacheSession
+        let session = needsCaching ? cacheSession : defaultSession
 
-    func loadData(url: URL, setting: RequestSetting = RequestSetting.defaults) -> URLDataPromise {
-        printMe(with: ["url = \(url)"])
+        let forceUpdatePromise: URLDataPromise = session.dataTask(with: url.request)
+        let cachePromise: URLDataPromise = cacheSession.dataTask(with: url.request)
 
-        session.configuration.requestCachePolicy = setting.policy
-        let dataPromise: URLDataPromise = session.dataTask(with: url.request)
-        _ = dataPromise.asDataAndResponse().then(on: background) {[weak self] data, response -> Void in
-            if setting.isNeedCaching {
-                self?.cache(response, data, for: url)
+        return URLDataPromise { fulfill, reject in
+            forceUpdatePromise.asDataAndResponse()
+                .then {data, response -> Void in
+                    fulfill(data)
+                    CacheSession.cache(response, data, for: url)
+                }.catch {_ in
+                    cachePromise
+                .then {data -> Void in
+                    fulfill(data)
+                }.catch { error in
+                    reject(error)
+                }
             }
         }
-        return dataPromise
     }
 
     func loadImage(url: URL) -> Promise<UIImage> {
-        printMe(with: ["url = \(url)"])
-
-        let setting = RequestSetting(isNeedCaching: true, policy: .returnCacheDataElseLoad)
-        return loadData(url: url, setting: setting).asImage()
-    }
-
-    private func cache(_ response: URLResponse, _ data: Data, for url: URL) {
-        DispatchQueue.global(qos: .userInitiated).async {[weak self] in
-            let cachedResponse = CachedURLResponse(response: response, data: data, userInfo:nil, storagePolicy: URLCache.StoragePolicy.allowed)
-            self?.urlCache.storeCachedResponse(cachedResponse, for: url.request)
-            printMe(with: ["cached"])
-        }
+        return loadData(url: url, needsCaching: true).asImage()
     }
 }

@@ -71,7 +71,6 @@ class SectionedValuesTests: XCTestCase {
 
         let expectedSectionedValues = SectionedValues<Section, Value>(expectedData)
 
-
         var sectionedValues = SectionedValues<Section, Value>(data)
 
         //Check existing duplicates

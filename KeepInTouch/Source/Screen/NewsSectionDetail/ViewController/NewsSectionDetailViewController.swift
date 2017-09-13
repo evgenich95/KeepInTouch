@@ -11,19 +11,18 @@ import UIKit
 
 class NewsSectionDetailViewController: ViewController {
 
-    //MARK: - UI -
+    // MARK: - UI -
     @IBOutlet weak var tableView: TableView!
     var errorView: LabelView = LabelView()
     var noDataView: LabelView = LabelView()
 
-    //MARK: - Class variables -
+    // MARK: - Class variables -
     var tableViewDelegate: NewsSectionDetailTableViewDataSource!
-
 
     var dataSource: NewsSectionDetailViewModel.TableData {
         return viewModel.tableData
     }
-    //MARK: - Init -
+    // MARK: - Init -
     var stateMachinge: NewsSectionDetailViewControllerStateMachine!
 
     var viewModel: NewsSectionDetailViewModel
@@ -71,7 +70,6 @@ class NewsSectionDetailViewController: ViewController {
     private func setupNoDataView() {
         view.addSubview(noDataView)
     }
-
 
     fileprivate func updateView() {
         stateMachinge.switch(to: dataSource.isEmpty ? .noData : .loaded(dataSource))
