@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJm-ib-BOB">
-                        <rect key="frame" x="3" y="3" width="375" height="208"/>
+                        <rect key="frame" x="10" y="10" width="361" height="194"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJ5-GM-RT3">
-                                <rect key="frame" x="15" y="0.0" width="345" height="208"/>
+                                <rect key="frame" x="15" y="0.0" width="331" height="194"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -40,10 +40,10 @@
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="cJm-ib-BOB" secondAttribute="bottom" constant="3" id="IKH-jE-Jf3"/>
-                <constraint firstItem="cJm-ib-BOB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="YO5-pg-bZg"/>
-                <constraint firstAttribute="trailing" secondItem="cJm-ib-BOB" secondAttribute="trailing" constant="3" id="kGU-p5-TCa"/>
-                <constraint firstItem="cJm-ib-BOB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="ziY-91-mQu"/>
+                <constraint firstAttribute="bottom" secondItem="cJm-ib-BOB" secondAttribute="bottom" constant="10" id="IKH-jE-Jf3"/>
+                <constraint firstItem="cJm-ib-BOB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="YO5-pg-bZg"/>
+                <constraint firstAttribute="trailing" secondItem="cJm-ib-BOB" secondAttribute="trailing" constant="10" id="kGU-p5-TCa"/>
+                <constraint firstItem="cJm-ib-BOB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="ziY-91-mQu"/>
             </constraints>
             <size key="customSize" width="381" height="214"/>
             <connections>

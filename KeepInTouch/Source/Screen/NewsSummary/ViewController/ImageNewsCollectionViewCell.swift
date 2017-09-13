@@ -22,7 +22,7 @@ class ImageNewsCollectionViewCell: SingleItemCollectionCell<News> {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.addBottomBorder(color: .gray, width: 1)
+        contentView.addBottomBorder(color: .lightGray, width: 0.5)
     }
 
     override func awakeFromNib() {
@@ -37,6 +37,6 @@ class ImageNewsCollectionViewCell: SingleItemCollectionCell<News> {
             newsUIImageView.isHidden = true
         }
         newsTitleUILabel.text = object.title
-        descriptionUILabel.text = object.definition.replacingOccurrences(of: "^\\s*", with: "", options: .regularExpression)
+//        descriptionUILabel.text = object.definition.replacingOccurrences(of: "^\\s*", with: "", options: .regularExpression)
     }
 }

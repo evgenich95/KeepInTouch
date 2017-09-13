@@ -15,7 +15,7 @@ class SimpleNewsCollectionViewCell: SingleItemCollectionCell<News> {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.addBottomBorder(color: .gray, width: 1)
+        contentView.addBottomBorder(color: .lightGray, width: 0.5)
     }
 
     override func awakeFromNib() {

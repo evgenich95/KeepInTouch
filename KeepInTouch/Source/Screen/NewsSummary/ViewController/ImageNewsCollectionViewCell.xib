@@ -31,15 +31,9 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i94-CH-gjp">
                                         <rect key="frame" x="160" y="0.0" width="195" height="136"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" verticalCompressionResistancePriority="754" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhL-aP-RRV">
-                                                <rect key="frame" x="0.0" y="0.0" width="195" height="12"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmV-xp-knz">
-                                                <rect key="frame" x="0.0" y="12" width="195" height="124"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" verticalCompressionResistancePriority="754" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OhL-aP-RRV">
+                                                <rect key="frame" x="0.0" y="0.0" width="195" height="136"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -68,7 +62,6 @@
             </constraints>
             <size key="customSize" width="375" height="156"/>
             <connections>
-                <outlet property="descriptionUILabel" destination="KmV-xp-knz" id="uvY-V5-lLr"/>
                 <outlet property="newsTitleUILabel" destination="OhL-aP-RRV" id="oNk-I8-BCS"/>
                 <outlet property="newsUIImageView" destination="xMv-Hz-QMp" id="12i-uu-Bxt"/>
             </connections>

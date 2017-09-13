@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class NewsSummaryCollectionDelegate: NSObject, UICollectionViewDelegate {
+class NewsSummaryCollectionDelegate: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     var onDidSelectItem: ((_ at: IndexPath) -> Void)?
     var collectionView: UICollectionView
 
