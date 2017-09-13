@@ -25,7 +25,7 @@ class WebService {
             Downloader.shared.loadData(url: url).then(on: background) { data -> Void in
                 let parser = XMLParser<News>.init(nodePath: nodePath, xmlData: data)
                 guard let array = parser.array else {
-                    let parseError = NetworkError(message: "Parse Error")
+                    let parseError = CustomError(message: "Parse Error")
                     reject(parseError)
                     return
                 }
