@@ -64,9 +64,13 @@ class NewsSectionDetailViewController: ViewController {
     }
 
     private func configureTableView() {
-        tableViewDelegate = NewsSectionDetailTableDataSource(tableView: tableView, data: dataSource)
-        tableViewDelegate.delegate = self
         tableView.addSubview(refreshControl)
+
+        tableViewDelegate = NewsSectionDetailTableDataSource(tableView: tableView, data: dataSource)
+
+        tableViewDelegate.onDidSelectItem = {[weak self] item in
+            self?.viewModel.openDetail(of: item)
+        }
     }
 
     private func setupErrorView() {
@@ -113,11 +117,5 @@ extension NewsSectionDetailViewController {
                 self?.stateMachinge.switch(to: .error(error))
             }
         }
-    }
-}
-
-extension NewsSectionDetailViewController: NewsSectionDetailTableDataSourceDelegate {
-    func newsSectionDetailTableDataSourceDidSelect(item: NewsSectionDetailViewModel.Value) {
-        viewModel.openDetail(of: item)
     }
 }

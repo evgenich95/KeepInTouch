@@ -9,12 +9,8 @@
 import Foundation
 import UIKit
 
-protocol NewsSectionDetailTableDataSourceDelegate: class {
-    func newsSectionDetailTableDataSourceDidSelect(item: NewsSectionDetailViewModel.Value)
-}
-
 class NewsSectionDetailTableDataSource: NSObject {
-    weak var delegate: NewsSectionDetailTableDataSourceDelegate?
+    var onDidSelectItem: ((_ item: NewsSectionDetailViewModel.Value) -> Void)?
 
     typealias Data = NewsSectionDetailViewModel.TableData
     fileprivate let tableView: TableView
@@ -80,7 +76,7 @@ extension NewsSectionDetailTableDataSource: UITableViewDelegate, UITableViewData
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellValue = data.value(for: indexPath).value
-        delegate?.newsSectionDetailTableDataSourceDidSelect(item: cellValue)
+        onDidSelectItem?(cellValue)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

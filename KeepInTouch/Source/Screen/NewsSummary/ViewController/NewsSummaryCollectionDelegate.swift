@@ -57,5 +57,4 @@ class NewsSummaryCollectionDelegate: NSObject, UICollectionViewDelegate, UIColle
         onDidSelectItem?(indexPath)
         collectionView.deselectItem(at: indexPath, animated: true)
     }
-
 }
