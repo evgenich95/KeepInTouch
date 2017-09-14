@@ -55,6 +55,11 @@ class NewsSummaryViewController: ViewController {
         viewModel.loadRequiredData()
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        newsCollectionView.reloadData()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()

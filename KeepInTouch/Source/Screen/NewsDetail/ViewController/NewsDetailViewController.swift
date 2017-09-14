@@ -25,6 +25,11 @@ class NewsDetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        view.set(safariViewController)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
