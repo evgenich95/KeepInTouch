@@ -1,6 +1,6 @@
 //
 //  CacheSession.swift
-//  KeepInTouch
+//  LentaSDK
 //
 //  Created by Anton Ivanov on 13.09.17.
 //  Copyright © 2017 IAE. All rights reserved.

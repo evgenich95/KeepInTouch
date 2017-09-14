@@ -1,6 +1,6 @@
 //
 //  UIImageView + setImage.swift
-//  KeepInTouch
+//  LentaSDK
 //
 //  Created by Anton Ivanov on 12.09.17.
 //  Copyright © 2017 IAE. All rights reserved.
@@ -8,15 +8,11 @@
 
 import Foundation
 import UIKit
-import LentaSDK
 
 extension UIImageView {
     private var activityIndicator: UIActivityIndicatorView {
-
-        let activityIndicator = build(UIActivityIndicatorView(activityIndicatorStyle: .gray)) {
-            $0.translatesAutoresizingMaskIntoConstraints = false
-        }
-
+        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         addSubview(activityIndicator)
 
         let horizontalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0)
@@ -29,8 +25,7 @@ extension UIImageView {
         return activityIndicator
     }
 
-    func setImage(url: URL, completion: ((_ image: UIImage?) -> Void)? = nil) {
-        let main = DispatchQueue.main
+    public func setImage(url: URL, completion: ((_ image: UIImage?) -> Void)? = nil) {
         let progressIndicator = activityIndicator
 
         main.async {

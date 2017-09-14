@@ -12,6 +12,7 @@
 		48F63164F2B1ACD87B40014D /* NewsSectionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E695970E3BE900B0D5649 /* NewsSectionDetailViewModel.swift */; };
 		4B7F6F4368EB1C9F4C707CC9 /* NewsSummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E96560EBC2AF51623B80BC68 /* NewsSummaryViewController.xib */; };
 		4CC4EDE4150375CBF51BD4DC /* NewsSectionDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC994837C74D28BB7977AB8F /* NewsSectionDetailCoordinator.swift */; };
+		56261F3F1F6A55B1003AEEC9 /* UIImageView + setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BCED2F1F67D37D00865827 /* UIImageView + setImage.swift */; };
 		563EB43D1F69D93400A3D722 /* LentaSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 563EB43B1F69D93400A3D722 /* LentaSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		563EB4401F69D93400A3D722 /* LentaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563EB4391F69D93400A3D722 /* LentaSDK.framework */; };
 		563EB4411F69D93400A3D722 /* LentaSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 563EB4391F69D93400A3D722 /* LentaSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -46,7 +47,6 @@
 		56BC25DE1F696E220036D4DE /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BC25DD1F696E220036D4DE /* LabelView.swift */; };
 		56BC25E41F6970070036D4DE /* NewsSectionDetailStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BC25E31F6970070036D4DE /* NewsSectionDetailStateMachine.swift */; };
 		56BC25E61F6970240036D4DE /* ListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BC25E51F6970240036D4DE /* ListState.swift */; };
-		56BCED301F67D37D00865827 /* UIImageView + setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BCED2F1F67D37D00865827 /* UIImageView + setImage.swift */; };
 		56BCED321F67F3AC00865827 /* NewsSectionDetailTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BCED311F67F3AC00865827 /* NewsSectionDetailTableDataSource.swift */; };
 		56BCED341F67F96F00865827 /* SingleItemTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BCED331F67F96F00865827 /* SingleItemTableCell.swift */; };
 		56BCED361F67FB8600865827 /* TableCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BCED351F67FB8600865827 /* TableCellData.swift */; };
@@ -160,7 +160,7 @@
 		56BC25DD1F696E220036D4DE /* LabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
 		56BC25E31F6970070036D4DE /* NewsSectionDetailStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSectionDetailStateMachine.swift; sourceTree = "<group>"; };
 		56BC25E51F6970240036D4DE /* ListState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListState.swift; path = Application/ListState.swift; sourceTree = "<group>"; };
-		56BCED2F1F67D37D00865827 /* UIImageView + setImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView + setImage.swift"; sourceTree = "<group>"; };
+		56BCED2F1F67D37D00865827 /* UIImageView + setImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView + setImage.swift"; path = "../KeepInTouch/Extension/UIKit/UIImageView + setImage.swift"; sourceTree = "<group>"; };
 		56BCED311F67F3AC00865827 /* NewsSectionDetailTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSectionDetailTableDataSource.swift; sourceTree = "<group>"; };
 		56BCED331F67F96F00865827 /* SingleItemTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleItemTableCell.swift; sourceTree = "<group>"; };
 		56BCED351F67FB8600865827 /* TableCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableCellData.swift; path = Application/TableCellData.swift; sourceTree = "<group>"; };
@@ -245,9 +245,18 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		56261F401F6A5677003AEEC9 /* UIImage Extension */ = {
+			isa = PBXGroup;
+			children = (
+				56BCED2F1F67D37D00865827 /* UIImageView + setImage.swift */,
+			);
+			name = "UIImage Extension";
+			sourceTree = "<group>";
+		};
 		563EB43A1F69D93400A3D722 /* LentaSDK */ = {
 			isa = PBXGroup;
 			children = (
+				56261F401F6A5677003AEEC9 /* UIImage Extension */,
 				563EB4561F69DF4300A3D722 /* Model */,
 				563EB4581F69DF6100A3D722 /* Data Handler */,
 				563EB4571F69DF4C00A3D722 /* Web */,
@@ -414,7 +423,6 @@
 			isa = PBXGroup;
 			children = (
 				56BCED3C1F6862A800865827 /* UIView */,
-				56BCED2E1F67D36C00865827 /* UIImageView */,
 				5676AFF71F6557D900F66296 /* UIViewController */,
 			);
 			path = UIKit;
@@ -503,14 +511,6 @@
 				56BC25E31F6970070036D4DE /* NewsSectionDetailStateMachine.swift */,
 			);
 			name = "State Machine";
-			sourceTree = "<group>";
-		};
-		56BCED2E1F67D36C00865827 /* UIImageView */ = {
-			isa = PBXGroup;
-			children = (
-				56BCED2F1F67D37D00865827 /* UIImageView + setImage.swift */,
-			);
-			name = UIImageView;
 			sourceTree = "<group>";
 		};
 		56BCED371F67FEE600865827 /* Cell */ = {
@@ -910,6 +910,7 @@
 				563EB4481F69DA4900A3D722 /* DataSerializer.swift in Sources */,
 				563EB44B1F69DA4900A3D722 /* Object.swift in Sources */,
 				563EB4491F69DA4900A3D722 /* DateFormatterTransform.swift in Sources */,
+				56261F3F1F6A55B1003AEEC9 /* UIImageView + setImage.swift in Sources */,
 				563EB4501F69DA4900A3D722 /* CacheSession.swift in Sources */,
 				563EB44C1F69DA4900A3D722 /* XMLParser.swift in Sources */,
 			);
@@ -933,7 +934,6 @@
 				56EDE4671F66632700570113 /* SimpleNewsCollectionViewCell.swift in Sources */,
 				5676AFFF1F6558BC00F66296 /* ViewController.swift in Sources */,
 				5676AFF41F65579400F66296 /* TableView.swift in Sources */,
-				56BCED301F67D37D00865827 /* UIImageView + setImage.swift in Sources */,
 				56BCED3A1F67FF0500865827 /* NewsSectionDetailTableViewCell.swift in Sources */,
 				56BC25E61F6970240036D4DE /* ListState.swift in Sources */,
 				56BCED401F686F3A00865827 /* UIView + addBorder.swift in Sources */,
