@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import LentaSDK
 
 extension UIImageView {
     private var activityIndicator: UIActivityIndicatorView {
@@ -27,7 +28,7 @@ extension UIImageView {
 
     public func setImage(url: URL, completion: ((_ image: UIImage?) -> Void)? = nil) {
         let progressIndicator = activityIndicator
-
+        let main = DispatchQueue.main
         main.async {
             self.image = nil
             progressIndicator.startAnimating()

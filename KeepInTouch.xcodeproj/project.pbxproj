@@ -12,7 +12,7 @@
 		48F63164F2B1ACD87B40014D /* NewsSectionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E695970E3BE900B0D5649 /* NewsSectionDetailViewModel.swift */; };
 		4B7F6F4368EB1C9F4C707CC9 /* NewsSummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E96560EBC2AF51623B80BC68 /* NewsSummaryViewController.xib */; };
 		4CC4EDE4150375CBF51BD4DC /* NewsSectionDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC994837C74D28BB7977AB8F /* NewsSectionDetailCoordinator.swift */; };
-		56261F3F1F6A55B1003AEEC9 /* UIImageView + setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BCED2F1F67D37D00865827 /* UIImageView + setImage.swift */; };
+		560497F41F6A6E7600CF9E15 /* UIImageView + setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BCED2F1F67D37D00865827 /* UIImageView + setImage.swift */; };
 		56261F431F6A5CF3003AEEC9 /* UITableView + cellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56261F421F6A5CF3003AEEC9 /* UITableView + cellConfiguration.swift */; };
 		56261F461F6A5E09003AEEC9 /* UICollectionView + cellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56261F451F6A5E09003AEEC9 /* UICollectionView + cellConfiguration.swift */; };
 		56261F681F6A5F71003AEEC9 /* CustomHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56261F671F6A5F67003AEEC9 /* CustomHUD.framework */; };
@@ -240,12 +240,13 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		56261F401F6A5677003AEEC9 /* UIImage Extension */ = {
+		56261F401F6A5677003AEEC9 /* UIImageView */ = {
 			isa = PBXGroup;
 			children = (
 				56BCED2F1F67D37D00865827 /* UIImageView + setImage.swift */,
 			);
-			name = "UIImage Extension";
+			name = UIImageView;
+			path = ../../../LentaSDK;
 			sourceTree = "<group>";
 		};
 		56261F411F6A5CD1003AEEC9 /* UITableViewController */ = {
@@ -275,7 +276,6 @@
 		563EB43A1F69D93400A3D722 /* LentaSDK */ = {
 			isa = PBXGroup;
 			children = (
-				56261F401F6A5677003AEEC9 /* UIImage Extension */,
 				563EB4561F69DF4300A3D722 /* Model */,
 				563EB4581F69DF6100A3D722 /* Data Handler */,
 				563EB4571F69DF4C00A3D722 /* Web */,
@@ -441,6 +441,7 @@
 		5676AFF61F6557D400F66296 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				56261F401F6A5677003AEEC9 /* UIImageView */,
 				56261F441F6A5DEB003AEEC9 /* UICollectionView */,
 				56261F411F6A5CD1003AEEC9 /* UITableViewController */,
 				56BCED3C1F6862A800865827 /* UIView */,
@@ -915,7 +916,6 @@
 				563EB4481F69DA4900A3D722 /* DataSerializer.swift in Sources */,
 				563EB44B1F69DA4900A3D722 /* Object.swift in Sources */,
 				563EB4491F69DA4900A3D722 /* DateFormatterTransform.swift in Sources */,
-				56261F3F1F6A55B1003AEEC9 /* UIImageView + setImage.swift in Sources */,
 				563EB4501F69DA4900A3D722 /* CacheSession.swift in Sources */,
 				563EB44C1F69DA4900A3D722 /* XMLParser.swift in Sources */,
 			);
@@ -934,6 +934,7 @@
 				5676AFE51F65557700F66296 /* MainFlowCoordinator.swift in Sources */,
 				56261F431F6A5CF3003AEEC9 /* UITableView + cellConfiguration.swift in Sources */,
 				56A744E31F668EBD00952FBF /* CollectionCellData.swift in Sources */,
+				560497F41F6A6E7600CF9E15 /* UIImageView + setImage.swift in Sources */,
 				56261F6D1F6A67D6003AEEC9 /* StateMachine.swift in Sources */,
 				56E3537E1F657CA3006E775F /* SectionedValues.swift in Sources */,
 				56EDE4581F66597F00570113 /* NewsSummaryCollectionDataSource.swift in Sources */,
