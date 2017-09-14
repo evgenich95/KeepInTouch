@@ -11,7 +11,6 @@ import LentaSDK
 
 class ImageNewsCollectionViewCell: SingleItemCollectionCell<News> {
 
-    @IBOutlet weak var descriptionUILabel: UILabel!
     @IBOutlet weak var newsTitleUILabel: UILabel!
     @IBOutlet weak var newsUIImageView: UIImageView!
 
@@ -38,6 +37,5 @@ class ImageNewsCollectionViewCell: SingleItemCollectionCell<News> {
             newsUIImageView.isHidden = true
         }
         newsTitleUILabel.text = object.title
-//        descriptionUILabel.text = object.definition.replacingOccurrences(of: "^\\s*", with: "", options: .regularExpression)
     }
 }

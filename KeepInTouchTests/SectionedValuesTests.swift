@@ -51,7 +51,7 @@ class SectionedValuesTests: XCTestCase {
         var sectionedValues = SectionedValues<Section, Value>(data)
         let expectedSectionedValues = SectionedValues<Section, Value>(expectedData)
 
-        sectionedValues = sectionedValues.removedDuplicates
+        sectionedValues = sectionedValues.withoutDuplicates
 
         XCTAssertEqual(expectedSectionedValues, sectionedValues)
     }
@@ -88,7 +88,7 @@ class SectionedValuesTests: XCTestCase {
             XCTAssertTrue(matches > 0)
         }
 
-        sectionedValues = sectionedValues.removedDuplicates
+        sectionedValues = sectionedValues.withoutDuplicates
 
         XCTAssertEqual(expectedSectionedValues, sectionedValues)
     }
@@ -100,7 +100,6 @@ class SectionedValuesTests: XCTestCase {
             $0.1
         }
 
-        print("sectionedValues before = \(sectionedValues)")
         //Check existing removing values
         removeItems
             .flatMap {$0.1}
@@ -122,7 +121,5 @@ class SectionedValuesTests: XCTestCase {
             .forEach {
                 XCTAssertFalse(containedValues.contains($0))
         }
-
-        printMe(with: [])
     }
 }

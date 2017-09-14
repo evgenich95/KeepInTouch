@@ -45,9 +45,6 @@ public class Object: NSObject, XMLIndexerDeserializable {
         propertyKeys
             .filter {!SelfType.ignoredProperties().contains($0)}
             .forEach {
-                if $0 == "sectionUIButton" {
-                    print()
-                }
                 let atrrValue = value(forKey: $0)
                 if let object = atrrValue as? Object {
                     result[$0] = object.toJSON()

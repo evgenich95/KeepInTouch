@@ -34,7 +34,6 @@ class NewsSummaryCollectionDataSource: NSObject {
     }
 
     func reloadData(by updates: Data) {
-        printMe()
         data = updates
         registerCellsIfNeed()
         collectionView.reloadData()

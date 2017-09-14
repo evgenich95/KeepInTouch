@@ -42,6 +42,5 @@ class AppCoordinator: Coordinator {
 
     func setupTheme() {
         UINavigationBar.appearance().barTintColor = .white
-//        UINavigationBar.appearance().tintColor = .white
     }
 }

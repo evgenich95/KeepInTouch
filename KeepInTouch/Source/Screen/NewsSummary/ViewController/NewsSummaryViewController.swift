@@ -110,7 +110,7 @@ class NewsSummaryViewController: ViewController {
     }
 }
 
-// MARK: - ViewModel Binding -
+// MARK: - Reactions -
 extension NewsSummaryViewController {
     fileprivate func bindToViewModel() {
         viewModel.onDataDidNotChange = {[weak self] in

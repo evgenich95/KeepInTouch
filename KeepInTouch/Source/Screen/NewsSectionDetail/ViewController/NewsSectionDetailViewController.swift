@@ -93,11 +93,9 @@ class NewsSectionDetailViewController: ViewController {
     }
 }
 
-// MARK: - ViewModel Binding -
 extension NewsSectionDetailViewController {
 
     fileprivate func bindToViewModel() {
-        printMe()
         viewModel.onDataDidNotChange = {[weak self] in
             DispatchQueue.main.async {
                 self?.hideLoadingView()
@@ -118,6 +116,7 @@ extension NewsSectionDetailViewController {
         }
     }
 }
+
 extension NewsSectionDetailViewController: NewsSectionDetailTableViewDataSourceDelegate {
     func newsSectionDetailTableViewDataSourceDidSelect(item: NewsSectionDetailViewModel.Value) {
         viewModel.openDetail(of: item)
