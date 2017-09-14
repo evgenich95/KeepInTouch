@@ -14,6 +14,7 @@
 		4CC4EDE4150375CBF51BD4DC /* NewsSectionDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC994837C74D28BB7977AB8F /* NewsSectionDetailCoordinator.swift */; };
 		56261F3F1F6A55B1003AEEC9 /* UIImageView + setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BCED2F1F67D37D00865827 /* UIImageView + setImage.swift */; };
 		56261F431F6A5CF3003AEEC9 /* UITableView + cellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56261F421F6A5CF3003AEEC9 /* UITableView + cellConfiguration.swift */; };
+		56261F461F6A5E09003AEEC9 /* UICollectionView + cellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56261F451F6A5E09003AEEC9 /* UICollectionView + cellConfiguration.swift */; };
 		563EB43D1F69D93400A3D722 /* LentaSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 563EB43B1F69D93400A3D722 /* LentaSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		563EB4401F69D93400A3D722 /* LentaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563EB4391F69D93400A3D722 /* LentaSDK.framework */; };
 		563EB4411F69D93400A3D722 /* LentaSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 563EB4391F69D93400A3D722 /* LentaSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -61,7 +62,6 @@
 		56EDE4631F66631400570113 /* ImageNewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56EDE4611F66631400570113 /* ImageNewsCollectionViewCell.xib */; };
 		56EDE4671F66632700570113 /* SimpleNewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDE4651F66632700570113 /* SimpleNewsCollectionViewCell.swift */; };
 		56EDE4681F66632700570113 /* SimpleNewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56EDE4661F66632700570113 /* SimpleNewsCollectionViewCell.xib */; };
-		56EDE46C1F66646E00570113 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDE46B1F66646E00570113 /* CollectionView.swift */; };
 		5C38B7F87CC10D871BD7CEA9 /* NewsSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C19D349B530A9ECBEF5F32F /* NewsSummaryViewController.swift */; };
 		6A478B594F7DB364E244B1EA /* NewsSummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A962AFF8142A12A2B29ADDC /* NewsSummaryViewModel.swift */; };
 		76DC7A227636FFB094F5044B /* Pods_LentaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA1E5A8711B03E383387EDFB /* Pods_LentaSDK.framework */; };
@@ -131,6 +131,7 @@
 		3A2BE642881FC08F3DCDA7AB /* Pods_KeepInTouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepInTouch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		555A36DB2846BEDFB3BB230D /* Pods-LentaSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LentaSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LentaSDK/Pods-LentaSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		56261F421F6A5CF3003AEEC9 /* UITableView + cellConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView + cellConfiguration.swift"; sourceTree = "<group>"; };
+		56261F451F6A5E09003AEEC9 /* UICollectionView + cellConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView + cellConfiguration.swift"; sourceTree = "<group>"; };
 		563EB4391F69D93400A3D722 /* LentaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LentaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		563EB43B1F69D93400A3D722 /* LentaSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LentaSDK.h; sourceTree = "<group>"; };
 		563EB43C1F69D93400A3D722 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -182,7 +183,6 @@
 		56EDE4611F66631400570113 /* ImageNewsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageNewsCollectionViewCell.xib; sourceTree = "<group>"; };
 		56EDE4651F66632700570113 /* SimpleNewsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		56EDE4661F66632700570113 /* SimpleNewsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleNewsCollectionViewCell.xib; sourceTree = "<group>"; };
-		56EDE46B1F66646E00570113 /* CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		5C19D349B530A9ECBEF5F32F /* NewsSummaryViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewsSummaryViewController.swift; sourceTree = "<group>"; };
 		6A962AFF8142A12A2B29ADDC /* NewsSummaryViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewsSummaryViewModel.swift; sourceTree = "<group>"; };
 		754E695970E3BE900B0D5649 /* NewsSectionDetailViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewsSectionDetailViewModel.swift; sourceTree = "<group>"; };
@@ -259,6 +259,14 @@
 				56261F421F6A5CF3003AEEC9 /* UITableView + cellConfiguration.swift */,
 			);
 			name = UITableViewController;
+			sourceTree = "<group>";
+		};
+		56261F441F6A5DEB003AEEC9 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				56261F451F6A5E09003AEEC9 /* UICollectionView + cellConfiguration.swift */,
+			);
+			name = UICollectionView;
 			sourceTree = "<group>";
 		};
 		563EB43A1F69D93400A3D722 /* LentaSDK */ = {
@@ -401,20 +409,20 @@
 		5676AFF11F65577600F66296 /* View Layer */ = {
 			isa = PBXGroup;
 			children = (
-				5676AFF21F65578500F66296 /* Base Classes */,
+				5676AFF21F65578500F66296 /* Base Class */,
 				56BC25DD1F696E220036D4DE /* LabelView.swift */,
 			);
 			path = "View Layer";
 			sourceTree = "<group>";
 		};
-		5676AFF21F65578500F66296 /* Base Classes */ = {
+		5676AFF21F65578500F66296 /* Base Class */ = {
 			isa = PBXGroup;
 			children = (
 				5676AFFA1F65587600F66296 /* SingleItemCollectionCell.swift */,
-				5676AFFE1F6558BC00F66296 /* ViewController.swift */,
-				56EDE46B1F66646E00570113 /* CollectionView.swift */,
 				56BCED331F67F96F00865827 /* SingleItemTableCell.swift */,
+				5676AFFE1F6558BC00F66296 /* ViewController.swift */,
 			);
+			name = "Base Class";
 			path = "Base Classes";
 			sourceTree = "<group>";
 		};
@@ -429,6 +437,7 @@
 		5676AFF61F6557D400F66296 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				56261F441F6A5DEB003AEEC9 /* UICollectionView */,
 				56261F411F6A5CD1003AEEC9 /* UITableViewController */,
 				56BCED3C1F6862A800865827 /* UIView */,
 				5676AFF71F6557D900F66296 /* UIViewController */,
@@ -929,7 +938,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5676AFFB1F65587600F66296 /* SingleItemCollectionCell.swift in Sources */,
-				56EDE46C1F66646E00570113 /* CollectionView.swift in Sources */,
 				5676AFF01F65574400F66296 /* ObjectBuilder.swift in Sources */,
 				5676AFEE1F65572900F66296 /* DebugPrinter.swift in Sources */,
 				5676AFE11F6554F200F66296 /* AppCoordinator.swift in Sources */,
@@ -945,6 +953,7 @@
 				56BCED3A1F67FF0500865827 /* NewsSectionDetailTableViewCell.swift in Sources */,
 				56BC25E61F6970240036D4DE /* ListState.swift in Sources */,
 				56BCED401F686F3A00865827 /* UIView + addBorder.swift in Sources */,
+				56261F461F6A5E09003AEEC9 /* UICollectionView + cellConfiguration.swift in Sources */,
 				5676AFCC1F6553FE00F66296 /* AppDelegate.swift in Sources */,
 				56BCED341F67F96F00865827 /* SingleItemTableCell.swift in Sources */,
 				5676AFF91F6557F800F66296 /* UIViewController+ProgressLoading.swift in Sources */,

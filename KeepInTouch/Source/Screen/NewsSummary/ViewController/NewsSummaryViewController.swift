@@ -15,7 +15,7 @@ class NewsSummaryViewController: ViewController {
     var errorView: LabelView = LabelView()
     var noDataView: LabelView = LabelView()
 
-    @IBOutlet weak var newsCollectionView: CollectionView!
+    @IBOutlet weak var newsCollectionView: UICollectionView!
 
     lazy var refreshControl: UIRefreshControl = {
         let refresh =  UIRefreshControl()

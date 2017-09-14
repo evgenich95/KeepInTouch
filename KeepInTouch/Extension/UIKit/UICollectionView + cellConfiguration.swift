@@ -1,8 +1,8 @@
 //
-//  CollectionView.swift
+//  UICollectionView + cellConfiguration.swift
 //  KeepInTouch
 //
-//  Created by Anton Ivanov on 11.09.17.
+//  Created by Anton Ivanov on 14.09.17.
 //  Copyright © 2017 IAE. All rights reserved.
 //
 
@@ -23,7 +23,7 @@ enum SupplementaryViewType {
     }
 }
 
-class CollectionView: UICollectionView {
+extension UICollectionView {
     func register(cellType: UICollectionViewCell.Type) {
         let nibName = String(describing: cellType)
         let nib = UINib(nibName: nibName, bundle: nil)
