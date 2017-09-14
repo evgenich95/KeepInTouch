@@ -1,15 +1,15 @@
 //
-//  TableView.swift
+//  UITableView + cellConfiguration.swift
 //  KeepInTouch
 //
-//  Created by Anton Ivanov on 10.09.17.
+//  Created by Anton Ivanov on 14.09.17.
 //  Copyright © 2017 IAE. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class TableView: UITableView {
+extension UITableView {
     func register(cellType: UITableViewCell.Type) {
         let nibName = String(describing: cellType)
         let nib = UINib(nibName: nibName, bundle: nil)

@@ -12,7 +12,7 @@ import UIKit
 class NewsSectionDetailViewController: ViewController {
 
     // MARK: - UI -
-    @IBOutlet weak var tableView: TableView!
+    @IBOutlet weak var tableView: UITableView!
     var errorView: LabelView = LabelView()
     var noDataView: LabelView = LabelView()
 

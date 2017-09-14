@@ -13,12 +13,12 @@ class NewsSectionDetailTableDataSource: NSObject {
     var onDidSelectItem: ((_ item: NewsSectionDetailViewModel.Value) -> Void)?
 
     typealias Data = NewsSectionDetailViewModel.TableData
-    fileprivate let tableView: TableView
+    fileprivate let tableView: UITableView
     fileprivate var data: Data
 
     private var registeredCells = [String]()
 
-    init(tableView: TableView, data: Data) {
+    init(tableView: UITableView, data: Data) {
         self.tableView = tableView
         self.data = data
         super.init()
@@ -71,7 +71,7 @@ extension NewsSectionDetailTableDataSource: UITableViewDelegate, UITableViewData
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = data.value(for: indexPath)
-        return self.tableView.makeCell(ofType: cell.type, with: cell.value, at: indexPath)
+        return tableView.makeCell(ofType: cell.type, with: cell.value, at: indexPath)
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
