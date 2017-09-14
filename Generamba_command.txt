@@ -1,0 +1,2 @@
+For models:
+generamba gen NewsSectionDetail MVVM --module_path KeepInTouch/Source/Screen

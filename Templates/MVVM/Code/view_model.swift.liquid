@@ -1,0 +1,39 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+protocol {{ module_info.name }}ViewModelDelegate: class {
+    
+}
+
+class {{ module_info.name }}ViewModel {
+
+    weak var delegate: {{ module_info.name }}ViewModelDelegate?
+
+    //MARK: - Properties -
+    var title: String {
+        return ""
+    }
+
+    init() {
+
+    }
+    
+    
+    func loadRequiredData() {
+
+    }
+   
+    //MARK: - Binding properties -
+    typealias EmptyFunction = (()-> Void)
+    var dataDidChange: EmptyFunction?
+    var onSignInRequestFailed: ((_ errorDescription: String) -> Void)?
+    var onSignInRequestStart: EmptyFunction?
+    var onSignInRequestEnd: EmptyFunction?
+}

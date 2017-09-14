@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ImageNewsCollectionViewCell" customModule="KeepInTouch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="156"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="156"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3N-Bn-SNS">
+                        <rect key="frame" x="10" y="10" width="355" height="136"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tDy-G2-XH3">
+                                <rect key="frame" x="0.0" y="0.0" width="355" height="136"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xMv-Hz-QMp">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="136"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i94-CH-gjp">
+                                        <rect key="frame" x="160" y="0.0" width="195" height="136"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" verticalCompressionResistancePriority="754" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OhL-aP-RRV">
+                                                <rect key="frame" x="0.0" y="0.0" width="195" height="136"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tDy-G2-XH3" secondAttribute="trailing" id="7bU-jN-12B"/>
+                            <constraint firstItem="tDy-G2-XH3" firstAttribute="leading" secondItem="x3N-Bn-SNS" secondAttribute="leading" id="7iF-hW-kdi"/>
+                            <constraint firstAttribute="bottom" secondItem="tDy-G2-XH3" secondAttribute="bottom" id="ChN-79-Ftv"/>
+                            <constraint firstItem="tDy-G2-XH3" firstAttribute="top" secondItem="x3N-Bn-SNS" secondAttribute="top" id="kOZ-gg-Hjf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="x3N-Bn-SNS" secondAttribute="trailing" constant="10" id="8Mr-CX-4eX"/>
+                <constraint firstItem="x3N-Bn-SNS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="NnY-0a-arH"/>
+                <constraint firstItem="x3N-Bn-SNS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="W08-OX-xI5"/>
+                <constraint firstItem="xMv-Hz-QMp" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="4/10" priority="900" id="fXE-Y9-LUk"/>
+                <constraint firstAttribute="bottom" secondItem="x3N-Bn-SNS" secondAttribute="bottom" constant="10" id="rNO-es-IvW"/>
+            </constraints>
+            <size key="customSize" width="375" height="156"/>
+            <connections>
+                <outlet property="newsTitleUILabel" destination="OhL-aP-RRV" id="oNk-I8-BCS"/>
+                <outlet property="newsUIImageView" destination="xMv-Hz-QMp" id="12i-uu-Bxt"/>
+            </connections>
+            <point key="canvasLocation" x="-118" y="20"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SimpleNewsCollectionViewCell" customModule="KeepInTouch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="381" height="214"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="381" height="214"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJm-ib-BOB">
+                        <rect key="frame" x="10" y="10" width="361" height="194"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJ5-GM-RT3">
+                                <rect key="frame" x="15" y="0.0" width="331" height="194"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bJ5-GM-RT3" firstAttribute="leading" secondItem="cJm-ib-BOB" secondAttribute="leading" constant="15" id="221-P3-Bty"/>
+                            <constraint firstAttribute="trailing" secondItem="bJ5-GM-RT3" secondAttribute="trailing" constant="15" id="aP3-R1-iKq"/>
+                            <constraint firstAttribute="bottom" secondItem="bJ5-GM-RT3" secondAttribute="bottom" id="fXH-H7-ahq"/>
+                            <constraint firstItem="bJ5-GM-RT3" firstAttribute="top" secondItem="cJm-ib-BOB" secondAttribute="top" id="oIm-yV-HEo"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="cJm-ib-BOB" secondAttribute="bottom" constant="10" id="IKH-jE-Jf3"/>
+                <constraint firstItem="cJm-ib-BOB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="YO5-pg-bZg"/>
+                <constraint firstAttribute="trailing" secondItem="cJm-ib-BOB" secondAttribute="trailing" constant="10" id="kGU-p5-TCa"/>
+                <constraint firstItem="cJm-ib-BOB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="ziY-91-mQu"/>
+            </constraints>
+            <size key="customSize" width="381" height="214"/>
+            <connections>
+                <outlet property="contentUIView" destination="cJm-ib-BOB" id="ePG-tI-X52"/>
+                <outlet property="newsTitle" destination="bJ5-GM-RT3" id="Mee-yR-Or3"/>
+            </connections>
+            <point key="canvasLocation" x="-474" y="24"/>
+        </collectionViewCell>
+    </objects>
+</document>
