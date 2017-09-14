@@ -15,21 +15,11 @@
 		560497F41F6A6E7600CF9E15 /* UIImageView + setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BCED2F1F67D37D00865827 /* UIImageView + setImage.swift */; };
 		560498381F6A79BB00CF9E15 /* CustomHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 560498331F6A79A200CF9E15 /* CustomHUD.framework */; };
 		560498391F6A79BB00CF9E15 /* CustomHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 560498331F6A79A200CF9E15 /* CustomHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5604986F1F6A7C3B00CF9E15 /* LentaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5604986E1F6A7C1700CF9E15 /* LentaSDK.framework */; };
+		560498701F6A7C3B00CF9E15 /* LentaSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5604986E1F6A7C1700CF9E15 /* LentaSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		56261F431F6A5CF3003AEEC9 /* UITableView + cellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56261F421F6A5CF3003AEEC9 /* UITableView + cellConfiguration.swift */; };
 		56261F461F6A5E09003AEEC9 /* UICollectionView + cellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56261F451F6A5E09003AEEC9 /* UICollectionView + cellConfiguration.swift */; };
 		56261F6D1F6A67D6003AEEC9 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56261F6C1F6A67D6003AEEC9 /* StateMachine.swift */; };
-		563EB43D1F69D93400A3D722 /* LentaSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 563EB43B1F69D93400A3D722 /* LentaSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		563EB4401F69D93400A3D722 /* LentaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563EB4391F69D93400A3D722 /* LentaSDK.framework */; };
-		563EB4411F69D93400A3D722 /* LentaSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 563EB4391F69D93400A3D722 /* LentaSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		563EB4481F69DA4900A3D722 /* DataSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E353791F656B44006E775F /* DataSerializer.swift */; };
-		563EB4491F69DA4900A3D722 /* DateFormatterTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EC44431F67AA52002DAD37 /* DateFormatterTransform.swift */; };
-		563EB44A1F69DA4900A3D722 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E353741F656A9A006E775F /* News.swift */; };
-		563EB44B1F69DA4900A3D722 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E353761F656AC2006E775F /* Object.swift */; };
-		563EB44C1F69DA4900A3D722 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E3537B1F656DD4006E775F /* XMLParser.swift */; };
-		563EB44E1F69DA4900A3D722 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56804FB01F65646800EF375D /* Downloader.swift */; };
-		563EB44F1F69DA4900A3D722 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56804FB61F6566DF00EF375D /* WebService.swift */; };
-		563EB4501F69DA4900A3D722 /* CacheSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5673DF441F69931D00E22F95 /* CacheSession.swift */; };
-		563EB4551F69DC3400A3D722 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFEB1F65570600F66296 /* Thread.swift */; };
 		565622FA1F68ED4F00E9097E /* SectionedValuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565622F91F68ED4F00E9097E /* SectionedValuesTests.swift */; };
 		5676AFCC1F6553FE00F66296 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFCB1F6553FE00F66296 /* AppDelegate.swift */; };
 		5676AFD31F6553FE00F66296 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5676AFD21F6553FE00F66296 /* Assets.xcassets */; };
@@ -65,7 +55,6 @@
 		56EDE4681F66632700570113 /* SimpleNewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56EDE4661F66632700570113 /* SimpleNewsCollectionViewCell.xib */; };
 		5C38B7F87CC10D871BD7CEA9 /* NewsSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C19D349B530A9ECBEF5F32F /* NewsSummaryViewController.swift */; };
 		6A478B594F7DB364E244B1EA /* NewsSummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A962AFF8142A12A2B29ADDC /* NewsSummaryViewModel.swift */; };
-		76DC7A227636FFB094F5044B /* Pods_LentaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA1E5A8711B03E383387EDFB /* Pods_LentaSDK.framework */; };
 		88D96B7CF13FF6738210A62A /* Pods_KeepInTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2BE642881FC08F3DCDA7AB /* Pods_KeepInTouch.framework */; };
 		8905EA46D3B157E3F5BDD4C4 /* NewsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC841ACA927F9C26300939 /* NewsDetailViewModel.swift */; };
 		8C317172F364F5CC9F85ED77 /* NewsSectionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D3E9AFC96E0D42402E21F0D /* NewsSectionDetailViewController.xib */; };
@@ -88,11 +77,18 @@
 			remoteGlobalIDString = 5604981E1F6A78A000CF9E15;
 			remoteInfo = CustomHUD;
 		};
-		563EB43E1F69D93400A3D722 /* PBXContainerItemProxy */ = {
+		5604986D1F6A7C1700CF9E15 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5676AFC01F6553FE00F66296 /* Project object */;
+			containerPortal = 560498691F6A7C1600CF9E15 /* LentaSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 560498481F6A7ABE00CF9E15;
+			remoteInfo = LentaSDK;
+		};
+		560498731F6A7C6000CF9E15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 560498691F6A7C1600CF9E15 /* LentaSDK.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 563EB4381F69D93400A3D722;
+			remoteGlobalIDString = 560498471F6A7ABE00CF9E15;
 			remoteInfo = LentaSDK;
 		};
 		56EC444E1F67AECD002DAD37 /* PBXContainerItemProxy */ = {
@@ -111,7 +107,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				563EB4411F69D93400A3D722 /* LentaSDK.framework in Embed Frameworks */,
+				560498701F6A7C3B00CF9E15 /* LentaSDK.framework in Embed Frameworks */,
 				560498391F6A79BB00CF9E15 /* CustomHUD.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -125,14 +121,11 @@
 		3A2BE642881FC08F3DCDA7AB /* Pods_KeepInTouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepInTouch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		555A36DB2846BEDFB3BB230D /* Pods-LentaSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LentaSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LentaSDK/Pods-LentaSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		5604982E1F6A79A100CF9E15 /* CustomHUD.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CustomHUD.xcodeproj; path = CustomHUD/CustomHUD.xcodeproj; sourceTree = "<group>"; };
+		560498691F6A7C1600CF9E15 /* LentaSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LentaSDK.xcodeproj; path = LentaSDK/LentaSDK.xcodeproj; sourceTree = "<group>"; };
 		56261F421F6A5CF3003AEEC9 /* UITableView + cellConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView + cellConfiguration.swift"; sourceTree = "<group>"; };
 		56261F451F6A5E09003AEEC9 /* UICollectionView + cellConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView + cellConfiguration.swift"; sourceTree = "<group>"; };
 		56261F6C1F6A67D6003AEEC9 /* StateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
-		563EB4391F69D93400A3D722 /* LentaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LentaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		563EB43B1F69D93400A3D722 /* LentaSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LentaSDK.h; sourceTree = "<group>"; };
-		563EB43C1F69D93400A3D722 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		565622F91F68ED4F00E9097E /* SectionedValuesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedValuesTests.swift; sourceTree = "<group>"; };
-		5673DF441F69931D00E22F95 /* CacheSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheSession.swift; sourceTree = "<group>"; };
 		5676AFC81F6553FE00F66296 /* KeepInTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepInTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5676AFCB1F6553FE00F66296 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5676AFD21F6553FE00F66296 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -141,15 +134,12 @@
 		5676AFE01F6554F200F66296 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		5676AFE21F65551100F66296 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		5676AFE41F65557700F66296 /* MainFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFlowCoordinator.swift; sourceTree = "<group>"; };
-		5676AFEB1F65570600F66296 /* Thread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		5676AFED1F65572900F66296 /* DebugPrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugPrinter.swift; sourceTree = "<group>"; };
 		5676AFEF1F65574400F66296 /* ObjectBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectBuilder.swift; sourceTree = "<group>"; };
 		5676AFF81F6557F800F66296 /* UIViewController+ProgressLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ProgressLoading.swift"; sourceTree = "<group>"; };
 		5676AFFA1F65587600F66296 /* SingleItemCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleItemCollectionCell.swift; sourceTree = "<group>"; };
 		5676AFFE1F6558BC00F66296 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		567DEE031F6942EA00615061 /* NewsSummaryStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSummaryStateMachine.swift; sourceTree = "<group>"; };
-		56804FB01F65646800EF375D /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
-		56804FB61F6566DF00EF375D /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		56A2D8DD1F668408009496F4 /* NewsSummaryHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSummaryHeader.swift; sourceTree = "<group>"; };
 		56A2D8DE1F668408009496F4 /* NewsSummaryHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsSummaryHeader.xib; sourceTree = "<group>"; };
 		56A744E21F668EBD00952FBF /* CollectionCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCellData.swift; sourceTree = "<group>"; };
@@ -164,12 +154,7 @@
 		56BCED391F67FF0500865827 /* NewsSectionDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsSectionDetailTableViewCell.xib; sourceTree = "<group>"; };
 		56BCED3D1F6862B100865827 /* UIView + set UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + set UIViewController.swift"; sourceTree = "<group>"; };
 		56BCED3F1F686F3A00865827 /* UIView + addBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + addBorder.swift"; sourceTree = "<group>"; };
-		56E353741F656A9A006E775F /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
-		56E353761F656AC2006E775F /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
-		56E353791F656B44006E775F /* DataSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSerializer.swift; sourceTree = "<group>"; };
-		56E3537B1F656DD4006E775F /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 		56E3537D1F657CA3006E775F /* SectionedValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedValues.swift; sourceTree = "<group>"; };
-		56EC44431F67AA52002DAD37 /* DateFormatterTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterTransform.swift; sourceTree = "<group>"; };
 		56EC44491F67AECD002DAD37 /* KeepInTouchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeepInTouchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56EC444D1F67AECD002DAD37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56EDE4571F66597F00570113 /* NewsSummaryCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSummaryCollectionDataSource.swift; sourceTree = "<group>"; };
@@ -194,20 +179,12 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		563EB4351F69D93400A3D722 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				76DC7A227636FFB094F5044B /* Pods_LentaSDK.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5676AFC51F6553FE00F66296 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5604986F1F6A7C3B00CF9E15 /* LentaSDK.framework in Frameworks */,
 				560498381F6A79BB00CF9E15 /* CustomHUD.framework in Frameworks */,
-				563EB4401F69D93400A3D722 /* LentaSDK.framework in Frameworks */,
 				88D96B7CF13FF6738210A62A /* Pods_KeepInTouch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +225,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5604986A1F6A7C1600CF9E15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5604986E1F6A7C1700CF9E15 /* LentaSDK.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		56261F401F6A5677003AEEC9 /* UIImageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,56 +257,14 @@
 			path = UICollectionView;
 			sourceTree = "<group>";
 		};
-		563EB43A1F69D93400A3D722 /* LentaSDK */ = {
-			isa = PBXGroup;
-			children = (
-				563EB4581F69DF6100A3D722 /* Data Handlers */,
-				563EB4561F69DF4300A3D722 /* Models */,
-				563EB4571F69DF4C00A3D722 /* Web */,
-				563EB43C1F69D93400A3D722 /* Info.plist */,
-				563EB43B1F69D93400A3D722 /* LentaSDK.h */,
-			);
-			path = LentaSDK;
-			sourceTree = "<group>";
-		};
-		563EB4561F69DF4300A3D722 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				56E353741F656A9A006E775F /* News.swift */,
-				56E353761F656AC2006E775F /* Object.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		563EB4571F69DF4C00A3D722 /* Web */ = {
-			isa = PBXGroup;
-			children = (
-				5673DF441F69931D00E22F95 /* CacheSession.swift */,
-				56804FB01F65646800EF375D /* Downloader.swift */,
-				5676AFEB1F65570600F66296 /* Thread.swift */,
-				56804FB61F6566DF00EF375D /* WebService.swift */,
-			);
-			path = Web;
-			sourceTree = "<group>";
-		};
-		563EB4581F69DF6100A3D722 /* Data Handlers */ = {
-			isa = PBXGroup;
-			children = (
-				56E353791F656B44006E775F /* DataSerializer.swift */,
-				56EC44431F67AA52002DAD37 /* DateFormatterTransform.swift */,
-				56E3537B1F656DD4006E775F /* XMLParser.swift */,
-			);
-			path = "Data Handlers";
-			sourceTree = "<group>";
-		};
 		5676AFBF1F6553FE00F66296 = {
 			isa = PBXGroup;
 			children = (
+				560498691F6A7C1600CF9E15 /* LentaSDK.xcodeproj */,
 				5604982E1F6A79A100CF9E15 /* CustomHUD.xcodeproj */,
 				21BB254E63DFE42273B6B9D1 /* Frameworks */,
 				5676AFCA1F6553FE00F66296 /* KeepInTouch */,
 				56EC444A1F67AECD002DAD37 /* KeepInTouchTests */,
-				563EB43A1F69D93400A3D722 /* LentaSDK */,
 				61DB1C343A330833285914F9 /* Pods */,
 				5676AFC91F6553FE00F66296 /* Products */,
 			);
@@ -332,7 +275,6 @@
 			children = (
 				5676AFC81F6553FE00F66296 /* KeepInTouch.app */,
 				56EC44491F67AECD002DAD37 /* KeepInTouchTests.xctest */,
-				563EB4391F69D93400A3D722 /* LentaSDK.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -637,38 +579,7 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		563EB4361F69D93400A3D722 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				563EB43D1F69D93400A3D722 /* LentaSDK.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		563EB4381F69D93400A3D722 /* LentaSDK */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 563EB4451F69D93400A3D722 /* Build configuration list for PBXNativeTarget "LentaSDK" */;
-			buildPhases = (
-				95E697628282634950B84425 /* [CP] Check Pods Manifest.lock */,
-				563EB4341F69D93400A3D722 /* Sources */,
-				563EB4351F69D93400A3D722 /* Frameworks */,
-				563EB4361F69D93400A3D722 /* Headers */,
-				563EB4371F69D93400A3D722 /* Resources */,
-				CB6874329E456ED54E5EA5D3 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LentaSDK;
-			productName = LentaSDK;
-			productReference = 563EB4391F69D93400A3D722 /* LentaSDK.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		5676AFC71F6553FE00F66296 /* KeepInTouch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5676AFDA1F6553FE00F66296 /* Build configuration list for PBXNativeTarget "KeepInTouch" */;
@@ -684,8 +595,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				560498741F6A7C6000CF9E15 /* PBXTargetDependency */,
 				5604983D1F6A7A0C00CF9E15 /* PBXTargetDependency */,
-				563EB43F1F69D93400A3D722 /* PBXTargetDependency */,
 			);
 			name = KeepInTouch;
 			productName = KeepInTouch;
@@ -720,11 +631,6 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = IAE;
 				TargetAttributes = {
-					563EB4381F69D93400A3D722 = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = GB85HYMZT6;
-						ProvisioningStyle = Automatic;
-					};
 					5676AFC71F6553FE00F66296 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = GB85HYMZT6;
@@ -754,12 +660,15 @@
 					ProductGroup = 5604982F1F6A79A100CF9E15 /* Products */;
 					ProjectRef = 5604982E1F6A79A100CF9E15 /* CustomHUD.xcodeproj */;
 				},
+				{
+					ProductGroup = 5604986A1F6A7C1600CF9E15 /* Products */;
+					ProjectRef = 560498691F6A7C1600CF9E15 /* LentaSDK.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
 				5676AFC71F6553FE00F66296 /* KeepInTouch */,
 				56EC44481F67AECD002DAD37 /* KeepInTouchTests */,
-				563EB4381F69D93400A3D722 /* LentaSDK */,
 			);
 		};
 /* End PBXProject section */
@@ -772,16 +681,16 @@
 			remoteRef = 560498321F6A79A200CF9E15 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		5604986E1F6A7C1700CF9E15 /* LentaSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LentaSDK.framework;
+			remoteRef = 5604986D1F6A7C1700CF9E15 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		563EB4371F69D93400A3D722 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5676AFC61F6553FE00F66296 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -852,55 +761,9 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeepInTouch/Pods-KeepInTouch-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		95E697628282634950B84425 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CB6874329E456ED54E5EA5D3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LentaSDK/Pods-LentaSDK-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		563EB4341F69D93400A3D722 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				563EB44A1F69DA4900A3D722 /* News.swift in Sources */,
-				563EB44E1F69DA4900A3D722 /* Downloader.swift in Sources */,
-				563EB4551F69DC3400A3D722 /* Thread.swift in Sources */,
-				563EB44F1F69DA4900A3D722 /* WebService.swift in Sources */,
-				563EB4481F69DA4900A3D722 /* DataSerializer.swift in Sources */,
-				563EB44B1F69DA4900A3D722 /* Object.swift in Sources */,
-				563EB4491F69DA4900A3D722 /* DateFormatterTransform.swift in Sources */,
-				563EB4501F69DA4900A3D722 /* CacheSession.swift in Sources */,
-				563EB44C1F69DA4900A3D722 /* XMLParser.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5676AFC41F6553FE00F66296 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -963,10 +826,10 @@
 			name = CustomHUD;
 			targetProxy = 5604983C1F6A7A0C00CF9E15 /* PBXContainerItemProxy */;
 		};
-		563EB43F1F69D93400A3D722 /* PBXTargetDependency */ = {
+		560498741F6A7C6000CF9E15 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 563EB4381F69D93400A3D722 /* LentaSDK */;
-			targetProxy = 563EB43E1F69D93400A3D722 /* PBXContainerItemProxy */;
+			name = LentaSDK;
+			targetProxy = 560498731F6A7C6000CF9E15 /* PBXContainerItemProxy */;
 		};
 		56EC444F1F67AECD002DAD37 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -988,52 +851,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		563EB4421F69D93400A3D722 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 555A36DB2846BEDFB3BB230D /* Pods-LentaSDK.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = GB85HYMZT6;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = LentaSDK/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iae.LentaSDK;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		563EB4431F69D93400A3D722 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FBB8662493AC6B8667E9C2D7 /* Pods-LentaSDK.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = GB85HYMZT6;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = LentaSDK/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iae.LentaSDK;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		5676AFD81F6553FE00F66296 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1190,15 +1007,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		563EB4451F69D93400A3D722 /* Build configuration list for PBXNativeTarget "LentaSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				563EB4421F69D93400A3D722 /* Debug */,
-				563EB4431F69D93400A3D722 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		5676AFC31F6553FE00F66296 /* Build configuration list for PBXProject "KeepInTouch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

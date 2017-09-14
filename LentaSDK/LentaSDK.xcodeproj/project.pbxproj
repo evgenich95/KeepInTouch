@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5604984D1F6A7ABE00CF9E15 /* LentaSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 5604984B1F6A7ABE00CF9E15 /* LentaSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		560498571F6A7AE400CF9E15 /* DataSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560498541F6A7AE400CF9E15 /* DataSerializer.swift */; };
+		560498581F6A7AE400CF9E15 /* DateFormatterTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560498551F6A7AE400CF9E15 /* DateFormatterTransform.swift */; };
+		560498591F6A7AE400CF9E15 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560498561F6A7AE400CF9E15 /* XMLParser.swift */; };
+		5604985D1F6A7AFE00CF9E15 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604985B1F6A7AFE00CF9E15 /* News.swift */; };
+		5604985E1F6A7AFE00CF9E15 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604985C1F6A7AFE00CF9E15 /* Object.swift */; };
+		560498641F6A7B1600CF9E15 /* CacheSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560498601F6A7B1600CF9E15 /* CacheSession.swift */; };
+		560498651F6A7B1600CF9E15 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560498611F6A7B1600CF9E15 /* Downloader.swift */; };
+		560498661F6A7B1600CF9E15 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560498621F6A7B1600CF9E15 /* Thread.swift */; };
+		560498671F6A7B1600CF9E15 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560498631F6A7B1600CF9E15 /* WebService.swift */; };
+		69E4509D254520E9411C17C1 /* Pods_LentaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9FA762F22DAE7DED3BB5C /* Pods_LentaSDK.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4AEA270E7C10BCA7967D4AD6 /* Pods-LentaSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LentaSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-LentaSDK/Pods-LentaSDK.release.xcconfig"; sourceTree = "<group>"; };
+		560498481F6A7ABE00CF9E15 /* LentaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LentaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5604984B1F6A7ABE00CF9E15 /* LentaSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LentaSDK.h; sourceTree = "<group>"; };
+		5604984C1F6A7ABE00CF9E15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		560498541F6A7AE400CF9E15 /* DataSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSerializer.swift; sourceTree = "<group>"; };
+		560498551F6A7AE400CF9E15 /* DateFormatterTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterTransform.swift; sourceTree = "<group>"; };
+		560498561F6A7AE400CF9E15 /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
+		5604985B1F6A7AFE00CF9E15 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		5604985C1F6A7AFE00CF9E15 /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		560498601F6A7B1600CF9E15 /* CacheSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheSession.swift; sourceTree = "<group>"; };
+		560498611F6A7B1600CF9E15 /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
+		560498621F6A7B1600CF9E15 /* Thread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
+		560498631F6A7B1600CF9E15 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		7EE9FA762F22DAE7DED3BB5C /* Pods_LentaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LentaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCA8D8597CEA7EB305E295BE /* Pods-LentaSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LentaSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LentaSDK/Pods-LentaSDK.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		560498441F6A7ABE00CF9E15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69E4509D254520E9411C17C1 /* Pods_LentaSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21FAC19CEE640F035BAD4AA0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCA8D8597CEA7EB305E295BE /* Pods-LentaSDK.debug.xcconfig */,
+				4AEA270E7C10BCA7967D4AD6 /* Pods-LentaSDK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5604983E1F6A7ABE00CF9E15 = {
+			isa = PBXGroup;
+			children = (
+				5604984A1F6A7ABE00CF9E15 /* LentaSDK */,
+				560498491F6A7ABE00CF9E15 /* Products */,
+				21FAC19CEE640F035BAD4AA0 /* Pods */,
+				566F3C82E35532208E6DC0C3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		560498491F6A7ABE00CF9E15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				560498481F6A7ABE00CF9E15 /* LentaSDK.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5604984A1F6A7ABE00CF9E15 /* LentaSDK */ = {
+			isa = PBXGroup;
+			children = (
+				5604985F1F6A7B0A00CF9E15 /* Web */,
+				5604985A1F6A7AF200CF9E15 /* Models */,
+				560498531F6A7AD100CF9E15 /* Data Handlers */,
+				5604984B1F6A7ABE00CF9E15 /* LentaSDK.h */,
+				5604984C1F6A7ABE00CF9E15 /* Info.plist */,
+			);
+			path = LentaSDK;
+			sourceTree = "<group>";
+		};
+		560498531F6A7AD100CF9E15 /* Data Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				560498541F6A7AE400CF9E15 /* DataSerializer.swift */,
+				560498551F6A7AE400CF9E15 /* DateFormatterTransform.swift */,
+				560498561F6A7AE400CF9E15 /* XMLParser.swift */,
+			);
+			name = "Data Handlers";
+			sourceTree = "<group>";
+		};
+		5604985A1F6A7AF200CF9E15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5604985B1F6A7AFE00CF9E15 /* News.swift */,
+				5604985C1F6A7AFE00CF9E15 /* Object.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5604985F1F6A7B0A00CF9E15 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				560498601F6A7B1600CF9E15 /* CacheSession.swift */,
+				560498611F6A7B1600CF9E15 /* Downloader.swift */,
+				560498621F6A7B1600CF9E15 /* Thread.swift */,
+				560498631F6A7B1600CF9E15 /* WebService.swift */,
+			);
+			name = Web;
+			sourceTree = "<group>";
+		};
+		566F3C82E35532208E6DC0C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EE9FA762F22DAE7DED3BB5C /* Pods_LentaSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		560498451F6A7ABE00CF9E15 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5604984D1F6A7ABE00CF9E15 /* LentaSDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		560498471F6A7ABE00CF9E15 /* LentaSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 560498501F6A7ABE00CF9E15 /* Build configuration list for PBXNativeTarget "LentaSDK" */;
+			buildPhases = (
+				D164B8CFC6B75ADC034C2F6A /* [CP] Check Pods Manifest.lock */,
+				560498431F6A7ABE00CF9E15 /* Sources */,
+				560498441F6A7ABE00CF9E15 /* Frameworks */,
+				560498451F6A7ABE00CF9E15 /* Headers */,
+				560498461F6A7ABE00CF9E15 /* Resources */,
+				6B9B240661FBFBF206296C64 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LentaSDK;
+			productName = LentaSDK;
+			productReference = 560498481F6A7ABE00CF9E15 /* LentaSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5604983F1F6A7ABE00CF9E15 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = IAE;
+				TargetAttributes = {
+					560498471F6A7ABE00CF9E15 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = GB85HYMZT6;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 560498421F6A7ABE00CF9E15 /* Build configuration list for PBXProject "LentaSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5604983E1F6A7ABE00CF9E15;
+			productRefGroup = 560498491F6A7ABE00CF9E15 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				560498471F6A7ABE00CF9E15 /* LentaSDK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		560498461F6A7ABE00CF9E15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B9B240661FBFBF206296C64 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LentaSDK/Pods-LentaSDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D164B8CFC6B75ADC034C2F6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		560498431F6A7ABE00CF9E15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				560498671F6A7B1600CF9E15 /* WebService.swift in Sources */,
+				5604985E1F6A7AFE00CF9E15 /* Object.swift in Sources */,
+				560498651F6A7B1600CF9E15 /* Downloader.swift in Sources */,
+				560498571F6A7AE400CF9E15 /* DataSerializer.swift in Sources */,
+				560498581F6A7AE400CF9E15 /* DateFormatterTransform.swift in Sources */,
+				560498641F6A7B1600CF9E15 /* CacheSession.swift in Sources */,
+				5604985D1F6A7AFE00CF9E15 /* News.swift in Sources */,
+				560498591F6A7AE400CF9E15 /* XMLParser.swift in Sources */,
+				560498661F6A7B1600CF9E15 /* Thread.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5604984E1F6A7ABE00CF9E15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5604984F1F6A7ABE00CF9E15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		560498511F6A7ABE00CF9E15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCA8D8597CEA7EB305E295BE /* Pods-LentaSDK.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GB85HYMZT6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LentaSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iae.LentaSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		560498521F6A7ABE00CF9E15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AEA270E7C10BCA7967D4AD6 /* Pods-LentaSDK.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GB85HYMZT6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LentaSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iae.LentaSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		560498421F6A7ABE00CF9E15 /* Build configuration list for PBXProject "LentaSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5604984E1F6A7ABE00CF9E15 /* Debug */,
+				5604984F1F6A7ABE00CF9E15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		560498501F6A7ABE00CF9E15 /* Build configuration list for PBXNativeTarget "LentaSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				560498511F6A7ABE00CF9E15 /* Debug */,
+				560498521F6A7ABE00CF9E15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5604983F1F6A7ABE00CF9E15 /* Project object */;
+}
