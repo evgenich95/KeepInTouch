@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class LabelView: UIView {
-    private let label = make(UILabel()) {
+    private let label = build(UILabel()) {
         $0.adjustsFontSizeToFitWidth = true
         $0.textAlignment = .center
         $0.numberOfLines = 0

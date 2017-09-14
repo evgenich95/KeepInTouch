@@ -12,13 +12,13 @@ import UIKit
 class NewsSummaryStateMachine {
 
     typealias State = ListState<NewsSummaryViewModel.CollectionData>
-    var state: State = .noData
+    private var state: State = .noData
 
-    var ownerFrame: CGRect {
+    private var ownerFrame: CGRect {
         return owner?.view.frame ?? CGRect()
     }
 
-    var usingView: [UIView] {
+    private  var usingView: [UIView] {
         guard let owner = owner else {
             return []
         }

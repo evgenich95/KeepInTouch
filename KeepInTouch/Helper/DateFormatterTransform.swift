@@ -9,10 +9,12 @@
 import Foundation
 
 class DateFormatterTransform {
-    let dateFormatter = make(DateFormatter()) {
-        $0.locale = Locale(identifier: "en_US_POSIX")
-        $0.dateFormat = "EEE, dd MMM yyyy HH:mm:ss Z"
-    }
+    lazy private var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "EEE, dd MMM yyyy HH:mm:ss Z"
+        return dateFormatter
+    }()
 
     func transformFrom(_ value: String?) -> Date? {
         if let dateString = value {

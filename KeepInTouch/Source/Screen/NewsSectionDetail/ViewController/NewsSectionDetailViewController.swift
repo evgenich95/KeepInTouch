@@ -28,18 +28,17 @@ class NewsSectionDetailViewController: ViewController {
     // MARK: - Class variables -
     var tableViewDelegate: NewsSectionDetailTableViewDataSource!
 
-    var dataSource: NewsSectionDetailViewModel.TableData {
+    private var dataSource: NewsSectionDetailViewModel.TableData {
         return viewModel.tableData
     }
     // MARK: - Init -
-    var stateMachinge: NewsSectionDetailViewControllerStateMachine!
-
-    let viewModel: NewsSectionDetailViewModel
+    fileprivate var stateMachinge: NewsSectionDetailStateMachine!
+    fileprivate let viewModel: NewsSectionDetailViewModel
 
     init(viewModel: NewsSectionDetailViewModel) {
         self.viewModel = viewModel
         defer {
-            stateMachinge = NewsSectionDetailViewControllerStateMachine(owner: self)
+            stateMachinge = NewsSectionDetailStateMachine(owner: self)
         }
 
         super.init()
@@ -86,7 +85,7 @@ class NewsSectionDetailViewController: ViewController {
         stateMachinge.switch(to: dataSource.isEmpty ? .noData : .loaded(dataSource))
     }
 
-    @objc func refreshTableData(refreshControl: UIRefreshControl) {
+    @objc private func refreshTableData(refreshControl: UIRefreshControl) {
         DispatchQueue.global(qos: .userInitiated).async {
             self.viewModel.updateData()
         }

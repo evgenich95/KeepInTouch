@@ -1,5 +1,5 @@
 //
-//  NewsSectionDetailViewControllerStateMachine.swift
+//  NewsSectionDetailStateMachine.swift
 //  KeepInTouch
 //
 //  Created by Anton Ivanov on 13.09.17.
@@ -9,16 +9,16 @@
 import Foundation
 import UIKit
 
-class NewsSectionDetailViewControllerStateMachine {
+class NewsSectionDetailStateMachine {
 
     typealias State = ListState<NewsSectionDetailViewModel.TableData>
-    var state: State = .loading
+    private var state: State = .loading
 
-    var ownerFrame: CGRect {
+    private var ownerFrame: CGRect {
         return owner?.view.frame ?? CGRect()
     }
 
-    var usingView: [UIView] {
+    private var usingView: [UIView] {
         guard let owner = owner else {
             return []
         }

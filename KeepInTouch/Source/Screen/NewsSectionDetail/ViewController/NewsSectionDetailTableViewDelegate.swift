@@ -17,10 +17,10 @@ class NewsSectionDetailTableViewDataSource: NSObject {
     weak var delegate: NewsSectionDetailTableViewDataSourceDelegate?
 
     typealias Data = NewsSectionDetailViewModel.TableData
-    let tableView: TableView
-    var data: Data
+    fileprivate let tableView: TableView
+    fileprivate var data: Data
 
-    var registeredCells = [String]()
+    private var registeredCells = [String]()
 
     init(tableView: TableView, data: Data) {
         self.tableView = tableView

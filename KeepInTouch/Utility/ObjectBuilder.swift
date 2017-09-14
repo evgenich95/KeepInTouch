@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public func make<T>(_ object: T, _ initializer: (T) -> Void) -> T {
+public func build<T>(_ object: T, _ initializer: (T) -> Void) -> T {
     initializer(object)
     return object
 }

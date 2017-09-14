@@ -11,12 +11,9 @@ import UIKit
 import LentaSDK
 
 extension UIImageView {
-    var main: DispatchQueue {
-        return DispatchQueue.main
-    }
-    var activityIndicator: UIActivityIndicatorView {
+    private var activityIndicator: UIActivityIndicatorView {
 
-        let activityIndicator = make(UIActivityIndicatorView(activityIndicatorStyle: .gray)) {
+        let activityIndicator = build(UIActivityIndicatorView(activityIndicatorStyle: .gray)) {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
 
@@ -33,10 +30,11 @@ extension UIImageView {
     }
 
     func setImage(url: URL, completion: ((_ image: UIImage?) -> Void)? = nil) {
-        image = nil
+        let main = DispatchQueue.main
         let progressIndicator = activityIndicator
 
         main.async {
+            self.image = nil
             progressIndicator.startAnimating()
         }
 

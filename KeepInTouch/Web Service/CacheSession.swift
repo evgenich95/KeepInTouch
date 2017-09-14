@@ -11,10 +11,10 @@ class CacheSession {
     static private var urlCache = URLCache(memoryCapacity: 20 * 1024 * 1024, diskCapacity: 100 * 1024 * 1024, diskPath: "ImageDownloadCache")
 
     static private var sessionConfiguration: URLSessionConfiguration {
-        return make(URLSessionConfiguration.default) {
-            $0.requestCachePolicy = URLRequest.CachePolicy.returnCacheDataElseLoad
-            $0.urlCache = urlCache
-        }
+        let session = URLSessionConfiguration.default
+        session.requestCachePolicy = .returnCacheDataElseLoad
+        session.urlCache = urlCache
+        return session
     }
 
     static var shared: URLSession {

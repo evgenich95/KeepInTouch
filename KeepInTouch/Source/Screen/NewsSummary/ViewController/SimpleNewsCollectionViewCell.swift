@@ -23,7 +23,7 @@ class SimpleNewsCollectionViewCell: SingleItemCollectionCell<News> {
         super.awakeFromNib()
     }
 
-    let dateFormatter = make(DateFormatter()) {
+    private let dateFormatter = build(DateFormatter()) {
         $0.locale = Locale(identifier: "en_US_POSIX")
         $0.dateFormat = "HH:mm"
     }
@@ -32,7 +32,7 @@ class SimpleNewsCollectionViewCell: SingleItemCollectionCell<News> {
         let dateStr = dateFormatter.string(from: object.pubDate)
         let labelText = "\(dateStr) \(object.title)"
 
-        let attributedText = make(NSMutableAttributedString(string: labelText)) {
+        let attributedText = build(NSMutableAttributedString(string: labelText)) {
             let range = NSRange(location: 0, length: dateStr.characters.count)
             $0.addAttribute(NSForegroundColorAttributeName, value: UIColor.red, range: range)
         }

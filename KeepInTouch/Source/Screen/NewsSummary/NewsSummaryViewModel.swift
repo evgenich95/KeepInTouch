@@ -21,7 +21,7 @@ class NewsSummaryViewModel {
         return "News Summary"
     }
 
-    let requiredNewsTypes = [NewsType.top7, NewsType.last24, NewsType.none]
+    private let requiredNewsTypes = [NewsType.top7, NewsType.last24, NewsType.none]
 
     typealias Section = String
     typealias Value = News

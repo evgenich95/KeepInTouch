@@ -23,7 +23,6 @@
 		563EB44E1F69DA4900A3D722 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56804FB01F65646800EF375D /* Downloader.swift */; };
 		563EB44F1F69DA4900A3D722 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56804FB61F6566DF00EF375D /* WebService.swift */; };
 		563EB4501F69DA4900A3D722 /* CacheSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5673DF441F69931D00E22F95 /* CacheSession.swift */; };
-		563EB4531F69DBEE00A3D722 /* ObjectBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563EB4521F69DBEE00A3D722 /* ObjectBuilder.swift */; };
 		563EB4551F69DC3400A3D722 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFEB1F65570600F66296 /* Thread.swift */; };
 		565622FA1F68ED4F00E9097E /* SectionedValuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565622F91F68ED4F00E9097E /* SectionedValuesTests.swift */; };
 		5676AFCC1F6553FE00F66296 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFCB1F6553FE00F66296 /* AppDelegate.swift */; };
@@ -134,7 +133,6 @@
 		563EB4391F69D93400A3D722 /* LentaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LentaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		563EB43B1F69D93400A3D722 /* LentaSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LentaSDK.h; sourceTree = "<group>"; };
 		563EB43C1F69D93400A3D722 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		563EB4521F69DBEE00A3D722 /* ObjectBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectBuilder.swift; sourceTree = "<group>"; };
 		565622F91F68ED4F00E9097E /* SectionedValuesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedValuesTests.swift; sourceTree = "<group>"; };
 		5673DF441F69931D00E22F95 /* CacheSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CacheSession.swift; path = "../KeepInTouch/Web Service/CacheSession.swift"; sourceTree = "<group>"; };
 		5676AFC81F6553FE00F66296 /* KeepInTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepInTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,14 +156,14 @@
 		56804FB61F6566DF00EF375D /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebService.swift; path = "../KeepInTouch/Web Service/WebService.swift"; sourceTree = "<group>"; };
 		56A2D8DD1F668408009496F4 /* NewsSummaryHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSummaryHeader.swift; sourceTree = "<group>"; };
 		56A2D8DE1F668408009496F4 /* NewsSummaryHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsSummaryHeader.xib; sourceTree = "<group>"; };
-		56A744E21F668EBD00952FBF /* CollectionCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCellData.swift; sourceTree = "<group>"; };
+		56A744E21F668EBD00952FBF /* CollectionCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionCellData.swift; path = Application/CollectionCellData.swift; sourceTree = "<group>"; };
 		56BC25DD1F696E220036D4DE /* LabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
 		56BC25E31F6970070036D4DE /* NewsSectionDetailViewControllerStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSectionDetailViewControllerStateMachine.swift; sourceTree = "<group>"; };
-		56BC25E51F6970240036D4DE /* ListState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListState.swift; sourceTree = "<group>"; };
+		56BC25E51F6970240036D4DE /* ListState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListState.swift; path = Application/ListState.swift; sourceTree = "<group>"; };
 		56BCED2F1F67D37D00865827 /* UIImageView + setImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView + setImage.swift"; sourceTree = "<group>"; };
 		56BCED311F67F3AC00865827 /* NewsSectionDetailTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSectionDetailTableViewDelegate.swift; sourceTree = "<group>"; };
 		56BCED331F67F96F00865827 /* SingleItemTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleItemTableCell.swift; sourceTree = "<group>"; };
-		56BCED351F67FB8600865827 /* TableCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellData.swift; sourceTree = "<group>"; };
+		56BCED351F67FB8600865827 /* TableCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableCellData.swift; path = Application/TableCellData.swift; sourceTree = "<group>"; };
 		56BCED381F67FF0500865827 /* NewsSectionDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSectionDetailTableViewCell.swift; sourceTree = "<group>"; };
 		56BCED391F67FF0500865827 /* NewsSectionDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsSectionDetailTableViewCell.xib; sourceTree = "<group>"; };
 		56BCED3D1F6862B100865827 /* UIView + set UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + set UIViewController.swift"; sourceTree = "<group>"; };
@@ -174,7 +172,7 @@
 		56E353761F656AC2006E775F /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Object.swift; path = ../KeepInTouch/Source/Model/Entity/Object.swift; sourceTree = "<group>"; };
 		56E353791F656B44006E775F /* DataSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataSerializer.swift; path = ../KeepInTouch/Helper/DataSerializer.swift; sourceTree = "<group>"; };
 		56E3537B1F656DD4006E775F /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XMLParser.swift; path = "../KeepInTouch/Web Service/XMLParser.swift"; sourceTree = "<group>"; };
-		56E3537D1F657CA3006E775F /* SectionedValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedValues.swift; sourceTree = "<group>"; };
+		56E3537D1F657CA3006E775F /* SectionedValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SectionedValues.swift; path = Application/SectionedValues.swift; sourceTree = "<group>"; };
 		56EC44431F67AA52002DAD37 /* DateFormatterTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatterTransform.swift; path = ../KeepInTouch/Helper/DateFormatterTransform.swift; sourceTree = "<group>"; };
 		56EC44491F67AECD002DAD37 /* KeepInTouchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeepInTouchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56EC444D1F67AECD002DAD37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -259,7 +257,6 @@
 			isa = PBXGroup;
 			children = (
 				563EB4561F69DF4300A3D722 /* Model */,
-				563EB4591F69DFA000A3D722 /* Utility */,
 				563EB4581F69DF6100A3D722 /* Data Handler */,
 				563EB4571F69DF4C00A3D722 /* Web */,
 				563EB43B1F69D93400A3D722 /* LentaSDK.h */,
@@ -296,14 +293,6 @@
 				56E3537B1F656DD4006E775F /* XMLParser.swift */,
 			);
 			name = "Data Handler";
-			sourceTree = "<group>";
-		};
-		563EB4591F69DFA000A3D722 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				563EB4521F69DBEE00A3D722 /* ObjectBuilder.swift */,
-			);
-			name = Utility;
 			sourceTree = "<group>";
 		};
 		5676AFBF1F6553FE00F66296 = {
@@ -363,8 +352,8 @@
 		5676AFDF1F6554E900F66296 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				5676AFE01F6554F200F66296 /* AppCoordinator.swift */,
 				5676AFE21F65551100F66296 /* Coordinator.swift */,
+				5676AFE01F6554F200F66296 /* AppCoordinator.swift */,
 				5676AFE41F65557700F66296 /* MainFlowCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -383,28 +372,12 @@
 		5676AFE71F6556BD00F66296 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5676AFE91F6556C700F66296 /* Application */,
-				5676AFE81F6556C100F66296 /* Entity */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		5676AFE81F6556C100F66296 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		5676AFE91F6556C700F66296 /* Application */ = {
-			isa = PBXGroup;
-			children = (
 				56E3537D1F657CA3006E775F /* SectionedValues.swift */,
 				56A744E21F668EBD00952FBF /* CollectionCellData.swift */,
 				56BCED351F67FB8600865827 /* TableCellData.swift */,
 				56BC25E51F6970240036D4DE /* ListState.swift */,
 			);
-			path = Application;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5676AFEA1F6556ED00F66296 /* Utility */ = {
@@ -947,7 +920,6 @@
 				563EB4491F69DA4900A3D722 /* DateFormatterTransform.swift in Sources */,
 				563EB4501F69DA4900A3D722 /* CacheSession.swift in Sources */,
 				563EB44C1F69DA4900A3D722 /* XMLParser.swift in Sources */,
-				563EB4531F69DBEE00A3D722 /* ObjectBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

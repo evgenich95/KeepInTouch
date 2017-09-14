@@ -13,11 +13,11 @@ class NewsSectionDetailCoordinator: Coordinator {
     var children: [Coordinator] = []
     var navigationController: UINavigationController
 
-    var newsSectionDetailViewModel: NewsSectionDetailViewModel!
-    var rootViewController: NewsSectionDetailViewController
+    private var newsSectionDetailViewModel: NewsSectionDetailViewModel!
+    private var rootViewController: NewsSectionDetailViewController
 
     typealias Data = NewsSectionDetailViewModel.Data
-    var sectionedValues: Data
+    private var sectionedValues: Data
 
     init(navigationController: UINavigationController, sectionedValues: Data) {
         self.navigationController = navigationController

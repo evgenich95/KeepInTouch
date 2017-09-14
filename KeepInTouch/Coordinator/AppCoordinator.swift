@@ -20,9 +20,9 @@ class AppCoordinator: Coordinator {
         setupTheme()
     }
 
-    func startMainFlow() {
+    private func startMainFlow() {
         removeAllCoordinators()
-        let mainNavigationController = make(UINavigationController()) {
+        let mainNavigationController = build(UINavigationController()) {
             $0.navigationBar.isTranslucent = false
         }
 
@@ -40,7 +40,7 @@ class AppCoordinator: Coordinator {
         window.makeKeyAndVisible()
     }
 
-    func setupTheme() {
+    private func setupTheme() {
         UINavigationBar.appearance().barTintColor = .white
     }
 }

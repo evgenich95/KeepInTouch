@@ -17,7 +17,7 @@ struct TableCellData<T: Equatable>: Equatable {
         self.type = type
     }
 
-    public static func ==(lhs: TableCellData<T>, rhs: TableCellData<T>) -> Bool {
+    public static func == (lhs: TableCellData<T>, rhs: TableCellData<T>) -> Bool {
         return lhs.value == rhs.value &&
             lhs.type == rhs.type
     }

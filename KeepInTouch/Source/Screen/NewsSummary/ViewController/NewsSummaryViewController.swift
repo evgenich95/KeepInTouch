@@ -28,15 +28,15 @@ class NewsSummaryViewController: ViewController {
 
     // MARK: - Class variables -
     var collectionDataSource: NewsSummaryCollectionDataSource!
-    var collectionDelegate: NewsSummaryCollectionDelegate!
+    private var collectionDelegate: NewsSummaryCollectionDelegate!
 
-    var dataSource: NewsSummaryViewModel.CollectionData {
+    private var dataSource: NewsSummaryViewModel.CollectionData {
         return viewModel.sectionedValues
     }
 
     // MARK: - Init -
-    let viewModel: NewsSummaryViewModel
-    var stateMachine: NewsSummaryStateMachine!
+    fileprivate let viewModel: NewsSummaryViewModel
+    fileprivate var stateMachine: NewsSummaryStateMachine!
 
     init(viewModel: NewsSummaryViewModel) {
         self.viewModel = viewModel
@@ -52,9 +52,7 @@ class NewsSummaryViewController: ViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        DispatchQueue.global(qos: .userInitiated).async {[weak self] in
-            self?.viewModel.loadRequiredData()
-        }
+        viewModel.loadRequiredData()
     }
 
     override func viewDidLoad() {
@@ -105,7 +103,7 @@ class NewsSummaryViewController: ViewController {
         stateMachine.switch(to: dataSource.isEmpty ? .noData : .loaded(dataSource))
     }
 
-    @objc func refreshTableData(refreshControl: UIRefreshControl) {
+    @objc private func refreshTableData(refreshControl: UIRefreshControl) {
         viewModel.updateData()
     }
 }

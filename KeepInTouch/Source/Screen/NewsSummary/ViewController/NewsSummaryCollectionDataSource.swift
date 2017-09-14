@@ -14,8 +14,8 @@ class NewsSummaryCollectionDataSource: NSObject {
 
     var onViewSectionAction: ((_ section: NewsSummaryViewModel.Section) -> Void)?
 
-    var registeredCells = [String]()
-    let header = NewsSummaryHeader.self
+    private var registeredCells = [String]()
+    fileprivate let header = NewsSummaryHeader.self
 
     typealias Data = NewsSummaryViewModel.CollectionData
     fileprivate let collectionView: CollectionView

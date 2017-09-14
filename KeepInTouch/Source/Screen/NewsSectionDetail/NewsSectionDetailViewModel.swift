@@ -21,7 +21,7 @@ class NewsSectionDetailViewModel {
     var title: String {
         return sectionedValues.sections.first ?? ""
     }
-    let background = DispatchQueue.global(qos: .userInitiated)
+    private let background = DispatchQueue.global(qos: .userInitiated)
 
     typealias Section = String
     typealias Value = News

@@ -13,11 +13,10 @@ import LentaSDK
 class NewsDetailCoordinator: Coordinator {
 
     var children: [Coordinator] = []
-
-    var newsDetailViewModel: NewsDetailViewModel!
+    private var newsDetailViewModel: NewsDetailViewModel!
 
     var navigationController: UINavigationController
-    let detailNews: News
+    private let detailNews: News
 
     init(navigationController: UINavigationController, detailNews: News) {
         self.navigationController = navigationController
