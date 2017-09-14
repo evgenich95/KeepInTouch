@@ -15,6 +15,8 @@
 		56261F3F1F6A55B1003AEEC9 /* UIImageView + setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BCED2F1F67D37D00865827 /* UIImageView + setImage.swift */; };
 		56261F431F6A5CF3003AEEC9 /* UITableView + cellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56261F421F6A5CF3003AEEC9 /* UITableView + cellConfiguration.swift */; };
 		56261F461F6A5E09003AEEC9 /* UICollectionView + cellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56261F451F6A5E09003AEEC9 /* UICollectionView + cellConfiguration.swift */; };
+		56261F681F6A5F71003AEEC9 /* CustomHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56261F671F6A5F67003AEEC9 /* CustomHUD.framework */; };
+		56261F691F6A5F71003AEEC9 /* CustomHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56261F671F6A5F67003AEEC9 /* CustomHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		563EB43D1F69D93400A3D722 /* LentaSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 563EB43B1F69D93400A3D722 /* LentaSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		563EB4401F69D93400A3D722 /* LentaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563EB4391F69D93400A3D722 /* LentaSDK.framework */; };
 		563EB4411F69D93400A3D722 /* LentaSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 563EB4391F69D93400A3D722 /* LentaSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -39,8 +41,6 @@
 		5676AFF91F6557F800F66296 /* UIViewController+ProgressLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFF81F6557F800F66296 /* UIViewController+ProgressLoading.swift */; };
 		5676AFFB1F65587600F66296 /* SingleItemCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFFA1F65587600F66296 /* SingleItemCollectionCell.swift */; };
 		5676AFFF1F6558BC00F66296 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676AFFE1F6558BC00F66296 /* ViewController.swift */; };
-		567DEDF91F69332A00615061 /* CustomHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567DEDF01F69330900615061 /* CustomHUD.framework */; };
-		567DEDFA1F69332A00615061 /* CustomHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 567DEDF01F69330900615061 /* CustomHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		567DEE041F6942EA00615061 /* NewsSummaryStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567DEE031F6942EA00615061 /* NewsSummaryStateMachine.swift */; };
 		56A2D8DF1F668408009496F4 /* NewsSummaryHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A2D8DD1F668408009496F4 /* NewsSummaryHeader.swift */; };
 		56A2D8E01F668408009496F4 /* NewsSummaryHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56A2D8DE1F668408009496F4 /* NewsSummaryHeader.xib */; };
@@ -73,33 +73,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		56261F661F6A5F67003AEEC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56261F621F6A5F67003AEEC9 /* CustomHUD.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 56261F511F6A5F0C003AEEC9;
+			remoteInfo = CustomHUD;
+		};
+		56261F6A1F6A5F71003AEEC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56261F621F6A5F67003AEEC9 /* CustomHUD.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 56261F501F6A5F0C003AEEC9;
+			remoteInfo = CustomHUD;
+		};
 		563EB43E1F69D93400A3D722 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5676AFC01F6553FE00F66296 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 563EB4381F69D93400A3D722;
 			remoteInfo = LentaSDK;
-		};
-		567DEDEF1F69330900615061 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 567DEDEA1F69330900615061 /* CustomHUD.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5620B90E1F6929F900386E3A;
-			remoteInfo = CustomHUD;
-		};
-		567DEDF11F69330900615061 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 567DEDEA1F69330900615061 /* CustomHUD.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5620B9171F6929F900386E3A;
-			remoteInfo = CustomHUDTests;
-		};
-		567DEDFB1F69332A00615061 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 567DEDEA1F69330900615061 /* CustomHUD.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5620B90D1F6929F900386E3A;
-			remoteInfo = CustomHUD;
 		};
 		56EC444E1F67AECD002DAD37 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -118,7 +111,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				563EB4411F69D93400A3D722 /* LentaSDK.framework in Embed Frameworks */,
-				567DEDFA1F69332A00615061 /* CustomHUD.framework in Embed Frameworks */,
+				56261F691F6A5F71003AEEC9 /* CustomHUD.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +125,7 @@
 		555A36DB2846BEDFB3BB230D /* Pods-LentaSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LentaSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LentaSDK/Pods-LentaSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		56261F421F6A5CF3003AEEC9 /* UITableView + cellConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView + cellConfiguration.swift"; sourceTree = "<group>"; };
 		56261F451F6A5E09003AEEC9 /* UICollectionView + cellConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView + cellConfiguration.swift"; sourceTree = "<group>"; };
+		56261F621F6A5F67003AEEC9 /* CustomHUD.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CustomHUD.xcodeproj; path = ../../Frameworks/CustomHUD/CustomHUD.xcodeproj; sourceTree = "<group>"; };
 		563EB4391F69D93400A3D722 /* LentaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LentaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		563EB43B1F69D93400A3D722 /* LentaSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LentaSDK.h; sourceTree = "<group>"; };
 		563EB43C1F69D93400A3D722 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,7 +145,6 @@
 		5676AFF81F6557F800F66296 /* UIViewController+ProgressLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ProgressLoading.swift"; sourceTree = "<group>"; };
 		5676AFFA1F65587600F66296 /* SingleItemCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleItemCollectionCell.swift; sourceTree = "<group>"; };
 		5676AFFE1F6558BC00F66296 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		567DEDEA1F69330900615061 /* CustomHUD.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CustomHUD.xcodeproj; path = ../CustomHUD/CustomHUD.xcodeproj; sourceTree = "<group>"; };
 		567DEE031F6942EA00615061 /* NewsSummaryStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsSummaryStateMachine.swift; sourceTree = "<group>"; };
 		56804FB01F65646800EF375D /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Downloader.swift; path = "../KeepInTouch/Web Service/Downloader.swift"; sourceTree = "<group>"; };
 		56804FB61F6566DF00EF375D /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebService.swift; path = "../KeepInTouch/Web Service/WebService.swift"; sourceTree = "<group>"; };
@@ -211,9 +204,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56261F681F6A5F71003AEEC9 /* CustomHUD.framework in Frameworks */,
 				563EB4401F69D93400A3D722 /* LentaSDK.framework in Frameworks */,
 				88D96B7CF13FF6738210A62A /* Pods_KeepInTouch.framework in Frameworks */,
-				567DEDF91F69332A00615061 /* CustomHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +262,14 @@
 			name = UICollectionView;
 			sourceTree = "<group>";
 		};
+		56261F631F6A5F67003AEEC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56261F671F6A5F67003AEEC9 /* CustomHUD.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		563EB43A1F69D93400A3D722 /* LentaSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,7 +316,7 @@
 		5676AFBF1F6553FE00F66296 = {
 			isa = PBXGroup;
 			children = (
-				567DEDEA1F69330900615061 /* CustomHUD.xcodeproj */,
+				56261F621F6A5F67003AEEC9 /* CustomHUD.xcodeproj */,
 				5676AFCA1F6553FE00F66296 /* KeepInTouch */,
 				56EC444A1F67AECD002DAD37 /* KeepInTouchTests */,
 				563EB43A1F69D93400A3D722 /* LentaSDK */,
@@ -451,15 +452,6 @@
 				5676AFF81F6557F800F66296 /* UIViewController+ProgressLoading.swift */,
 			);
 			path = UIViewController;
-			sourceTree = "<group>";
-		};
-		567DEDEB1F69330900615061 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				567DEDF01F69330900615061 /* CustomHUD.framework */,
-				567DEDF21F69330900615061 /* CustomHUDTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		567DEE011F69429600615061 /* View */ = {
@@ -695,8 +687,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				567DEDFC1F69332A00615061 /* PBXTargetDependency */,
 				563EB43F1F69D93400A3D722 /* PBXTargetDependency */,
+				56261F6B1F6A5F71003AEEC9 /* PBXTargetDependency */,
 			);
 			name = KeepInTouch;
 			productName = KeepInTouch;
@@ -762,8 +754,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 567DEDEB1F69330900615061 /* Products */;
-					ProjectRef = 567DEDEA1F69330900615061 /* CustomHUD.xcodeproj */;
+					ProductGroup = 56261F631F6A5F67003AEEC9 /* Products */;
+					ProjectRef = 56261F621F6A5F67003AEEC9 /* CustomHUD.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -776,18 +768,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		567DEDF01F69330900615061 /* CustomHUD.framework */ = {
+		56261F671F6A5F67003AEEC9 /* CustomHUD.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = CustomHUD.framework;
-			remoteRef = 567DEDEF1F69330900615061 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		567DEDF21F69330900615061 /* CustomHUDTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = CustomHUDTests.xctest;
-			remoteRef = 567DEDF11F69330900615061 /* PBXContainerItemProxy */;
+			remoteRef = 56261F661F6A5F67003AEEC9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -988,15 +973,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		56261F6B1F6A5F71003AEEC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CustomHUD;
+			targetProxy = 56261F6A1F6A5F71003AEEC9 /* PBXContainerItemProxy */;
+		};
 		563EB43F1F69D93400A3D722 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 563EB4381F69D93400A3D722 /* LentaSDK */;
 			targetProxy = 563EB43E1F69D93400A3D722 /* PBXContainerItemProxy */;
-		};
-		567DEDFC1F69332A00615061 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CustomHUD;
-			targetProxy = 567DEDFB1F69332A00615061 /* PBXContainerItemProxy */;
 		};
 		56EC444F1F67AECD002DAD37 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
