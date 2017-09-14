@@ -10,7 +10,7 @@ import Foundation
 import LentaSDK
 
 protocol NewsSectionDetailViewModelDelegate: class {
-    func newsSectionDetailViewModelDidOpenDetails(of news: NewsSectionDetailViewModel.Value)
+    func newsSectionDetailViewModel(_ newsSectionDetailViewModel: NewsSectionDetailViewModel, didOpenDetailsFor news: NewsSectionDetailViewModel.Value)
 }
 
 class NewsSectionDetailViewModel {
@@ -57,7 +57,7 @@ class NewsSectionDetailViewModel {
     }
 
     func openDetail(of news: Value) {
-        delegate?.newsSectionDetailViewModelDidOpenDetails(of: news)
+        delegate?.newsSectionDetailViewModel(self, didOpenDetailsFor: news)
     }
 
     func updateData() {

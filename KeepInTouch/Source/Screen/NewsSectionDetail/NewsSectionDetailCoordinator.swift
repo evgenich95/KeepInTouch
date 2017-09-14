@@ -45,7 +45,7 @@ extension NewsSectionDetailCoordinator {
 }
 
 extension NewsSectionDetailCoordinator: NewsSectionDetailViewModelDelegate {
-    func newsSectionDetailViewModelDidOpenDetails(of news: NewsSectionDetailViewModel.Value) {
+    func newsSectionDetailViewModel(_ newsSectionDetailViewModel: NewsSectionDetailViewModel, didOpenDetailsFor news: NewsSectionDetailViewModel.Value) {
         openDetails(for: news)
     }
 }
