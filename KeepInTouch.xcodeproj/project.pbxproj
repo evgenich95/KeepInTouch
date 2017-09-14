@@ -17,6 +17,7 @@
 		56261F461F6A5E09003AEEC9 /* UICollectionView + cellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56261F451F6A5E09003AEEC9 /* UICollectionView + cellConfiguration.swift */; };
 		56261F681F6A5F71003AEEC9 /* CustomHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56261F671F6A5F67003AEEC9 /* CustomHUD.framework */; };
 		56261F691F6A5F71003AEEC9 /* CustomHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56261F671F6A5F67003AEEC9 /* CustomHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		56261F6D1F6A67D6003AEEC9 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56261F6C1F6A67D6003AEEC9 /* StateMachine.swift */; };
 		563EB43D1F69D93400A3D722 /* LentaSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 563EB43B1F69D93400A3D722 /* LentaSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		563EB4401F69D93400A3D722 /* LentaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563EB4391F69D93400A3D722 /* LentaSDK.framework */; };
 		563EB4411F69D93400A3D722 /* LentaSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 563EB4391F69D93400A3D722 /* LentaSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -126,6 +127,7 @@
 		56261F421F6A5CF3003AEEC9 /* UITableView + cellConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView + cellConfiguration.swift"; sourceTree = "<group>"; };
 		56261F451F6A5E09003AEEC9 /* UICollectionView + cellConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView + cellConfiguration.swift"; sourceTree = "<group>"; };
 		56261F621F6A5F67003AEEC9 /* CustomHUD.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CustomHUD.xcodeproj; path = ../../Frameworks/CustomHUD/CustomHUD.xcodeproj; sourceTree = "<group>"; };
+		56261F6C1F6A67D6003AEEC9 /* StateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
 		563EB4391F69D93400A3D722 /* LentaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LentaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		563EB43B1F69D93400A3D722 /* LentaSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LentaSDK.h; sourceTree = "<group>"; };
 		563EB43C1F69D93400A3D722 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 				56A744E21F668EBD00952FBF /* CollectionCellData.swift */,
 				56BCED351F67FB8600865827 /* TableCellData.swift */,
 				56BC25E51F6970240036D4DE /* ListState.swift */,
+				56261F6C1F6A67D6003AEEC9 /* StateMachine.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -931,6 +934,7 @@
 				5676AFE51F65557700F66296 /* MainFlowCoordinator.swift in Sources */,
 				56261F431F6A5CF3003AEEC9 /* UITableView + cellConfiguration.swift in Sources */,
 				56A744E31F668EBD00952FBF /* CollectionCellData.swift in Sources */,
+				56261F6D1F6A67D6003AEEC9 /* StateMachine.swift in Sources */,
 				56E3537E1F657CA3006E775F /* SectionedValues.swift in Sources */,
 				56EDE4581F66597F00570113 /* NewsSummaryCollectionDataSource.swift in Sources */,
 				56EDE4671F66632700570113 /* SimpleNewsCollectionViewCell.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  StateMachine.swift
+//  ListState.swift
 //  KeepInTouch
 //
 //  Created by Anton Ivanov on 13.09.17.

@@ -9,10 +9,12 @@
 import Foundation
 import UIKit
 
-class NewsSummaryStateMachine {
+class NewsSummaryStateMachine: StateMachine {
+    typealias Owner = NewsSummaryViewController
+    typealias Content = NewsSummaryViewModel.CollectionData
 
-    typealias State = ListState<NewsSummaryViewModel.CollectionData>
-    private var state: State = .noData
+    weak var owner: NewsSummaryViewController?
+    var state: State = .noData
 
     private var ownerFrame: CGRect {
         return owner?.view.frame ?? CGRect()
@@ -29,11 +31,7 @@ class NewsSummaryStateMachine {
         ]
     }
 
-    weak var owner: NewsSummaryViewController?
-
-    init(owner: NewsSummaryViewController) {
-        self.owner = owner
-    }
+    required init() {}
 
     func `switch`(to state: State) {
         resetUsingView()
