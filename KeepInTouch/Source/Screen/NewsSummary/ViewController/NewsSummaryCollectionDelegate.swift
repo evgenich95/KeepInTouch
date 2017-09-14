@@ -26,6 +26,10 @@ class NewsSummaryCollectionDelegate: NSObject, UICollectionViewDelegate, UIColle
         collectionView.delegate = self
     }
 
+    func redrawCells() {
+        collectionView.collectionViewLayout.invalidateLayout()
+    }
+
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {

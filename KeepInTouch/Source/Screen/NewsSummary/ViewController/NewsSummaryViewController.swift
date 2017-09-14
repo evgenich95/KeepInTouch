@@ -55,9 +55,9 @@ class NewsSummaryViewController: ViewController {
         viewModel.loadRequiredData()
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        newsCollectionView.reloadData()
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        collectionDelegate.redrawCells()
     }
 
     override func viewDidLoad() {
