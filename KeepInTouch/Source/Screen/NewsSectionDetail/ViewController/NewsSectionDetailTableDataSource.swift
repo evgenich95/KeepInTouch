@@ -1,5 +1,5 @@
 //
-//  NewsSectionDetailTableViewDataSource.swift
+//  NewsSectionDetailTableDataSource.swift
 //  KeepInTouch
 //
 //  Created by Anton Ivanov on 12.09.17.
@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-protocol NewsSectionDetailTableViewDataSourceDelegate: class {
-    func newsSectionDetailTableViewDataSourceDidSelect(item: NewsSectionDetailViewModel.Value)
+protocol NewsSectionDetailTableDataSourceDelegate: class {
+    func newsSectionDetailTableDataSourceDidSelect(item: NewsSectionDetailViewModel.Value)
 }
 
-class NewsSectionDetailTableViewDataSource: NSObject {
-    weak var delegate: NewsSectionDetailTableViewDataSourceDelegate?
+class NewsSectionDetailTableDataSource: NSObject {
+    weak var delegate: NewsSectionDetailTableDataSourceDelegate?
 
     typealias Data = NewsSectionDetailViewModel.TableData
     fileprivate let tableView: TableView
@@ -64,7 +64,7 @@ class NewsSectionDetailTableViewDataSource: NSObject {
     }
 }
 
-extension NewsSectionDetailTableViewDataSource: UITableViewDelegate, UITableViewDataSource {
+extension NewsSectionDetailTableDataSource: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return data.sections.count
     }
@@ -80,7 +80,7 @@ extension NewsSectionDetailTableViewDataSource: UITableViewDelegate, UITableView
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellValue = data.value(for: indexPath).value
-        delegate?.newsSectionDetailTableViewDataSourceDidSelect(item: cellValue)
+        delegate?.newsSectionDetailTableDataSourceDidSelect(item: cellValue)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

@@ -26,7 +26,7 @@ class NewsSectionDetailViewController: ViewController {
     }()
 
     // MARK: - Class variables -
-    var tableViewDelegate: NewsSectionDetailTableViewDataSource!
+    var tableViewDelegate: NewsSectionDetailTableDataSource!
 
     private var dataSource: NewsSectionDetailViewModel.TableData {
         return viewModel.tableData
@@ -64,7 +64,7 @@ class NewsSectionDetailViewController: ViewController {
     }
 
     private func configureTableView() {
-        tableViewDelegate = NewsSectionDetailTableViewDataSource(tableView: tableView, data: dataSource)
+        tableViewDelegate = NewsSectionDetailTableDataSource(tableView: tableView, data: dataSource)
         tableViewDelegate.delegate = self
         tableView.addSubview(refreshControl)
     }
@@ -116,8 +116,8 @@ extension NewsSectionDetailViewController {
     }
 }
 
-extension NewsSectionDetailViewController: NewsSectionDetailTableViewDataSourceDelegate {
-    func newsSectionDetailTableViewDataSourceDidSelect(item: NewsSectionDetailViewModel.Value) {
+extension NewsSectionDetailViewController: NewsSectionDetailTableDataSourceDelegate {
+    func newsSectionDetailTableDataSourceDidSelect(item: NewsSectionDetailViewModel.Value) {
         viewModel.openDetail(of: item)
     }
 }

@@ -9,13 +9,7 @@
 import Foundation
 import UIKit
 
-protocol NewsSummaryCoordinatorDelegate: class {
-
-}
-
 class NewsSummaryCoordinator: Coordinator {
-
-    weak var delegate: NewsSummaryCoordinatorDelegate?
 
     var children: [Coordinator] = []
 
