@@ -231,12 +231,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2FCF3583E63C484B98489F8D /* ViewController */ = {
+		2FCF3583E63C484B98489F8D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				5C19D349B530A9ECBEF5F32F /* NewsSummaryViewController.swift */,
 				E96560EBC2AF51623B80BC68 /* NewsSummaryViewController.xib */,
 			);
+			name = ViewControllers;
 			path = ViewController;
 			sourceTree = "<group>";
 		};
@@ -276,8 +277,8 @@
 		563EB43A1F69D93400A3D722 /* LentaSDK */ = {
 			isa = PBXGroup;
 			children = (
-				563EB4561F69DF4300A3D722 /* Model */,
-				563EB4581F69DF6100A3D722 /* Data Handler */,
+				563EB4561F69DF4300A3D722 /* Models */,
+				563EB4581F69DF6100A3D722 /* Data Handlers */,
 				563EB4571F69DF4C00A3D722 /* Web */,
 				563EB43B1F69D93400A3D722 /* LentaSDK.h */,
 				563EB43C1F69D93400A3D722 /* Info.plist */,
@@ -285,13 +286,13 @@
 			path = LentaSDK;
 			sourceTree = "<group>";
 		};
-		563EB4561F69DF4300A3D722 /* Model */ = {
+		563EB4561F69DF4300A3D722 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				56E353761F656AC2006E775F /* Object.swift */,
 				56E353741F656A9A006E775F /* News.swift */,
 			);
-			name = Model;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		563EB4571F69DF4C00A3D722 /* Web */ = {
@@ -305,14 +306,14 @@
 			name = Web;
 			sourceTree = "<group>";
 		};
-		563EB4581F69DF6100A3D722 /* Data Handler */ = {
+		563EB4581F69DF6100A3D722 /* Data Handlers */ = {
 			isa = PBXGroup;
 			children = (
 				56E353791F656B44006E775F /* DataSerializer.swift */,
 				56EC44431F67AA52002DAD37 /* DateFormatterTransform.swift */,
 				56E3537B1F656DD4006E775F /* XMLParser.swift */,
 			);
-			name = "Data Handler";
+			name = "Data Handlers";
 			sourceTree = "<group>";
 		};
 		5676AFBF1F6553FE00F66296 = {
@@ -343,10 +344,10 @@
 			children = (
 				5676AFDE1F6554BE00F66296 /* Application */,
 				5676AFDD1F6554A500F66296 /* Assets */,
-				5676AFDF1F6554E900F66296 /* Coordinator */,
-				5676AFF51F6557CE00F66296 /* Extension */,
-				5676AFE61F6556B900F66296 /* Source */,
-				5676AFEA1F6556ED00F66296 /* Utility */,
+				5676AFDF1F6554E900F66296 /* Coordinators */,
+				5676AFF51F6557CE00F66296 /* Extensions */,
+				5676AFE61F6556B900F66296 /* Sources */,
+				5676AFEA1F6556ED00F66296 /* Utilities */,
 			);
 			path = KeepInTouch;
 			sourceTree = "<group>";
@@ -369,27 +370,29 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		5676AFDF1F6554E900F66296 /* Coordinator */ = {
+		5676AFDF1F6554E900F66296 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
 				5676AFE21F65551100F66296 /* Coordinator.swift */,
 				5676AFE01F6554F200F66296 /* AppCoordinator.swift */,
 				5676AFE41F65557700F66296 /* MainFlowCoordinator.swift */,
 			);
+			name = Coordinators;
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		5676AFE61F6556B900F66296 /* Source */ = {
+		5676AFE61F6556B900F66296 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				5676AFE71F6556BD00F66296 /* Model */,
-				56804FAD1F655E6000EF375D /* Screen */,
-				5676AFF11F65577600F66296 /* View Layer */,
+				5676AFE71F6556BD00F66296 /* Models */,
+				56804FAD1F655E6000EF375D /* Screens */,
+				5676AFF11F65577600F66296 /* View Layers */,
 			);
+			name = Sources;
 			path = Source;
 			sourceTree = "<group>";
 		};
-		5676AFE71F6556BD00F66296 /* Model */ = {
+		5676AFE71F6556BD00F66296 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				56E3537D1F657CA3006E775F /* SectionedValues.swift */,
@@ -398,43 +401,46 @@
 				56BC25E51F6970240036D4DE /* ListState.swift */,
 				56261F6C1F6A67D6003AEEC9 /* StateMachine.swift */,
 			);
+			name = Models;
 			path = Model;
 			sourceTree = "<group>";
 		};
-		5676AFEA1F6556ED00F66296 /* Utility */ = {
+		5676AFEA1F6556ED00F66296 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				5676AFED1F65572900F66296 /* DebugPrinter.swift */,
 				5676AFEF1F65574400F66296 /* ObjectBuilder.swift */,
 			);
+			name = Utilities;
 			path = Utility;
 			sourceTree = "<group>";
 		};
-		5676AFF11F65577600F66296 /* View Layer */ = {
+		5676AFF11F65577600F66296 /* View Layers */ = {
 			isa = PBXGroup;
 			children = (
-				5676AFF21F65578500F66296 /* Base Class */,
+				5676AFF21F65578500F66296 /* Base Classes */,
 				56BC25DD1F696E220036D4DE /* LabelView.swift */,
 			);
+			name = "View Layers";
 			path = "View Layer";
 			sourceTree = "<group>";
 		};
-		5676AFF21F65578500F66296 /* Base Class */ = {
+		5676AFF21F65578500F66296 /* Base Classes */ = {
 			isa = PBXGroup;
 			children = (
 				5676AFFA1F65587600F66296 /* SingleItemCollectionCell.swift */,
 				56BCED331F67F96F00865827 /* SingleItemTableCell.swift */,
 				5676AFFE1F6558BC00F66296 /* ViewController.swift */,
 			);
-			name = "Base Class";
 			path = "Base Classes";
 			sourceTree = "<group>";
 		};
-		5676AFF51F6557CE00F66296 /* Extension */ = {
+		5676AFF51F6557CE00F66296 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				5676AFF61F6557D400F66296 /* UIKit */,
 			);
+			name = Extensions;
 			path = Extension;
 			sourceTree = "<group>";
 		};
@@ -458,81 +464,82 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
-		567DEE011F69429600615061 /* View */ = {
+		567DEE011F69429600615061 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				567DEE021F6942A500615061 /* State Machine */,
-				56A2D8DC1F6683DB009496F4 /* Header */,
-				56EDE4591F665D8100570113 /* Cell */,
-				56EDE4561F66595A00570113 /* Delegate */,
-				2FCF3583E63C484B98489F8D /* ViewController */,
+				567DEE021F6942A500615061 /* State Machines */,
+				56A2D8DC1F6683DB009496F4 /* Headers */,
+				56EDE4591F665D8100570113 /* Cells */,
+				56EDE4561F66595A00570113 /* Delegates */,
+				2FCF3583E63C484B98489F8D /* ViewControllers */,
 			);
-			name = View;
+			name = Views;
 			sourceTree = "<group>";
 		};
-		567DEE021F6942A500615061 /* State Machine */ = {
+		567DEE021F6942A500615061 /* State Machines */ = {
 			isa = PBXGroup;
 			children = (
 				567DEE031F6942EA00615061 /* NewsSummaryStateMachine.swift */,
 			);
-			name = "State Machine";
+			name = "State Machines";
 			sourceTree = "<group>";
 		};
-		56804FAD1F655E6000EF375D /* Screen */ = {
+		56804FAD1F655E6000EF375D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				6F30E24E1096B14CA77EC616 /* NewsSummary */,
 				FD62141181670DD53EC5A241 /* NewsSectionDetail */,
 				AD2FD78A45B36E9549518A2D /* NewsDetail */,
 			);
+			name = Screens;
 			path = Screen;
 			sourceTree = "<group>";
 		};
-		56A2D8DC1F6683DB009496F4 /* Header */ = {
+		56A2D8DC1F6683DB009496F4 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
 				56A2D8DD1F668408009496F4 /* NewsSummaryHeader.swift */,
 				56A2D8DE1F668408009496F4 /* NewsSummaryHeader.xib */,
 			);
-			name = Header;
+			name = Headers;
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		56BC25E01F696E5D0036D4DE /* Delegate */ = {
+		56BC25E01F696E5D0036D4DE /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
 				56BCED311F67F3AC00865827 /* NewsSectionDetailTableDataSource.swift */,
 			);
-			name = Delegate;
+			name = Delegates;
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		56BC25E11F696E6A0036D4DE /* View */ = {
+		56BC25E11F696E6A0036D4DE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				56BC25E21F696FF10036D4DE /* State Machine */,
-				56BC25E01F696E5D0036D4DE /* Delegate */,
-				56BCED371F67FEE600865827 /* Cell */,
-				CC343FDC42D95A5C108961CF /* ViewController */,
+				56BC25E21F696FF10036D4DE /* State Machines */,
+				56BC25E01F696E5D0036D4DE /* Delegates */,
+				56BCED371F67FEE600865827 /* Cells */,
+				CC343FDC42D95A5C108961CF /* ViewControllers */,
 			);
-			name = View;
+			name = Views;
 			sourceTree = "<group>";
 		};
-		56BC25E21F696FF10036D4DE /* State Machine */ = {
+		56BC25E21F696FF10036D4DE /* State Machines */ = {
 			isa = PBXGroup;
 			children = (
 				56BC25E31F6970070036D4DE /* NewsSectionDetailStateMachine.swift */,
 			);
-			name = "State Machine";
+			name = "State Machines";
 			sourceTree = "<group>";
 		};
-		56BCED371F67FEE600865827 /* Cell */ = {
+		56BCED371F67FEE600865827 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				56BCED381F67FF0500865827 /* NewsSectionDetailTableViewCell.swift */,
 				56BCED391F67FF0500865827 /* NewsSectionDetailTableViewCell.xib */,
 			);
-			name = Cell;
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		56BCED3C1F6862A800865827 /* UIView */ = {
@@ -553,42 +560,42 @@
 			path = KeepInTouchTests;
 			sourceTree = "<group>";
 		};
-		56EDE4561F66595A00570113 /* Delegate */ = {
+		56EDE4561F66595A00570113 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
 				56EDE4571F66597F00570113 /* NewsSummaryCollectionDataSource.swift */,
 				56EDE45E1F665E7700570113 /* NewsSummaryCollectionDelegate.swift */,
 			);
-			name = Delegate;
+			name = Delegates;
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		56EDE4591F665D8100570113 /* Cell */ = {
+		56EDE4591F665D8100570113 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				56EDE4641F66631900570113 /* ImageNewsCollectionViewCell */,
-				56EDE46A1F66632E00570113 /* SimpleNewsCollectionViewCell */,
+				56EDE4641F66631900570113 /* ImageNews */,
+				56EDE46A1F66632E00570113 /* SimpleNews */,
 			);
-			name = Cell;
+			name = Cells;
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		56EDE4641F66631900570113 /* ImageNewsCollectionViewCell */ = {
+		56EDE4641F66631900570113 /* ImageNews */ = {
 			isa = PBXGroup;
 			children = (
 				56EDE4601F66631400570113 /* ImageNewsCollectionViewCell.swift */,
 				56EDE4611F66631400570113 /* ImageNewsCollectionViewCell.xib */,
 			);
-			name = ImageNewsCollectionViewCell;
+			name = ImageNews;
 			sourceTree = "<group>";
 		};
-		56EDE46A1F66632E00570113 /* SimpleNewsCollectionViewCell */ = {
+		56EDE46A1F66632E00570113 /* SimpleNews */ = {
 			isa = PBXGroup;
 			children = (
 				56EDE4651F66632700570113 /* SimpleNewsCollectionViewCell.swift */,
 				56EDE4661F66632700570113 /* SimpleNewsCollectionViewCell.xib */,
 			);
-			name = SimpleNewsCollectionViewCell;
+			name = SimpleNews;
 			sourceTree = "<group>";
 		};
 		61DB1C343A330833285914F9 /* Pods */ = {
@@ -605,7 +612,7 @@
 		6F30E24E1096B14CA77EC616 /* NewsSummary */ = {
 			isa = PBXGroup;
 			children = (
-				567DEE011F69429600615061 /* View */,
+				567DEE011F69429600615061 /* Views */,
 				D282724FD44BF4B147F4FD17 /* NewsSummaryCoordinator.swift */,
 				6A962AFF8142A12A2B29ADDC /* NewsSummaryViewModel.swift */,
 			);
@@ -622,19 +629,20 @@
 			path = NewsDetail;
 			sourceTree = "<group>";
 		};
-		CC343FDC42D95A5C108961CF /* ViewController */ = {
+		CC343FDC42D95A5C108961CF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				B7A984224E08B30051F09D2E /* NewsSectionDetailViewController.swift */,
 				0D3E9AFC96E0D42402E21F0D /* NewsSectionDetailViewController.xib */,
 			);
+			name = ViewControllers;
 			path = ViewController;
 			sourceTree = "<group>";
 		};
 		FD62141181670DD53EC5A241 /* NewsSectionDetail */ = {
 			isa = PBXGroup;
 			children = (
-				56BC25E11F696E6A0036D4DE /* View */,
+				56BC25E11F696E6A0036D4DE /* Views */,
 				754E695970E3BE900B0D5649 /* NewsSectionDetailViewModel.swift */,
 				CC994837C74D28BB7977AB8F /* NewsSectionDetailCoordinator.swift */,
 			);
@@ -685,7 +693,6 @@
 				5676AFC61F6553FE00F66296 /* Resources */,
 				1D927EA6564FEAC75306C38F /* [CP] Embed Pods Frameworks */,
 				838B3C71B4FAAFC5D172C6FC /* [CP] Copy Pods Resources */,
-				562EF5EA1F655A3B0021B8BB /* ShellScript */,
 				567DEDFD1F69332A00615061 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -843,19 +850,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeepInTouch/Pods-KeepInTouch-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		562EF5EA1F655A3B0021B8BB /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		838B3C71B4FAAFC5D172C6FC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

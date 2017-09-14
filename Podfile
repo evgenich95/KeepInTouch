@@ -6,7 +6,6 @@ target 'KeepInTouch' do
   use_frameworks!
 
   # Pods for KeepInTouch
-	pod 'SwiftLint'
 	pod ‘PromiseKit’, ‘~> 4.4’
 
 
