@@ -11,9 +11,11 @@ import PromiseKit
 import LentaSDK
 
 protocol NewsSummaryViewModelDelegate: class {
-    func newsSummaryViewModelDidOpenSectionDetails(of section: SectionedValues<NewsSummaryViewModel.Section, NewsSummaryViewModel.Value>)
-    func newsSummaryViewModelDidOpenValueDetails(of value: NewsSummaryViewModel.Value)
+    func newsSummaryViewModel(_ newsSummaryViewModel: NewsSummaryViewModel, didOpenValueDetailsFor value: NewsSummaryViewModel.Value)
+
+    func newsSummaryViewModel(_ newsSummaryViewModel: NewsSummaryViewModel, didOpenSectionDetailsFor section: SectionedValues<NewsSummaryViewModel.Section, NewsSummaryViewModel.Value>)
 }
+
 class NewsSummaryViewModel {
     weak var delegate: NewsSummaryViewModelDelegate?
 
@@ -54,6 +56,21 @@ class NewsSummaryViewModel {
         }
     }
 
+    func viewDetails(for section: Section) {
+        if let detailedData = data.sectionsAndValues.first(where: {$0.0 == section}) {
+            let sectionedValues = SectionedValues<Section, Value>([detailedData])
+            delegate?.newsSummaryViewModel(self, didOpenSectionDetailsFor: sectionedValues)
+        }
+    }
+
+    func openDetails(for value: Value) {
+        delegate?.newsSummaryViewModel(self, didOpenValueDetailsFor: value)
+    }
+
+    func updateData() {
+        loadRequiredData()
+    }
+
     // MARK: - Web Layer -
     func loadRequiredData() {
         let background = DispatchQueue.global(qos: .userInitiated)
@@ -83,21 +100,6 @@ class NewsSummaryViewModel {
             result[index] = updatedCortege
         }
         return result
-    }
-
-    func viewDetails(for section: Section) {
-        if let detailedData = data.sectionsAndValues.first(where: {$0.0 == section}) {
-            let sectionedValues = SectionedValues<Section, Value>([detailedData])
-            delegate?.newsSummaryViewModelDidOpenSectionDetails(of: sectionedValues)
-        }
-    }
-
-    func openDetails(for value: Value) {
-        delegate?.newsSummaryViewModelDidOpenValueDetails(of: value)
-    }
-
-    func updateData() {
-        loadRequiredData()
     }
 
     // MARK: - Reactions -

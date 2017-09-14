@@ -48,11 +48,11 @@ extension NewsSummaryCoordinator {
 }
 
 extension NewsSummaryCoordinator: NewsSummaryViewModelDelegate {
-    func newsSummaryViewModelDidOpenValueDetails(of value: NewsSummaryViewModel.Value) {
+    func newsSummaryViewModel(_ newsSummaryViewModel: NewsSummaryViewModel, didOpenValueDetailsFor value: NewsSummaryViewModel.Value) {
         viewDetails(for: value)
-
     }
-    func newsSummaryViewModelDidOpenSectionDetails(of section: NewsSectionDetailCoordinator.Data) {
+
+    func newsSummaryViewModel(_ newsSummaryViewModel: NewsSummaryViewModel, didOpenSectionDetailsFor section: SectionedValues<NewsSummaryViewModel.Section, NewsSummaryViewModel.Value>) {
         viewSectioned(data: section)
     }
 }
