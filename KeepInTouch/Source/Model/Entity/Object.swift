@@ -11,13 +11,7 @@ import SWXMLHash
 
 public class Object: NSObject, XMLIndexerDeserializable {
 
-    override public func isEqual(_ object: Any?) -> Bool {
-        if let rhs = object as? Object {
-            return self == rhs
-        }
-        return false
-    }
-
+    // MARK: - Deserializable -
     public static func deserialize(_ node: XMLIndexer) throws -> Self {
         return try self.prase(node, self)
     }
@@ -26,8 +20,12 @@ public class Object: NSObject, XMLIndexerDeserializable {
         fatalError("'\(self)' class must implement prase(_:) function")
     }
 
-    class func ignoredProperties() -> [String] {
-        return []
+    // MARK: - NSObject -
+    override public func isEqual(_ object: Any?) -> Bool {
+        if let rhs = object as? Object {
+            return self == rhs
+        }
+        return false
     }
 
     static func == (lhs: Object, rhs: Object) -> Bool {
@@ -38,6 +36,11 @@ public class Object: NSObject, XMLIndexerDeserializable {
         return toJSONString() ?? ""
     }
 
+    // MARK: - JSON Parsing -
+    class func ignoredProperties() -> [String] {
+        return []
+    }
+
     func toJSON() -> [String: Any] {
         var result = [String: Any]()
         let SelfType = type(of: self)
@@ -45,6 +48,9 @@ public class Object: NSObject, XMLIndexerDeserializable {
         propertyKeys
             .filter {!SelfType.ignoredProperties().contains($0)}
             .forEach {
+                if $0 == "sectionUIButton" {
+                    print()
+                }
                 let atrrValue = value(forKey: $0)
                 if let object = atrrValue as? Object {
                     result[$0] = object.toJSON()
