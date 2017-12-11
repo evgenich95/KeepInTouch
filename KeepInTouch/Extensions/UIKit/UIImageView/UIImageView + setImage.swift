@@ -35,7 +35,7 @@ extension UIImageView {
         }
 
         Downloader.shared.loadImage(url: url)
-            .then(on: main) {[weak self] image -> Void in
+            .then(on: .main) {[weak self] image -> Void in
                 self?.image = image
                 completion?(image)
             }.catch { (_) in

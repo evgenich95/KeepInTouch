@@ -23,7 +23,7 @@ class NewsSummaryViewModel {
         return "News Summary"
     }
 
-    private let requiredNewsTypes = [NewsType.top7, NewsType.last24, NewsType.none]
+    private let requiredNewsTypes: [NewsType] = [.top7, .last24, .none]
 
     typealias Section = String
     typealias Value = News
@@ -73,9 +73,8 @@ class NewsSummaryViewModel {
 
     // MARK: - Web Layer -
     func loadRequiredData() {
-        let background = DispatchQueue.global(qos: .userInitiated)
         WebService.loadNews(with: requiredNewsTypes)
-            .then(on: background) {[weak self] typedNews in
+            .then(on: .background) {[weak self] typedNews in
                 self?.save(typedNews: typedNews)
             }.catch {[weak self] (error) in
                 self?.onDataRequestFailed?(error)

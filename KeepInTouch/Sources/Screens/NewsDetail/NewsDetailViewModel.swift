@@ -14,6 +14,7 @@ class NewsDetailViewModel {
     }
 
     let url: URL
+    
     init(url: URL) {
         self.url = url
     }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		180586128515FF567CA7CB3E /* NewsSummaryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D282724FD44BF4B147F4FD17 /* NewsSummaryCoordinator.swift */; };
+		18D1D9241FDEC11000D138CF /* DispatchQueue + Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1D9231FDEC11000D138CF /* DispatchQueue + Background.swift */; };
 		3C358B2C6853CC14109E6FB0 /* NewsSectionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A984224E08B30051F09D2E /* NewsSectionDetailViewController.swift */; };
 		48F63164F2B1ACD87B40014D /* NewsSectionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E695970E3BE900B0D5649 /* NewsSectionDetailViewModel.swift */; };
 		4B7F6F4368EB1C9F4C707CC9 /* NewsSummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E96560EBC2AF51623B80BC68 /* NewsSummaryViewController.xib */; };
@@ -117,6 +118,7 @@
 
 /* Begin PBXFileReference section */
 		0D3E9AFC96E0D42402E21F0D /* NewsSectionDetailViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = NewsSectionDetailViewController.xib; sourceTree = "<group>"; };
+		18D1D9231FDEC11000D138CF /* DispatchQueue + Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue + Background.swift"; sourceTree = "<group>"; };
 		1B6990B741A0E0C497C3B79E /* NewsDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		3A2BE642881FC08F3DCDA7AB /* Pods_KeepInTouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepInTouch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		555A36DB2846BEDFB3BB230D /* Pods-LentaSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LentaSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LentaSDK/Pods-LentaSDK.debug.xcconfig"; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				5676AFF61F6557D400F66296 /* UIKit */,
+				18D1D9231FDEC11000D138CF /* DispatchQueue + Background.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -787,6 +790,7 @@
 				56BC25E61F6970240036D4DE /* ListState.swift in Sources */,
 				56BCED401F686F3A00865827 /* UIView + addBorder.swift in Sources */,
 				56261F461F6A5E09003AEEC9 /* UICollectionView + cellConfiguration.swift in Sources */,
+				18D1D9241FDEC11000D138CF /* DispatchQueue + Background.swift in Sources */,
 				5676AFCC1F6553FE00F66296 /* AppDelegate.swift in Sources */,
 				56BCED341F67F96F00865827 /* SingleItemTableCell.swift in Sources */,
 				5676AFF91F6557F800F66296 /* UIViewController+ProgressLoading.swift in Sources */,

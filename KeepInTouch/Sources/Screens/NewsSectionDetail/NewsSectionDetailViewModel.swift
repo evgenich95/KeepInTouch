@@ -68,7 +68,7 @@ class NewsSectionDetailViewModel {
         ))
 
         WebService.loadNews(with: newsTypes)
-            .then(on: background) {[weak self] typedNews in
+            .then(on: .background) {[weak self] typedNews in
                 self?.save(typedNews: typedNews)
             }.catch {[weak self] error in
                 self?.onDataRequestFailed?(error)
