@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1863D53E200DB15B006FE198 /* LentaSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863D53D200DB15B006FE198 /* LentaSDKTests.swift */; };
+		1863D540200DB15B006FE198 /* LentaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 560498481F6A7ABE00CF9E15 /* LentaSDK.framework */; };
 		5604984D1F6A7ABE00CF9E15 /* LentaSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 5604984B1F6A7ABE00CF9E15 /* LentaSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		560498571F6A7AE400CF9E15 /* DataSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560498541F6A7AE400CF9E15 /* DataSerializer.swift */; };
 		560498581F6A7AE400CF9E15 /* DateFormatterTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560498551F6A7AE400CF9E15 /* DateFormatterTransform.swift */; };
@@ -18,9 +20,23 @@
 		560498661F6A7B1600CF9E15 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560498621F6A7B1600CF9E15 /* Thread.swift */; };
 		560498671F6A7B1600CF9E15 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560498631F6A7B1600CF9E15 /* WebService.swift */; };
 		69E4509D254520E9411C17C1 /* Pods_LentaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9FA762F22DAE7DED3BB5C /* Pods_LentaSDK.framework */; };
+		81669E6578D84B547FED6A6F /* Pods_LentaSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DE809B8D1E0555B05E5457 /* Pods_LentaSDKTests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1863D541200DB15B006FE198 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5604983F1F6A7ABE00CF9E15 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 560498471F6A7ABE00CF9E15;
+			remoteInfo = LentaSDK;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1863D53B200DB15B006FE198 /* LentaSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LentaSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1863D53D200DB15B006FE198 /* LentaSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LentaSDKTests.swift; sourceTree = "<group>"; };
+		1863D53F200DB15B006FE198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AEA270E7C10BCA7967D4AD6 /* Pods-LentaSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LentaSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-LentaSDK/Pods-LentaSDK.release.xcconfig"; sourceTree = "<group>"; };
 		560498481F6A7ABE00CF9E15 /* LentaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LentaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5604984B1F6A7ABE00CF9E15 /* LentaSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LentaSDK.h; sourceTree = "<group>"; };
@@ -34,11 +50,23 @@
 		560498611F6A7B1600CF9E15 /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		560498621F6A7B1600CF9E15 /* Thread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		560498631F6A7B1600CF9E15 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		5CAEFCEE94EF6AB83AB79D29 /* Pods-LentaSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LentaSDKTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LentaSDKTests/Pods-LentaSDKTests.release.xcconfig"; sourceTree = "<group>"; };
+		75DE809B8D1E0555B05E5457 /* Pods_LentaSDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LentaSDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE9FA762F22DAE7DED3BB5C /* Pods_LentaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LentaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		900E79F97D25F2AED8A4587D /* Pods-LentaSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LentaSDKTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LentaSDKTests/Pods-LentaSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DCA8D8597CEA7EB305E295BE /* Pods-LentaSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LentaSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LentaSDK/Pods-LentaSDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1863D538200DB15B006FE198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1863D540200DB15B006FE198 /* LentaSDK.framework in Frameworks */,
+				81669E6578D84B547FED6A6F /* Pods_LentaSDKTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		560498441F6A7ABE00CF9E15 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,11 +78,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1863D53C200DB15B006FE198 /* LentaSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				1863D53D200DB15B006FE198 /* LentaSDKTests.swift */,
+				1863D53F200DB15B006FE198 /* Info.plist */,
+			);
+			path = LentaSDKTests;
+			sourceTree = "<group>";
+		};
 		21FAC19CEE640F035BAD4AA0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				DCA8D8597CEA7EB305E295BE /* Pods-LentaSDK.debug.xcconfig */,
 				4AEA270E7C10BCA7967D4AD6 /* Pods-LentaSDK.release.xcconfig */,
+				900E79F97D25F2AED8A4587D /* Pods-LentaSDKTests.debug.xcconfig */,
+				5CAEFCEE94EF6AB83AB79D29 /* Pods-LentaSDKTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -63,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				5604984A1F6A7ABE00CF9E15 /* LentaSDK */,
+				1863D53C200DB15B006FE198 /* LentaSDKTests */,
 				560498491F6A7ABE00CF9E15 /* Products */,
 				21FAC19CEE640F035BAD4AA0 /* Pods */,
 				566F3C82E35532208E6DC0C3 /* Frameworks */,
@@ -73,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				560498481F6A7ABE00CF9E15 /* LentaSDK.framework */,
+				1863D53B200DB15B006FE198 /* LentaSDKTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				7EE9FA762F22DAE7DED3BB5C /* Pods_LentaSDK.framework */,
+				75DE809B8D1E0555B05E5457 /* Pods_LentaSDKTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -141,6 +183,27 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		1863D53A200DB15B006FE198 /* LentaSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1863D545200DB15B006FE198 /* Build configuration list for PBXNativeTarget "LentaSDKTests" */;
+			buildPhases = (
+				1C497CF9FAC44ECAEB34A53B /* [CP] Check Pods Manifest.lock */,
+				1863D537200DB15B006FE198 /* Sources */,
+				1863D538200DB15B006FE198 /* Frameworks */,
+				1863D539200DB15B006FE198 /* Resources */,
+				39AF54F5ADE0970D7C8D4D31 /* [CP] Embed Pods Frameworks */,
+				6FAE1FE866F92286EB7F654F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1863D542200DB15B006FE198 /* PBXTargetDependency */,
+			);
+			name = LentaSDKTests;
+			productName = LentaSDKTests;
+			productReference = 1863D53B200DB15B006FE198 /* LentaSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		560498471F6A7ABE00CF9E15 /* LentaSDK */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 560498501F6A7ABE00CF9E15 /* Build configuration list for PBXNativeTarget "LentaSDK" */;
@@ -167,9 +230,15 @@
 		5604983F1F6A7ABE00CF9E15 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = IAE;
 				TargetAttributes = {
+					1863D53A200DB15B006FE198 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = GB85HYMZT6;
+						ProvisioningStyle = Automatic;
+					};
 					560498471F6A7ABE00CF9E15 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = GB85HYMZT6;
@@ -191,11 +260,19 @@
 			projectRoot = "";
 			targets = (
 				560498471F6A7ABE00CF9E15 /* LentaSDK */,
+				1863D53A200DB15B006FE198 /* LentaSDKTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1863D539200DB15B006FE198 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		560498461F6A7ABE00CF9E15 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -206,6 +283,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1C497CF9FAC44ECAEB34A53B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LentaSDKTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39AF54F5ADE0970D7C8D4D31 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LentaSDKTests/Pods-LentaSDKTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LentaSDKTests/Pods-LentaSDKTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6B9B240661FBFBF206296C64 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,24 +336,50 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LentaSDK/Pods-LentaSDK-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D164B8CFC6B75ADC034C2F6A /* [CP] Check Pods Manifest.lock */ = {
+		6FAE1FE866F92286EB7F654F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LentaSDKTests/Pods-LentaSDKTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D164B8CFC6B75ADC034C2F6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LentaSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1863D537200DB15B006FE198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1863D53E200DB15B006FE198 /* LentaSDKTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		560498431F6A7ABE00CF9E15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,7 +398,67 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1863D542200DB15B006FE198 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 560498471F6A7ABE00CF9E15 /* LentaSDK */;
+			targetProxy = 1863D541200DB15B006FE198 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		1863D543200DB15B006FE198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 900E79F97D25F2AED8A4587D /* Pods-LentaSDKTests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GB85HYMZT6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = LentaSDKTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = iae.LentaSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1863D544200DB15B006FE198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CAEFCEE94EF6AB83AB79D29 /* Pods-LentaSDKTests.release.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GB85HYMZT6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = LentaSDKTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = iae.LentaSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		5604984E1F6A7ABE00CF9E15 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -405,6 +606,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1863D545200DB15B006FE198 /* Build configuration list for PBXNativeTarget "LentaSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1863D543200DB15B006FE198 /* Debug */,
+				1863D544200DB15B006FE198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		560498421F6A7ABE00CF9E15 /* Build configuration list for PBXProject "LentaSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -421,6 +631,7 @@
 				560498521F6A7ABE00CF9E15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

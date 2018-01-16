@@ -14,7 +14,8 @@
 		16CF5A8B0709773FC62482CCE35A67BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
 		1961549226A9031F7B7D547984ECB625 /* SWXMLHash-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0248B662D966B4C1164DD65975F88DBF /* SWXMLHash-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DCA6761DD5C132667D5ADCF8D33E6D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3917A50EB224EEDBC66971700D698782 /* UIKit.framework */; };
-		275D685D691F0F0E6575E531ADADB28E /* Pods-LentaSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1145CBF6FC93C5476B20BDBC9EB000DE /* Pods-LentaSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2131B966B15E09EF90B5CFB8F3DEEEF9 /* Pods-LentaSDKTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4287D8E50A40F306363042DCBB376CBD /* Pods-LentaSDKTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		275D685D691F0F0E6575E531ADADB28E /* Pods-LentaSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B656CC6AA337E80685AA08A2FF0BD3C7 /* Pods-LentaSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2873721A125FBE9F87EB968F40F298C8 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0654413472E1267549BEC7C502B24B5 /* State.swift */; };
 		28B8B6C858EB24FE009956795ABB3E12 /* AnyPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E129A980E64DD467FB75BF33083F96 /* AnyPromise.swift */; };
 		2CB13DF1BF8E4D72C22B273759E99738 /* Process+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B21858DBEE27655C6B010146054751 /* Process+Promise.swift */; };
@@ -22,6 +23,7 @@
 		314ACA5C38DAE5E66BD750E7A6023748 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
 		3193469CEC88A60F8FBDDAED42EE4AEF /* NSTask+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 5236B06EDB5923FE7662BD29150C5EE1 /* NSTask+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359D94A370659A4D9531E29CFCE02753 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		3AB9B7A38675415493B4CB3D9C743F46 /* Pods-LentaSDKTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 556E35CB1C26FF089E2D020C6005CC8B /* Pods-LentaSDKTests-dummy.m */; };
 		3DE989CEDEE1A780BA316A998FA68575 /* UIView+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = B70646C25F5CE24DC90A1A0785A25578 /* UIView+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		450DF879CE758BD11F34D3FEBA245895 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */; };
 		4A3B5D56FE31B5CD6D1AE1164465E434 /* wrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04AFF6CEB1B941A7C32E08A92CA7AC1 /* wrap.swift */; };
@@ -29,6 +31,7 @@
 		4F670107004DD8C0F94ED0DB3185697E /* after.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFA9A02594FB5138A59DA0DE339AAC0 /* after.swift */; };
 		5056BFF442659AB5A938424CDA8B2ED1 /* PMKQuartzCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 639CC374E83D20B7270BC20CAB64740C /* PMKQuartzCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61E028E951F9BE016AD056B02589B37D /* CALayer+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = E07EE9EA96B462FD9BFDAD62836BA1F9 /* CALayer+AnyPromise.m */; };
+		665CE75D8FD336AD4EB6F6596B6B97B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
 		692922E10D52D149820610E9FBF5CF16 /* NSNotificationCenter+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 3347B9C4680748D28E0E89666EA7D6C6 /* NSNotificationCenter+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6A26D1A12AB1C022C4250C447A0F2B6F /* PMKUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C87BF7D0696C4900B61C95174A9FDA61 /* PMKUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E676B0182BAA0C01801560D987DDFF8 /* dispatch_promise.m in Sources */ = {isa = PBXBuildFile; fileRef = 6650CE886B9C0DD4E67D1E08F5983BF6 /* dispatch_promise.m */; };
@@ -64,12 +67,26 @@
 		EBD6E9A4F95C343AABEF495FBEE617F1 /* join.swift in Sources */ = {isa = PBXBuildFile; fileRef = C294929B6C2234B2FFFC3051EC0D9F1D /* join.swift */; };
 		F25BB2C5522D8056E744052FBD2DA9AB /* Promise+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4264BEB171185BD0D16DA06810AE134 /* Promise+Properties.swift */; };
 		F399D5DCC98E38F5F9A9D5236394CD2A /* hang.m in Sources */ = {isa = PBXBuildFile; fileRef = E3460C886F3390630F62DC3B800FD44C /* hang.m */; };
-		F3E153B311B55CC5752361CE0F6D1100 /* Pods-LentaSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ED6A5832851FABCB3697EF4C79A707 /* Pods-LentaSDK-dummy.m */; };
+		F3E153B311B55CC5752361CE0F6D1100 /* Pods-LentaSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B041DA681AF2D7E8D8003738F33D93B /* Pods-LentaSDK-dummy.m */; };
 		F96F649D02F4AD3E7132162BDD59AE2B /* NSNotificationCenter+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CD151A5AE61374E2CEC43301F4DF /* NSNotificationCenter+Promise.swift */; };
 		FDAAA3AE80E50CBEEF0F9E2CABE03D89 /* DispatchQueue+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68111FD549707DD9878BB95184967DFA /* DispatchQueue+Promise.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0BB360B8D7C30AFB54B2FE25A9E1D8E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0AF47C179F594AF1C739ADBDCC094F1;
+			remoteInfo = SWXMLHash;
+		};
+		10A9CAFD396A0EA4269ED7AD54FFF39E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34D78F170CE5670671AD820999CA5371;
+			remoteInfo = PromiseKit;
+		};
 		4053386462F06F8F945279E74F5CCD99 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -88,46 +105,56 @@
 
 /* Begin PBXFileReference section */
 		0248B662D966B4C1164DD65975F88DBF /* SWXMLHash-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWXMLHash-umbrella.h"; sourceTree = "<group>"; };
+		0348AD5415B4D873C5A7D2E687E82943 /* Pods-LentaSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LentaSDKTests.release.xcconfig"; sourceTree = "<group>"; };
 		07B21858DBEE27655C6B010146054751 /* Process+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Process+Promise.swift"; path = "Extensions/Foundation/Sources/Process+Promise.swift"; sourceTree = "<group>"; };
 		09C4B0307E1F28440B5A3001BDA9E7C2 /* AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AnyPromise.m; path = Sources/AnyPromise.m; sourceTree = "<group>"; };
 		0B4CC06A4A12DCEB87B435881ECA0FD2 /* when.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = when.m; path = Sources/when.m; sourceTree = "<group>"; };
 		0E7C99A3EB7324FF86463B0BFDDC6B94 /* PMKFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PMKFoundation.h; path = Extensions/Foundation/Sources/PMKFoundation.h; sourceTree = "<group>"; };
 		0FAFFEC7A78A697F9A55423114E30CCF /* UIView+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+AnyPromise.m"; path = "Extensions/UIKit/Sources/UIView+AnyPromise.m"; sourceTree = "<group>"; };
 		113C5B8C92CCB0E78832120CCE41AF45 /* NSURLSession+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSURLSession+AnyPromise.m"; sourceTree = "<group>"; };
-		1145CBF6FC93C5476B20BDBC9EB000DE /* Pods-LentaSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LentaSDK-umbrella.h"; sourceTree = "<group>"; };
 		12D6392EEEB8ADC41FD798AC7AA1A261 /* UIViewController+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Promise.swift"; path = "Extensions/UIKit/Sources/UIViewController+Promise.swift"; sourceTree = "<group>"; };
 		1443110BD737DFD53AF4CDD28FD534DE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14BE4B57D7CE738FC6310CF20489A577 /* PromiseKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PromiseKit.modulemap; sourceTree = "<group>"; };
+		18DBB5E9ECCC12DB2FC296C2FB73C3A4 /* Pods-LentaSDK-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LentaSDK-acknowledgements.plist"; sourceTree = "<group>"; };
+		1A6DAE9371813CE885F6C798883D8A67 /* Pods-LentaSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LentaSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1F81CD151A5AE61374E2CEC43301F4DF /* NSNotificationCenter+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSNotificationCenter+Promise.swift"; path = "Extensions/Foundation/Sources/NSNotificationCenter+Promise.swift"; sourceTree = "<group>"; };
 		20B7E4C7FAAB1338C20130FCA8C874A7 /* race.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = race.swift; path = Sources/race.swift; sourceTree = "<group>"; };
-		2F735D6C5798FD2342AD3F6748198661 /* Pods-LentaSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LentaSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		212E0BED8E149C83F39C7ED4BA52420D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2520155C8947951ACA1526C4E4954C34 /* Pods-LentaSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LentaSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		2B041DA681AF2D7E8D8003738F33D93B /* Pods-LentaSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LentaSDK-dummy.m"; sourceTree = "<group>"; };
+		2B1ADBA16280A8CCA91D2F2A71EADFBA /* Pods-LentaSDK-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LentaSDK-resources.sh"; sourceTree = "<group>"; };
 		30772E3FFF47F8E344497FC5337BDBCF /* UIViewController+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+AnyPromise.h"; path = "Extensions/UIKit/Sources/UIViewController+AnyPromise.h"; sourceTree = "<group>"; };
 		33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3347B9C4680748D28E0E89666EA7D6C6 /* NSNotificationCenter+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+AnyPromise.h"; path = "Extensions/Foundation/Sources/NSNotificationCenter+AnyPromise.h"; sourceTree = "<group>"; };
 		3917A50EB224EEDBC66971700D698782 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		393CCA1F75B755BD58EFC2A696F9121B /* afterlife.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = afterlife.swift; path = Extensions/Foundation/Sources/afterlife.swift; sourceTree = "<group>"; };
+		396DFF03C284AC7D4EA4830C152B5714 /* Pods-LentaSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-LentaSDK.modulemap"; sourceTree = "<group>"; };
 		39B9D204BBBC434528B698AEE1FE5FCD /* NSURLSession+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLSession+AnyPromise.h"; path = "Extensions/Foundation/Sources/NSURLSession+AnyPromise.h"; sourceTree = "<group>"; };
+		3DAC78C8CC3044910BB61FAFCFCBE7C0 /* Pods_LentaSDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LentaSDKTests.framework; path = "Pods-LentaSDKTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4287D8E50A40F306363042DCBB376CBD /* Pods-LentaSDKTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LentaSDKTests-umbrella.h"; sourceTree = "<group>"; };
 		436B80AB2C501ADCE5A56BA43EB02210 /* SWXMLHash.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWXMLHash.xcconfig; sourceTree = "<group>"; };
 		44F2093D62639345DE77D13B7D9EA6AE /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Sources/Error.swift; sourceTree = "<group>"; };
-		46D44000811C21843E7B69C4CA9B8416 /* Pods-LentaSDK-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LentaSDK-acknowledgements.markdown"; sourceTree = "<group>"; };
+		491AE7C3327B9EB7E8669E22C915E4F1 /* Pods-LentaSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LentaSDK.release.xcconfig"; sourceTree = "<group>"; };
 		4D7A1358F22485DEE7579233F3071EC9 /* Promise+AnyPromise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+AnyPromise.swift"; path = "Sources/Promise+AnyPromise.swift"; sourceTree = "<group>"; };
 		5236B06EDB5923FE7662BD29150C5EE1 /* NSTask+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSTask+AnyPromise.h"; path = "Extensions/Foundation/Sources/NSTask+AnyPromise.h"; sourceTree = "<group>"; };
 		53074798E7AF8EC08F9F4498012C57B0 /* PromiseKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PromiseKit.h; path = Sources/PromiseKit.h; sourceTree = "<group>"; };
+		553687CF39C38203C3E7BA04A92B8AFD /* Pods_LentaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LentaSDK.framework; path = "Pods-LentaSDK.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		556E35CB1C26FF089E2D020C6005CC8B /* Pods-LentaSDKTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LentaSDKTests-dummy.m"; sourceTree = "<group>"; };
 		558A68B554928ADB71330E1BE915F613 /* UIViewController+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+AnyPromise.m"; path = "Extensions/UIKit/Sources/UIViewController+AnyPromise.m"; sourceTree = "<group>"; };
-		5C9C0E7EC0FF6AD4C441EFA9E05A9CD4 /* Pods-LentaSDK-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LentaSDK-resources.sh"; sourceTree = "<group>"; };
-		5E169A0586DAAECA72742E072007A91E /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PromiseKit.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E6908E578620B0408B9E56A99D6244A /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SWXMLHash.framework; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		639CC374E83D20B7270BC20CAB64740C /* PMKQuartzCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PMKQuartzCore.h; path = Extensions/QuartzCore/Sources/PMKQuartzCore.h; sourceTree = "<group>"; };
 		65AF4D66E06FCB196C2913D65EB7C845 /* UIView+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Promise.swift"; path = "Extensions/UIKit/Sources/UIView+Promise.swift"; sourceTree = "<group>"; };
 		6650CE886B9C0DD4E67D1E08F5983BF6 /* dispatch_promise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = dispatch_promise.m; path = Sources/dispatch_promise.m; sourceTree = "<group>"; };
 		68111FD549707DD9878BB95184967DFA /* DispatchQueue+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Promise.swift"; path = "Sources/DispatchQueue+Promise.swift"; sourceTree = "<group>"; };
-		68FB680AC37B89E9BFAC0426D18F85CB /* Pods-LentaSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LentaSDK.release.xcconfig"; sourceTree = "<group>"; };
 		6EB4CCDD1C821E49832DC68C69841ED0 /* PromiseKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromiseKit-umbrella.h"; sourceTree = "<group>"; };
-		74ED6A5832851FABCB3697EF4C79A707 /* Pods-LentaSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LentaSDK-dummy.m"; sourceTree = "<group>"; };
+		73002437BB32D005E25438B85A350D13 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D35019AE9C8EBB76F9F9A475E277C51 /* PromiseKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromiseKit-prefix.pch"; sourceTree = "<group>"; };
+		858435CC15FE2E0B802361962F59D4E0 /* Pods-LentaSDKTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-LentaSDKTests.modulemap"; sourceTree = "<group>"; };
 		8D3248C89C951AA7F5FE88621DBFA428 /* SWXMLHash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SWXMLHash.swift; path = Source/SWXMLHash.swift; sourceTree = "<group>"; };
 		8DFA9A02594FB5138A59DA0DE339AAC0 /* after.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = after.swift; path = Sources/after.swift; sourceTree = "<group>"; };
 		9043DA0F6F361F0D8635C3998BC0BDBA /* PromiseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PromiseKit-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D45D0DC42499F8C1A8587376AF06FB5 /* Pods-LentaSDK-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LentaSDK-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A04AFF6CEB1B941A7C32E08A92CA7AC1 /* wrap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = wrap.swift; path = Sources/wrap.swift; sourceTree = "<group>"; };
 		A0A5A8BE5C32828B02D595EF512779E3 /* NSTask+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTask+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSTask+AnyPromise.m"; sourceTree = "<group>"; };
 		A3E8F39CEC5A380B5A2CBA85154B16E3 /* SWXMLHash-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWXMLHash-prefix.pch"; sourceTree = "<group>"; };
@@ -135,31 +162,32 @@
 		AAFD39DF9366C98856F37BF6B0808DC6 /* fwd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fwd.h; path = Sources/fwd.h; sourceTree = "<group>"; };
 		AB12B2C5E5AA6D570B1A6564795DAB2C /* Zalgo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Zalgo.swift; path = Sources/Zalgo.swift; sourceTree = "<group>"; };
 		ADEAE0BB16329413D2A3C14846D42D86 /* when.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = when.swift; path = Sources/when.swift; sourceTree = "<group>"; };
+		AEA3A7DDB1ADBB86689D8B82C00138A1 /* Pods-LentaSDKTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LentaSDKTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		B34890E8591448EBBC37E8F2464072CC /* AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AnyPromise.h; path = Sources/AnyPromise.h; sourceTree = "<group>"; };
+		B656CC6AA337E80685AA08A2FF0BD3C7 /* Pods-LentaSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LentaSDK-umbrella.h"; sourceTree = "<group>"; };
 		B70646C25F5CE24DC90A1A0785A25578 /* UIView+AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+AnyPromise.h"; path = "Extensions/UIKit/Sources/UIView+AnyPromise.h"; sourceTree = "<group>"; };
 		B80330FD60361C24E4EE351D442D288E /* NSNotificationCenter+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+AnyPromise.m"; path = "Extensions/Foundation/Sources/NSNotificationCenter+AnyPromise.m"; sourceTree = "<group>"; };
 		BBDD6E905A6132CEA9355983A5FC83ED /* GlobalState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GlobalState.m; path = Sources/GlobalState.m; sourceTree = "<group>"; };
-		BCE1E58762B9F626D2452271271ABB85 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC8A11BD3F65BB910FB3634634E9F611 /* Pods-LentaSDKTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LentaSDKTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BEC7B1BE638789B6A8EFD3E22131C596 /* PromiseKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PromiseKit.xcconfig; sourceTree = "<group>"; };
 		C0912D56F679139F062D28F56EA49B19 /* NSURLSession+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLSession+Promise.swift"; path = "Extensions/Foundation/Sources/NSURLSession+Promise.swift"; sourceTree = "<group>"; };
 		C294929B6C2234B2FFFC3051EC0D9F1D /* join.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = join.swift; path = Sources/join.swift; sourceTree = "<group>"; };
 		C87BF7D0696C4900B61C95174A9FDA61 /* PMKUIKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PMKUIKit.h; path = Extensions/UIKit/Sources/PMKUIKit.h; sourceTree = "<group>"; };
 		CB0B0C23E353A2F6D9E401855C939295 /* join.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = join.m; path = Sources/join.m; sourceTree = "<group>"; };
 		D07B75868ADF62A55E66422E03B41122 /* NSObject+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Promise.swift"; path = "Extensions/Foundation/Sources/NSObject+Promise.swift"; sourceTree = "<group>"; };
-		D15081CC5470E33C6CDCC0AAF48CC2E7 /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SWXMLHash.framework; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1724783959605CFD37A99FA21D43787 /* Pods-LentaSDK-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LentaSDK-acknowledgements.plist"; sourceTree = "<group>"; };
 		D319B36CE9867E5491245294B9856112 /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = Sources/Promise.swift; sourceTree = "<group>"; };
 		D47A840BFC147F4D6DCC736C5D18A456 /* after.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = after.m; path = Sources/after.m; sourceTree = "<group>"; };
 		D72E881AC7071398AF5974495D14DF11 /* SWXMLHash.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SWXMLHash.modulemap; sourceTree = "<group>"; };
+		DCE6EAD677E1D60D0B2D7799769985C1 /* Pods-LentaSDKTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LentaSDKTests-resources.sh"; sourceTree = "<group>"; };
+		DCECDE6551B270FBC6F16BBF48AD989A /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PromiseKit.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD148798666FAB4D9E1F95245667FF7 /* URLDataPromise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLDataPromise.swift; path = Extensions/Foundation/Sources/URLDataPromise.swift; sourceTree = "<group>"; };
 		E07EE9EA96B462FD9BFDAD62836BA1F9 /* CALayer+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CALayer+AnyPromise.m"; path = "Extensions/QuartzCore/Sources/CALayer+AnyPromise.m"; sourceTree = "<group>"; };
-		E28E2D02C279BE8075023859C4533D57 /* Pods-LentaSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-LentaSDK.modulemap"; sourceTree = "<group>"; };
 		E3460C886F3390630F62DC3B800FD44C /* hang.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = hang.m; path = Sources/hang.m; sourceTree = "<group>"; };
 		E4264BEB171185BD0D16DA06810AE134 /* Promise+Properties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Properties.swift"; path = "Sources/Promise+Properties.swift"; sourceTree = "<group>"; };
 		E5E6544FF6970692275A9168434712D1 /* SWXMLHash-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWXMLHash-dummy.m"; sourceTree = "<group>"; };
-		E767BA097BC7C456FAFB3C89229F306C /* Pods_LentaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LentaSDK.framework; path = "Pods-LentaSDK.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2D0D35612963D8D6E27D229478322F /* SWXMLHash+TypeConversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SWXMLHash+TypeConversion.swift"; path = "Source/SWXMLHash+TypeConversion.swift"; sourceTree = "<group>"; };
 		EC4AB603E6D7E17678791FC8C7F5BCC5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED05855D9FAFD406E0E831C74D4169C8 /* Pods-LentaSDKTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LentaSDKTests-frameworks.sh"; sourceTree = "<group>"; };
 		F0654413472E1267549BEC7C502B24B5 /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = State.swift; path = Sources/State.swift; sourceTree = "<group>"; };
 		F9E129A980E64DD467FB75BF33083F96 /* AnyPromise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyPromise.swift; path = Sources/AnyPromise.swift; sourceTree = "<group>"; };
 		F9F5EAE3D528018BCEC2E602CCBA06CA /* PMKAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PMKAlertController.swift; path = Extensions/UIKit/Sources/PMKAlertController.swift; sourceTree = "<group>"; };
@@ -174,6 +202,14 @@
 				314ACA5C38DAE5E66BD750E7A6023748 /* Foundation.framework in Frameworks */,
 				450DF879CE758BD11F34D3FEBA245895 /* QuartzCore.framework in Frameworks */,
 				1DCA6761DD5C132667D5ADCF8D33E6D9 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FB779038683CF7418F8959802C15E07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				665CE75D8FD336AD4EB6F6596B6B97B9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +267,23 @@
 			path = PromiseKit;
 			sourceTree = "<group>";
 		};
+		2D3E1BBEEF12BD848D18FBD09B7BEB8A /* Pods-LentaSDK */ = {
+			isa = PBXGroup;
+			children = (
+				212E0BED8E149C83F39C7ED4BA52420D /* Info.plist */,
+				396DFF03C284AC7D4EA4830C152B5714 /* Pods-LentaSDK.modulemap */,
+				9D45D0DC42499F8C1A8587376AF06FB5 /* Pods-LentaSDK-acknowledgements.markdown */,
+				18DBB5E9ECCC12DB2FC296C2FB73C3A4 /* Pods-LentaSDK-acknowledgements.plist */,
+				2B041DA681AF2D7E8D8003738F33D93B /* Pods-LentaSDK-dummy.m */,
+				2B1ADBA16280A8CCA91D2F2A71EADFBA /* Pods-LentaSDK-resources.sh */,
+				B656CC6AA337E80685AA08A2FF0BD3C7 /* Pods-LentaSDK-umbrella.h */,
+				2520155C8947951ACA1526C4E4954C34 /* Pods-LentaSDK.debug.xcconfig */,
+				491AE7C3327B9EB7E8669E22C915E4F1 /* Pods-LentaSDK.release.xcconfig */,
+			);
+			name = "Pods-LentaSDK";
+			path = "Target Support Files/Pods-LentaSDK";
+			sourceTree = "<group>";
+		};
 		399767C900DB8D498234F35AD1BE22E2 /* QuartzCore */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,16 +292,6 @@
 				639CC374E83D20B7270BC20CAB64740C /* PMKQuartzCore.h */,
 			);
 			name = QuartzCore;
-			sourceTree = "<group>";
-		};
-		3C5F509BBF0FF31DA4487BA3F0008A17 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E767BA097BC7C456FAFB3C89229F306C /* Pods_LentaSDK.framework */,
-				5E169A0586DAAECA72742E072007A91E /* PromiseKit.framework */,
-				D15081CC5470E33C6CDCC0AAF48CC2E7 /* SWXMLHash.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		4723D6506FF63E02BBF8ADEEA4591565 /* SWXMLHash */ = {
@@ -262,10 +305,11 @@
 			path = SWXMLHash;
 			sourceTree = "<group>";
 		};
-		4A1DE87D3670D0831184EDBEABB634AA /* Targets Support Files */ = {
+		4F8FE59B79E6692FE64B1127250AFF3F /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9E77A899A4ECA0497BFF4A8EFBD7481E /* Pods-LentaSDK */,
+				2D3E1BBEEF12BD848D18FBD09B7BEB8A /* Pods-LentaSDK */,
+				582DD0717C44DCB348BAFF9F08E0689C /* Pods-LentaSDKTests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -283,6 +327,24 @@
 				12D6392EEEB8ADC41FD798AC7AA1A261 /* UIViewController+Promise.swift */,
 			);
 			name = UIKit;
+			sourceTree = "<group>";
+		};
+		582DD0717C44DCB348BAFF9F08E0689C /* Pods-LentaSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				73002437BB32D005E25438B85A350D13 /* Info.plist */,
+				858435CC15FE2E0B802361962F59D4E0 /* Pods-LentaSDKTests.modulemap */,
+				BC8A11BD3F65BB910FB3634634E9F611 /* Pods-LentaSDKTests-acknowledgements.markdown */,
+				AEA3A7DDB1ADBB86689D8B82C00138A1 /* Pods-LentaSDKTests-acknowledgements.plist */,
+				556E35CB1C26FF089E2D020C6005CC8B /* Pods-LentaSDKTests-dummy.m */,
+				ED05855D9FAFD406E0E831C74D4169C8 /* Pods-LentaSDKTests-frameworks.sh */,
+				DCE6EAD677E1D60D0B2D7799769985C1 /* Pods-LentaSDKTests-resources.sh */,
+				4287D8E50A40F306363042DCBB376CBD /* Pods-LentaSDKTests-umbrella.h */,
+				1A6DAE9371813CE885F6C798883D8A67 /* Pods-LentaSDKTests.debug.xcconfig */,
+				0348AD5415B4D873C5A7D2E687E82943 /* Pods-LentaSDKTests.release.xcconfig */,
+			);
+			name = "Pods-LentaSDKTests";
+			path = "Target Support Files/Pods-LentaSDKTests";
 			sourceTree = "<group>";
 		};
 		75DB3BFA00BBFC8102FD98CDD9CE9A9E /* CorePromise */ = {
@@ -321,8 +383,8 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
 				9DE88F6F2B54FE5CBEA0B29205C2528A /* Pods */,
-				3C5F509BBF0FF31DA4487BA3F0008A17 /* Products */,
-				4A1DE87D3670D0831184EDBEABB634AA /* Targets Support Files */,
+				F97717C5ADAE89A1D25FD9DF0097EE50 /* Products */,
+				4F8FE59B79E6692FE64B1127250AFF3F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -345,23 +407,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		9E77A899A4ECA0497BFF4A8EFBD7481E /* Pods-LentaSDK */ = {
-			isa = PBXGroup;
-			children = (
-				BCE1E58762B9F626D2452271271ABB85 /* Info.plist */,
-				E28E2D02C279BE8075023859C4533D57 /* Pods-LentaSDK.modulemap */,
-				46D44000811C21843E7B69C4CA9B8416 /* Pods-LentaSDK-acknowledgements.markdown */,
-				D1724783959605CFD37A99FA21D43787 /* Pods-LentaSDK-acknowledgements.plist */,
-				74ED6A5832851FABCB3697EF4C79A707 /* Pods-LentaSDK-dummy.m */,
-				5C9C0E7EC0FF6AD4C441EFA9E05A9CD4 /* Pods-LentaSDK-resources.sh */,
-				1145CBF6FC93C5476B20BDBC9EB000DE /* Pods-LentaSDK-umbrella.h */,
-				2F735D6C5798FD2342AD3F6748198661 /* Pods-LentaSDK.debug.xcconfig */,
-				68FB680AC37B89E9BFAC0426D18F85CB /* Pods-LentaSDK.release.xcconfig */,
-			);
-			name = "Pods-LentaSDK";
-			path = "Target Support Files/Pods-LentaSDK";
-			sourceTree = "<group>";
-		};
 		A525829F9CAA1EAB941A5CEC54450383 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +419,17 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/PromiseKit";
+			sourceTree = "<group>";
+		};
+		F97717C5ADAE89A1D25FD9DF0097EE50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				553687CF39C38203C3E7BA04A92B8AFD /* Pods_LentaSDK.framework */,
+				3DAC78C8CC3044910BB61FAFCFCBE7C0 /* Pods_LentaSDKTests.framework */,
+				DCECDE6551B270FBC6F16BBF48AD989A /* PromiseKit.framework */,
+				5E6908E578620B0408B9E56A99D6244A /* SWXMLHash.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		FED8B70A7029CF4236207F0E5F93438A /* Foundation */ = {
@@ -399,6 +455,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		386E319EB0CE5989DD2A29211F4DECA6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2131B966B15E09EF90B5CFB8F3DEEEF9 /* Pods-LentaSDKTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		96C6FEF2505B3E782AC49C06A8DBC77A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -452,7 +516,7 @@
 			);
 			name = PromiseKit;
 			productName = PromiseKit;
-			productReference = 5E169A0586DAAECA72742E072007A91E /* PromiseKit.framework */;
+			productReference = DCECDE6551B270FBC6F16BBF48AD989A /* PromiseKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C0AF47C179F594AF1C739ADBDCC094F1 /* SWXMLHash */ = {
@@ -469,7 +533,26 @@
 			);
 			name = SWXMLHash;
 			productName = SWXMLHash;
-			productReference = D15081CC5470E33C6CDCC0AAF48CC2E7 /* SWXMLHash.framework */;
+			productReference = 5E6908E578620B0408B9E56A99D6244A /* SWXMLHash.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EA415CD4E532A92F04B67409742C57FE /* Pods-LentaSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED94FE35B59306D3A145488DC9DCB947 /* Build configuration list for PBXNativeTarget "Pods-LentaSDKTests" */;
+			buildPhases = (
+				04F15ED744058E656C8DB1797DCAF2B2 /* Sources */,
+				6FB779038683CF7418F8959802C15E07 /* Frameworks */,
+				386E319EB0CE5989DD2A29211F4DECA6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A23B58EA10ED075047DD991E069EA2FC /* PBXTargetDependency */,
+				FF422B88930F550108C5101D04C0A9D0 /* PBXTargetDependency */,
+			);
+			name = "Pods-LentaSDKTests";
+			productName = "Pods-LentaSDKTests";
+			productReference = 3DAC78C8CC3044910BB61FAFCFCBE7C0 /* Pods_LentaSDKTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		ED49B1979E87FC055707915A16DB89C6 /* Pods-LentaSDK */ = {
@@ -488,7 +571,7 @@
 			);
 			name = "Pods-LentaSDK";
 			productName = "Pods-LentaSDK";
-			productReference = E767BA097BC7C456FAFB3C89229F306C /* Pods_LentaSDK.framework */;
+			productReference = 553687CF39C38203C3E7BA04A92B8AFD /* Pods_LentaSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -508,11 +591,12 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 3C5F509BBF0FF31DA4487BA3F0008A17 /* Products */;
+			productRefGroup = F97717C5ADAE89A1D25FD9DF0097EE50 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				ED49B1979E87FC055707915A16DB89C6 /* Pods-LentaSDK */,
+				EA415CD4E532A92F04B67409742C57FE /* Pods-LentaSDKTests */,
 				34D78F170CE5670671AD820999CA5371 /* PromiseKit */,
 				C0AF47C179F594AF1C739ADBDCC094F1 /* SWXMLHash */,
 			);
@@ -520,6 +604,14 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		04F15ED744058E656C8DB1797DCAF2B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AB9B7A38675415493B4CB3D9C743F46 /* Pods-LentaSDKTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5A3EA018889E2136EE5AC0405678451 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -590,16 +682,62 @@
 			target = C0AF47C179F594AF1C739ADBDCC094F1 /* SWXMLHash */;
 			targetProxy = 4053386462F06F8F945279E74F5CCD99 /* PBXContainerItemProxy */;
 		};
+		A23B58EA10ED075047DD991E069EA2FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PromiseKit;
+			target = 34D78F170CE5670671AD820999CA5371 /* PromiseKit */;
+			targetProxy = 10A9CAFD396A0EA4269ED7AD54FFF39E /* PBXContainerItemProxy */;
+		};
 		E1A1C7E205391782D02ED4AA8767129E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PromiseKit;
 			target = 34D78F170CE5670671AD820999CA5371 /* PromiseKit */;
 			targetProxy = 445C22318C9B720072650CF93AA92439 /* PBXContainerItemProxy */;
 		};
+		FF422B88930F550108C5101D04C0A9D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SWXMLHash;
+			target = C0AF47C179F594AF1C739ADBDCC094F1 /* SWXMLHash */;
+			targetProxy = 0BB360B8D7C30AFB54B2FE25A9E1D8E0 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0671789FC1E50ABC8231A138ABFED62B /* Debug */ = {
+		3660E7CE46DC094E294075F79FC348E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0348AD5415B4D873C5A7D2E687E82943 /* Pods-LentaSDKTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LentaSDKTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LentaSDKTests/Pods-LentaSDKTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LentaSDKTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		473B9113C4D45FC243F18E8A15607F62 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BEC7B1BE638789B6A8EFD3E22131C596 /* PromiseKit.xcconfig */;
 			buildSettings = {
@@ -608,159 +746,247 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PromiseKit/PromiseKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/PromiseKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PromiseKit/PromiseKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = PromiseKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		621AB785940626574F07364CB14760E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		64ADE928F98C68E71F04A15A267792D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 491AE7C3327B9EB7E8669E22C915E4F1 /* Pods-LentaSDK.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LentaSDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LentaSDK/Pods-LentaSDK.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LentaSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		79BFC9F3FC085C9C2EACFF2890B99E1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2520155C8947951ACA1526C4E4954C34 /* Pods-LentaSDK.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LentaSDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LentaSDK/Pods-LentaSDK.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LentaSDK;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		163D87BE96A63549B0EACF1CC31A2E90 /* Debug */ = {
+		914B7E0B5DBC030DDFFFC5A691BF00CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A6DAE9371813CE885F6C798883D8A67 /* Pods-LentaSDKTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LentaSDKTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LentaSDKTests/Pods-LentaSDKTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LentaSDKTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B57C09D404C607DDE283C5C44183B2A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		16FA3D842A6BDC344AB20946E37D16F2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 436B80AB2C501ADCE5A56BA43EB02210 /* SWXMLHash.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SWXMLHash;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		707B86CFB21B645E37109F39754D4051 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		825BD269F949EF67523DBE7E6FD54C26 /* Release */ = {
+		BCD6B7FD221592AE56FB77EE33E2C288 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BEC7B1BE638789B6A8EFD3E22131C596 /* PromiseKit.xcconfig */;
 			buildSettings = {
@@ -769,32 +995,29 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/PromiseKit/PromiseKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/PromiseKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PromiseKit/PromiseKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = PromiseKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		8C7E38E68059B88CCBF4493776E04497 /* Debug */ = {
+		BE7E0A37BB788CCFC6DE9CA7689348FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 436B80AB2C501ADCE5A56BA43EB02210 /* SWXMLHash.xcconfig */;
 			buildSettings = {
@@ -803,108 +1026,59 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = SWXMLHash;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E1B26A2E214A6CF201917E27822A4977 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F735D6C5798FD2342AD3F6748198661 /* Pods-LentaSDK.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-LentaSDK/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LentaSDK/Pods-LentaSDK.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_LentaSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F9F7DC29ECDAFD7B616E6184C709FD81 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68FB680AC37B89E9BFAC0426D18F85CB /* Pods-LentaSDK.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-LentaSDK/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LentaSDK/Pods-LentaSDK.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_LentaSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		EAA856528E44B877F202B149C85C81E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 436B80AB2C501ADCE5A56BA43EB02210 /* SWXMLHash.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
+				PRODUCT_NAME = SWXMLHash;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -912,8 +1086,8 @@
 		0DB3EDC6A003D1A38221A3CCAFF42B38 /* Build configuration list for PBXNativeTarget "SWXMLHash" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8C7E38E68059B88CCBF4493776E04497 /* Debug */,
-				16FA3D842A6BDC344AB20946E37D16F2 /* Release */,
+				EAA856528E44B877F202B149C85C81E6 /* Debug */,
+				BE7E0A37BB788CCFC6DE9CA7689348FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -921,8 +1095,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				163D87BE96A63549B0EACF1CC31A2E90 /* Debug */,
-				707B86CFB21B645E37109F39754D4051 /* Release */,
+				B57C09D404C607DDE283C5C44183B2A1 /* Debug */,
+				621AB785940626574F07364CB14760E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -930,8 +1104,8 @@
 		4A040FE1262CFBD7ED5D7FA9C59C8704 /* Build configuration list for PBXNativeTarget "PromiseKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0671789FC1E50ABC8231A138ABFED62B /* Debug */,
-				825BD269F949EF67523DBE7E6FD54C26 /* Release */,
+				BCD6B7FD221592AE56FB77EE33E2C288 /* Debug */,
+				473B9113C4D45FC243F18E8A15607F62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -939,8 +1113,17 @@
 		DA606C0E561FEE44E3AFB03E601992B5 /* Build configuration list for PBXNativeTarget "Pods-LentaSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E1B26A2E214A6CF201917E27822A4977 /* Debug */,
-				F9F7DC29ECDAFD7B616E6184C709FD81 /* Release */,
+				79BFC9F3FC085C9C2EACFF2890B99E1C /* Debug */,
+				64ADE928F98C68E71F04A15A267792D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED94FE35B59306D3A145488DC9DCB947 /* Build configuration list for PBXNativeTarget "Pods-LentaSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				914B7E0B5DBC030DDFFFC5A691BF00CB /* Debug */,
+				3660E7CE46DC094E294075F79FC348E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
