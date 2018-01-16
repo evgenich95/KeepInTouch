@@ -34,4 +34,32 @@ class WebServiceTests: XCTestCase {
         
         waitForExpectations(timeout: 5.0)
     }
+    
+    func testloadLast24News() {
+        let exp = expectation(description: #function)
+        
+        WebService.loadNews(with: .last24).then { news in
+            XCTAssertTrue(news.count > 0)
+            }.catch { (error) in
+                XCTAssertTrue(false, "Loading of last24 news is failed with error: \(error)")
+            }.always {
+                exp.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5.0)
+    }
+    
+    func testloadAllNews() {
+        let exp = expectation(description: #function)
+        
+        WebService.loadNews(with: .none).then { news in
+            XCTAssertTrue(news.count > 7)
+            }.catch { (error) in
+                XCTAssertTrue(false, "Loading of All news is failed with error: \(error)")
+            }.always {
+                exp.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5.0)
+    }
 }
