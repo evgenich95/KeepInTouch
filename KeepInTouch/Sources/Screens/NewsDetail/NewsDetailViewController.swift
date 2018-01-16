@@ -32,7 +32,9 @@ class NewsDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.accessibilityIdentifier = "WebView"
         setupView()
+
     }
 
     private func setupView() {

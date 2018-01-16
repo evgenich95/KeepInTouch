@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		180586128515FF567CA7CB3E /* NewsSummaryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D282724FD44BF4B147F4FD17 /* NewsSummaryCoordinator.swift */; };
+		1816B60F200E3E09005CEFBA /* KeepInTouchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1816B60E200E3E09005CEFBA /* KeepInTouchUITests.swift */; };
 		18D1D9241FDEC11000D138CF /* DispatchQueue + Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1D9231FDEC11000D138CF /* DispatchQueue + Background.swift */; };
 		3C358B2C6853CC14109E6FB0 /* NewsSectionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A984224E08B30051F09D2E /* NewsSectionDetailViewController.swift */; };
 		48F63164F2B1ACD87B40014D /* NewsSectionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E695970E3BE900B0D5649 /* NewsSectionDetailViewModel.swift */; };
@@ -64,6 +65,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1816B611200E3E09005CEFBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5676AFC01F6553FE00F66296 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5676AFC71F6553FE00F66296;
+			remoteInfo = KeepInTouch;
+		};
+		1816B616200E3E09005CEFBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 560498691F6A7C1600CF9E15 /* LentaSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1863D53B200DB15B006FE198;
+			remoteInfo = LentaSDKTests;
+		};
 		560498321F6A79A200CF9E15 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5604982E1F6A79A100CF9E15 /* CustomHUD.xcodeproj */;
@@ -118,6 +133,9 @@
 
 /* Begin PBXFileReference section */
 		0D3E9AFC96E0D42402E21F0D /* NewsSectionDetailViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = NewsSectionDetailViewController.xib; sourceTree = "<group>"; };
+		1816B60C200E3E09005CEFBA /* KeepInTouchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeepInTouchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1816B60E200E3E09005CEFBA /* KeepInTouchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepInTouchUITests.swift; sourceTree = "<group>"; };
+		1816B610200E3E09005CEFBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D1D9231FDEC11000D138CF /* DispatchQueue + Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue + Background.swift"; sourceTree = "<group>"; };
 		1B6990B741A0E0C497C3B79E /* NewsDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		3A2BE642881FC08F3DCDA7AB /* Pods_KeepInTouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepInTouch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +199,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1816B609200E3E09005CEFBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5676AFC51F6553FE00F66296 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,6 +226,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1816B60D200E3E09005CEFBA /* KeepInTouchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1816B60E200E3E09005CEFBA /* KeepInTouchUITests.swift */,
+				1816B610200E3E09005CEFBA /* Info.plist */,
+			);
+			path = KeepInTouchUITests;
+			sourceTree = "<group>";
+		};
 		21BB254E63DFE42273B6B9D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				5604986E1F6A7C1700CF9E15 /* LentaSDK.framework */,
+				1816B617200E3E09005CEFBA /* LentaSDKTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,6 +299,7 @@
 			children = (
 				560498691F6A7C1600CF9E15 /* LentaSDK.xcodeproj */,
 				5604982E1F6A79A100CF9E15 /* CustomHUD.xcodeproj */,
+				1816B60D200E3E09005CEFBA /* KeepInTouchUITests */,
 				21BB254E63DFE42273B6B9D1 /* Frameworks */,
 				5676AFCA1F6553FE00F66296 /* KeepInTouch */,
 				56EC444A1F67AECD002DAD37 /* KeepInTouchTests */,
@@ -277,6 +313,7 @@
 			children = (
 				5676AFC81F6553FE00F66296 /* KeepInTouch.app */,
 				56EC44491F67AECD002DAD37 /* KeepInTouchTests.xctest */,
+				1816B60C200E3E09005CEFBA /* KeepInTouchUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -583,6 +620,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1816B60B200E3E09005CEFBA /* KeepInTouchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1816B618200E3E09005CEFBA /* Build configuration list for PBXNativeTarget "KeepInTouchUITests" */;
+			buildPhases = (
+				1816B608200E3E09005CEFBA /* Sources */,
+				1816B609200E3E09005CEFBA /* Frameworks */,
+				1816B60A200E3E09005CEFBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1816B612200E3E09005CEFBA /* PBXTargetDependency */,
+			);
+			name = KeepInTouchUITests;
+			productName = KeepInTouchUITests;
+			productReference = 1816B60C200E3E09005CEFBA /* KeepInTouchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		5676AFC71F6553FE00F66296 /* KeepInTouch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5676AFDA1F6553FE00F66296 /* Build configuration list for PBXNativeTarget "KeepInTouch" */;
@@ -630,10 +685,16 @@
 		5676AFC01F6553FE00F66296 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = IAE;
 				TargetAttributes = {
+					1816B60B200E3E09005CEFBA = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = GB85HYMZT6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5676AFC71F6553FE00F66296;
+					};
 					5676AFC71F6553FE00F66296 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = GB85HYMZT6;
@@ -672,11 +733,19 @@
 			targets = (
 				5676AFC71F6553FE00F66296 /* KeepInTouch */,
 				56EC44481F67AECD002DAD37 /* KeepInTouchTests */,
+				1816B60B200E3E09005CEFBA /* KeepInTouchUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		1816B617200E3E09005CEFBA /* LentaSDKTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LentaSDKTests.xctest;
+			remoteRef = 1816B616200E3E09005CEFBA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		560498331F6A79A200CF9E15 /* CustomHUD.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -694,6 +763,13 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1816B60A200E3E09005CEFBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5676AFC61F6553FE00F66296 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -767,6 +843,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1816B608200E3E09005CEFBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1816B60F200E3E09005CEFBA /* KeepInTouchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5676AFC41F6553FE00F66296 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -825,6 +909,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1816B612200E3E09005CEFBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5676AFC71F6553FE00F66296 /* KeepInTouch */;
+			targetProxy = 1816B611200E3E09005CEFBA /* PBXContainerItemProxy */;
+		};
 		5604983D1F6A7A0C00CF9E15 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CustomHUD;
@@ -855,6 +944,59 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1816B613200E3E09005CEFBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GB85HYMZT6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = KeepInTouchUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = iae.KeepInTouchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KeepInTouch;
+			};
+			name = Debug;
+		};
+		1816B614200E3E09005CEFBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GB85HYMZT6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = KeepInTouchUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = iae.KeepInTouchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KeepInTouch;
+			};
+			name = Release;
+		};
 		5676AFD81F6553FE00F66296 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1011,6 +1153,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1816B618200E3E09005CEFBA /* Build configuration list for PBXNativeTarget "KeepInTouchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1816B613200E3E09005CEFBA /* Debug */,
+				1816B614200E3E09005CEFBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5676AFC31F6553FE00F66296 /* Build configuration list for PBXProject "KeepInTouch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

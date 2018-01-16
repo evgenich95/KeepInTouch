@@ -28,6 +28,8 @@ class ImageNewsCollectionViewCell: SingleItemCollectionCell<News> {
     override func awakeFromNib() {
         super.awakeFromNib()
         newsUIImageView.contentMode = .scaleAspectFit
+        
+        newsTitleUILabel.accessibilityIdentifier = "NewsTitle"
     }
 
     override func updateUI(with object: News) {

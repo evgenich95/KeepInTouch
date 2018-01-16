@@ -64,6 +64,10 @@ class NewsSummaryViewController: ViewController {
         super.viewDidLoad()
         setupView()
         bindToViewModel()
+        
+        view.accessibilityIdentifier = "NewsSummaryViewController"
+        
+        
     }
 
     internal override func setupView() {
