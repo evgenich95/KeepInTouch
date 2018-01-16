@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1863D53E200DB15B006FE198 /* LentaSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863D53D200DB15B006FE198 /* LentaSDKTests.swift */; };
 		1863D540200DB15B006FE198 /* LentaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 560498481F6A7ABE00CF9E15 /* LentaSDK.framework */; };
+		1863D547200DB21C006FE198 /* WebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863D546200DB21C006FE198 /* WebServiceTests.swift */; };
 		5604984D1F6A7ABE00CF9E15 /* LentaSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 5604984B1F6A7ABE00CF9E15 /* LentaSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		560498571F6A7AE400CF9E15 /* DataSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560498541F6A7AE400CF9E15 /* DataSerializer.swift */; };
 		560498581F6A7AE400CF9E15 /* DateFormatterTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560498551F6A7AE400CF9E15 /* DateFormatterTransform.swift */; };
@@ -37,6 +38,7 @@
 		1863D53B200DB15B006FE198 /* LentaSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LentaSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1863D53D200DB15B006FE198 /* LentaSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LentaSDKTests.swift; sourceTree = "<group>"; };
 		1863D53F200DB15B006FE198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1863D546200DB21C006FE198 /* WebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTests.swift; sourceTree = "<group>"; };
 		4AEA270E7C10BCA7967D4AD6 /* Pods-LentaSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LentaSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-LentaSDK/Pods-LentaSDK.release.xcconfig"; sourceTree = "<group>"; };
 		560498481F6A7ABE00CF9E15 /* LentaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LentaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5604984B1F6A7ABE00CF9E15 /* LentaSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LentaSDK.h; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			children = (
 				1863D53D200DB15B006FE198 /* LentaSDKTests.swift */,
 				1863D53F200DB15B006FE198 /* Info.plist */,
+				1863D546200DB21C006FE198 /* WebServiceTests.swift */,
 			);
 			path = LentaSDKTests;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1863D547200DB21C006FE198 /* WebServiceTests.swift in Sources */,
 				1863D53E200DB15B006FE198 /* LentaSDKTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
