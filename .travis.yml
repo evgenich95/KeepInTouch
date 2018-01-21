@@ -1,0 +1,4 @@
+language: objective-c  #1
+osx_image: xcode9.2 #2
+xcode_workspace: KeepInTouch.xcworkspace #3
+xcode_scheme: KeepInTouchTests #4
