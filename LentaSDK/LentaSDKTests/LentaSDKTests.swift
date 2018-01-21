@@ -2,7 +2,7 @@
 //  LentaSDKTests.swift
 //  LentaSDKTests
 //
-//  Created by iae on 1/16/18.
+//  Created by Anton on 21.01.18.
 //  Copyright © 2018 IAE. All rights reserved.
 //
 
@@ -18,6 +18,7 @@ class LentaSDKTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+        
     }
     
     func testExample() {
