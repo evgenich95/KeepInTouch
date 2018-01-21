@@ -21,7 +21,7 @@ class KeepInTouchUITests: XCTestCase {
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
-
+        
         app = XCUIApplication()
         
         // We send a command line argument to our app,
@@ -37,27 +37,38 @@ class KeepInTouchUITests: XCTestCase {
     func testOpenAndCloseNews() {
         app.launch()
         
+        // Check that NewsSummary screen is displaying now
+        // But not NewsDetails screen
         XCTAssertTrue(app.isDisplayingNewsSummary)
         XCTAssertFalse(app.isDisplayingWebView)
         
+        //Check that table has more than 4 news
         XCTAssertTrue(app.collectionViews.firstMatch.cells.count > 4)
         
-        
+        //Wait for 3 second and open details of the first news
+        // in the table
         execute(after: 3.0) {
             self.app.collectionViews.firstMatch.cells.firstMatch.tap()
         }
         
+        // Check that NewsDetails screen is displaying now
+        // But not NewsSummary screen
         XCTAssertFalse(app.isDisplayingNewsSummary)
         XCTAssertTrue(self.app.isDisplayingWebView)
-
+        
+        // Screen must have Done button
+        // which shoud return us to the NewsSummary screen
         execute(after: 3.0) {
             self.app.buttons["Done"].tap()
         }
         
+        // Check that NewsSummary screen is displaying now
+        // But not NewsDetails screen
         XCTAssertTrue(app.isDisplayingNewsSummary)
         XCTAssertFalse(app.isDisplayingWebView)
     }
-
+    
+    // Help function
     func execute(after delay: TimeInterval, block: @escaping () -> Void) {
         let exp = expectation(description: #function)
         
@@ -68,15 +79,16 @@ class KeepInTouchUITests: XCTestCase {
         
         waitForExpectations(timeout: delay + 5.0)
     }
-
+    
 }
 
 extension XCUIApplication {
     var isDisplayingNewsSummary: Bool {
         return otherElements["NewsSummaryViewController"].exists
     }
-
+    
     var isDisplayingWebView: Bool {
         return otherElements["WebView"].exists
     }
 }
+
