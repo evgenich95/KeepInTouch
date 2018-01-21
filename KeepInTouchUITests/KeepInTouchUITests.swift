@@ -53,8 +53,10 @@ class KeepInTouchUITests: XCTestCase {
         
         // Check that NewsDetails screen is displaying now
         // But not NewsSummary screen
-        XCTAssertFalse(app.isDisplayingNewsSummary)
-        XCTAssertTrue(self.app.isDisplayingWebView)
+        execute(after: 3.0) {
+            XCTAssertFalse(self.app.isDisplayingNewsSummary)
+            XCTAssertTrue(self.app.isDisplayingWebView)
+        }
         
         // Screen must have Done button
         // which shoud return us to the NewsSummary screen
