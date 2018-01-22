@@ -34,6 +34,12 @@ class KeepInTouchUITests: XCTestCase {
         super.tearDown()
     }
     
+    func waitForElementToAppear(_ element: XCUIElement) {
+        let existsPredicate = NSPredicate(format: "exists == true")
+        expectation(for: existsPredicate, evaluatedWith: element, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
     func testOpenAndCloseNews() {
         app.launch()
         
@@ -42,6 +48,9 @@ class KeepInTouchUITests: XCTestCase {
         XCTAssertTrue(app.isDisplayingNewsSummary)
         XCTAssertFalse(app.isDisplayingWebView)
         
+        //Wait when first news is appered
+        self.waitForElementToAppear(app.collectionViews.firstMatch.cells.firstMatch)
+
         //Check that table has more than 0 news
         XCTAssertTrue(app.collectionViews.firstMatch.cells.count > 0)
         
