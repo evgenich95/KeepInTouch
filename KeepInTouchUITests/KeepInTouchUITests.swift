@@ -42,8 +42,8 @@ class KeepInTouchUITests: XCTestCase {
         XCTAssertTrue(app.isDisplayingNewsSummary)
         XCTAssertFalse(app.isDisplayingWebView)
         
-        //Check that table has more than 4 news
-        XCTAssertTrue(app.collectionViews.firstMatch.cells.count > 4)
+        //Check that table has more than 0 news
+        XCTAssertTrue(app.collectionViews.firstMatch.cells.count > 0)
         
         //Wait for 3 second and open details of the first news
         // in the table
