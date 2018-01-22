@@ -34,6 +34,12 @@ class KeepInTouchUITests: XCTestCase {
         super.tearDown()
     }
     
+    func waitForElementToAppear(_ element: XCUIElement) {
+        let existsPredicate = NSPredicate(format: "exists == true")
+        expectation(for: existsPredicate, evaluatedWith: element, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
     func testOpenAndCloseNews() {
         app.launch()
         
@@ -42,8 +48,11 @@ class KeepInTouchUITests: XCTestCase {
         XCTAssertTrue(app.isDisplayingNewsSummary)
         XCTAssertFalse(app.isDisplayingWebView)
         
-        //Check that table has more than 4 news
-        XCTAssertTrue(app.collectionViews.firstMatch.cells.count > 4)
+        //Wait when first news is appered
+        self.waitForElementToAppear(app.collectionViews.firstMatch.cells.firstMatch)
+
+        //Check that table has more than 0 news
+        XCTAssertTrue(app.collectionViews.firstMatch.cells.count > 0)
         
         //Wait for 3 second and open details of the first news
         // in the table
@@ -53,8 +62,10 @@ class KeepInTouchUITests: XCTestCase {
         
         // Check that NewsDetails screen is displaying now
         // But not NewsSummary screen
-        XCTAssertFalse(app.isDisplayingNewsSummary)
-        XCTAssertTrue(self.app.isDisplayingWebView)
+        execute(after: 3.0) {
+            XCTAssertFalse(self.app.isDisplayingNewsSummary)
+            XCTAssertTrue(self.app.isDisplayingWebView)
+        }
         
         // Screen must have Done button
         // which shoud return us to the NewsSummary screen

@@ -34,6 +34,12 @@ class SectionedValuesTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    
+    func testFailedTest() {
+        // Uncomment this line to failed this test
+//        XCTFail()
+        
+    }
 
     func test_Remove_Duplicates_With_Invalid_Order() {
         let data: [(Section, [Value])] = [
